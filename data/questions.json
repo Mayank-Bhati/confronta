@@ -1,0 +1,54 @@
+{
+  "broad": [
+    { "id": "b1", "a": { "text": "Spend Saturday repairing a scooter with a friend", "w": { "R": 2 } }, "b": { "text": "Spend Saturday filming and editing a short video", "w": { "A": 2 } } },
+    { "id": "b2", "a": { "text": "Figure out why the home wifi is slow until you crack it", "w": { "I": 2 } }, "b": { "text": "Spend the evening helping a friend through a rough week", "w": { "S": 2 } } },
+    { "id": "b3", "a": { "text": "Pitch the class trip idea and convince everyone", "w": { "E": 2 } }, "b": { "text": "Plan the trip budget, bookings and schedule", "w": { "C": 2 } } },
+    { "id": "b4", "a": { "text": "Build the stage for the school festival", "w": { "R": 2 } }, "b": { "text": "Welcome and guide people at the school festival", "w": { "S": 2 } } },
+    { "id": "b5", "a": { "text": "Analyze your team's match statistics to find patterns", "w": { "I": 2 } }, "b": { "text": "Be the captain who decides tactics and motivates", "w": { "E": 2 } } },
+    { "id": "b6", "a": { "text": "Design the poster for the school play", "w": { "A": 2 } }, "b": { "text": "Organize the rehearsal calendar and checklists", "w": { "C": 2 } } },
+    { "id": "b7", "a": { "text": "Assemble a PC from parts", "w": { "R": 2 } }, "b": { "text": "Understand exactly how a processor works inside", "w": { "I": 2 } } },
+    { "id": "b8", "a": { "text": "Tutor a younger student who is struggling", "w": { "S": 2 } }, "b": { "text": "Keep the club's records, money and lists in perfect order", "w": { "C": 2 } } },
+    { "id": "b9", "a": { "text": "Write the script for the show", "w": { "A": 2 } }, "b": { "text": "Promote the show and sell out the tickets", "w": { "E": 2 } } },
+    { "id": "b10", "a": { "text": "Research one question for hours until you truly get it", "w": { "I": 2 } }, "b": { "text": "Execute a proven step-by-step plan flawlessly", "w": { "C": 2 } } },
+    { "id": "b11", "a": { "text": "Test, tune and fix bikes in the workshop", "w": { "R": 2 } }, "b": { "text": "Run the shop counter, negotiate and close deals", "w": { "E": 2 } } },
+    { "id": "b12", "a": { "text": "Compose or create something alone in your room", "w": { "A": 2 } }, "b": { "text": "Perform or teach it in front of people", "w": { "S": 2 } } }
+  ],
+  "targeted": {
+    "R": [
+      { "id": "r1", "a": { "text": "A job where your hands get dirty and things visibly work at the end", "w": { "R": 2 } }, "b": { "text": "A job at a desk where your ideas do the work", "w": { "I": 1, "C": 1 } } },
+      { "id": "r2", "a": { "text": "Operate real machines, tools or vehicles", "w": { "R": 2 } }, "b": { "text": "Design them on a computer for someone else to build", "w": { "I": 1, "A": 1 } } },
+      { "id": "r3", "a": { "text": "Work outdoors or on-site, moving around", "w": { "R": 2 } }, "b": { "text": "Work in one comfortable indoor place", "w": { "C": 1 } } },
+      { "id": "r4", "a": { "text": "Fix something broken today and see it run", "w": { "R": 2 } }, "b": { "text": "Prevent it breaking next year with a clever plan", "w": { "I": 1, "C": 1 } } }
+    ],
+    "I": [
+      { "id": "i1", "a": { "text": "Ask 'why does this happen?' and dig for the real cause", "w": { "I": 2 } }, "b": { "text": "Ask 'what should we do?' and act fast", "w": { "E": 1, "R": 1 } } },
+      { "id": "i2", "a": { "text": "Work with data, experiments and evidence", "w": { "I": 2 } }, "b": { "text": "Work with people, stories and emotions", "w": { "S": 1, "A": 1 } } },
+      { "id": "i3", "a": { "text": "Solve a hard abstract puzzle nobody has cracked", "w": { "I": 2 } }, "b": { "text": "Ship something concrete that people use tomorrow", "w": { "R": 1, "E": 1 } } },
+      { "id": "i4", "a": { "text": "Read and learn deeply before acting", "w": { "I": 2 } }, "b": { "text": "Learn by trying, failing and adjusting", "w": { "R": 1, "E": 1 } } }
+    ],
+    "A": [
+      { "id": "a1", "a": { "text": "A day with no rules where you invent from zero", "w": { "A": 2 } }, "b": { "text": "A day with a clear brief and clear success criteria", "w": { "C": 1 } } },
+      { "id": "a2", "a": { "text": "Express something personal through images, words or sound", "w": { "A": 2 } }, "b": { "text": "Explain something true through facts and logic", "w": { "I": 1 } } },
+      { "id": "a3", "a": { "text": "Your work should be recognizably yours", "w": { "A": 2 } }, "b": { "text": "Your work should be exactly what the client asked", "w": { "C": 1, "E": 1 } } },
+      { "id": "a4", "a": { "text": "Design how a thing looks and feels", "w": { "A": 2 } }, "b": { "text": "Engineer how a thing works inside", "w": { "R": 1, "I": 1 } } }
+    ],
+    "S": [
+      { "id": "s1", "a": { "text": "A job where you directly improve someone's day", "w": { "S": 2 } }, "b": { "text": "A job where you improve a system that helps thousands indirectly", "w": { "I": 1, "C": 1 } } },
+      { "id": "s2", "a": { "text": "Listen, understand and support one person deeply", "w": { "S": 2 } }, "b": { "text": "Lead and energize a whole group", "w": { "E": 1 } } },
+      { "id": "s3", "a": { "text": "Teach someone a skill and watch them get it", "w": { "S": 2 } }, "b": { "text": "Master the skill yourself to the highest level", "w": { "I": 1, "R": 1 } } },
+      { "id": "s4", "a": { "text": "Care work: health, education, wellbeing", "w": { "S": 2 } }, "b": { "text": "Creative work: media, design, content", "w": { "A": 1 } } }
+    ],
+    "E": [
+      { "id": "e1", "a": { "text": "Take the risk, own the decision, take the credit or blame", "w": { "E": 2 } }, "b": { "text": "Advise the decision-maker with solid analysis", "w": { "I": 1, "C": 1 } } },
+      { "id": "e2", "a": { "text": "Convince a skeptical room", "w": { "E": 2 } }, "b": { "text": "Quietly build the thing that convinces them", "w": { "R": 1, "A": 1 } } },
+      { "id": "e3", "a": { "text": "Start your own thing someday", "w": { "E": 2 } }, "b": { "text": "Become the irreplaceable expert inside a great team", "w": { "I": 1, "C": 1 } } },
+      { "id": "e4", "a": { "text": "Negotiate, sell, close", "w": { "E": 2 } }, "b": { "text": "Help, coach, support", "w": { "S": 1 } } }
+    ],
+    "C": [
+      { "id": "c1", "a": { "text": "A clear plan, a clean desk, a done checklist", "w": { "C": 2 } }, "b": { "text": "Beautiful chaos and improvisation", "w": { "A": 1, "E": 1 } } },
+      { "id": "c2", "a": { "text": "Be the person who makes everything run on time", "w": { "C": 2 } }, "b": { "text": "Be the person with the wild new idea", "w": { "A": 1, "E": 1 } } },
+      { "id": "c3", "a": { "text": "Numbers, records, precision", "w": { "C": 2 } }, "b": { "text": "People, conversations, energy", "w": { "S": 1, "E": 1 } } },
+      { "id": "c4", "a": { "text": "Improve an existing process by 10%", "w": { "C": 2 } }, "b": { "text": "Invent a new process from scratch", "w": { "I": 1, "A": 1 } } }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
-import Confronta from "../components/Confronta";
+import CareerCompass from "../components/CareerCompass";
 
 export default function Home() {
-  return <Confronta />;
+  return <CareerCompass />;
 }
