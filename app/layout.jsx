@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Confronta — same data, your lens",
+  title: "CareerCompass — find your world, then your path",
   description:
-    "Personalized post-diploma path comparison. Pick two paths; the comparison re-scores against your profile.",
+    "Personalized post-diploma guidance. A fresh survey every time, worlds of careers ranked for you, and real institutions compared through your lens.",
 };
 
 export default function RootLayout({ children }) {

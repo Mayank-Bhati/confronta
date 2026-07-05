@@ -1,1 +1,79 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --bg: #07070e;
+  --ink: #f2f3f8;
+}
+
+html {
+  background: var(--bg);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ————— Motion ————— */
+
+@keyframes ccFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ccFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ccBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.15); }
+  66% { transform: translate(-40px, 30px) scale(0.9); }
+}
+
+@keyframes ccShimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes ccPulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.35); }
+  50% { box-shadow: 0 0 55px rgba(236, 72, 153, 0.45); }
+}
+
+.cc-fade-up { animation: ccFadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.cc-fade-in { animation: ccFadeIn 0.4s ease both; }
+.cc-blob { animation: ccBlob 14s ease-in-out infinite; }
+.cc-glow { animation: ccPulse 4s ease-in-out infinite; }
+
+.cc-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cc-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(139, 92, 246, 0.35);
+}
+
+.cc-progress {
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #8b5cf6);
+  background-size: 400px 100%;
+  animation: ccShimmer 2.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-fade-up, .cc-fade-in, .cc-blob, .cc-glow, .cc-progress { animation: none; }
+  .cc-card, .cc-card:hover { transition: none; transform: none; }
+}
+
+/* Dark scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0b0b14; }
+::-webkit-scrollbar-thumb { background: #26263a; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #373752; }
+
+input[type="range"] { accent-color: #8b5cf6; }

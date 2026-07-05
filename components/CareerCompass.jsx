@@ -1,19 +1,38 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import POOLS from "../data/questions-v2.json";
 import WORLDS_DATA from "../data/worlds.json";
 import COURSES from "../data/courses-v2.json";
 import CITIES from "../data/cities-v2.json";
-import { emptyVector, applyAnswer, applyLikert, applyMulti, buildSurvey, pickLikert, LIKERT_SCALE, normalize, identity, topDimensions, DIMS, DIM_INFO } from "../lib/scoreEngine";
+import { emptyVector, applyAnswer, applyLikert, applyMulti, buildSurvey, pickLikert, normalize, identity, topDimensions, DIMS } from "../lib/scoreEngine";
 import { rankWorlds, rankCareers } from "../lib/matchEngine";
 import { fitInterests, fitOutcome, fitEnvironment, passesHardFilters, prepList, generateNarrative, haversineKm } from "../lib/fitEngine-v2";
+import { LANGS, makeT, makeTD } from "../lib/i18n";
+import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
 
-const C = {
-  ink: "#16213E", blue: "#2244BB", blueSoft: "#E8EDFB", green: "#1E9E6A",
-  greenSoft: "#E4F4ED", amber: "#D08700", amberSoft: "#FCF3DD", red: "#C94040",
-  redSoft: "#FBEAEA", paper: "#F7F6F1", line: "#D9DCE8", grey: "#6B7280",
+// ————— Dark cinematic theme —————
+const T = {
+  bg: "#07070E",
+  card: "#12121D",
+  card2: "#181826",
+  line: "rgba(255,255,255,0.09)",
+  lineStrong: "rgba(255,255,255,0.18)",
+  ink: "#F2F3F8",
+  grey: "#9CA3B8",
+  violet: "#8B5CF6",
+  violetSoft: "rgba(139,92,246,0.16)",
+  pink: "#EC4899",
+  green: "#34D399",
+  greenSoft: "rgba(52,211,153,0.14)",
+  amber: "#FBBF24",
+  amberSoft: "rgba(251,191,36,0.13)",
+  red: "#F87171",
+  redSoft: "rgba(248,113,113,0.13)",
+  grad: "linear-gradient(135deg,#8B5CF6,#EC4899)",
 };
+
+const WORLD_HUES = ["#8B5CF6", "#EC4899", "#38BDF8", "#FBBF24", "#34D399", "#F87171", "#A3E635"];
 
 const INTEREST_TAGS = [
   "Programming", "Mathematics", "Economics & finance", "Design & creativity",
@@ -31,19 +50,38 @@ const DIM_TO_TAGS = {
   C: ["Economics & finance", "Mathematics"],
 };
 
-const NATURE_LABEL = {
-  scientific: { text: "Scientific — mathematics is guaranteed", bg: "#E8EDFB", fg: "#2244BB" },
-  classical: { text: "Classical — literature & humanities core", bg: "#FCF3DD", fg: "#D08700" },
-  mixed: { text: "Mixed — light maths, strong practice", bg: "#E4F4ED", fg: "#1E9E6A" },
-  "technical-practical": { text: "Technical-practical — workshop over theory", bg: "#E4F4ED", fg: "#1E9E6A" },
+const NATURE_STYLE = {
+  scientific: { bg: T.violetSoft, fg: "#A78BFA", key: "nat_scientific" },
+  classical: { bg: T.amberSoft, fg: T.amber, key: "nat_classical" },
+  mixed: { bg: T.greenSoft, fg: T.green, key: "nat_mixed" },
+  "technical-practical": { bg: T.greenSoft, fg: T.green, key: "nat_technical" },
 };
 
-const scoreColor = (s) => (s >= 70 ? C.green : s >= 45 ? C.amber : C.red);
-const scoreSoft = (s) => (s >= 70 ? C.greenSoft : s >= 45 ? C.amberSoft : C.redSoft);
+const scoreColor = (s) => (s >= 70 ? T.green : s >= 45 ? T.amber : T.red);
+const scoreSoft = (s) => (s >= 70 ? T.greenSoft : s >= 45 ? T.amberSoft : T.redSoft);
+const mono = { fontFamily: "'Space Mono', monospace" };
+const display = { fontFamily: "'Outfit', system-ui, sans-serif" };
+const DATE_LOCALE = { en: "en-GB", it: "it-IT", hi: "hi-IN" };
+
+function Logo({ size = 34 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden>
+      <defs>
+        <linearGradient id="ccLogoGrad" x1="0" y1="0" x2="48" y2="48">
+          <stop stopColor="#8B5CF6" />
+          <stop offset="1" stopColor="#EC4899" />
+        </linearGradient>
+      </defs>
+      <circle cx="24" cy="24" r="20.5" stroke="url(#ccLogoGrad)" strokeWidth="3.5" />
+      <path d="M32.5 15.5 L26.8 26.8 L15.5 32.5 L21.2 21.2 Z" fill="url(#ccLogoGrad)" />
+      <circle cx="24" cy="24" r="2.4" fill="#07070E" />
+    </svg>
+  );
+}
 
 function Bar({ score, color }) {
   return (
-    <div className="w-full h-2 rounded-full" style={{ background: "#E7E7E0" }}>
+    <div className="w-full h-2 rounded-full" style={{ background: "rgba(255,255,255,0.08)" }}>
       <div className="h-2 rounded-full transition-all duration-500" style={{ width: `${score}%`, background: color || scoreColor(score) }} />
     </div>
   );
@@ -51,56 +89,118 @@ function Bar({ score, color }) {
 
 function Chip({ active, onClick, children }) {
   return (
-    <button onClick={onClick} className="px-3 py-1.5 rounded-full text-sm transition-colors"
-      style={{ border: `1.5px solid ${active ? C.blue : C.line}`, background: active ? C.blue : "#fff", color: active ? "#fff" : C.ink }}>
+    <button onClick={onClick} className="px-3.5 py-1.5 rounded-full text-sm transition-all"
+      style={{
+        border: `1.5px solid ${active ? T.violet : T.line}`,
+        background: active ? T.grad : "transparent",
+        color: active ? "#fff" : T.ink,
+        boxShadow: active ? "0 4px 18px rgba(139,92,246,0.35)" : "none",
+      }}>
       {children}
     </button>
   );
 }
 
-function Section({ children }) {
-  return <section className="rounded-2xl p-5" style={{ background: "#fff", border: `1.5px solid ${C.line}` }}>{children}</section>;
-}
-
-function GoogleLink({ course }) {
+function Section({ children, className = "" }) {
   return (
-    <a href={`https://www.google.com/search?q=${course.googleQuery}`} target="_blank" rel="noreferrer"
-      onClick={(e) => e.stopPropagation()}
-      className="text-xs font-semibold underline" style={{ color: C.blue }}>
-      View on Google ↗
-    </a>
+    <section className={`rounded-2xl p-5 md:p-7 cc-fade-up ${className}`}
+      style={{ background: T.card, border: `1px solid ${T.line}` }}>
+      {children}
+    </section>
   );
 }
 
 export default function CareerCompass() {
+  // ————— Language + profiles (device-local) —————
+  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en" });
+  const [storeLoaded, setStoreLoaded] = useState(false);
+  useEffect(() => { setStore(loadStore()); setStoreLoaded(true); }, []);
+  useEffect(() => { if (storeLoaded) saveStore(store); }, [store, storeLoaded]);
+  function updateStore(fn) {
+    setStore(fn);
+  }
+  const lang = store.lang || "en";
+  const t = useMemo(() => makeT(lang), [lang]);
+  const td = useMemo(() => makeTD(lang), [lang]);
+  const activeProfile = store.profiles.find((p) => p.id === store.activeId) || null;
+
+  // ————— App state —————
   const [stage, setStage] = useState("welcome");
-  const [survey] = useState(() => buildSurvey(POOLS, 10, 5));
+  const [survey, setSurvey] = useState(null);
   const [likertQs, setLikertQs] = useState([]);
   const [phase, setPhase] = useState("binary"); // binary → multi → likert
   const [qIndex, setQIndex] = useState(0);
   const [multiSel, setMultiSel] = useState([]);
   const [vector, setVector] = useState(emptyVector());
-  const [profile, setProfile] = useState({ interests: [], goal: "work", isee: "mid", awayFromHome: false, homeCityId: "", relocationCities: [], mathStrength: 3 });
+  const [qHistory, setQHistory] = useState([]); // snapshots for the survey back button
+  const [profile, setProfile] = useState({ interests: [], goals: ["work"], isee: "mid", awayFromHome: false, homeCityId: "", relocationCities: [], mathStrength: 3 });
   const [worldId, setWorldId] = useState(null);
   const [careerId, setCareerId] = useState(null);
   const [prefs, setPrefs] = useState({ pathType: "any", maxDistance: 100, budget: 900 });
-  const [saved, setSaved] = useState([]); // course ids, survives across worlds
+  const [saved, setSaved] = useState([]); // [{ courseId, careerId, careerName, worldName }] — contextual per path
   const [finalists, setFinalists] = useState([]);
   const [narrative, setNarrative] = useState("");
   const [prevStage, setPrevStage] = useState("worlds");
+  const [showProfiles, setShowProfiles] = useState(false);
+  const [newName, setNewName] = useState("");
+  const [savedToName, setSavedToName] = useState("");
+  const [lastResult, setLastResult] = useState(null);
 
   const totalQ = 10 + 5 + 5;
   const answered = phase === "binary" ? qIndex : phase === "multi" ? 10 + qIndex : 15 + qIndex;
   const homeCity = CITIES.find((c) => c.id === profile.homeCityId) || null;
 
+  // ————— Survey flow (with undo history) —————
+  function startSurvey() {
+    setSurvey(buildSurvey(POOLS, 10, 5));
+    setVector(emptyVector());
+    setPhase("binary");
+    setQIndex(0);
+    setMultiSel([]);
+    setLikertQs([]);
+    setQHistory([]);
+    setSavedToName("");
+    setLastResult(null);
+    setStage("express");
+  }
+
+  function goHome() { setStage("welcome"); }
+
+  function pushSnapshot() {
+    setQHistory((h) => [...h, { phase, qIndex, vector, multiSel, likertQs }]);
+  }
+
+  function goBackQuestion() {
+    if (!qHistory.length) { setStage("welcome"); return; }
+    const last = qHistory[qHistory.length - 1];
+    setQHistory((h) => h.slice(0, -1));
+    setPhase(last.phase);
+    setQIndex(last.qIndex);
+    setVector(last.vector);
+    setMultiSel(last.multiSel);
+    setLikertQs(last.likertQs);
+  }
+
   function finishExpress(v) {
     const tags = new Set();
-    for (const d of topDimensions(v, 2)) for (const t of DIM_TO_TAGS[d]) tags.add(t);
+    for (const d of topDimensions(v, 2)) for (const tg of DIM_TO_TAGS[d]) tags.add(tg);
     setProfile((p) => ({ ...p, interests: [...tags] }));
+    const result = { id: uid(), date: Date.now(), letters: identity(v).letters, vector: v, interests: [...tags], goals: profile.goals };
+    setLastResult(result);
+    if (activeProfile) {
+      updateStore((s) => ({
+        ...s,
+        profiles: s.profiles.map((p) => (p.id === s.activeId ? { ...p, history: [result, ...p.history] } : p)),
+      }));
+      setSavedToName(activeProfile.name);
+    } else {
+      setSavedToName("");
+    }
     setStage("reveal");
   }
 
   function answerBinary(weights) {
+    pushSnapshot();
     const v = applyAnswer(vector, weights);
     setVector(v);
     if (qIndex + 1 >= survey.binary.length) { setPhase("multi"); setQIndex(0); }
@@ -108,6 +208,7 @@ export default function CareerCompass() {
   }
 
   function submitMulti() {
+    pushSnapshot();
     const q = survey.multi[qIndex];
     const v = applyMulti(vector, multiSel.map((i) => q.options[i]));
     setVector(v);
@@ -120,6 +221,7 @@ export default function CareerCompass() {
   }
 
   function answerLikert(val) {
+    pushSnapshot();
     const q = likertQs[qIndex];
     const v = applyLikert(vector, q.dim, val);
     setVector(v);
@@ -127,8 +229,29 @@ export default function CareerCompass() {
     else setQIndex(qIndex + 1);
   }
 
+  // ————— Goals: multi-select with an exclusivity rule —————
+  // "work" and "study" pull opposite ways → picking one releases the other.
+  // "salary" combines with either. "unsure" stands alone.
+  function toggleGoal(g) {
+    setProfile((p) => {
+      const goals = new Set(p.goals);
+      if (g === "unsure") return { ...p, goals: ["unsure"] };
+      goals.delete("unsure");
+      if (goals.has(g)) goals.delete(g);
+      else {
+        goals.add(g);
+        if (g === "work") goals.delete("study");
+        if (g === "study") goals.delete("work");
+      }
+      if (!goals.size) goals.add("unsure");
+      return { ...p, goals: [...goals] };
+    });
+  }
+
+  // ————— Derived rankings —————
   const norm = useMemo(() => normalize(vector), [vector]);
   const ident = useMemo(() => identity(vector), [vector]);
+  const identTitle = t(`pair_${ident.letters}`) === `pair_${ident.letters}` ? t("pair_XX") : t(`pair_${ident.letters}`);
   const rankedWorlds = useMemo(() => rankWorlds(vector, WORLDS_DATA.worlds), [vector]);
   const world = rankedWorlds.find((w) => w.id === worldId);
   const rankedCareers = useMemo(() => (world ? rankCareers(vector, world) : []), [vector, world]);
@@ -148,20 +271,31 @@ export default function CareerCompass() {
       .sort((a, b) => b.envFit.score - a.envFit.score);
   }, [career, prefs, profile, homeCity]);
 
-  const savedCourses = saved.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
+  const savedEntries = saved
+    .map((s) => ({ ...s, course: COURSES.find((c) => c.id === s.courseId) }))
+    .filter((s) => s.course);
   const pair = finalists.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
 
   const compareDims = useMemo(() => {
     if (pair.length < 2) return [];
     return [
-      { key: "interest", label: "Interest match", data: pair.map((c) => fitInterests(c, profile.interests)) },
-      { key: "outcome", label: "Outcome fit", data: pair.map((c) => fitOutcome(c, profile.goal)) },
-      { key: "env", label: "Environment fit", data: pair.map((c) => { const f = fitEnvironment(c, envPrefs, !profile.awayFromHome ? homeCity : null); return { score: f.score, note: f.reasons[0] || "" }; }) },
+      { key: "interest", label: t("cmp_interest"), data: pair.map((c) => fitInterests(c, profile.interests)) },
+      { key: "outcome", label: t("cmp_outcome"), data: pair.map((c) => fitOutcome(c, profile.goals)) },
+      { key: "env", label: t("cmp_env"), data: pair.map((c) => { const f = fitEnvironment(c, envPrefs, !profile.awayFromHome ? homeCity : null); return { score: f.score, note: f.reasons[0] || "" }; }) },
     ].map((r) => ({ ...r, scores: r.data.map((d) => d.score) }));
-  }, [pair, profile, prefs, homeCity]);
+  }, [pair, profile, prefs, homeCity, t]);
 
-  function toggleSave(id) {
-    setSaved((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
+  // ————— Contextual saves: a course is saved on a specific career path —————
+  function isSavedOn(courseId, cId) {
+    return saved.some((s) => s.courseId === courseId && s.careerId === cId);
+  }
+  function toggleSave(course, ctx) {
+    const cId = ctx?.careerId ?? null;
+    setSaved((prev) =>
+      prev.some((s) => s.courseId === course.id && s.careerId === cId)
+        ? prev.filter((s) => !(s.courseId === course.id && s.careerId === cId))
+        : [...prev, { courseId: course.id, careerId: cId, careerName: ctx?.careerName || "", worldName: ctx?.worldName || "" }]
+    );
   }
 
   function toggleFinalist(id) {
@@ -175,208 +309,319 @@ export default function CareerCompass() {
 
   function cityCostBadge(cityName) {
     const c = CITIES.find((x) => x.name === cityName);
-    return c ? `€${c.costRange[0]}–${c.costRange[1]}/month to live` : "";
+    return c ? t("cost_badge", { a: c.costRange[0], b: c.costRange[1] }) : "";
   }
 
-  const gridPaper = {
-    background: `linear-gradient(${C.paper} 0, ${C.paper} 0), repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(34,68,187,0.07) 27px, rgba(34,68,187,0.07) 28px), repeating-linear-gradient(90deg, transparent, transparent 27px, rgba(34,68,187,0.07) 27px, rgba(34,68,187,0.07) 28px)`,
-    backgroundColor: C.paper,
+  // ————— Profile actions —————
+  function createProfile() {
+    const name = newName.trim();
+    if (!name) return;
+    const p = newProfile(name);
+    if (lastResult && !savedToName) {
+      p.history = [lastResult];
+      setSavedToName(name);
+    }
+    updateStore((s) => ({ ...s, profiles: [...s.profiles, p], activeId: p.id }));
+    setNewName("");
+  }
+  function switchProfile(id) { updateStore((s) => ({ ...s, activeId: id })); }
+  function deleteProfile(id) {
+    updateStore((s) => ({ ...s, profiles: s.profiles.filter((p) => p.id !== id), activeId: s.activeId === id ? null : s.activeId }));
+  }
+  function openResult(r) {
+    setVector(r.vector);
+    setProfile((p) => ({ ...p, interests: r.interests, goals: r.goals?.length ? r.goals : ["work"] }));
+    setLastResult(r);
+    setSavedToName(activeProfile?.name || "");
+    setShowProfiles(false);
+    setStage("reveal");
+  }
+
+  const natureBadge = (c, full = false) => {
+    const n = NATURE_STYLE[c.nature];
+    const text = t(n.key);
+    return (
+      <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: n.bg, color: n.fg }}>
+        {full ? text : text.split(" — ")[0]}
+      </span>
+    );
   };
 
-  const InstitutionCard = ({ c, showFit, chosen, onCardClick }) => (
-    <div onClick={onCardClick} className={`w-full text-left rounded-2xl p-4 transition-all ${onCardClick ? "cursor-pointer" : ""}`}
-      style={{ background: chosen ? C.blueSoft : "#fff", border: `1.5px solid ${chosen ? C.blue : C.line}`, boxShadow: chosen ? `3px 3px 0 ${C.blue}` : "none" }}>
+  const InstitutionCard = ({ c, showFit, chosen, onCardClick, saveCtx, badge }) => (
+    <div onClick={onCardClick} className={`cc-card w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
+      style={{ background: chosen ? "rgba(139,92,246,0.10)" : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
+      {badge && (
+        <div className="mb-2 text-xs px-2.5 py-1 rounded-full inline-block" style={{ background: T.violetSoft, color: "#A78BFA" }}>
+          {badge}
+        </div>
+      )}
       <div className="flex items-start justify-between gap-3">
         <div>
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? C.greenSoft : C.blueSoft, color: c.type === "ITS" ? C.green : C.blue, fontFamily: "'Space Mono', monospace" }}>
+            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? T.greenSoft : T.violetSoft, color: c.type === "ITS" ? T.green : "#A78BFA", ...mono }}>
               {c.type} · {c.years}y · {c.city}
             </span>
-            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: NATURE_LABEL[c.nature].bg, color: NATURE_LABEL[c.nature].fg }}>
-              {NATURE_LABEL[c.nature].text.split(" — ")[0]}
-            </span>
+            {natureBadge(c)}
           </div>
-          <div className="font-bold mt-2">{c.name}</div>
-          <div className="text-sm" style={{ color: C.grey }}>{c.inst}</div>
-          <div className="mt-1"><GoogleLink course={c} /></div>
+          <div className="font-bold mt-2" style={display}>{c.name}</div>
+          <div className="text-sm" style={{ color: T.grey }}>{c.inst}</div>
+          <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="inline-block mt-1 text-xs font-semibold underline" style={{ color: "#A78BFA" }}>
+            {t("card_google")}
+          </a>
         </div>
         <div className="text-right shrink-0">
           {showFit && c.envFit && (
             <>
-              <div className="text-sm font-bold" style={{ fontFamily: "'Space Mono', monospace", color: scoreColor(c.envFit.score) }}>{c.envFit.score}/100</div>
-              <div className="text-xs" style={{ color: C.grey }}>environment fit</div>
+              <div className="text-sm font-bold" style={{ ...mono, color: scoreColor(c.envFit.score) }}>{c.envFit.score}/100</div>
+              <div className="text-xs" style={{ color: T.grey }}>{t("card_env")}</div>
             </>
           )}
-          <button onClick={(e) => { e.stopPropagation(); toggleSave(c.id); }}
-            className="mt-2 px-3 py-1 rounded-full text-xs font-bold"
-            style={{ border: `1.5px solid ${saved.includes(c.id) ? C.green : C.line}`, background: saved.includes(c.id) ? C.greenSoft : "#fff", color: saved.includes(c.id) ? C.green : C.ink }}>
-            {saved.includes(c.id) ? "✓ Saved" : "☆ Save"}
+          <button onClick={(e) => { e.stopPropagation(); toggleSave(c, saveCtx); }}
+            className="mt-2 px-3 py-1 rounded-full text-xs font-bold transition-all"
+            style={{
+              border: `1.5px solid ${isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.green : T.lineStrong}`,
+              background: isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.greenSoft : "transparent",
+              color: isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.green : T.ink,
+            }}>
+            {isSavedOn(c.id, saveCtx?.careerId ?? null) ? t("card_saved") : t("card_save")}
           </button>
-          {chosen && <div className="mt-1 text-xs font-bold" style={{ color: C.blue }}>✓ finalist</div>}
+          {chosen && <div className="mt-1 text-xs font-bold" style={{ color: "#A78BFA" }}>{t("card_finalist")}</div>}
         </div>
       </div>
       {showFit && c.envFit && (
-        <div className="mt-2 text-xs space-y-0.5" style={{ color: C.grey }}>
+        <div className="mt-2 text-xs space-y-0.5" style={{ color: T.grey }}>
           {c.envFit.reasons.slice(0, 2).map((r, i) => <div key={i}>· {r}</div>)}
         </div>
       )}
     </div>
   );
 
-  return (
-    <div className="min-h-screen" style={{ ...gridPaper, color: C.ink, fontFamily: "'Archivo', system-ui, sans-serif" }}>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Space+Mono:wght@400;700&display=swap');`}</style>
+  const BackLink = ({ onClick, label }) => (
+    <button onClick={onClick} className="text-sm font-semibold transition-colors hover:opacity-80" style={{ color: "#A78BFA" }}>
+      ← {label ?? t("back")}
+    </button>
+  );
 
-      <header className="px-6 pt-8 pb-4 max-w-3xl mx-auto flex items-baseline justify-between flex-wrap gap-2">
-        <div className="flex items-baseline gap-3 flex-wrap">
-          <h1 className="text-3xl font-extrabold tracking-tight cursor-pointer" style={{ color: C.blue }} onClick={() => setStage("welcome")}>CareerCompass</h1>
-          <span className="text-xs" style={{ color: C.grey, fontFamily: "'Space Mono', monospace" }}>find your world · then your path</span>
-        </div>
-        {saved.length > 0 && stage !== "welcome" && stage !== "express" && (
-          <button onClick={() => { setPrevStage(stage); setStage("saved"); }} className="px-4 py-1.5 rounded-full text-sm font-bold"
-            style={{ background: C.greenSoft, color: C.green, border: `1.5px solid ${C.green}` }}>
-            ☆ Saved ({saved.length})
+  const savedForHeader = saved.length;
+
+  return (
+    <div className="min-h-screen" style={{ background: T.bg, color: T.ink }}>
+
+      {/* ————— Header ————— */}
+      <header className="sticky top-0 z-40" style={{ background: "rgba(7,7,14,0.82)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${T.line}` }}>
+        <div className="max-w-[1500px] mx-auto px-4 md:px-10 py-3 flex items-center justify-between gap-3 flex-wrap">
+          <button onClick={goHome} className="flex items-center gap-2.5 group">
+            <Logo />
+            <span className="text-xl md:text-2xl font-extrabold tracking-tight" style={{ ...display, background: T.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              CareerCompass
+            </span>
+            <span className="hidden md:inline text-xs ml-1" style={{ color: T.grey, ...mono }}>{t("tagline")}</span>
           </button>
-        )}
+
+          <nav className="flex items-center gap-2 md:gap-3 flex-wrap">
+            <button onClick={goHome} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:bg-white/5"
+              style={{ color: stage === "welcome" ? "#A78BFA" : T.ink }}>
+              {t("nav_home")}
+            </button>
+            <button onClick={startSurvey} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:bg-white/5" style={{ color: T.ink }}>
+              {t("nav_retake")}
+            </button>
+            {savedForHeader > 0 && (
+              <button onClick={() => { setPrevStage(stage === "saved" ? prevStage : stage); setStage("saved"); }}
+                className="px-3.5 py-1.5 rounded-full text-sm font-bold transition-all"
+                style={{ background: T.greenSoft, color: T.green, border: `1.5px solid ${T.green}` }}>
+                ☆ {t("nav_saved")} ({savedForHeader})
+              </button>
+            )}
+            <select value={lang} onChange={(e) => updateStore((s) => ({ ...s, lang: e.target.value }))}
+              aria-label="Language"
+              className="rounded-full px-2.5 py-1.5 text-sm font-semibold cursor-pointer"
+              style={{ background: T.card2, color: T.ink, border: `1.5px solid ${T.line}` }}>
+              {LANGS.map((l) => <option key={l.id} value={l.id}>{l.label}</option>)}
+            </select>
+            <button onClick={() => setShowProfiles(true)} aria-label={t("nav_profile")}
+              className="w-9 h-9 rounded-full font-bold text-sm flex items-center justify-center transition-transform hover:scale-105"
+              style={{ background: activeProfile ? activeProfile.color : T.card2, color: activeProfile ? "#07070E" : T.grey, border: `1.5px solid ${activeProfile ? "transparent" : T.lineStrong}` }}>
+              {activeProfile ? activeProfile.name[0].toUpperCase() : "?"}
+            </button>
+          </nav>
+        </div>
       </header>
 
-      <main className="px-6 pb-16 max-w-3xl mx-auto space-y-5">
+      <main className="max-w-[1500px] mx-auto px-4 md:px-10 pb-20 pt-6 space-y-5">
 
+        {/* ————— Welcome / hero ————— */}
         {stage === "welcome" && (
-          <Section>
-            <h2 className="text-2xl font-extrabold" style={{ color: C.blue }}>What are you going to become?</h2>
-            <p className="mt-3 text-sm leading-relaxed" style={{ color: C.grey }}>
-              Not a test you can fail. ~20 quick questions — go with your gut — and we'll show you worlds of
-              careers that fit how you actually are, including paths you've never heard of. Then compare the
-              real institutions that lead there. Different every time you take it.
-            </p>
-            <button onClick={() => setStage("express")} className="mt-5 px-6 py-3 rounded-full font-bold text-white" style={{ background: C.blue }}>
-              Start · ~4 minutes
-            </button>
-            <p className="mt-4 text-xs" style={{ color: C.grey }}>
-              Anonymous. Nothing is saved or sent anywhere — everything runs on your device. Guidance, not advice.
-            </p>
-          </Section>
-        )}
-
-        {stage === "express" && (
-          <Section>
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-xs" style={{ color: C.grey, fontFamily: "'Space Mono', monospace" }}>{answered + 1} / {totalQ}</span>
-              {phase === "multi" && qIndex === 0 && <span className="text-xs font-semibold" style={{ color: C.blue }}>New round — pick as many as you want</span>}
-              {phase === "likert" && qIndex === 0 && <span className="text-xs font-semibold" style={{ color: C.blue }}>Last 5 — how strongly is this you?</span>}
-            </div>
-            <Bar score={Math.round((answered / totalQ) * 100)} color={C.blue} />
-
-            {phase === "binary" && survey.binary[qIndex] && (
-              <>
-                <h2 className="mt-6 text-lg font-bold">Which would you rather?</h2>
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[survey.binary[qIndex].a, survey.binary[qIndex].b].map((opt, i) => (
-                    <button key={i} onClick={() => answerBinary(opt.w)}
-                      className="text-left rounded-2xl p-5 transition-all hover:-translate-y-0.5"
-                      style={{ background: "#fff", border: `1.5px solid ${C.line}`, boxShadow: `3px 3px 0 ${C.line}` }}>
-                      <span className="text-base leading-snug">{opt.text}</span>
-                    </button>
-                  ))}
-                </div>
-                <p className="mt-4 text-xs" style={{ color: C.grey }}>No wrong answers. Gut feeling wins.</p>
-              </>
-            )}
-
-            {phase === "multi" && survey.multi[qIndex] && (
-              <>
-                <h2 className="mt-6 text-lg font-bold">{survey.multi[qIndex].prompt}</h2>
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {survey.multi[qIndex].options.map((opt, i) => (
-                    <button key={i} onClick={() => setMultiSel((s) => (s.includes(i) ? s.filter((x) => x !== i) : [...s, i]))}
-                      className="text-left rounded-xl p-3 text-sm transition-all"
-                      style={{ background: multiSel.includes(i) ? C.blueSoft : "#fff", border: `1.5px solid ${multiSel.includes(i) ? C.blue : C.line}` }}>
-                      {multiSel.includes(i) ? "✓ " : ""}{opt.text}
-                    </button>
-                  ))}
-                </div>
-                <button onClick={submitMulti} className="mt-4 px-6 py-2.5 rounded-full font-bold text-white" style={{ background: multiSel.length ? C.blue : C.grey }}>
-                  {multiSel.length ? `Continue (${multiSel.length} picked)` : "None of these → skip"}
-                </button>
-              </>
-            )}
-
-            {phase === "likert" && likertQs[qIndex] && (
-              <>
-                <h2 className="mt-6 text-lg font-bold leading-snug">"{likertQs[qIndex].text}"</h2>
-                <div className="mt-4 flex flex-col gap-2">
-                  {LIKERT_SCALE.map((s) => (
-                    <button key={s.v} onClick={() => answerLikert(s.v)}
-                      className="text-left rounded-xl px-4 py-3 text-sm transition-all hover:-translate-y-0.5"
-                      style={{ background: "#fff", border: `1.5px solid ${C.line}` }}>
-                      {s.label}
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
-          </Section>
-        )}
-
-        {stage === "reveal" && (
-          <>
-            <Section>
-              <div className="text-xs uppercase tracking-widest" style={{ color: C.grey }}>You are</div>
-              <h2 className="text-3xl font-extrabold mt-1" style={{ color: C.blue }}>{ident.title}</h2>
-              <p className="mt-2 text-sm" style={{ color: C.grey }}>
-                {ident.primary.name} first ({ident.primary.desc.toLowerCase()}), {ident.secondary.name} second ({ident.secondary.desc.toLowerCase()}).
-                This is how your interests lean today — not a box.
+          <div className="relative overflow-hidden rounded-3xl cc-fade-up" style={{ border: `1px solid ${T.line}`, background: T.card }}>
+            <div className="cc-blob absolute -top-32 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(139,92,246,0.35), transparent 65%)", filter: "blur(40px)" }} />
+            <div className="cc-blob absolute -bottom-40 -right-24 w-[520px] h-[520px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(236,72,153,0.28), transparent 65%)", filter: "blur(40px)", animationDelay: "-7s" }} />
+            <div className="relative px-6 md:px-16 py-16 md:py-24">
+              <div className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: "#A78BFA", ...mono }}>{t("welcome_kicker")}</div>
+              <h2 className="text-4xl md:text-6xl font-black leading-tight max-w-3xl" style={display}>
+                <span style={{ background: T.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{t("welcome_title")}</span>
+              </h2>
+              <p className="mt-5 text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: T.grey }}>
+                {t("welcome_body")}
               </p>
-              <div className="mt-5 space-y-2">
+              <button onClick={startSurvey} className="cc-glow mt-8 px-8 py-4 rounded-full font-bold text-white text-lg transition-transform hover:scale-105" style={{ background: T.grad, ...display }}>
+                {t("welcome_start")}
+              </button>
+              <div className="mt-10 flex gap-8 md:gap-14 flex-wrap">
+                {[[WORLDS_DATA.worlds.length, t("stat_worlds")], [WORLDS_DATA.worlds.reduce((n, w) => n + w.careers.length, 0), t("stat_careers")], ["20", t("stat_fresh")]].map(([n, l], i) => (
+                  <div key={i}>
+                    <div className="text-3xl font-black" style={{ ...display, color: WORLD_HUES[i] }}>{n}</div>
+                    <div className="text-xs mt-0.5" style={{ color: T.grey }}>{l}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-10 text-xs max-w-xl" style={{ color: T.grey }}>{t("welcome_privacy")}</p>
+            </div>
+          </div>
+        )}
+
+        {/* ————— Survey ————— */}
+        {stage === "express" && survey && (
+          <div className="max-w-3xl mx-auto">
+            <Section>
+              <div className="flex items-center justify-between mb-2">
+                <BackLink onClick={goBackQuestion} />
+                <span className="text-xs" style={{ color: T.grey, ...mono }}>{answered + 1} / {totalQ}</span>
+              </div>
+              {phase === "multi" && qIndex === 0 && <div className="text-xs font-semibold mb-1" style={{ color: "#A78BFA" }}>{t("q_multi_round")}</div>}
+              {phase === "likert" && qIndex === 0 && <div className="text-xs font-semibold mb-1" style={{ color: "#A78BFA" }}>{t("q_likert_round")}</div>}
+              <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.08)" }}>
+                <div className="cc-progress h-2 rounded-full transition-all duration-500" style={{ width: `${Math.round((answered / totalQ) * 100)}%` }} />
+              </div>
+
+              <div key={`${phase}-${qIndex}`} className="cc-fade-up">
+                {phase === "binary" && survey.binary[qIndex] && (
+                  <>
+                    <h2 className="mt-6 text-xl font-bold" style={display}>{t("q_binary_title")}</h2>
+                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {[survey.binary[qIndex].a, survey.binary[qIndex].b].map((opt, i) => (
+                        <button key={i} onClick={() => answerBinary(opt.w)}
+                          className="cc-card text-left rounded-2xl p-5"
+                          style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+                          <span className="text-base leading-snug">{td(opt.text)}</span>
+                        </button>
+                      ))}
+                    </div>
+                    <p className="mt-4 text-xs" style={{ color: T.grey }}>{t("q_binary_hint")}</p>
+                  </>
+                )}
+
+                {phase === "multi" && survey.multi[qIndex] && (
+                  <>
+                    <h2 className="mt-6 text-xl font-bold" style={display}>{td(survey.multi[qIndex].prompt)}</h2>
+                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {survey.multi[qIndex].options.map((opt, i) => (
+                        <button key={i} onClick={() => setMultiSel((s) => (s.includes(i) ? s.filter((x) => x !== i) : [...s, i]))}
+                          className="text-left rounded-xl p-3.5 text-sm transition-all"
+                          style={{ background: multiSel.includes(i) ? "rgba(139,92,246,0.14)" : T.card2, border: `1.5px solid ${multiSel.includes(i) ? T.violet : T.line}` }}>
+                          {multiSel.includes(i) ? "✓ " : ""}{td(opt.text)}
+                        </button>
+                      ))}
+                    </div>
+                    <button onClick={submitMulti} className="mt-5 px-6 py-2.5 rounded-full font-bold text-white transition-transform hover:scale-105"
+                      style={{ background: multiSel.length ? T.grad : "rgba(255,255,255,0.12)" }}>
+                      {multiSel.length ? t("q_continue", { n: multiSel.length }) : t("q_skip")}
+                    </button>
+                  </>
+                )}
+
+                {phase === "likert" && likertQs[qIndex] && (
+                  <>
+                    <h2 className="mt-6 text-xl font-bold leading-snug" style={display}>"{td(likertQs[qIndex].text)}"</h2>
+                    <div className="mt-4 flex flex-col gap-2">
+                      {[["lik_m2", -2], ["lik_m1", -1], ["lik_0", 0], ["lik_p1", 1], ["lik_p2", 2]].map(([k, v]) => (
+                        <button key={k} onClick={() => answerLikert(v)}
+                          className="cc-card text-left rounded-xl px-4 py-3 text-sm"
+                          style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+                          {t(k)}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            </Section>
+          </div>
+        )}
+
+        {/* ————— Reveal ————— */}
+        {stage === "reveal" && (
+          <div className="max-w-4xl mx-auto space-y-5">
+            <BackLink onClick={goHome} label={t("nav_home")} />
+            <Section>
+              <div className="text-xs uppercase tracking-[0.25em]" style={{ color: T.grey, ...mono }}>{t("reveal_youare")}</div>
+              <h2 className="text-4xl md:text-5xl font-black mt-2" style={{ ...display, background: T.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                {identTitle}
+              </h2>
+              <p className="mt-3 text-sm md:text-base" style={{ color: T.grey }}>
+                {t("reveal_blurb", {
+                  a: t(`dim_${ident.letters[0]}`), ad: t(`dimd_${ident.letters[0]}`).toLowerCase(),
+                  b: t(`dim_${ident.letters[1]}`), bd: t(`dimd_${ident.letters[1]}`).toLowerCase(),
+                })}
+              </p>
+              {savedToName ? (
+                <p className="mt-3 text-xs font-semibold" style={{ color: T.green }}>{t("reveal_saved_to", { name: savedToName })}</p>
+              ) : lastResult ? (
+                <button onClick={() => setShowProfiles(true)} className="mt-3 text-xs font-bold underline" style={{ color: "#A78BFA" }}>
+                  {t("reveal_create_prompt")}
+                </button>
+              ) : null}
+              <div className="mt-6 space-y-2.5">
                 {DIMS.map((d) => (
                   <div key={d} className="flex items-center gap-3">
-                    <span className="w-24 text-xs font-semibold">{DIM_INFO[d].name}</span>
-                    <div className="flex-1"><Bar score={norm[d]} color={C.blue} /></div>
-                    <span className="w-8 text-xs text-right" style={{ fontFamily: "'Space Mono', monospace", color: C.grey }}>{norm[d]}</span>
+                    <span className="w-28 text-xs font-semibold">{t(`dim_${d}`)}</span>
+                    <div className="flex-1"><Bar score={norm[d]} color={T.violet} /></div>
+                    <span className="w-8 text-xs text-right" style={{ ...mono, color: T.grey }}>{norm[d]}</span>
                   </div>
                 ))}
               </div>
             </Section>
 
             <Section>
-              <h3 className="font-bold">Did we get you right?</h3>
-              <p className="text-xs mt-1 mb-3" style={{ color: C.grey }}>Inferred from your answers — fix anything. You're in charge, not the algorithm.</p>
+              <h3 className="font-bold text-lg" style={display}>{t("check_title")}</h3>
+              <p className="text-xs mt-1 mb-3" style={{ color: T.grey }}>{t("check_sub")}</p>
               <div className="flex flex-wrap gap-2">
-                {INTEREST_TAGS.map((t) => (
-                  <Chip key={t} active={profile.interests.includes(t)}
-                    onClick={() => setProfile((p) => ({ ...p, interests: p.interests.includes(t) ? p.interests.filter((x) => x !== t) : [...p.interests, t] }))}>
-                    {t}
+                {INTEREST_TAGS.map((tag) => (
+                  <Chip key={tag} active={profile.interests.includes(tag)}
+                    onClick={() => setProfile((p) => ({ ...p, interests: p.interests.includes(tag) ? p.interests.filter((x) => x !== tag) : [...p.interests, tag] }))}>
+                    {td(tag)}
                   </Chip>
                 ))}
               </div>
 
-              <div className="mt-5">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>After the diploma I want to…</div>
+              <div className="mt-6">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("goal_title")}</div>
                 <div className="flex flex-wrap gap-2">
-                  {[["work", "Work soon"], ["salary", "Max salary"], ["study", "Master's & beyond"], ["unsure", "I don't know yet"]].map(([v, l]) => (
-                    <Chip key={v} active={profile.goal === v} onClick={() => setProfile((p) => ({ ...p, goal: v }))}>{l}</Chip>
+                  {[["work", t("goal_work")], ["salary", t("goal_salary")], ["study", t("goal_study")], ["unsure", t("goal_unsure")]].map(([v, l]) => (
+                    <Chip key={v} active={profile.goals.includes(v)} onClick={() => toggleGoal(v)}>{l}</Chip>
                   ))}
                 </div>
-                {profile.goal === "unsure" && (
-                  <p className="text-xs mt-2" style={{ color: C.green }}>Totally fine — we'll show you a balanced view and keep every door open.</p>
+                <p className="text-xs mt-2" style={{ color: T.grey }}>{t("goal_rules")}</p>
+                {profile.goals.includes("unsure") && (
+                  <p className="text-xs mt-1.5" style={{ color: T.green }}>{t("goal_unsure_note")}</p>
                 )}
               </div>
 
-              <div className="mt-5">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>During my studies I'd be…</div>
+              <div className="mt-6">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("living_title")}</div>
                 <div className="flex gap-2 flex-wrap">
-                  <Chip active={!profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: false }))}>Living at home</Chip>
-                  <Chip active={profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: true }))}>Moving away from home</Chip>
+                  <Chip active={!profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: false }))}>{t("living_home")}</Chip>
+                  <Chip active={profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: true }))}>{t("living_away")}</Chip>
                 </div>
               </div>
 
               {!profile.awayFromHome && (
                 <div className="mt-4">
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>My city — we'll sort paths by distance from you</div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("city_label")}</div>
                   <select value={profile.homeCityId} onChange={(e) => setProfile((p) => ({ ...p, homeCityId: e.target.value }))}
-                    className="w-full rounded-xl px-3 py-2 text-sm" style={{ border: `1.5px solid ${C.line}`, background: "#fff" }}>
-                    <option value="">Choose your city…</option>
+                    className="w-full rounded-xl px-3 py-2.5 text-sm" style={{ border: `1.5px solid ${T.line}`, background: T.card2, color: T.ink }}>
+                    <option value="">{t("city_choose")}</option>
                     {CITIES.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
                   </select>
                 </div>
@@ -384,101 +629,111 @@ export default function CareerCompass() {
 
               {profile.awayFromHome && (
                 <div className="mt-4">
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Cities I'd be happy to live in (pick any) — with real living costs</div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("reloc_label")}</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                     {CITIES.map((c) => {
                       const on = profile.relocationCities.includes(c.id);
                       return (
                         <button key={c.id} onClick={() => setProfile((p) => ({ ...p, relocationCities: on ? p.relocationCities.filter((x) => x !== c.id) : [...p.relocationCities, c.id] }))}
                           className="text-left rounded-xl p-3 transition-all"
-                          style={{ background: on ? C.blueSoft : "#fff", border: `1.5px solid ${on ? C.blue : C.line}` }}>
+                          style={{ background: on ? "rgba(139,92,246,0.14)" : T.card2, border: `1.5px solid ${on ? T.violet : T.line}` }}>
                           <div className="flex justify-between items-baseline">
                             <span className="font-semibold text-sm">{on ? "✓ " : ""}{c.name}</span>
-                            <span className="text-xs" style={{ fontFamily: "'Space Mono', monospace", color: C.grey }}>€{c.costRange[0]}–{c.costRange[1]}/mo</span>
+                            <span className="text-xs" style={{ ...mono, color: T.grey }}>€{c.costRange[0]}–{c.costRange[1]}/mo</span>
                           </div>
-                          <div className="text-xs mt-0.5" style={{ color: C.grey }}>{c.vibe}</div>
+                          <div className="text-xs mt-0.5" style={{ color: T.grey }}>{c.vibe}</div>
                         </button>
                       );
                     })}
                   </div>
-                  <p className="text-xs mt-2" style={{ color: C.grey }}>Living cost is a range — a hostel room and a private flat are different lives. Fees are separate and fixed by your ISEE.</p>
+                  <p className="text-xs mt-2" style={{ color: T.grey }}>{t("reloc_note")}</p>
                 </div>
               )}
 
-              <button onClick={() => setStage("worlds")} className="mt-5 px-6 py-3 rounded-full font-bold text-white" style={{ background: C.ink }}>
-                Show me my worlds →
+              <button onClick={() => setStage("worlds")} className="cc-glow mt-6 px-7 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad, ...display }}>
+                {t("cta_worlds")}
               </button>
             </Section>
-          </>
+          </div>
         )}
 
+        {/* ————— Worlds ————— */}
         {stage === "worlds" && (
           <>
-            <h2 className="font-bold text-lg">Worlds that fit {ident.title.toLowerCase().replace("the ", "a ")}</h2>
-            <p className="text-sm -mt-3" style={{ color: C.grey }}>Ranked for you. Open the ones that spark something — especially the unexpected ones.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {rankedWorlds.map((w, i) => (
-                <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); setStage("career"); }}
-                  className="text-left rounded-2xl p-4 transition-all hover:-translate-y-0.5"
-                  style={{ background: i < 2 ? C.blueSoft : "#fff", border: `1.5px solid ${i < 2 ? C.blue : C.line}` }}>
-                  <div className="flex items-center justify-between">
-                    <span className="font-extrabold" style={{ color: C.blue }}>{w.name}</span>
-                    <span className="text-xs font-bold" style={{ fontFamily: "'Space Mono', monospace", color: scoreColor(w.fit) }}>{w.fit}% you</span>
-                  </div>
-                  <div className="text-xs mt-1" style={{ color: C.grey }}>{w.tagline}</div>
-                </button>
-              ))}
+            <BackLink onClick={() => setStage("reveal")} />
+            <h2 className="font-black text-2xl md:text-4xl cc-fade-up" style={display}>
+              {t("worlds_title", { t: identTitle })}
+            </h2>
+            <p className="text-sm -mt-2 cc-fade-up" style={{ color: T.grey }}>{t("worlds_sub")}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {rankedWorlds.map((w, i) => {
+                const hue = WORLD_HUES[WORLDS_DATA.worlds.findIndex((x) => x.id === w.id) % WORLD_HUES.length];
+                return (
+                  <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); setStage("career"); }}
+                    className="cc-card cc-fade-up relative overflow-hidden text-left rounded-2xl p-5 min-h-[150px]"
+                    style={{ background: T.card, border: `1.5px solid ${i < 2 ? hue : T.line}`, animationDelay: `${i * 70}ms` }}>
+                    <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full pointer-events-none" style={{ background: `radial-gradient(circle, ${hue}33, transparent 70%)` }} />
+                    <div className="flex items-center justify-between relative">
+                      <span className="font-extrabold text-lg" style={{ ...display, color: hue }}>{td(w.name)}</span>
+                      <span className="text-xs font-bold shrink-0" style={{ ...mono, color: scoreColor(w.fit) }}>{t("fit_you", { n: w.fit })}</span>
+                    </div>
+                    <div className="text-xs mt-2 relative" style={{ color: T.grey }}>{td(w.tagline)}</div>
+                  </button>
+                );
+              })}
             </div>
           </>
         )}
 
+        {/* ————— Careers in a world ————— */}
         {stage === "career" && world && (
           <>
-            <button onClick={() => setStage("worlds")} className="text-sm font-semibold" style={{ color: C.blue }}>← All worlds</button>
-            <h2 className="font-bold text-xl" style={{ color: C.blue }}>{world.name}</h2>
-            <p className="text-sm -mt-3" style={{ color: C.grey }}>{world.tagline}</p>
-            <div className="space-y-3">
-              {rankedCareers.map((c) => (
-                <Section key={c.id}>
+            <BackLink onClick={() => setStage("worlds")} label={t("career_all")} />
+            <h2 className="font-black text-2xl md:text-3xl" style={{ ...display, color: "#A78BFA" }}>{td(world.name)}</h2>
+            <p className="text-sm -mt-2" style={{ color: T.grey }}>{td(world.tagline)}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {rankedCareers.map((c, i) => (
+                <div key={c.id} className="cc-card cc-fade-up rounded-2xl p-5" style={{ background: T.card, border: `1px solid ${T.line}`, animationDelay: `${i * 60}ms` }}>
                   <div className="flex items-start justify-between gap-3 flex-wrap">
                     <div>
-                      <div className="font-bold">{c.name}</div>
-                      <div className="text-sm mt-1" style={{ color: C.grey }}>{c.day}</div>
-                      <div className="text-xs mt-2" style={{ fontFamily: "'Space Mono', monospace", color: C.grey }}>
-                        {c.netMonthly ? `~€${c.netMonthly.toLocaleString()}/month net after taxes (entry)` : "variable income"} · demand: {c.demand} · via {c.pathTypes.join(" / ")}
+                      <div className="font-bold text-lg" style={display}>{c.name}</div>
+                      <div className="text-sm mt-1" style={{ color: T.grey }}>{c.day}</div>
+                      <div className="text-xs mt-2" style={{ ...mono, color: T.grey }}>
+                        {c.netMonthly ? t("career_net", { n: c.netMonthly.toLocaleString() }) : t("career_var")} · {t("career_demand")}: {c.demand} · {t("career_via")} {c.pathTypes.join(" / ")}
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-2">
-                      <span className="text-xs font-bold" style={{ fontFamily: "'Space Mono', monospace", color: scoreColor(c.fit) }}>{c.fit}% you</span>
+                      <span className="text-xs font-bold" style={{ ...mono, color: scoreColor(c.fit) }}>{t("fit_you", { n: c.fit })}</span>
                       <button onClick={() => { setCareerId(c.id); setFinalists([]); setStage("filter"); }}
-                        className="px-4 py-2 rounded-full text-sm font-bold text-white" style={{ background: C.ink }}>
-                        Explore paths →
+                        className="px-4 py-2 rounded-full text-sm font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad }}>
+                        {t("career_explore")}
                       </button>
                     </div>
                   </div>
-                </Section>
+                </div>
               ))}
             </div>
           </>
         )}
 
+        {/* ————— Institutions / filters ————— */}
         {stage === "filter" && career && (
           <>
-            <button onClick={() => setStage("career")} className="text-sm font-semibold" style={{ color: C.blue }}>← {world.name}</button>
-            <h2 className="font-bold text-xl">Paths to {career.name}</h2>
+            <BackLink onClick={() => setStage("career")} label={td(world.name)} />
+            <h2 className="font-black text-2xl md:text-3xl" style={display}>{t("paths_to", { c: career.name })}</h2>
             <Section>
-              <h3 className="font-bold text-sm mb-3">Tune your environment</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <h3 className="font-bold text-sm mb-3">{t("tune_title")}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                 <div>
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Path type</div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("pathtype")}</div>
                   <div className="flex gap-2 flex-wrap">
-                    {[["any", "Any"], ["University", "University"], ["ITS", "ITS (2y, practical)"]].map(([v, l]) => (
+                    {[["any", t("pt_any")], ["University", t("pt_uni")], ["ITS", t("pt_its")]].map(([v, l]) => (
                       <Chip key={v} active={prefs.pathType === v} onClick={() => setPrefs((p) => ({ ...p, pathType: v }))}>{l}</Chip>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>ISEE band — your fees are fixed by this</div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("isee_label")}</div>
                   <div className="flex gap-2">
                     {[["low", "< €15k"], ["mid", "€15–35k"], ["high", "> €35k"]].map(([v, l]) => (
                       <Chip key={v} active={profile.isee === v} onClick={() => setProfile((p) => ({ ...p, isee: v }))}>{l}</Chip>
@@ -487,92 +742,97 @@ export default function CareerCompass() {
                 </div>
                 {profile.awayFromHome && (
                   <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Monthly living budget · €{prefs.budget.toLocaleString()}/month</div>
-                    <input type="range" min="400" max="2000" step="50" value={prefs.budget} onChange={(e) => setPrefs((p) => ({ ...p, budget: +e.target.value }))} className="w-full" style={{ accentColor: C.blue }} />
+                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("budget_label", { n: prefs.budget.toLocaleString() })}</div>
+                    <input type="range" min="400" max="2000" step="50" value={prefs.budget} onChange={(e) => setPrefs((p) => ({ ...p, budget: +e.target.value }))} className="w-full" />
                   </div>
                 )}
                 {!profile.awayFromHome && homeCity && (
                   <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Max commuting distance from {homeCity.name} · {prefs.maxDistance} km</div>
-                    <input type="range" min="10" max="300" step="10" value={prefs.maxDistance} onChange={(e) => setPrefs((p) => ({ ...p, maxDistance: +e.target.value }))} className="w-full" style={{ accentColor: C.blue }} />
+                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("dist_label", { city: homeCity.name, n: prefs.maxDistance })}</div>
+                    <input type="range" min="10" max="300" step="10" value={prefs.maxDistance} onChange={(e) => setPrefs((p) => ({ ...p, maxDistance: +e.target.value }))} className="w-full" />
                   </div>
                 )}
               </div>
               {profile.awayFromHome && profile.relocationCities.length > 0 && (
-                <p className="text-xs mt-3" style={{ color: C.grey }}>
-                  Showing only your chosen cities: {profile.relocationCities.map((id) => CITIES.find((c) => c.id === id)?.name).join(", ")} — change them in your profile (tap the identity screen).
+                <p className="text-xs mt-3" style={{ color: T.grey }}>
+                  {t("cities_note", { list: profile.relocationCities.map((id) => CITIES.find((c) => c.id === id)?.name).join(", ") })}
                 </p>
               )}
             </Section>
 
             {institutions.length === 0 && (
-              <Section>
-                <p className="text-sm" style={{ color: C.grey }}>
-                  No institutions match these filters for this career in the current dataset — we're expanding region by region.
-                  Try relaxing a filter or adding a city.
-                </p>
-              </Section>
+              <Section><p className="text-sm" style={{ color: T.grey }}>{t("no_match")}</p></Section>
             )}
 
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {institutions.map((c) => (
-                <InstitutionCard key={c.id} c={c} showFit chosen={finalists.includes(c.id)} onCardClick={() => toggleFinalist(c.id)} />
+                <InstitutionCard key={c.id} c={c} showFit chosen={finalists.includes(c.id)} onCardClick={() => toggleFinalist(c.id)}
+                  saveCtx={{ careerId: career.id, careerName: career.name, worldName: td(world.name) }} />
               ))}
             </div>
 
             {finalists.length === 2 && (
-              <button onClick={() => { setPrevStage("filter"); setStage("compare"); }} className="w-full px-6 py-3 rounded-full font-bold text-white" style={{ background: C.blue }}>
-                Compare my 2 finalists →
+              <button onClick={() => { setPrevStage("filter"); setStage("compare"); }} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
+                {t("compare_cta")}
               </button>
             )}
             {institutions.length > 0 && finalists.length < 2 && (
-              <p className="text-xs text-center" style={{ color: C.grey }}>Tap cards to pick 2 finalists · ☆ Save keeps them for cross-world comparison later.</p>
+              <p className="text-xs text-center" style={{ color: T.grey }}>{t("pick_hint")}</p>
             )}
           </>
         )}
 
+        {/* ————— Saved (contextual per career path) ————— */}
         {stage === "saved" && (
           <>
-            <button onClick={() => setStage(prevStage)} className="text-sm font-semibold" style={{ color: C.blue }}>← Back</button>
-            <h2 className="font-bold text-xl">Your saved paths ({savedCourses.length})</h2>
-            <p className="text-sm -mt-3" style={{ color: C.grey }}>Saved across all worlds — tap any two to compare them, even from different careers.</p>
-            <div className="space-y-3">
-              {savedCourses.map((c) => (
-                <InstitutionCard key={c.id} c={c} chosen={finalists.includes(c.id)} onCardClick={() => toggleFinalist(c.id)} />
+            <BackLink onClick={() => setStage(prevStage)} />
+            <h2 className="font-black text-2xl md:text-3xl" style={display}>{t("saved_title", { n: savedEntries.length })}</h2>
+            <p className="text-sm -mt-2" style={{ color: T.grey }}>{t("saved_sub")}</p>
+            {savedEntries.length === 0 && <Section><p className="text-sm" style={{ color: T.grey }}>{t("saved_empty")}</p></Section>}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {savedEntries.map((s) => (
+                <InstitutionCard key={`${s.courseId}::${s.careerId}`} c={s.course} chosen={finalists.includes(s.courseId)}
+                  onCardClick={() => toggleFinalist(s.courseId)}
+                  saveCtx={{ careerId: s.careerId, careerName: s.careerName, worldName: s.worldName }}
+                  badge={s.careerName ? `${t("saved_from")}: ${s.worldName} → ${s.careerName}` : null} />
               ))}
             </div>
             {finalists.length === 2 && (
-              <button onClick={() => { setPrevStage("saved"); setStage("compare"); }} className="w-full px-6 py-3 rounded-full font-bold text-white" style={{ background: C.blue }}>
-                Compare these 2 →
+              <button onClick={() => { setPrevStage("saved"); setStage("compare"); }} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
+                {t("saved_compare")}
               </button>
             )}
           </>
         )}
 
+        {/* ————— Compare ————— */}
         {stage === "compare" && pair.length === 2 && (
           <>
-            <button onClick={() => setStage(prevStage)} className="text-sm font-semibold" style={{ color: C.blue }}>← Back</button>
+            <BackLink onClick={() => setStage(prevStage)} />
             <Section>
-              <h2 className="font-bold text-lg mb-1">Your finalists, your lens</h2>
-              <p className="text-xs mb-4" style={{ color: C.grey }}>Same data, scored for you. No winner declared — the trade-offs are yours.</p>
+              <h2 className="font-black text-2xl mb-1" style={display}>{t("cmp_title")}</h2>
+              <p className="text-xs mb-5" style={{ color: T.grey }}>{t("cmp_sub")}</p>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {pair.map((c) => (
-                  <div key={c.id} className="rounded-xl p-3" style={{ background: C.paper }}>
-                    <div className="font-extrabold text-sm" style={{ color: C.blue }}>{c.name}</div>
-                    <div className="text-xs" style={{ color: C.grey }}>{c.inst} · {c.city}</div>
-                    <div className="mt-1"><GoogleLink course={c} /></div>
+                  <div key={c.id} className="rounded-xl p-3 md:p-4" style={{ background: T.card2 }}>
+                    <div className="font-extrabold text-sm md:text-base" style={{ ...display, color: "#A78BFA" }}>{c.name}</div>
+                    <div className="text-xs" style={{ color: T.grey }}>{c.inst} · {c.city}</div>
+                    <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
+                      className="inline-block mt-1 text-xs font-semibold underline" style={{ color: "#A78BFA" }}>
+                      {t("card_google")}
+                    </a>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-4">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>What you'll actually study</div>
-                <div className="grid grid-cols-2 gap-3">
+              <div className="mt-5">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_study")}</div>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs" style={{ border: `1.5px solid ${C.line}` }}>
-                      <div className="mb-2 px-2 py-1 rounded-lg inline-block font-semibold" style={{ background: NATURE_LABEL[c.nature].bg, color: NATURE_LABEL[c.nature].fg }}>
-                        {NATURE_LABEL[c.nature].text}
+                    <div key={c.id} className="rounded-xl p-3 text-xs" style={{ border: `1px solid ${T.line}` }}>
+                      <div className="mb-2 px-2 py-1 rounded-lg inline-block font-semibold" style={{ background: NATURE_STYLE[c.nature].bg, color: NATURE_STYLE[c.nature].fg }}>
+                        {t(NATURE_STYLE[c.nature].key)}
                       </div>
                       {c.curriculum.map((s, i) => (
                         <div key={i} style={{ fontWeight: /matemat|analisi/i.test(s) ? 700 : 400 }}>· {s}</div>
@@ -580,16 +840,16 @@ export default function CareerCompass() {
                     </div>
                   ))}
                 </div>
-                <p className="text-xs mt-2" style={{ color: C.grey }}>Maths subjects in bold — if that's a dealbreaker, better to know now than in October.</p>
+                <p className="text-xs mt-2" style={{ color: T.grey }}>{t("cmp_study_note")}</p>
               </div>
 
               {compareDims.map((row) => (
-                <div key={row.key} className="mt-4">
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>{row.label}</div>
-                  <div className="grid grid-cols-2 gap-3">
+                <div key={row.key} className="mt-5">
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{row.label}</div>
+                  <div className="grid grid-cols-2 gap-3 md:gap-4">
                     {row.data.map((d, i) => (
                       <div key={i} className="rounded-xl p-3" style={{ background: scoreSoft(d.score) }}>
-                        <div className="text-sm font-bold mb-1" style={{ fontFamily: "'Space Mono', monospace", color: scoreColor(d.score) }}>{d.score}/100</div>
+                        <div className="text-sm font-bold mb-1" style={{ ...mono, color: scoreColor(d.score) }}>{d.score}/100</div>
                         <Bar score={d.score} />
                         <div className="mt-1.5 text-xs">{d.note}</div>
                       </div>
@@ -598,52 +858,52 @@ export default function CareerCompass() {
                 </div>
               ))}
 
-              <div className="mt-4">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Reality check (graduate surveys)</div>
-                <div className="grid grid-cols-2 gap-3">
+              <div className="mt-5">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_reality")}</div>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1.5px solid ${C.line}` }}>
-                      <div><b>{c.env.wouldChooseAgain}%</b> would choose it again</div>
-                      <div><b>{c.env.teachSat}%</b> satisfied with professors</div>
-                      <div><b>{c.env.dropout}%</b> off-schedule / dropout</div>
-                      <div style={{ color: C.grey }}>{c.env.cityVibe}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Money, honestly</div>
-                <div className="grid grid-cols-2 gap-3">
-                  {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1.5px solid ${C.line}`, fontFamily: "'Space Mono', monospace" }}>
-                      <div>Fees (your ISEE): €{c.costByIsee[profile.isee].toLocaleString()}/y</div>
-                      {profile.awayFromHome && <div>Living in {c.city}: {cityCostBadge(c.city) || `~€${c.cityRent}/mo rent`}</div>}
-                      {!profile.awayFromHome && homeCity && <div>{haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon)} km from {homeCity.name}</div>}
-                      <div>After: ~€{c.netMonthly.toLocaleString()}/mo net entry</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: C.grey }}>Your preparation plan</div>
-                <div className="grid grid-cols-2 gap-3">
-                  {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ background: C.amberSoft }}>
-                      {prepList(c, profile).map((item, i) => <div key={i}>→ {item}</div>)}
+                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1px solid ${T.line}` }}>
+                      <div><b>{c.env.wouldChooseAgain}%</b> {t("cmp_again")}</div>
+                      <div><b>{c.env.teachSat}%</b> {t("cmp_teach")}</div>
+                      <div><b>{c.env.dropout}%</b> {t("cmp_drop")}</div>
+                      <div style={{ color: T.grey }}>{c.env.cityVibe}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="mt-5">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_money")}</div>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  {pair.map((c) => (
+                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1px solid ${T.line}`, ...mono }}>
+                      <div>{t("cmp_fees", { n: c.costByIsee[profile.isee].toLocaleString() })}</div>
+                      {profile.awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
+                      {!profile.awayFromHome && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
+                      <div>{t("cmp_after", { n: c.netMonthly.toLocaleString() })}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_prep")}</div>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  {pair.map((c) => (
+                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ background: T.amberSoft }}>
+                      {prepList(c, profile).map((item, i) => <div key={i}>→ {item}</div>)}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-6">
                 <button onClick={() => setNarrative(generateNarrative(pair, compareDims, profile))}
-                  className="px-5 py-2.5 rounded-full font-semibold text-sm text-white" style={{ background: C.ink }}>
-                  Explain the differences for me
+                  className="px-5 py-2.5 rounded-full font-semibold text-sm text-white transition-transform hover:scale-105" style={{ background: T.grad }}>
+                  {t("cmp_explain")}
                 </button>
                 {narrative && (
-                  <div className="mt-3 rounded-xl p-4 text-sm whitespace-pre-wrap leading-relaxed" style={{ background: "#fff", border: `1.5px dashed ${C.blue}` }}>
+                  <div className="cc-fade-up mt-3 rounded-xl p-4 text-sm whitespace-pre-wrap leading-relaxed" style={{ background: T.card2, border: `1.5px dashed ${T.violet}` }}>
                     {narrative}
                   </div>
                 )}
@@ -652,11 +912,80 @@ export default function CareerCompass() {
           </>
         )}
 
-        <footer className="text-xs pt-2" style={{ color: C.grey }}>
-          Prototype · figures modelled on public AlmaLaurea / MUR / Ustat data · net salaries are indicative estimates ·
-          anonymous, nothing stored · guidance, not advice.
-        </footer>
+        <footer className="text-xs pt-4" style={{ color: T.grey }}>{t("footer")}</footer>
       </main>
+
+      {/* ————— Profile manager ————— */}
+      {showProfiles && (
+        <div className="cc-fade-in fixed inset-0 z-50 flex items-start md:items-center justify-center p-4 overflow-y-auto"
+          style={{ background: "rgba(0,0,0,0.72)", backdropFilter: "blur(6px)" }}
+          onClick={() => setShowProfiles(false)}>
+          <div className="cc-fade-up w-full max-w-lg rounded-2xl p-6 my-8" style={{ background: T.card, border: `1px solid ${T.lineStrong}` }}
+            onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <h3 className="font-black text-xl" style={display}>{t("pf_title")}</h3>
+              <button onClick={() => setShowProfiles(false)} className="w-8 h-8 rounded-full hover:bg-white/10 transition-colors" aria-label="Close">✕</button>
+            </div>
+            <p className="text-xs mt-1.5" style={{ color: T.grey }}>{t("pf_note")}</p>
+
+            <div className="mt-4 flex gap-2">
+              <input value={newName} onChange={(e) => setNewName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && createProfile()}
+                placeholder={t("pf_new_ph")}
+                className="flex-1 rounded-xl px-3 py-2.5 text-sm outline-none focus:border-violet-500"
+                style={{ background: T.card2, border: `1.5px solid ${T.line}`, color: T.ink }} />
+              <button onClick={createProfile} className="px-4 py-2 rounded-xl text-sm font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad }}>
+                {t("pf_add")}
+              </button>
+            </div>
+
+            {store.profiles.length === 0 && <p className="text-xs mt-4" style={{ color: T.grey }}>{t("pf_none_active")}</p>}
+
+            <div className="mt-4 space-y-2">
+              {store.profiles.map((p) => (
+                <div key={p.id} className="rounded-xl p-3" style={{ background: T.card2, border: `1.5px solid ${p.id === store.activeId ? T.violet : T.line}` }}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0" style={{ background: p.color, color: "#07070E" }}>
+                      {p.name[0].toUpperCase()}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-sm truncate">{p.name}</div>
+                      {p.id === store.activeId && <div className="text-xs" style={{ color: "#A78BFA" }}>{t("pf_active")}</div>}
+                    </div>
+                    {p.id !== store.activeId && (
+                      <button onClick={() => switchProfile(p.id)} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.violet}`, color: "#A78BFA" }}>
+                        {t("pf_use")}
+                      </button>
+                    )}
+                    <button onClick={() => deleteProfile(p.id)} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.line}`, color: T.grey }}>
+                      {t("pf_del")}
+                    </button>
+                  </div>
+
+                  {p.id === store.activeId && (
+                    <div className="mt-3 pl-12">
+                      <div className="text-xs uppercase tracking-widest mb-1.5" style={{ color: T.grey }}>{t("pf_history")}</div>
+                      {p.history.length === 0 && <p className="text-xs" style={{ color: T.grey }}>{t("pf_empty")}</p>}
+                      <div className="space-y-1.5">
+                        {p.history.map((r) => (
+                          <div key={r.id} className="flex items-center justify-between gap-2 text-xs rounded-lg px-2.5 py-2" style={{ background: "rgba(255,255,255,0.04)" }}>
+                            <div className="min-w-0">
+                              <span className="font-bold">{t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`)}</span>
+                              <span className="ml-2" style={{ color: T.grey, ...mono }}>
+                                {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                              </span>
+                            </div>
+                            <button onClick={() => openResult(r)} className="font-bold shrink-0" style={{ color: "#A78BFA" }}>{t("pf_open")}</button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
