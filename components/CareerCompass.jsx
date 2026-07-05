@@ -11,25 +11,38 @@ import { fitInterests, fitOutcome, fitEnvironment, passesHardFilters, prepList, 
 import { LANGS, makeT, makeTD } from "../lib/i18n";
 import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
 
-// ————— Dark cinematic theme —————
-const T = {
-  bg: "#07070E",
-  card: "#12121D",
-  card2: "#181826",
-  line: "rgba(255,255,255,0.09)",
-  lineStrong: "rgba(255,255,255,0.18)",
-  ink: "#F2F3F8",
-  grey: "#9CA3B8",
-  violet: "#8B5CF6",
-  violetSoft: "rgba(139,92,246,0.16)",
-  pink: "#EC4899",
-  green: "#34D399",
-  greenSoft: "rgba(52,211,153,0.14)",
-  amber: "#FBBF24",
-  amberSoft: "rgba(251,191,36,0.13)",
-  red: "#F87171",
-  redSoft: "rgba(248,113,113,0.13)",
-  grad: "linear-gradient(135deg,#8B5CF6,#EC4899)",
+// ————— Theme palettes: dark (cinematic) and light —————
+const PALETTES = {
+  dark: {
+    bg: "#07070E", card: "#12121D", card2: "#181826",
+    line: "rgba(255,255,255,0.09)", lineStrong: "rgba(255,255,255,0.18)",
+    ink: "#F2F3F8", grey: "#9CA3B8",
+    violet: "#8B5CF6", violetSoft: "rgba(139,92,246,0.16)", accent: "#A78BFA",
+    pink: "#EC4899",
+    green: "#34D399", greenSoft: "rgba(52,211,153,0.14)",
+    amber: "#FBBF24", amberSoft: "rgba(251,191,36,0.13)",
+    red: "#F87171", redSoft: "rgba(248,113,113,0.13)",
+    grad: "linear-gradient(135deg,#8B5CF6,#EC4899)",
+    track: "rgba(255,255,255,0.08)",
+    headerBg: "rgba(7,7,14,0.82)",
+    chipIdle: "transparent",
+    rowBg: "rgba(255,255,255,0.04)",
+  },
+  light: {
+    bg: "#F5F5FB", card: "#FFFFFF", card2: "#F1F1F8",
+    line: "rgba(20,20,60,0.10)", lineStrong: "rgba(20,20,60,0.22)",
+    ink: "#1A1B2E", grey: "#5D6470",
+    violet: "#7C3AED", violetSoft: "rgba(124,58,237,0.10)", accent: "#7C3AED",
+    pink: "#DB2777",
+    green: "#0E9F6E", greenSoft: "rgba(14,159,110,0.12)",
+    amber: "#B45309", amberSoft: "rgba(245,158,11,0.16)",
+    red: "#DC2626", redSoft: "rgba(220,38,38,0.10)",
+    grad: "linear-gradient(135deg,#7C3AED,#DB2777)",
+    track: "rgba(20,20,60,0.10)",
+    headerBg: "rgba(245,245,251,0.85)",
+    chipIdle: "#FFFFFF",
+    rowBg: "rgba(20,20,60,0.04)",
+  },
 };
 
 const WORLD_HUES = ["#8B5CF6", "#EC4899", "#38BDF8", "#FBBF24", "#34D399", "#F87171", "#A3E635"];
@@ -50,15 +63,13 @@ const DIM_TO_TAGS = {
   C: ["Economics & finance", "Mathematics"],
 };
 
-const NATURE_STYLE = {
-  scientific: { bg: T.violetSoft, fg: "#A78BFA", key: "nat_scientific" },
-  classical: { bg: T.amberSoft, fg: T.amber, key: "nat_classical" },
-  mixed: { bg: T.greenSoft, fg: T.green, key: "nat_mixed" },
-  "technical-practical": { bg: T.greenSoft, fg: T.green, key: "nat_technical" },
+const NATURE_KEY = {
+  scientific: "nat_scientific",
+  classical: "nat_classical",
+  mixed: "nat_mixed",
+  "technical-practical": "nat_technical",
 };
 
-const scoreColor = (s) => (s >= 70 ? T.green : s >= 45 ? T.amber : T.red);
-const scoreSoft = (s) => (s >= 70 ? T.greenSoft : s >= 45 ? T.amberSoft : T.redSoft);
 const mono = { fontFamily: "'Space Mono', monospace" };
 const display = { fontFamily: "'Outfit', system-ui, sans-serif" };
 const DATE_LOCALE = { en: "en-GB", it: "it-IT", hi: "hi-IN" };
@@ -79,53 +90,37 @@ function Logo({ size = 34 }) {
   );
 }
 
-function Bar({ score, color }) {
-  return (
-    <div className="w-full h-2 rounded-full" style={{ background: "rgba(255,255,255,0.08)" }}>
-      <div className="h-2 rounded-full transition-all duration-500" style={{ width: `${score}%`, background: color || scoreColor(score) }} />
-    </div>
-  );
-}
-
-function Chip({ active, onClick, children }) {
-  return (
-    <button onClick={onClick} className="px-3.5 py-1.5 rounded-full text-sm transition-all"
-      style={{
-        border: `1.5px solid ${active ? T.violet : T.line}`,
-        background: active ? T.grad : "transparent",
-        color: active ? "#fff" : T.ink,
-        boxShadow: active ? "0 4px 18px rgba(139,92,246,0.35)" : "none",
-      }}>
-      {children}
-    </button>
-  );
-}
-
-function Section({ children, className = "" }) {
-  return (
-    <section className={`rounded-2xl p-5 md:p-7 cc-fade-up ${className}`}
-      style={{ background: T.card, border: `1px solid ${T.line}` }}>
-      {children}
-    </section>
-  );
-}
-
 export default function CareerCompass() {
-  // ————— Language + profiles (device-local) —————
-  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en" });
+  // ————— Language + theme + profiles (device-local) —————
+  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en", theme: "dark" });
   const [storeLoaded, setStoreLoaded] = useState(false);
-  useEffect(() => { setStore(loadStore()); setStoreLoaded(true); }, []);
+  useEffect(() => { setStore((s) => ({ ...s, ...loadStore() })); setStoreLoaded(true); }, []);
   useEffect(() => { if (storeLoaded) saveStore(store); }, [store, storeLoaded]);
-  function updateStore(fn) {
-    setStore(fn);
-  }
+  function updateStore(fn) { setStore(fn); }
+
   const lang = store.lang || "en";
+  const theme = store.theme || "dark";
+  const T = PALETTES[theme];
   const t = useMemo(() => makeT(lang), [lang]);
   const td = useMemo(() => makeTD(lang), [lang]);
   const activeProfile = store.profiles.find((p) => p.id === store.activeId) || null;
 
+  useEffect(() => {
+    document.documentElement.style.background = T.bg;
+    document.documentElement.style.colorScheme = theme;
+    document.body.style.background = T.bg;
+  }, [theme, T.bg]);
+
+  const scoreColor = (s) => (s >= 70 ? T.green : s >= 45 ? T.amber : T.red);
+  const scoreSoft = (s) => (s >= 70 ? T.greenSoft : s >= 45 ? T.amberSoft : T.redSoft);
+  const natureStyle = (nature) =>
+    nature === "classical" ? { bg: T.amberSoft, fg: T.amber }
+    : nature === "scientific" ? { bg: T.violetSoft, fg: T.accent }
+    : { bg: T.greenSoft, fg: T.green };
+
   // ————— App state —————
   const [stage, setStage] = useState("welcome");
+  const [navStack, setNavStack] = useState([]);
   const [survey, setSurvey] = useState(null);
   const [likertQs, setLikertQs] = useState([]);
   const [phase, setPhase] = useState("binary"); // binary → multi → likert
@@ -140,7 +135,6 @@ export default function CareerCompass() {
   const [saved, setSaved] = useState([]); // [{ courseId, careerId, careerName, worldName }] — contextual per path
   const [finalists, setFinalists] = useState([]);
   const [narrative, setNarrative] = useState("");
-  const [prevStage, setPrevStage] = useState("worlds");
   const [showProfiles, setShowProfiles] = useState(false);
   const [newName, setNewName] = useState("");
   const [savedToName, setSavedToName] = useState("");
@@ -149,6 +143,47 @@ export default function CareerCompass() {
   const totalQ = 10 + 5 + 5;
   const answered = phase === "binary" ? qIndex : phase === "multi" ? 10 + qIndex : 15 + qIndex;
   const homeCity = CITIES.find((c) => c.id === profile.homeCityId) || null;
+  const hasResult = lastResult !== null || DIMS.some((d) => vector[d] > 0);
+
+  // ————— Derived rankings —————
+  const norm = useMemo(() => normalize(vector), [vector]);
+  const ident = useMemo(() => identity(vector), [vector]);
+  const identTitle = t(`pair_${ident.letters}`) === `pair_${ident.letters}` ? t("pair_XX") : t(`pair_${ident.letters}`);
+  const rankedWorlds = useMemo(() => rankWorlds(vector, WORLDS_DATA.worlds), [vector]);
+  const world = rankedWorlds.find((w) => w.id === worldId);
+  const rankedCareers = useMemo(() => (world ? rankCareers(vector, world) : []), [vector, world]);
+  const career = rankedCareers.find((c) => c.id === careerId);
+  const pair = finalists.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
+
+  // ————— Stage navigation with a real history stack —————
+  const renderableStage = (s) => {
+    if (s === "career") return !!world;
+    if (s === "filter") return !!career;
+    if (s === "compare") return pair.length === 2;
+    if (s === "express") return !!survey;
+    if (s === "reveal") return hasResult;
+    return true;
+  };
+
+  function go(next) {
+    if (next === stage) return;
+    // The survey isn't a place to "go back" into once left — skip it in history.
+    setNavStack((s) => (stage === "express" ? s : [...s, stage]));
+    setStage(next);
+  }
+
+  function goBack() {
+    const st = [...navStack];
+    let target = "welcome";
+    while (st.length) {
+      const cand = st.pop();
+      if (renderableStage(cand) && cand !== stage) { target = cand; break; }
+    }
+    setNavStack(st);
+    setStage(target);
+  }
+
+  function goHome() { setNavStack([]); setStage("welcome"); }
 
   // ————— Survey flow (with undo history) —————
   function startSurvey() {
@@ -161,17 +196,21 @@ export default function CareerCompass() {
     setQHistory([]);
     setSavedToName("");
     setLastResult(null);
+    setNavStack(["welcome"]);
     setStage("express");
   }
 
-  function goHome() { setStage("welcome"); }
+  function goInsights() {
+    if (hasResult) go("reveal");
+    else startSurvey();
+  }
 
   function pushSnapshot() {
     setQHistory((h) => [...h, { phase, qIndex, vector, multiSel, likertQs }]);
   }
 
   function goBackQuestion() {
-    if (!qHistory.length) { setStage("welcome"); return; }
+    if (!qHistory.length) { goHome(); return; }
     const last = qHistory[qHistory.length - 1];
     setQHistory((h) => h.slice(0, -1));
     setPhase(last.phase);
@@ -190,13 +229,13 @@ export default function CareerCompass() {
     if (activeProfile) {
       updateStore((s) => ({
         ...s,
-        profiles: s.profiles.map((p) => (p.id === s.activeId ? { ...p, history: [result, ...p.history] } : p)),
+        profiles: s.profiles.map((p) => (p.id === s.activeId && !p.history.some((h) => h.id === result.id) ? { ...p, history: [result, ...p.history] } : p)),
       }));
       setSavedToName(activeProfile.name);
     } else {
       setSavedToName("");
     }
-    setStage("reveal");
+    go("reveal");
   }
 
   function answerBinary(weights) {
@@ -248,15 +287,6 @@ export default function CareerCompass() {
     });
   }
 
-  // ————— Derived rankings —————
-  const norm = useMemo(() => normalize(vector), [vector]);
-  const ident = useMemo(() => identity(vector), [vector]);
-  const identTitle = t(`pair_${ident.letters}`) === `pair_${ident.letters}` ? t("pair_XX") : t(`pair_${ident.letters}`);
-  const rankedWorlds = useMemo(() => rankWorlds(vector, WORLDS_DATA.worlds), [vector]);
-  const world = rankedWorlds.find((w) => w.id === worldId);
-  const rankedCareers = useMemo(() => (world ? rankCareers(vector, world) : []), [vector, world]);
-  const career = rankedCareers.find((c) => c.id === careerId);
-
   const envPrefs = { ...prefs, isee: profile.isee, awayFromHome: profile.awayFromHome, budget: profile.awayFromHome ? prefs.budget * 12 : null, maxDistance: !profile.awayFromHome && homeCity ? prefs.maxDistance : null };
 
   const institutions = useMemo(() => {
@@ -274,7 +304,6 @@ export default function CareerCompass() {
   const savedEntries = saved
     .map((s) => ({ ...s, course: COURSES.find((c) => c.id === s.courseId) }))
     .filter((s) => s.course);
-  const pair = finalists.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
 
   const compareDims = useMemo(() => {
     if (pair.length < 2) return [];
@@ -321,7 +350,7 @@ export default function CareerCompass() {
       p.history = [lastResult];
       setSavedToName(name);
     }
-    updateStore((s) => ({ ...s, profiles: [...s.profiles, p], activeId: p.id }));
+    updateStore((s) => (s.profiles.some((x) => x.id === p.id) ? s : { ...s, profiles: [...s.profiles, p], activeId: p.id }));
     setNewName("");
   }
   function switchProfile(id) { updateStore((s) => ({ ...s, activeId: id })); }
@@ -334,12 +363,39 @@ export default function CareerCompass() {
     setLastResult(r);
     setSavedToName(activeProfile?.name || "");
     setShowProfiles(false);
+    setNavStack(["welcome"]);
     setStage("reveal");
   }
 
+  // ————— Small themed building blocks —————
+  const Bar = ({ score, color }) => (
+    <div className="w-full h-2 rounded-full" style={{ background: T.track }}>
+      <div className="h-2 rounded-full transition-all duration-500" style={{ width: `${score}%`, background: color || scoreColor(score) }} />
+    </div>
+  );
+
+  const ChipBtn = ({ active, onClick, children }) => (
+    <button onClick={onClick} className="px-3.5 py-1.5 rounded-full text-sm transition-all"
+      style={{
+        border: `1.5px solid ${active ? T.violet : T.line}`,
+        background: active ? T.grad : T.chipIdle,
+        color: active ? "#fff" : T.ink,
+        boxShadow: active ? "0 4px 18px rgba(139,92,246,0.35)" : "none",
+      }}>
+      {children}
+    </button>
+  );
+
+  const Section = ({ children, className = "" }) => (
+    <section className={`rounded-2xl p-5 md:p-7 cc-fade-up ${className}`}
+      style={{ background: T.card, border: `1px solid ${T.line}` }}>
+      {children}
+    </section>
+  );
+
   const natureBadge = (c, full = false) => {
-    const n = NATURE_STYLE[c.nature];
-    const text = t(n.key);
+    const n = natureStyle(c.nature);
+    const text = t(NATURE_KEY[c.nature]);
     return (
       <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: n.bg, color: n.fg }}>
         {full ? text : text.split(" — ")[0]}
@@ -347,29 +403,43 @@ export default function CareerCompass() {
     );
   };
 
+  const GoogleLink = ({ c }) => (
+    <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="text-xs font-semibold underline whitespace-nowrap" style={{ color: T.accent }}>
+      {t("card_google")}
+    </a>
+  );
+
+  const OfficialLink = ({ c }) => (
+    c.url ? (
+      <a href={c.url} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}
+        className="inline-block mt-1 text-xs font-semibold underline" style={{ color: T.accent }}>
+        {t("card_official")}
+      </a>
+    ) : null
+  );
+
   const InstitutionCard = ({ c, showFit, chosen, onCardClick, saveCtx, badge }) => (
     <div onClick={onCardClick} className={`cc-card w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
-      style={{ background: chosen ? "rgba(139,92,246,0.10)" : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
+      style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
       {badge && (
-        <div className="mb-2 text-xs px-2.5 py-1 rounded-full inline-block" style={{ background: T.violetSoft, color: "#A78BFA" }}>
+        <div className="mb-2 text-xs px-2.5 py-1 rounded-full inline-block" style={{ background: T.violetSoft, color: T.accent }}>
           {badge}
         </div>
       )}
       <div className="flex items-start justify-between gap-3">
         <div>
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? T.greenSoft : T.violetSoft, color: c.type === "ITS" ? T.green : "#A78BFA", ...mono }}>
+            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? T.greenSoft : T.violetSoft, color: c.type === "ITS" ? T.green : T.accent, ...mono }}>
               {c.type} · {c.years}y · {c.city}
             </span>
             {natureBadge(c)}
+            <GoogleLink c={c} />
           </div>
           <div className="font-bold mt-2" style={display}>{c.name}</div>
           <div className="text-sm" style={{ color: T.grey }}>{c.inst}</div>
-          <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-block mt-1 text-xs font-semibold underline" style={{ color: "#A78BFA" }}>
-            {t("card_google")}
-          </a>
+          <OfficialLink c={c} />
         </div>
         <div className="text-right shrink-0">
           {showFit && c.envFit && (
@@ -387,7 +457,7 @@ export default function CareerCompass() {
             }}>
             {isSavedOn(c.id, saveCtx?.careerId ?? null) ? t("card_saved") : t("card_save")}
           </button>
-          {chosen && <div className="mt-1 text-xs font-bold" style={{ color: "#A78BFA" }}>{t("card_finalist")}</div>}
+          {chosen && <div className="mt-1 text-xs font-bold" style={{ color: T.accent }}>{t("card_finalist")}</div>}
         </div>
       </div>
       {showFit && c.envFit && (
@@ -399,42 +469,50 @@ export default function CareerCompass() {
   );
 
   const BackLink = ({ onClick, label }) => (
-    <button onClick={onClick} className="text-sm font-semibold transition-colors hover:opacity-80" style={{ color: "#A78BFA" }}>
+    <button onClick={onClick ?? goBack} className="text-sm font-semibold transition-colors hover:opacity-80" style={{ color: T.accent }}>
       ← {label ?? t("back")}
     </button>
   );
-
-  const savedForHeader = saved.length;
 
   return (
     <div className="min-h-screen" style={{ background: T.bg, color: T.ink }}>
 
       {/* ————— Header ————— */}
-      <header className="sticky top-0 z-40" style={{ background: "rgba(7,7,14,0.82)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${T.line}` }}>
+      <header className="sticky top-0 z-40" style={{ background: T.headerBg, backdropFilter: "blur(14px)", borderBottom: `1px solid ${T.line}` }}>
         <div className="max-w-[1500px] mx-auto px-4 md:px-10 py-3 flex items-center justify-between gap-3 flex-wrap">
           <button onClick={goHome} className="flex items-center gap-2.5 group">
             <Logo />
-            <span className="text-xl md:text-2xl font-extrabold tracking-tight" style={{ ...display, background: T.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span className="text-xl md:text-2xl font-extrabold tracking-tight" style={{ ...display, backgroundImage: T.grad, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               CareerCompass
             </span>
-            <span className="hidden md:inline text-xs ml-1" style={{ color: T.grey, ...mono }}>{t("tagline")}</span>
+            <span className="hidden lg:inline text-xs ml-1" style={{ color: T.grey, ...mono }}>{t("tagline")}</span>
           </button>
 
-          <nav className="flex items-center gap-2 md:gap-3 flex-wrap">
-            <button onClick={goHome} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:bg-white/5"
-              style={{ color: stage === "welcome" ? "#A78BFA" : T.ink }}>
+          <nav className="flex items-center gap-1.5 md:gap-2.5 flex-wrap">
+            <button onClick={goHome} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:opacity-75"
+              style={{ color: stage === "welcome" ? T.accent : T.ink }}>
               {t("nav_home")}
             </button>
-            <button onClick={startSurvey} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:bg-white/5" style={{ color: T.ink }}>
+            <button onClick={goInsights} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:opacity-75"
+              style={{ color: stage === "reveal" ? T.accent : T.ink }}>
+              {t("nav_insights")}
+            </button>
+            <button onClick={startSurvey} className="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors hover:opacity-75" style={{ color: T.ink }}>
               {t("nav_retake")}
             </button>
-            {savedForHeader > 0 && (
-              <button onClick={() => { setPrevStage(stage === "saved" ? prevStage : stage); setStage("saved"); }}
+            {saved.length > 0 && (
+              <button onClick={() => go("saved")}
                 className="px-3.5 py-1.5 rounded-full text-sm font-bold transition-all"
                 style={{ background: T.greenSoft, color: T.green, border: `1.5px solid ${T.green}` }}>
-                ☆ {t("nav_saved")} ({savedForHeader})
+                ☆ {t("nav_saved")} ({saved.length})
               </button>
             )}
+            <button onClick={() => updateStore((s) => ({ ...s, theme: theme === "dark" ? "light" : "dark" }))}
+              aria-label="Toggle theme"
+              className="w-9 h-9 rounded-full text-base flex items-center justify-center transition-transform hover:scale-105"
+              style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
             <select value={lang} onChange={(e) => updateStore((s) => ({ ...s, lang: e.target.value }))}
               aria-label="Language"
               className="rounded-full px-2.5 py-1.5 text-sm font-semibold cursor-pointer"
@@ -458,9 +536,9 @@ export default function CareerCompass() {
             <div className="cc-blob absolute -top-32 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(139,92,246,0.35), transparent 65%)", filter: "blur(40px)" }} />
             <div className="cc-blob absolute -bottom-40 -right-24 w-[520px] h-[520px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(236,72,153,0.28), transparent 65%)", filter: "blur(40px)", animationDelay: "-7s" }} />
             <div className="relative px-6 md:px-16 py-16 md:py-24">
-              <div className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: "#A78BFA", ...mono }}>{t("welcome_kicker")}</div>
+              <div className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: T.accent, ...mono }}>{t("welcome_kicker")}</div>
               <h2 className="text-4xl md:text-6xl font-black leading-tight max-w-3xl" style={display}>
-                <span style={{ background: T.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{t("welcome_title")}</span>
+                <span style={{ backgroundImage: T.grad, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent" }}>{t("welcome_title")}</span>
               </h2>
               <p className="mt-5 text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: T.grey }}>
                 {t("welcome_body")}
@@ -468,11 +546,11 @@ export default function CareerCompass() {
               <button onClick={startSurvey} className="cc-glow mt-8 px-8 py-4 rounded-full font-bold text-white text-lg transition-transform hover:scale-105" style={{ background: T.grad, ...display }}>
                 {t("welcome_start")}
               </button>
-              <div className="mt-10 flex gap-8 md:gap-14 flex-wrap">
-                {[[WORLDS_DATA.worlds.length, t("stat_worlds")], [WORLDS_DATA.worlds.reduce((n, w) => n + w.careers.length, 0), t("stat_careers")], ["20", t("stat_fresh")]].map(([n, l], i) => (
-                  <div key={i}>
-                    <div className="text-3xl font-black" style={{ ...display, color: WORLD_HUES[i] }}>{n}</div>
-                    <div className="text-xs mt-0.5" style={{ color: T.grey }}>{l}</div>
+              <div className="mt-10 space-y-3 max-w-2xl">
+                {[t("feat_1"), t("feat_2"), t("feat_3")].map((f, i) => (
+                  <div key={i} className="flex items-center gap-3 cc-fade-up" style={{ animationDelay: `${200 + i * 120}ms` }}>
+                    <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: T.grad }} />
+                    <span className="text-sm md:text-base" style={{ color: T.grey }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -489,9 +567,9 @@ export default function CareerCompass() {
                 <BackLink onClick={goBackQuestion} />
                 <span className="text-xs" style={{ color: T.grey, ...mono }}>{answered + 1} / {totalQ}</span>
               </div>
-              {phase === "multi" && qIndex === 0 && <div className="text-xs font-semibold mb-1" style={{ color: "#A78BFA" }}>{t("q_multi_round")}</div>}
-              {phase === "likert" && qIndex === 0 && <div className="text-xs font-semibold mb-1" style={{ color: "#A78BFA" }}>{t("q_likert_round")}</div>}
-              <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.08)" }}>
+              {phase === "multi" && qIndex === 0 && <div className="text-xs font-semibold mb-1" style={{ color: T.accent }}>{t("q_multi_round")}</div>}
+              {phase === "likert" && qIndex === 0 && <div className="text-xs font-semibold mb-1" style={{ color: T.accent }}>{t("q_likert_round")}</div>}
+              <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: T.track }}>
                 <div className="cc-progress h-2 rounded-full transition-all duration-500" style={{ width: `${Math.round((answered / totalQ) * 100)}%` }} />
               </div>
 
@@ -503,7 +581,7 @@ export default function CareerCompass() {
                       {[survey.binary[qIndex].a, survey.binary[qIndex].b].map((opt, i) => (
                         <button key={i} onClick={() => answerBinary(opt.w)}
                           className="cc-card text-left rounded-2xl p-5"
-                          style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+                          style={{ background: T.card2, border: `1.5px solid ${T.line}`, color: T.ink }}>
                           <span className="text-base leading-snug">{td(opt.text)}</span>
                         </button>
                       ))}
@@ -519,13 +597,13 @@ export default function CareerCompass() {
                       {survey.multi[qIndex].options.map((opt, i) => (
                         <button key={i} onClick={() => setMultiSel((s) => (s.includes(i) ? s.filter((x) => x !== i) : [...s, i]))}
                           className="text-left rounded-xl p-3.5 text-sm transition-all"
-                          style={{ background: multiSel.includes(i) ? "rgba(139,92,246,0.14)" : T.card2, border: `1.5px solid ${multiSel.includes(i) ? T.violet : T.line}` }}>
+                          style={{ background: multiSel.includes(i) ? T.violetSoft : T.card2, border: `1.5px solid ${multiSel.includes(i) ? T.violet : T.line}`, color: T.ink }}>
                           {multiSel.includes(i) ? "✓ " : ""}{td(opt.text)}
                         </button>
                       ))}
                     </div>
                     <button onClick={submitMulti} className="mt-5 px-6 py-2.5 rounded-full font-bold text-white transition-transform hover:scale-105"
-                      style={{ background: multiSel.length ? T.grad : "rgba(255,255,255,0.12)" }}>
+                      style={{ background: multiSel.length ? T.grad : T.grey }}>
                       {multiSel.length ? t("q_continue", { n: multiSel.length }) : t("q_skip")}
                     </button>
                   </>
@@ -538,7 +616,7 @@ export default function CareerCompass() {
                       {[["lik_m2", -2], ["lik_m1", -1], ["lik_0", 0], ["lik_p1", 1], ["lik_p2", 2]].map(([k, v]) => (
                         <button key={k} onClick={() => answerLikert(v)}
                           className="cc-card text-left rounded-xl px-4 py-3 text-sm"
-                          style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+                          style={{ background: T.card2, border: `1.5px solid ${T.line}`, color: T.ink }}>
                           {t(k)}
                         </button>
                       ))}
@@ -550,13 +628,13 @@ export default function CareerCompass() {
           </div>
         )}
 
-        {/* ————— Reveal ————— */}
+        {/* ————— Reveal / insights ————— */}
         {stage === "reveal" && (
           <div className="max-w-4xl mx-auto space-y-5">
-            <BackLink onClick={goHome} label={t("nav_home")} />
+            <BackLink />
             <Section>
               <div className="text-xs uppercase tracking-[0.25em]" style={{ color: T.grey, ...mono }}>{t("reveal_youare")}</div>
-              <h2 className="text-4xl md:text-5xl font-black mt-2" style={{ ...display, background: T.grad, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              <h2 className="text-4xl md:text-5xl font-black mt-2" style={{ ...display, backgroundImage: T.grad, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                 {identTitle}
               </h2>
               <p className="mt-3 text-sm md:text-base" style={{ color: T.grey }}>
@@ -568,7 +646,7 @@ export default function CareerCompass() {
               {savedToName ? (
                 <p className="mt-3 text-xs font-semibold" style={{ color: T.green }}>{t("reveal_saved_to", { name: savedToName })}</p>
               ) : lastResult ? (
-                <button onClick={() => setShowProfiles(true)} className="mt-3 text-xs font-bold underline" style={{ color: "#A78BFA" }}>
+                <button onClick={() => setShowProfiles(true)} className="mt-3 text-xs font-bold underline" style={{ color: T.accent }}>
                   {t("reveal_create_prompt")}
                 </button>
               ) : null}
@@ -588,10 +666,10 @@ export default function CareerCompass() {
               <p className="text-xs mt-1 mb-3" style={{ color: T.grey }}>{t("check_sub")}</p>
               <div className="flex flex-wrap gap-2">
                 {INTEREST_TAGS.map((tag) => (
-                  <Chip key={tag} active={profile.interests.includes(tag)}
+                  <ChipBtn key={tag} active={profile.interests.includes(tag)}
                     onClick={() => setProfile((p) => ({ ...p, interests: p.interests.includes(tag) ? p.interests.filter((x) => x !== tag) : [...p.interests, tag] }))}>
                     {td(tag)}
-                  </Chip>
+                  </ChipBtn>
                 ))}
               </div>
 
@@ -599,7 +677,7 @@ export default function CareerCompass() {
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("goal_title")}</div>
                 <div className="flex flex-wrap gap-2">
                   {[["work", t("goal_work")], ["salary", t("goal_salary")], ["study", t("goal_study")], ["unsure", t("goal_unsure")]].map(([v, l]) => (
-                    <Chip key={v} active={profile.goals.includes(v)} onClick={() => toggleGoal(v)}>{l}</Chip>
+                    <ChipBtn key={v} active={profile.goals.includes(v)} onClick={() => toggleGoal(v)}>{l}</ChipBtn>
                   ))}
                 </div>
                 <p className="text-xs mt-2" style={{ color: T.grey }}>{t("goal_rules")}</p>
@@ -611,8 +689,8 @@ export default function CareerCompass() {
               <div className="mt-6">
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("living_title")}</div>
                 <div className="flex gap-2 flex-wrap">
-                  <Chip active={!profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: false }))}>{t("living_home")}</Chip>
-                  <Chip active={profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: true }))}>{t("living_away")}</Chip>
+                  <ChipBtn active={!profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: false }))}>{t("living_home")}</ChipBtn>
+                  <ChipBtn active={profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: true }))}>{t("living_away")}</ChipBtn>
                 </div>
               </div>
 
@@ -636,7 +714,7 @@ export default function CareerCompass() {
                       return (
                         <button key={c.id} onClick={() => setProfile((p) => ({ ...p, relocationCities: on ? p.relocationCities.filter((x) => x !== c.id) : [...p.relocationCities, c.id] }))}
                           className="text-left rounded-xl p-3 transition-all"
-                          style={{ background: on ? "rgba(139,92,246,0.14)" : T.card2, border: `1.5px solid ${on ? T.violet : T.line}` }}>
+                          style={{ background: on ? T.violetSoft : T.card2, border: `1.5px solid ${on ? T.violet : T.line}`, color: T.ink }}>
                           <div className="flex justify-between items-baseline">
                             <span className="font-semibold text-sm">{on ? "✓ " : ""}{c.name}</span>
                             <span className="text-xs" style={{ ...mono, color: T.grey }}>€{c.costRange[0]}–{c.costRange[1]}/mo</span>
@@ -650,7 +728,7 @@ export default function CareerCompass() {
                 </div>
               )}
 
-              <button onClick={() => setStage("worlds")} className="cc-glow mt-6 px-7 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad, ...display }}>
+              <button onClick={() => go("worlds")} className="cc-glow mt-6 px-7 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad, ...display }}>
                 {t("cta_worlds")}
               </button>
             </Section>
@@ -660,7 +738,7 @@ export default function CareerCompass() {
         {/* ————— Worlds ————— */}
         {stage === "worlds" && (
           <>
-            <BackLink onClick={() => setStage("reveal")} />
+            <BackLink />
             <h2 className="font-black text-2xl md:text-4xl cc-fade-up" style={display}>
               {t("worlds_title", { t: identTitle })}
             </h2>
@@ -669,7 +747,7 @@ export default function CareerCompass() {
               {rankedWorlds.map((w, i) => {
                 const hue = WORLD_HUES[WORLDS_DATA.worlds.findIndex((x) => x.id === w.id) % WORLD_HUES.length];
                 return (
-                  <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); setStage("career"); }}
+                  <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); go("career"); }}
                     className="cc-card cc-fade-up relative overflow-hidden text-left rounded-2xl p-5 min-h-[150px]"
                     style={{ background: T.card, border: `1.5px solid ${i < 2 ? hue : T.line}`, animationDelay: `${i * 70}ms` }}>
                     <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full pointer-events-none" style={{ background: `radial-gradient(circle, ${hue}33, transparent 70%)` }} />
@@ -688,8 +766,8 @@ export default function CareerCompass() {
         {/* ————— Careers in a world ————— */}
         {stage === "career" && world && (
           <>
-            <BackLink onClick={() => setStage("worlds")} label={t("career_all")} />
-            <h2 className="font-black text-2xl md:text-3xl" style={{ ...display, color: "#A78BFA" }}>{td(world.name)}</h2>
+            <BackLink label={t("career_all")} />
+            <h2 className="font-black text-2xl md:text-3xl" style={{ ...display, color: T.accent }}>{td(world.name)}</h2>
             <p className="text-sm -mt-2" style={{ color: T.grey }}>{td(world.tagline)}</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {rankedCareers.map((c, i) => (
@@ -704,7 +782,7 @@ export default function CareerCompass() {
                     </div>
                     <div className="flex flex-col items-end gap-2">
                       <span className="text-xs font-bold" style={{ ...mono, color: scoreColor(c.fit) }}>{t("fit_you", { n: c.fit })}</span>
-                      <button onClick={() => { setCareerId(c.id); setFinalists([]); setStage("filter"); }}
+                      <button onClick={() => { setCareerId(c.id); setFinalists([]); go("filter"); }}
                         className="px-4 py-2 rounded-full text-sm font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad }}>
                         {t("career_explore")}
                       </button>
@@ -719,7 +797,7 @@ export default function CareerCompass() {
         {/* ————— Institutions / filters ————— */}
         {stage === "filter" && career && (
           <>
-            <BackLink onClick={() => setStage("career")} label={td(world.name)} />
+            <BackLink label={td(world.name)} />
             <h2 className="font-black text-2xl md:text-3xl" style={display}>{t("paths_to", { c: career.name })}</h2>
             <Section>
               <h3 className="font-bold text-sm mb-3">{t("tune_title")}</h3>
@@ -728,7 +806,7 @@ export default function CareerCompass() {
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("pathtype")}</div>
                   <div className="flex gap-2 flex-wrap">
                     {[["any", t("pt_any")], ["University", t("pt_uni")], ["ITS", t("pt_its")]].map(([v, l]) => (
-                      <Chip key={v} active={prefs.pathType === v} onClick={() => setPrefs((p) => ({ ...p, pathType: v }))}>{l}</Chip>
+                      <ChipBtn key={v} active={prefs.pathType === v} onClick={() => setPrefs((p) => ({ ...p, pathType: v }))}>{l}</ChipBtn>
                     ))}
                   </div>
                 </div>
@@ -736,7 +814,7 @@ export default function CareerCompass() {
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("isee_label")}</div>
                   <div className="flex gap-2">
                     {[["low", "< €15k"], ["mid", "€15–35k"], ["high", "> €35k"]].map(([v, l]) => (
-                      <Chip key={v} active={profile.isee === v} onClick={() => setProfile((p) => ({ ...p, isee: v }))}>{l}</Chip>
+                      <ChipBtn key={v} active={profile.isee === v} onClick={() => setProfile((p) => ({ ...p, isee: v }))}>{l}</ChipBtn>
                     ))}
                   </div>
                 </div>
@@ -772,7 +850,7 @@ export default function CareerCompass() {
             </div>
 
             {finalists.length === 2 && (
-              <button onClick={() => { setPrevStage("filter"); setStage("compare"); }} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
+              <button onClick={() => go("compare")} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
                 {t("compare_cta")}
               </button>
             )}
@@ -785,7 +863,7 @@ export default function CareerCompass() {
         {/* ————— Saved (contextual per career path) ————— */}
         {stage === "saved" && (
           <>
-            <BackLink onClick={() => setStage(prevStage)} />
+            <BackLink />
             <h2 className="font-black text-2xl md:text-3xl" style={display}>{t("saved_title", { n: savedEntries.length })}</h2>
             <p className="text-sm -mt-2" style={{ color: T.grey }}>{t("saved_sub")}</p>
             {savedEntries.length === 0 && <Section><p className="text-sm" style={{ color: T.grey }}>{t("saved_empty")}</p></Section>}
@@ -798,7 +876,7 @@ export default function CareerCompass() {
               ))}
             </div>
             {finalists.length === 2 && (
-              <button onClick={() => { setPrevStage("saved"); setStage("compare"); }} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
+              <button onClick={() => go("compare")} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
                 {t("saved_compare")}
               </button>
             )}
@@ -808,7 +886,7 @@ export default function CareerCompass() {
         {/* ————— Compare ————— */}
         {stage === "compare" && pair.length === 2 && (
           <>
-            <BackLink onClick={() => setStage(prevStage)} />
+            <BackLink />
             <Section>
               <h2 className="font-black text-2xl mb-1" style={display}>{t("cmp_title")}</h2>
               <p className="text-xs mb-5" style={{ color: T.grey }}>{t("cmp_sub")}</p>
@@ -816,12 +894,12 @@ export default function CareerCompass() {
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {pair.map((c) => (
                   <div key={c.id} className="rounded-xl p-3 md:p-4" style={{ background: T.card2 }}>
-                    <div className="font-extrabold text-sm md:text-base" style={{ ...display, color: "#A78BFA" }}>{c.name}</div>
+                    <div className="flex items-baseline justify-between gap-2 flex-wrap">
+                      <div className="font-extrabold text-sm md:text-base" style={{ ...display, color: T.accent }}>{c.name}</div>
+                      <GoogleLink c={c} />
+                    </div>
                     <div className="text-xs" style={{ color: T.grey }}>{c.inst} · {c.city}</div>
-                    <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
-                      className="inline-block mt-1 text-xs font-semibold underline" style={{ color: "#A78BFA" }}>
-                      {t("card_google")}
-                    </a>
+                    <OfficialLink c={c} />
                   </div>
                 ))}
               </div>
@@ -831,8 +909,8 @@ export default function CareerCompass() {
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
                     <div key={c.id} className="rounded-xl p-3 text-xs" style={{ border: `1px solid ${T.line}` }}>
-                      <div className="mb-2 px-2 py-1 rounded-lg inline-block font-semibold" style={{ background: NATURE_STYLE[c.nature].bg, color: NATURE_STYLE[c.nature].fg }}>
-                        {t(NATURE_STYLE[c.nature].key)}
+                      <div className="mb-2 px-2 py-1 rounded-lg inline-block font-semibold" style={{ background: natureStyle(c.nature).bg, color: natureStyle(c.nature).fg }}>
+                        {t(NATURE_KEY[c.nature])}
                       </div>
                       {c.curriculum.map((s, i) => (
                         <div key={i} style={{ fontWeight: /matemat|analisi/i.test(s) ? 700 : 400 }}>· {s}</div>
@@ -911,8 +989,6 @@ export default function CareerCompass() {
             </Section>
           </>
         )}
-
-        <footer className="text-xs pt-4" style={{ color: T.grey }}>{t("footer")}</footer>
       </main>
 
       {/* ————— Profile manager ————— */}
@@ -924,14 +1000,14 @@ export default function CareerCompass() {
             onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between">
               <h3 className="font-black text-xl" style={display}>{t("pf_title")}</h3>
-              <button onClick={() => setShowProfiles(false)} className="w-8 h-8 rounded-full hover:bg-white/10 transition-colors" aria-label="Close">✕</button>
+              <button onClick={() => setShowProfiles(false)} className="w-8 h-8 rounded-full hover:opacity-70 transition-opacity" aria-label="Close">✕</button>
             </div>
             <p className="text-xs mt-1.5" style={{ color: T.grey }}>{t("pf_note")}</p>
 
             <div className="mt-4 flex gap-2">
               <input value={newName} onChange={(e) => setNewName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && createProfile()}
                 placeholder={t("pf_new_ph")}
-                className="flex-1 rounded-xl px-3 py-2.5 text-sm outline-none focus:border-violet-500"
+                className="flex-1 rounded-xl px-3 py-2.5 text-sm outline-none"
                 style={{ background: T.card2, border: `1.5px solid ${T.line}`, color: T.ink }} />
               <button onClick={createProfile} className="px-4 py-2 rounded-xl text-sm font-bold text-white transition-transform hover:scale-105" style={{ background: T.grad }}>
                 {t("pf_add")}
@@ -949,10 +1025,10 @@ export default function CareerCompass() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-sm truncate">{p.name}</div>
-                      {p.id === store.activeId && <div className="text-xs" style={{ color: "#A78BFA" }}>{t("pf_active")}</div>}
+                      {p.id === store.activeId && <div className="text-xs" style={{ color: T.accent }}>{t("pf_active")}</div>}
                     </div>
                     {p.id !== store.activeId && (
-                      <button onClick={() => switchProfile(p.id)} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.violet}`, color: "#A78BFA" }}>
+                      <button onClick={() => switchProfile(p.id)} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.violet}`, color: T.accent }}>
                         {t("pf_use")}
                       </button>
                     )}
@@ -967,14 +1043,14 @@ export default function CareerCompass() {
                       {p.history.length === 0 && <p className="text-xs" style={{ color: T.grey }}>{t("pf_empty")}</p>}
                       <div className="space-y-1.5">
                         {p.history.map((r) => (
-                          <div key={r.id} className="flex items-center justify-between gap-2 text-xs rounded-lg px-2.5 py-2" style={{ background: "rgba(255,255,255,0.04)" }}>
+                          <div key={r.id} className="flex items-center justify-between gap-2 text-xs rounded-lg px-2.5 py-2" style={{ background: T.rowBg }}>
                             <div className="min-w-0">
                               <span className="font-bold">{t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`)}</span>
                               <span className="ml-2" style={{ color: T.grey, ...mono }}>
                                 {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
                               </span>
                             </div>
-                            <button onClick={() => openResult(r)} className="font-bold shrink-0" style={{ color: "#A78BFA" }}>{t("pf_open")}</button>
+                            <button onClick={() => openResult(r)} className="font-bold shrink-0" style={{ color: T.accent }}>{t("pf_open")}</button>
                           </div>
                         ))}
                       </div>

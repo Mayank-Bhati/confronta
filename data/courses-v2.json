@@ -46,7 +46,8 @@
       "Reti Logiche",
       "Basi di Dati"
     ],
-    "googleQuery": "Politecnico%20di%20Milano%20Milano"
+    "googleQuery": "Politecnico%20di%20Milano%20Milano",
+    "url": "https://www.polimi.it"
   },
   {
     "id": "polito",
@@ -95,7 +96,8 @@
       "Sistemi Operativi",
       "Basi di Dati"
     ],
-    "googleQuery": "Politecnico%20di%20Torino%20Torino"
+    "googleQuery": "Politecnico%20di%20Torino%20Torino",
+    "url": "https://www.polito.it"
   },
   {
     "id": "unimib",
@@ -143,7 +145,8 @@
       "Basi di Dati",
       "Sistemi Operativi"
     ],
-    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Milano"
+    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Milano",
+    "url": "https://www.unimib.it"
   },
   {
     "id": "its-ict",
@@ -191,7 +194,8 @@
       "Inglese tecnico",
       "Stage in azienda (800h)"
     ],
-    "googleQuery": "ITS%20ICT%20Academy%20Lombardia%20Milano"
+    "googleQuery": "ITS%20ICT%20Academy%20Lombardia%20Milano",
+    "url": "https://www.itsrizzoli.it"
   },
   {
     "id": "its-mecc",
@@ -239,7 +243,8 @@
       "Manutenzione predittiva",
       "Stage in azienda (800h)"
     ],
-    "googleQuery": "ITS%20Lombardia%20Meccatronica%20Bergamo"
+    "googleQuery": "ITS%20Lombardia%20Meccatronica%20Bergamo",
+    "url": "https://www.itslombardiameccatronica.it"
   },
   {
     "id": "bocconi",
@@ -288,7 +293,8 @@
       "Diritto Privato",
       "Finanza Aziendale"
     ],
-    "googleQuery": "Universit%C3%A0%20Bocconi%20Milano"
+    "googleQuery": "Universit%C3%A0%20Bocconi%20Milano",
+    "url": "https://www.unibocconi.it"
   },
   {
     "id": "unimib-econ",
@@ -336,7 +342,8 @@
       "Diritto Commerciale",
       "Marketing"
     ],
-    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Milano"
+    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Milano",
+    "url": "https://www.unimib.it"
   },
   {
     "id": "unito-inf",
@@ -386,7 +393,8 @@
       "Tirocinio in reparto (dal 1° anno)",
       "Psicologia Generale"
     ],
-    "googleQuery": "Universit%C3%A0%20di%20Torino%20Torino"
+    "googleQuery": "Universit%C3%A0%20di%20Torino%20Torino",
+    "url": "https://www.unito.it"
   },
   {
     "id": "polimi-design",
@@ -435,7 +443,8 @@
       "Geometria (base)",
       "Prototipazione"
     ],
-    "googleQuery": "Politecnico%20di%20Milano%20Milano"
+    "googleQuery": "Politecnico%20di%20Milano%20Milano",
+    "url": "https://www.polimi.it"
   },
   {
     "id": "its-energia",
@@ -485,7 +494,8 @@
       "Normativa energetica",
       "Stage in azienda (800h)"
     ],
-    "googleQuery": "ITS%20Energia%20Piemonte%20Torino"
+    "googleQuery": "ITS%20Energia%20Piemonte%20Torino",
+    "url": "https://www.itsenergiapiemonte.it"
   },
   {
     "id": "polito-env",
@@ -535,6 +545,847 @@
       "Ingegneria Sanitaria-Ambientale",
       "Geotecnica"
     ],
-    "googleQuery": "Politecnico%20di%20Torino%20Torino"
+    "googleQuery": "Politecnico%20di%20Torino%20Torino",
+    "url": "https://www.polito.it"
+  },
+  {
+    "id": "polimi-auto",
+    "name": "Ingegneria dell'Automazione",
+    "inst": "Politecnico di Milano",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.4782,
+    "lon": 9.2272,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-I",
+    "selectivity": 88,
+    "mathLoad": 5,
+    "subjects": [
+      "Machines & hardware",
+      "Programming",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 200,
+      "mid": 1800,
+      "high": 3900
+    },
+    "cityRent": 620,
+    "employment1y": 94,
+    "salary": 31000,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 86,
+      "workloadOk": 74,
+      "infraOk": 88,
+      "wouldChooseAgain": 76,
+      "dropout": 24,
+      "language": "both",
+      "cityVibe": "Big, fast, expensive, full of opportunities"
+    },
+    "nature": "scientific",
+    "netMonthly": 1700,
+    "curriculum": [
+      "Analisi Matematica I & II",
+      "Fisica",
+      "Fondamenti di Automatica",
+      "Robotica Industriale",
+      "Elettrotecnica",
+      "Azionamenti Elettrici"
+    ],
+    "googleQuery": "Politecnico%20di%20Milano%20Ingegneria%20dell%27Automazione",
+    "url": "https://www.polimi.it"
+  },
+  {
+    "id": "polito-mecha",
+    "name": "Ingegneria Meccatronica",
+    "inst": "Politecnico di Torino",
+    "type": "University",
+    "city": "Torino",
+    "lat": 45.0625,
+    "lon": 7.6626,
+    "citySize": "large",
+    "years": 3,
+    "test": "TIL-I",
+    "selectivity": 78,
+    "mathLoad": 5,
+    "subjects": [
+      "Machines & hardware",
+      "Programming",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 160,
+      "mid": 1400,
+      "high": 2800
+    },
+    "cityRent": 420,
+    "employment1y": 92,
+    "salary": 29500,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 84,
+      "workloadOk": 72,
+      "infraOk": 85,
+      "wouldChooseAgain": 74,
+      "dropout": 26,
+      "language": "both",
+      "cityVibe": "Elegant, livable, strong student community"
+    },
+    "nature": "scientific",
+    "netMonthly": 1620,
+    "curriculum": [
+      "Analisi Matematica",
+      "Fisica",
+      "Meccanica Applicata",
+      "Elettronica",
+      "Controlli Automatici",
+      "Azionamenti e Robotica"
+    ],
+    "googleQuery": "Politecnico%20di%20Torino%20Ingegneria%20Meccatronica",
+    "url": "https://www.polito.it"
+  },
+  {
+    "id": "its-emob",
+    "name": "E-Mobility & Veicoli Intelligenti",
+    "inst": "ITS Lombardia Meccatronica",
+    "type": "ITS",
+    "city": "Bergamo",
+    "lat": 45.69,
+    "lon": 9.67,
+    "citySize": "small",
+    "years": 2,
+    "test": "Internal test + interview",
+    "selectivity": 40,
+    "mathLoad": 3,
+    "subjects": [
+      "Machines & hardware",
+      "Building things"
+    ],
+    "costByIsee": {
+      "low": 0,
+      "mid": 500,
+      "high": 900
+    },
+    "cityRent": 350,
+    "employment1y": 93,
+    "salary": 27000,
+    "mastersAccess": 1,
+    "handsOn": 5,
+    "env": {
+      "teachSat": 91,
+      "workloadOk": 89,
+      "infraOk": 86,
+      "wouldChooseAgain": 87,
+      "dropout": 10,
+      "language": "it",
+      "cityVibe": "Quiet, industrial heartland, close-knit"
+    },
+    "nature": "technical-practical",
+    "netMonthly": 1500,
+    "curriculum": [
+      "Veicoli elettrici e ibridi",
+      "Sistemi di ricarica",
+      "Batterie e powertrain",
+      "Diagnostica veicolo",
+      "Normativa e sicurezza"
+    ],
+    "googleQuery": "ITS%20Lombardia%20Meccatronica%20E-Mobility%20%26%20Veicoli%20Intelligenti",
+    "url": "https://www.itslombardiameccatronica.it"
+  },
+  {
+    "id": "polito-mecc",
+    "name": "Ingegneria Meccanica",
+    "inst": "Politecnico di Torino",
+    "type": "University",
+    "city": "Torino",
+    "lat": 45.0625,
+    "lon": 7.6626,
+    "citySize": "large",
+    "years": 3,
+    "test": "TIL-I",
+    "selectivity": 78,
+    "mathLoad": 5,
+    "subjects": [
+      "Machines & hardware",
+      "Building things",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 160,
+      "mid": 1400,
+      "high": 2800
+    },
+    "cityRent": 420,
+    "employment1y": 92,
+    "salary": 29500,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 84,
+      "workloadOk": 72,
+      "infraOk": 85,
+      "wouldChooseAgain": 74,
+      "dropout": 26,
+      "language": "both",
+      "cityVibe": "Elegant, livable, strong student community"
+    },
+    "nature": "scientific",
+    "netMonthly": 1620,
+    "curriculum": [
+      "Analisi Matematica",
+      "Fisica",
+      "Meccanica delle Macchine",
+      "Costruzione di Macchine",
+      "Tecnologia Meccanica",
+      "Termodinamica"
+    ],
+    "googleQuery": "Politecnico%20di%20Torino%20Ingegneria%20Meccanica",
+    "url": "https://www.polito.it"
+  },
+  {
+    "id": "its-manut",
+    "name": "Manutenzione Industriale 4.0",
+    "inst": "ITS Lombardia Meccatronica",
+    "type": "ITS",
+    "city": "Bergamo",
+    "lat": 45.69,
+    "lon": 9.67,
+    "citySize": "small",
+    "years": 2,
+    "test": "Internal test + interview",
+    "selectivity": 40,
+    "mathLoad": 3,
+    "subjects": [
+      "Machines & hardware",
+      "Building things"
+    ],
+    "costByIsee": {
+      "low": 0,
+      "mid": 500,
+      "high": 900
+    },
+    "cityRent": 350,
+    "employment1y": 93,
+    "salary": 27000,
+    "mastersAccess": 1,
+    "handsOn": 5,
+    "env": {
+      "teachSat": 91,
+      "workloadOk": 89,
+      "infraOk": 86,
+      "wouldChooseAgain": 87,
+      "dropout": 10,
+      "language": "it",
+      "cityVibe": "Quiet, industrial heartland, close-knit"
+    },
+    "nature": "technical-practical",
+    "netMonthly": 1500,
+    "curriculum": [
+      "Manutenzione predittiva",
+      "Sensoristica IoT",
+      "Automazione industriale",
+      "Sicurezza impianti",
+      "Lean maintenance"
+    ],
+    "googleQuery": "ITS%20Lombardia%20Meccatronica%20Manutenzione%20Industriale%204.0",
+    "url": "https://www.itslombardiameccatronica.it"
+  },
+  {
+    "id": "polimi-mat",
+    "name": "Ingegneria Matematica",
+    "inst": "Politecnico di Milano",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.4782,
+    "lon": 9.2272,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-I",
+    "selectivity": 88,
+    "mathLoad": 5,
+    "subjects": [
+      "Mathematics",
+      "Programming",
+      "Science & research"
+    ],
+    "costByIsee": {
+      "low": 200,
+      "mid": 1800,
+      "high": 3900
+    },
+    "cityRent": 620,
+    "employment1y": 94,
+    "salary": 31000,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 86,
+      "workloadOk": 74,
+      "infraOk": 88,
+      "wouldChooseAgain": 76,
+      "dropout": 24,
+      "language": "both",
+      "cityVibe": "Big, fast, expensive, full of opportunities"
+    },
+    "nature": "scientific",
+    "netMonthly": 1700,
+    "curriculum": [
+      "Analisi Matematica I & II",
+      "Probabilità e Statistica",
+      "Fisica",
+      "Calcolo Numerico",
+      "Ottimizzazione",
+      "Fondamenti di Machine Learning"
+    ],
+    "googleQuery": "Politecnico%20di%20Milano%20Ingegneria%20Matematica",
+    "url": "https://www.polimi.it"
+  },
+  {
+    "id": "unimib-stat",
+    "name": "Scienze Statistiche ed Economiche",
+    "inst": "Università Milano-Bicocca",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.5183,
+    "lon": 9.213,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-I",
+    "selectivity": 62,
+    "mathLoad": 4,
+    "subjects": [
+      "Mathematics",
+      "Economics & finance",
+      "Programming"
+    ],
+    "costByIsee": {
+      "low": 156,
+      "mid": 1300,
+      "high": 3400
+    },
+    "cityRent": 620,
+    "employment1y": 89,
+    "salary": 28000,
+    "mastersAccess": 4,
+    "handsOn": 3,
+    "env": {
+      "teachSat": 87,
+      "workloadOk": 81,
+      "infraOk": 84,
+      "wouldChooseAgain": 72,
+      "dropout": 28,
+      "language": "it",
+      "cityVibe": "Campus-style within a big city"
+    },
+    "nature": "scientific",
+    "netMonthly": 1550,
+    "curriculum": [
+      "Statistica I & II",
+      "Matematica Generale",
+      "Economia",
+      "Basi di Dati",
+      "Analisi dei Dati",
+      "Programmazione R/Python"
+    ],
+    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20Statistiche%20ed%20Economiche",
+    "url": "https://www.unimib.it"
+  },
+  {
+    "id": "polito-cyber",
+    "name": "Ingegneria Informatica — Cybersecurity",
+    "inst": "Politecnico di Torino",
+    "type": "University",
+    "city": "Torino",
+    "lat": 45.0625,
+    "lon": 7.6626,
+    "citySize": "large",
+    "years": 3,
+    "test": "TIL-I",
+    "selectivity": 78,
+    "mathLoad": 5,
+    "subjects": [
+      "Programming",
+      "Mathematics",
+      "Science & research"
+    ],
+    "costByIsee": {
+      "low": 160,
+      "mid": 1400,
+      "high": 2800
+    },
+    "cityRent": 420,
+    "employment1y": 92,
+    "salary": 29500,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 84,
+      "workloadOk": 72,
+      "infraOk": 85,
+      "wouldChooseAgain": 74,
+      "dropout": 26,
+      "language": "both",
+      "cityVibe": "Elegant, livable, strong student community"
+    },
+    "nature": "scientific",
+    "netMonthly": 1620,
+    "curriculum": [
+      "Analisi Matematica",
+      "Reti di Calcolatori",
+      "Sistemi Operativi",
+      "Crittografia",
+      "Sicurezza delle Reti",
+      "Programmazione"
+    ],
+    "googleQuery": "Politecnico%20di%20Torino%20Ingegneria%20Informatica%20%E2%80%94%20Cybersecurity",
+    "url": "https://www.polito.it"
+  },
+  {
+    "id": "its-cyber",
+    "name": "Cybersecurity Specialist",
+    "inst": "ITS ICT Academy Lombardia",
+    "type": "ITS",
+    "city": "Milano",
+    "lat": 45.479,
+    "lon": 9.1855,
+    "citySize": "large",
+    "years": 2,
+    "test": "Internal test + interview",
+    "selectivity": 45,
+    "mathLoad": 2,
+    "subjects": [
+      "Programming",
+      "Building things"
+    ],
+    "costByIsee": {
+      "low": 0,
+      "mid": 600,
+      "high": 1000
+    },
+    "cityRent": 620,
+    "employment1y": 91,
+    "salary": 26000,
+    "mastersAccess": 1,
+    "handsOn": 5,
+    "env": {
+      "teachSat": 90,
+      "workloadOk": 88,
+      "infraOk": 82,
+      "wouldChooseAgain": 85,
+      "dropout": 12,
+      "language": "it",
+      "cityVibe": "Small classes, company-driven, fast"
+    },
+    "nature": "technical-practical",
+    "netMonthly": 1450,
+    "curriculum": [
+      "Network security",
+      "Ethical hacking",
+      "SOC operations",
+      "Sicurezza cloud",
+      "Normativa privacy e compliance"
+    ],
+    "googleQuery": "ITS%20ICT%20Academy%20Lombardia%20Cybersecurity%20Specialist",
+    "url": "https://www.itsrizzoli.it"
+  },
+  {
+    "id": "polimi-des-dig",
+    "name": "Digital & Interaction Design",
+    "inst": "Politecnico di Milano",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.4782,
+    "lon": 9.2272,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-D (design test)",
+    "selectivity": 80,
+    "mathLoad": 2,
+    "subjects": [
+      "Design & creativity",
+      "Media & video",
+      "Programming"
+    ],
+    "costByIsee": {
+      "low": 200,
+      "mid": 1800,
+      "high": 3900
+    },
+    "cityRent": 620,
+    "employment1y": 90,
+    "salary": 25000,
+    "mastersAccess": 5,
+    "handsOn": 4,
+    "env": {
+      "teachSat": 85,
+      "workloadOk": 70,
+      "infraOk": 90,
+      "wouldChooseAgain": 79,
+      "dropout": 14,
+      "language": "it",
+      "cityVibe": "Design capital of the world"
+    },
+    "nature": "mixed",
+    "netMonthly": 1400,
+    "curriculum": [
+      "Fondamenti del Design",
+      "Interaction Design",
+      "Prototipazione Digitale",
+      "User Research",
+      "Design dei Servizi",
+      "Web & Mobile Design"
+    ],
+    "googleQuery": "Politecnico%20di%20Milano%20Digital%20%26%20Interaction%20Design",
+    "url": "https://www.polimi.it"
+  },
+  {
+    "id": "polimi-des-com",
+    "name": "Design della Comunicazione",
+    "inst": "Politecnico di Milano",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.4782,
+    "lon": 9.2272,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-D (design test)",
+    "selectivity": 80,
+    "mathLoad": 2,
+    "subjects": [
+      "Design & creativity",
+      "Media & video"
+    ],
+    "costByIsee": {
+      "low": 200,
+      "mid": 1800,
+      "high": 3900
+    },
+    "cityRent": 620,
+    "employment1y": 90,
+    "salary": 25000,
+    "mastersAccess": 5,
+    "handsOn": 4,
+    "env": {
+      "teachSat": 85,
+      "workloadOk": 70,
+      "infraOk": 90,
+      "wouldChooseAgain": 79,
+      "dropout": 14,
+      "language": "it",
+      "cityVibe": "Design capital of the world"
+    },
+    "nature": "mixed",
+    "netMonthly": 1400,
+    "curriculum": [
+      "Fondamenti del Design",
+      "Graphic Design",
+      "Tipografia",
+      "Brand Design",
+      "Fotografia",
+      "Motion Graphics"
+    ],
+    "googleQuery": "Politecnico%20di%20Milano%20Design%20della%20Comunicazione",
+    "url": "https://www.polimi.it"
+  },
+  {
+    "id": "unimib-mark",
+    "name": "Marketing, Comunicazione e Mercati Globali",
+    "inst": "Università Milano-Bicocca",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.5183,
+    "lon": 9.213,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-E",
+    "selectivity": 55,
+    "mathLoad": 3,
+    "subjects": [
+      "Economics & finance",
+      "People & communication",
+      "Media & video"
+    ],
+    "costByIsee": {
+      "low": 156,
+      "mid": 1300,
+      "high": 3400
+    },
+    "cityRent": 620,
+    "employment1y": 85,
+    "salary": 26000,
+    "mastersAccess": 4,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 85,
+      "workloadOk": 83,
+      "infraOk": 84,
+      "wouldChooseAgain": 70,
+      "dropout": 27,
+      "language": "it",
+      "cityVibe": "Campus-style within a big city"
+    },
+    "nature": "scientific",
+    "netMonthly": 1450,
+    "curriculum": [
+      "Marketing",
+      "Economia Aziendale",
+      "Statistica per il Marketing",
+      "Comunicazione d'Impresa",
+      "Consumer Behaviour",
+      "Digital Marketing"
+    ],
+    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Marketing%2C%20Comunicazione%20e%20Mercati%20Globali",
+    "url": "https://www.unimib.it"
+  },
+  {
+    "id": "bocconi-fin",
+    "name": "Economia e Finanza",
+    "inst": "Università Bocconi",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.4436,
+    "lon": 9.19,
+    "citySize": "large",
+    "years": 3,
+    "test": "Bocconi test / SAT",
+    "selectivity": 92,
+    "mathLoad": 3,
+    "subjects": [
+      "Economics & finance",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 4000,
+      "mid": 8500,
+      "high": 14000
+    },
+    "cityRent": 620,
+    "employment1y": 96,
+    "salary": 38000,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 89,
+      "workloadOk": 68,
+      "infraOk": 95,
+      "wouldChooseAgain": 82,
+      "dropout": 8,
+      "language": "both",
+      "cityVibe": "Elite, intense, international"
+    },
+    "nature": "scientific",
+    "netMonthly": 2050,
+    "curriculum": [
+      "Matematica Generale",
+      "Economia Politica",
+      "Finanza Aziendale",
+      "Statistica",
+      "Diritto Commerciale",
+      "Financial Markets"
+    ],
+    "googleQuery": "Universit%C3%A0%20Bocconi%20Economia%20e%20Finanza",
+    "url": "https://www.unibocconi.it"
+  },
+  {
+    "id": "polito-ener",
+    "name": "Ingegneria Energetica",
+    "inst": "Politecnico di Torino",
+    "type": "University",
+    "city": "Torino",
+    "lat": 45.0625,
+    "lon": 7.6626,
+    "citySize": "large",
+    "years": 3,
+    "test": "TIL-I",
+    "selectivity": 78,
+    "mathLoad": 5,
+    "subjects": [
+      "Nature & environment",
+      "Machines & hardware",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 160,
+      "mid": 1400,
+      "high": 2800
+    },
+    "cityRent": 420,
+    "employment1y": 92,
+    "salary": 29500,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 84,
+      "workloadOk": 72,
+      "infraOk": 85,
+      "wouldChooseAgain": 74,
+      "dropout": 26,
+      "language": "both",
+      "cityVibe": "Elegant, livable, strong student community"
+    },
+    "nature": "scientific",
+    "netMonthly": 1620,
+    "curriculum": [
+      "Analisi Matematica",
+      "Fisica Tecnica",
+      "Termodinamica Applicata",
+      "Sistemi Energetici",
+      "Fonti Rinnovabili",
+      "Elettrotecnica"
+    ],
+    "googleQuery": "Politecnico%20di%20Torino%20Ingegneria%20Energetica",
+    "url": "https://www.polito.it"
+  },
+  {
+    "id": "unimib-fis",
+    "name": "Fisica",
+    "inst": "Università Milano-Bicocca",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.5183,
+    "lon": 9.213,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-I",
+    "selectivity": 62,
+    "mathLoad": 4,
+    "subjects": [
+      "Science & research",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 156,
+      "mid": 1300,
+      "high": 3400
+    },
+    "cityRent": 620,
+    "employment1y": 89,
+    "salary": 28000,
+    "mastersAccess": 4,
+    "handsOn": 3,
+    "env": {
+      "teachSat": 87,
+      "workloadOk": 81,
+      "infraOk": 84,
+      "wouldChooseAgain": 72,
+      "dropout": 28,
+      "language": "it",
+      "cityVibe": "Campus-style within a big city"
+    },
+    "nature": "scientific",
+    "netMonthly": 1550,
+    "curriculum": [
+      "Analisi Matematica",
+      "Fisica Generale I & II",
+      "Meccanica Quantistica",
+      "Laboratorio di Fisica",
+      "Struttura della Materia",
+      "Fisica Computazionale"
+    ],
+    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Fisica",
+    "url": "https://www.unimib.it"
+  },
+  {
+    "id": "polimi-ing-fis",
+    "name": "Ingegneria Fisica",
+    "inst": "Politecnico di Milano",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.4782,
+    "lon": 9.2272,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-I",
+    "selectivity": 88,
+    "mathLoad": 5,
+    "subjects": [
+      "Science & research",
+      "Mathematics"
+    ],
+    "costByIsee": {
+      "low": 200,
+      "mid": 1800,
+      "high": 3900
+    },
+    "cityRent": 620,
+    "employment1y": 94,
+    "salary": 31000,
+    "mastersAccess": 5,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 86,
+      "workloadOk": 74,
+      "infraOk": 88,
+      "wouldChooseAgain": 76,
+      "dropout": 24,
+      "language": "both",
+      "cityVibe": "Big, fast, expensive, full of opportunities"
+    },
+    "nature": "scientific",
+    "netMonthly": 1700,
+    "curriculum": [
+      "Analisi Matematica I & II",
+      "Fisica Sperimentale",
+      "Meccanica Quantistica",
+      "Elettromagnetismo",
+      "Fotonica",
+      "Laboratorio di Misure"
+    ],
+    "googleQuery": "Politecnico%20di%20Milano%20Ingegneria%20Fisica",
+    "url": "https://www.polimi.it"
+  },
+  {
+    "id": "unimib-org",
+    "name": "Scienze dell'Organizzazione",
+    "inst": "Università Milano-Bicocca",
+    "type": "University",
+    "city": "Milano",
+    "lat": 45.5183,
+    "lon": 9.213,
+    "citySize": "large",
+    "years": 3,
+    "test": "TOLC-E",
+    "selectivity": 55,
+    "mathLoad": 3,
+    "subjects": [
+      "People & communication",
+      "Law & society",
+      "Economics & finance"
+    ],
+    "costByIsee": {
+      "low": 156,
+      "mid": 1300,
+      "high": 3400
+    },
+    "cityRent": 620,
+    "employment1y": 85,
+    "salary": 26000,
+    "mastersAccess": 4,
+    "handsOn": 2,
+    "env": {
+      "teachSat": 85,
+      "workloadOk": 83,
+      "infraOk": 84,
+      "wouldChooseAgain": 70,
+      "dropout": 27,
+      "language": "it",
+      "cityVibe": "Campus-style within a big city"
+    },
+    "nature": "scientific",
+    "netMonthly": 1450,
+    "curriculum": [
+      "Organizzazione Aziendale",
+      "Diritto del Lavoro",
+      "Psicologia del Lavoro",
+      "Gestione delle Risorse Umane",
+      "Economia Aziendale",
+      "Statistica Sociale"
+    ],
+    "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20dell%27Organizzazione",
+    "url": "https://www.unimib.it"
   }
 ]
