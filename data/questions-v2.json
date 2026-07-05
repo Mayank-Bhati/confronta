@@ -1,0 +1,110 @@
+{
+  "binary": [
+    { "id": "b1", "pair": "RA", "a": { "text": "Spend Saturday repairing a scooter with a friend", "w": { "R": 2 } }, "b": { "text": "Spend Saturday filming and editing a short video", "w": { "A": 2 } } },
+    { "id": "b2", "pair": "IS", "a": { "text": "Figure out why the home wifi is slow until you crack it", "w": { "I": 2 } }, "b": { "text": "Spend the evening helping a friend through a rough week", "w": { "S": 2 } } },
+    { "id": "b3", "pair": "EC", "a": { "text": "Pitch the class trip idea and convince everyone", "w": { "E": 2 } }, "b": { "text": "Plan the trip budget, bookings and schedule", "w": { "C": 2 } } },
+    { "id": "b4", "pair": "RS", "a": { "text": "Build the stage for the school festival", "w": { "R": 2 } }, "b": { "text": "Welcome and guide people at the school festival", "w": { "S": 2 } } },
+    { "id": "b5", "pair": "IE", "a": { "text": "Analyze your team's match statistics to find patterns", "w": { "I": 2 } }, "b": { "text": "Be the captain who decides tactics and motivates", "w": { "E": 2 } } },
+    { "id": "b6", "pair": "AC", "a": { "text": "Design the poster for the school play", "w": { "A": 2 } }, "b": { "text": "Organize the rehearsal calendar and checklists", "w": { "C": 2 } } },
+    { "id": "b7", "pair": "RI", "a": { "text": "Assemble a PC from parts", "w": { "R": 2 } }, "b": { "text": "Understand exactly how a processor works inside", "w": { "I": 2 } } },
+    { "id": "b8", "pair": "SC", "a": { "text": "Tutor a younger student who is struggling", "w": { "S": 2 } }, "b": { "text": "Keep the club's records, money and lists in perfect order", "w": { "C": 2 } } },
+    { "id": "b9", "pair": "AE", "a": { "text": "Write the script for the show", "w": { "A": 2 } }, "b": { "text": "Promote the show and sell out the tickets", "w": { "E": 2 } } },
+    { "id": "b10", "pair": "IC", "a": { "text": "Research one question for hours until you truly get it", "w": { "I": 2 } }, "b": { "text": "Execute a proven step-by-step plan flawlessly", "w": { "C": 2 } } },
+    { "id": "b11", "pair": "RE", "a": { "text": "Test, tune and fix bikes in the workshop", "w": { "R": 2 } }, "b": { "text": "Run the shop counter, negotiate and close deals", "w": { "E": 2 } } },
+    { "id": "b12", "pair": "AS", "a": { "text": "Compose or create something alone in your room", "w": { "A": 2 } }, "b": { "text": "Perform or teach it in front of people", "w": { "S": 2 } } },
+    { "id": "b13", "pair": "RC", "a": { "text": "Install and wire the lights for the party", "w": { "R": 2 } }, "b": { "text": "Make the guest list, timings and seating work perfectly", "w": { "C": 2 } } },
+    { "id": "b14", "pair": "IA", "a": { "text": "Prove why something is true", "w": { "I": 2 } }, "b": { "text": "Imagine something that doesn't exist yet", "w": { "A": 2 } } },
+    { "id": "b15", "pair": "SE", "a": { "text": "Coach one teammate until they finally get it", "w": { "S": 2 } }, "b": { "text": "Rally the whole team before the final", "w": { "E": 2 } } },
+    { "id": "b16", "pair": "RA", "a": { "text": "Restore an old piece of furniture until it works again", "w": { "R": 2 } }, "b": { "text": "Paint it in a style nobody's seen before", "w": { "A": 2 } } },
+    { "id": "b17", "pair": "IS", "a": { "text": "Read about how memory works in the brain", "w": { "I": 2 } }, "b": { "text": "Help a classmate actually memorize for the exam", "w": { "S": 2 } } },
+    { "id": "b18", "pair": "EC", "a": { "text": "Convince the principal to fund your project", "w": { "E": 2 } }, "b": { "text": "Write the flawless project plan that gets it approved", "w": { "C": 2 } } },
+    { "id": "b19", "pair": "RI", "a": { "text": "Fly the drone", "w": { "R": 2 } }, "b": { "text": "Understand the physics that keeps it up", "w": { "I": 2 } } },
+    { "id": "b20", "pair": "AE", "a": { "text": "Create the content", "w": { "A": 2 } }, "b": { "text": "Grow the channel and make it big", "w": { "E": 2 } } }
+  ],
+  "multi": [
+    { "id": "m1", "prompt": "Your perfect Saturday could include… (pick any)", "options": [
+      { "text": "Building or fixing something physical", "w": { "R": 1 } },
+      { "text": "Getting lost in a rabbit hole of learning", "w": { "I": 1 } },
+      { "text": "Drawing, writing, filming, making", "w": { "A": 1 } },
+      { "text": "Time with people who need you", "w": { "S": 1 } },
+      { "text": "Working on your own hustle or idea", "w": { "E": 1 } },
+      { "text": "Getting your life perfectly organized", "w": { "C": 1 } }
+    ]},
+    { "id": "m2", "prompt": "Which compliments would mean the most? (pick any)", "options": [
+      { "text": "\"You can fix anything\"", "w": { "R": 1 } },
+      { "text": "\"You're the smartest person I know\"", "w": { "I": 1 } },
+      { "text": "\"Your ideas are so original\"", "w": { "A": 1 } },
+      { "text": "\"You really helped me\"", "w": { "S": 1 } },
+      { "text": "\"You're a born leader\"", "w": { "E": 1 } },
+      { "text": "\"I can always count on you\"", "w": { "C": 1 } }
+    ]},
+    { "id": "m3", "prompt": "Which school moments do you actually enjoy? (pick any)", "options": [
+      { "text": "Lab and workshop hours", "w": { "R": 1, "I": 1 } },
+      { "text": "A problem that takes the whole hour to solve", "w": { "I": 1 } },
+      { "text": "Projects where you present something you made", "w": { "A": 1, "E": 1 } },
+      { "text": "Group work where you keep everyone together", "w": { "S": 1 } },
+      { "text": "Debates and discussions", "w": { "E": 1 } },
+      { "text": "Subjects with clear rules and right answers", "w": { "C": 1 } }
+    ]},
+    { "id": "m4", "prompt": "What would you refuse in a future job? (pick any)", "options": [
+      { "text": "Sitting still at a desk all day", "w": { "R": 1 } },
+      { "text": "Doing without understanding why", "w": { "I": 1 } },
+      { "text": "Zero room for my own ideas", "w": { "A": 1 } },
+      { "text": "Never seeing the people I'm helping", "w": { "S": 1 } },
+      { "text": "No chance to grow or lead", "w": { "E": 1 } },
+      { "text": "Constant chaos and improvisation", "w": { "C": 1 } }
+    ]},
+    { "id": "m5", "prompt": "Which YouTube/TikTok content do you actually watch? (pick any)", "options": [
+      { "text": "Restorations, builds, machines, DIY", "w": { "R": 1 } },
+      { "text": "Science, explainers, documentaries", "w": { "I": 1 } },
+      { "text": "Art, design, music production, film analysis", "w": { "A": 1 } },
+      { "text": "Psychology, relationships, self-improvement", "w": { "S": 1 } },
+      { "text": "Business, startups, money", "w": { "E": 1 } },
+      { "text": "Productivity, organization, studygram", "w": { "C": 1 } }
+    ]},
+    { "id": "m6", "prompt": "In a group project, you naturally end up… (pick any)", "options": [
+      { "text": "Building the actual thing", "w": { "R": 1 } },
+      { "text": "Doing the research nobody else understands", "w": { "I": 1 } },
+      { "text": "Making it look and sound great", "w": { "A": 1 } },
+      { "text": "Keeping the group from falling apart", "w": { "S": 1 } },
+      { "text": "Deciding direction and presenting", "w": { "E": 1 } },
+      { "text": "Tracking deadlines and putting it all together", "w": { "C": 1 } }
+    ]},
+    { "id": "m7", "prompt": "Which problems would you enjoy spending a career on? (pick any)", "options": [
+      { "text": "Machines that don't work yet", "w": { "R": 1, "I": 1 } },
+      { "text": "Questions nobody has answered", "w": { "I": 1 } },
+      { "text": "Things that are ugly, boring or badly told", "w": { "A": 1 } },
+      { "text": "People who aren't okay", "w": { "S": 1 } },
+      { "text": "Markets nobody has conquered", "w": { "E": 1 } },
+      { "text": "Systems that waste time and money", "w": { "C": 1, "I": 1 } }
+    ]},
+    { "id": "m8", "prompt": "What did you love as a kid? (pick any)", "options": [
+      { "text": "LEGO, taking toys apart, building forts", "w": { "R": 1 } },
+      { "text": "Endless 'why?' questions", "w": { "I": 1 } },
+      { "text": "Inventing games, stories, drawings", "w": { "A": 1 } },
+      { "text": "Taking care of animals or younger kids", "w": { "S": 1 } },
+      { "text": "Selling things, trading cards, organizing the gang", "w": { "E": 1 } },
+      { "text": "Collections in perfect order", "w": { "C": 1 } }
+    ]}
+  ],
+  "likert": [
+    { "id": "lr1", "dim": "R", "text": "I feel more myself with tools in my hands than with a pen" },
+    { "id": "lr2", "dim": "R", "text": "I'd rather be on-site where things happen than in an office" },
+    { "id": "lr3", "dim": "R", "text": "When something breaks at home, I'm the one who tries to fix it" },
+    { "id": "li1", "dim": "I", "text": "I can't accept 'that's just how it is' as an answer" },
+    { "id": "li2", "dim": "I", "text": "I enjoy being confused, because it means I'm about to learn something" },
+    { "id": "li3", "dim": "I", "text": "I'd take a harder course that explains the 'why' over an easy one that doesn't" },
+    { "id": "la1", "dim": "A", "text": "I notice fonts, colors and design that others don't see" },
+    { "id": "la2", "dim": "A", "text": "Following instructions exactly kills my motivation" },
+    { "id": "la3", "dim": "A", "text": "I have ideas I never tell anyone because they seem too strange" },
+    { "id": "ls1", "dim": "S", "text": "People come to me with their problems, and I like that" },
+    { "id": "ls2", "dim": "S", "text": "A job that doesn't help anyone would feel empty to me" },
+    { "id": "ls3", "dim": "S", "text": "I notice quickly when someone in the room isn't okay" },
+    { "id": "le1", "dim": "E", "text": "I'd rather make a wrong decision than make no decision" },
+    { "id": "le2", "dim": "E", "text": "I think about business ideas even when nobody asks me to" },
+    { "id": "le3", "dim": "E", "text": "Speaking in front of people energizes me more than it scares me" },
+    { "id": "lc1", "dim": "C", "text": "A finished checklist gives me genuine satisfaction" },
+    { "id": "lc2", "dim": "C", "text": "I'm the one who remembers the deadline everyone else forgot" },
+    { "id": "lc3", "dim": "C", "text": "I work better with clear rules than with total freedom" }
+  ]
+}
