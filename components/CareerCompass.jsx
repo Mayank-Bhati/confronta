@@ -74,6 +74,144 @@ const mono = { fontFamily: "'Space Mono', monospace" };
 const display = { fontFamily: "'Outfit', system-ui, sans-serif" };
 const DATE_LOCALE = { en: "en-GB", it: "it-IT", hi: "hi-IN" };
 
+const natureStyleFor = (T, nature) =>
+  nature === "classical" ? { bg: T.amberSoft, fg: T.amber }
+  : nature === "scientific" ? { bg: T.violetSoft, fg: T.accent }
+  : { bg: T.greenSoft, fg: T.green };
+
+// App context: the building blocks below MUST stay at module level. Defining
+// them inside the main component gives them a fresh identity on every render,
+// which makes React remount the whole page on each click (scroll jumps to top,
+// entrance animations replay). Theme and shared handlers flow through context.
+const AppCtx = React.createContext(null);
+
+function Bar({ score, color }) {
+  const { T, scoreColor } = React.useContext(AppCtx);
+  return (
+    <div className="w-full h-2 rounded-full" style={{ background: T.track }}>
+      <div className="h-2 rounded-full transition-all duration-500" style={{ width: `${score}%`, background: color || scoreColor(score) }} />
+    </div>
+  );
+}
+
+function ChipBtn({ active, onClick, children }) {
+  const { T } = React.useContext(AppCtx);
+  return (
+    <button onClick={onClick} className="px-3.5 py-1.5 rounded-full text-sm transition-all"
+      style={{
+        border: `1.5px solid ${active ? T.violet : T.line}`,
+        background: active ? T.grad : T.chipIdle,
+        color: active ? "#fff" : T.ink,
+        boxShadow: active ? "0 4px 18px rgba(139,92,246,0.35)" : "none",
+      }}>
+      {children}
+    </button>
+  );
+}
+
+function Section({ children, className = "" }) {
+  const { T } = React.useContext(AppCtx);
+  return (
+    <section className={`rounded-2xl p-5 md:p-7 cc-fade-up ${className}`}
+      style={{ background: T.card, border: `1px solid ${T.line}` }}>
+      {children}
+    </section>
+  );
+}
+
+function NatureBadge({ c, full = false }) {
+  const { T, t } = React.useContext(AppCtx);
+  const n = natureStyleFor(T, c.nature);
+  const text = t(NATURE_KEY[c.nature]);
+  return (
+    <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: n.bg, color: n.fg }}>
+      {full ? text : text.split(" — ")[0]}
+    </span>
+  );
+}
+
+function GoogleLink({ c }) {
+  const { T, t } = React.useContext(AppCtx);
+  return (
+    <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="text-xs font-semibold underline whitespace-nowrap" style={{ color: T.accent }}>
+      {t("card_google")}
+    </a>
+  );
+}
+
+function OfficialLink({ c }) {
+  const { T, t } = React.useContext(AppCtx);
+  if (!c.url) return null;
+  return (
+    <a href={c.url} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}
+      className="inline-block mt-1 text-xs font-semibold underline" style={{ color: T.accent }}>
+      {t("card_official")}
+    </a>
+  );
+}
+
+function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badge }) {
+  const { T, t, scoreColor, isSavedOn, toggleSave } = React.useContext(AppCtx);
+  return (
+    <div onClick={onCardClick} className={`cc-card w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
+      style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
+      {badge && (
+        <div className="mb-2 text-xs px-2.5 py-1 rounded-full inline-block" style={{ background: T.violetSoft, color: T.accent }}>
+          {badge}
+        </div>
+      )}
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? T.greenSoft : T.violetSoft, color: c.type === "ITS" ? T.green : T.accent, ...mono }}>
+              {c.type} · {c.years}y · {c.city}
+            </span>
+            <NatureBadge c={c} />
+            <GoogleLink c={c} />
+          </div>
+          <div className="font-bold mt-2" style={display}>{c.name}</div>
+          <div className="text-sm" style={{ color: T.grey }}>{c.inst}</div>
+          <OfficialLink c={c} />
+        </div>
+        <div className="text-right shrink-0">
+          {showFit && c.envFit && (
+            <>
+              <div className="text-sm font-bold" style={{ ...mono, color: scoreColor(c.envFit.score) }}>{c.envFit.score}/100</div>
+              <div className="text-xs" style={{ color: T.grey }}>{t("card_env")}</div>
+            </>
+          )}
+          <button onClick={(e) => { e.stopPropagation(); toggleSave(c, saveCtx); }}
+            className="mt-2 px-3 py-1 rounded-full text-xs font-bold transition-all"
+            style={{
+              border: `1.5px solid ${isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.green : T.lineStrong}`,
+              background: isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.greenSoft : "transparent",
+              color: isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.green : T.ink,
+            }}>
+            {isSavedOn(c.id, saveCtx?.careerId ?? null) ? t("card_saved") : t("card_save")}
+          </button>
+          {chosen && <div className="mt-1 text-xs font-bold" style={{ color: T.accent }}>{t("card_finalist")}</div>}
+        </div>
+      </div>
+      {showFit && c.envFit && (
+        <div className="mt-2 text-xs space-y-0.5" style={{ color: T.grey }}>
+          {c.envFit.reasons.slice(0, 2).map((r, i) => <div key={i}>· {r}</div>)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function BackLink({ onClick, label }) {
+  const { T, t, goBack } = React.useContext(AppCtx);
+  return (
+    <button onClick={onClick ?? goBack} className="text-sm font-semibold transition-colors hover:opacity-80" style={{ color: T.accent }}>
+      ← {label ?? t("back")}
+    </button>
+  );
+}
+
 function Logo({ size = 34 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden>
@@ -367,114 +505,10 @@ export default function CareerCompass() {
     setStage("reveal");
   }
 
-  // ————— Small themed building blocks —————
-  const Bar = ({ score, color }) => (
-    <div className="w-full h-2 rounded-full" style={{ background: T.track }}>
-      <div className="h-2 rounded-full transition-all duration-500" style={{ width: `${score}%`, background: color || scoreColor(score) }} />
-    </div>
-  );
-
-  const ChipBtn = ({ active, onClick, children }) => (
-    <button onClick={onClick} className="px-3.5 py-1.5 rounded-full text-sm transition-all"
-      style={{
-        border: `1.5px solid ${active ? T.violet : T.line}`,
-        background: active ? T.grad : T.chipIdle,
-        color: active ? "#fff" : T.ink,
-        boxShadow: active ? "0 4px 18px rgba(139,92,246,0.35)" : "none",
-      }}>
-      {children}
-    </button>
-  );
-
-  const Section = ({ children, className = "" }) => (
-    <section className={`rounded-2xl p-5 md:p-7 cc-fade-up ${className}`}
-      style={{ background: T.card, border: `1px solid ${T.line}` }}>
-      {children}
-    </section>
-  );
-
-  const natureBadge = (c, full = false) => {
-    const n = natureStyle(c.nature);
-    const text = t(NATURE_KEY[c.nature]);
-    return (
-      <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: n.bg, color: n.fg }}>
-        {full ? text : text.split(" — ")[0]}
-      </span>
-    );
-  };
-
-  const GoogleLink = ({ c }) => (
-    <a href={`https://www.google.com/search?q=${c.googleQuery}`} target="_blank" rel="noreferrer"
-      onClick={(e) => e.stopPropagation()}
-      className="text-xs font-semibold underline whitespace-nowrap" style={{ color: T.accent }}>
-      {t("card_google")}
-    </a>
-  );
-
-  const OfficialLink = ({ c }) => (
-    c.url ? (
-      <a href={c.url} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}
-        className="inline-block mt-1 text-xs font-semibold underline" style={{ color: T.accent }}>
-        {t("card_official")}
-      </a>
-    ) : null
-  );
-
-  const InstitutionCard = ({ c, showFit, chosen, onCardClick, saveCtx, badge }) => (
-    <div onClick={onCardClick} className={`cc-card w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
-      style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
-      {badge && (
-        <div className="mb-2 text-xs px-2.5 py-1 rounded-full inline-block" style={{ background: T.violetSoft, color: T.accent }}>
-          {badge}
-        </div>
-      )}
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? T.greenSoft : T.violetSoft, color: c.type === "ITS" ? T.green : T.accent, ...mono }}>
-              {c.type} · {c.years}y · {c.city}
-            </span>
-            {natureBadge(c)}
-            <GoogleLink c={c} />
-          </div>
-          <div className="font-bold mt-2" style={display}>{c.name}</div>
-          <div className="text-sm" style={{ color: T.grey }}>{c.inst}</div>
-          <OfficialLink c={c} />
-        </div>
-        <div className="text-right shrink-0">
-          {showFit && c.envFit && (
-            <>
-              <div className="text-sm font-bold" style={{ ...mono, color: scoreColor(c.envFit.score) }}>{c.envFit.score}/100</div>
-              <div className="text-xs" style={{ color: T.grey }}>{t("card_env")}</div>
-            </>
-          )}
-          <button onClick={(e) => { e.stopPropagation(); toggleSave(c, saveCtx); }}
-            className="mt-2 px-3 py-1 rounded-full text-xs font-bold transition-all"
-            style={{
-              border: `1.5px solid ${isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.green : T.lineStrong}`,
-              background: isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.greenSoft : "transparent",
-              color: isSavedOn(c.id, saveCtx?.careerId ?? null) ? T.green : T.ink,
-            }}>
-            {isSavedOn(c.id, saveCtx?.careerId ?? null) ? t("card_saved") : t("card_save")}
-          </button>
-          {chosen && <div className="mt-1 text-xs font-bold" style={{ color: T.accent }}>{t("card_finalist")}</div>}
-        </div>
-      </div>
-      {showFit && c.envFit && (
-        <div className="mt-2 text-xs space-y-0.5" style={{ color: T.grey }}>
-          {c.envFit.reasons.slice(0, 2).map((r, i) => <div key={i}>· {r}</div>)}
-        </div>
-      )}
-    </div>
-  );
-
-  const BackLink = ({ onClick, label }) => (
-    <button onClick={onClick ?? goBack} className="text-sm font-semibold transition-colors hover:opacity-80" style={{ color: T.accent }}>
-      ← {label ?? t("back")}
-    </button>
-  );
+  const ctx = { T, t, scoreColor, scoreSoft, goBack, isSavedOn, toggleSave };
 
   return (
+    <AppCtx.Provider value={ctx}>
     <div className="min-h-screen" style={{ background: T.bg, color: T.ink }}>
 
       {/* ————— Header ————— */}
@@ -1063,5 +1097,6 @@ export default function CareerCompass() {
         </div>
       )}
     </div>
+    </AppCtx.Provider>
   );
 }
