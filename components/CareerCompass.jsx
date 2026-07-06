@@ -523,11 +523,20 @@ export default function CareerCompass() {
   const [authStage, setAuthStage] = useState("idle"); // idle | sent
   const [authMsg, setAuthMsg] = useState("");
   const [showAuth, setShowAuth] = useState(false);
+  const [authBusy, setAuthBusy] = useState(false);
   const [saveNudged, setSaveNudged] = useState(false);
 
   useEffect(() => {
     const sb = getSupabase();
     if (!sb) return;
+    // magic-link failures come back as #error_description=... on the redirect
+    const hash = new URLSearchParams(window.location.hash.slice(1));
+    const errDesc = hash.get("error_description");
+    if (errDesc) {
+      setShowAuth(true);
+      setAuthMsg(t("acct_err", { e: errDesc.replace(/\+/g, " ") }));
+      window.history.replaceState({}, "", window.location.pathname);
+    }
     sb.auth.getSession().then(({ data }) => setSession(data.session));
     const { data: sub } = sb.auth.onAuthStateChange((_event, s) => {
       setSession(s);
@@ -551,20 +560,24 @@ export default function CareerCompass() {
 
   async function sendCode() {
     const sb = getSupabase();
-    if (!sb || !authEmail.includes("@")) return;
+    if (!sb || !authEmail.includes("@") || authBusy) return;
+    setAuthBusy(true);
     setAuthMsg("");
     const { error } = await sb.auth.signInWithOtp({
       email: authEmail.trim(),
       options: { shouldCreateUser: true, emailRedirectTo: window.location.origin + window.location.pathname },
     });
+    setAuthBusy(false);
     if (error) setAuthMsg(t("acct_err", { e: error.message }));
     else { setAuthStage("sent"); setAuthMsg(t("acct_sent")); }
   }
 
   async function verifyCode() {
     const sb = getSupabase();
-    if (!sb || !authCode.trim()) return;
+    if (!sb || !authCode.trim() || authBusy) return;
+    setAuthBusy(true);
     const { error } = await sb.auth.verifyOtp({ email: authEmail.trim(), token: authCode.trim(), type: "email" });
+    setAuthBusy(false);
     if (error) setAuthMsg(t("acct_err", { e: error.message }));
     else { setAuthStage("idle"); setAuthCode(""); setAuthMsg(""); }
   }
@@ -714,8 +727,10 @@ export default function CareerCompass() {
                 type="email" placeholder={t("acct_email_ph")}
                 className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
                 style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink }} />
-              <button onClick={sendCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
-                {t("acct_send")}
+              <button onClick={sendCode} disabled={authBusy}
+                className="px-3.5 py-2 rounded-xl text-xs font-bold text-white transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 disabled:scale-100"
+                style={{ background: T.grad }}>
+                {authBusy ? "…" : t("acct_send")}
               </button>
             </div>
           ) : (
@@ -724,8 +739,10 @@ export default function CareerCompass() {
                 inputMode="numeric" placeholder={t("acct_code_ph")}
                 className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
                 style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink, ...mono }} />
-              <button onClick={verifyCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
-                {t("acct_verify")}
+              <button onClick={verifyCode} disabled={authBusy}
+                className="px-3.5 py-2 rounded-xl text-xs font-bold text-white transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 disabled:scale-100"
+                style={{ background: T.grad }}>
+                {authBusy ? "…" : t("acct_verify")}
               </button>
             </div>
           )}
