@@ -18,8 +18,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1300,
-   "high": 3400
+   "mid": 1200,
+   "high": 4100
   },
   "cityRent": 620,
   "employment1y": 89,
@@ -67,8 +67,8 @@
   ],
   "costByIsee": {
    "low": 0,
-   "mid": 600,
-   "high": 1000
+   "mid": 0,
+   "high": 0
   },
   "cityRent": 620,
   "employment1y": 91,
@@ -116,8 +116,8 @@
   ],
   "costByIsee": {
    "low": 0,
-   "mid": 500,
-   "high": 900
+   "mid": 0,
+   "high": 0
   },
   "cityRent": 350,
   "employment1y": 93,
@@ -165,9 +165,9 @@
    "People & communication"
   ],
   "costByIsee": {
-   "low": 4000,
-   "mid": 8500,
-   "high": 14000
+   "low": 3000,
+   "mid": 9000,
+   "high": 17000
   },
   "cityRent": 620,
   "employment1y": 96,
@@ -215,8 +215,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1300,
-   "high": 3400
+   "mid": 1200,
+   "high": 4100
   },
   "cityRent": 620,
   "employment1y": 85,
@@ -266,8 +266,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1200,
-   "high": 2600
+   "mid": 1400,
+   "high": 2800
   },
   "cityRent": 420,
   "employment1y": 97,
@@ -317,8 +317,8 @@
   ],
   "costByIsee": {
    "low": 0,
-   "mid": 500,
-   "high": 900
+   "mid": 0,
+   "high": 0
   },
   "cityRent": 420,
   "employment1y": 90,
@@ -366,8 +366,8 @@
   ],
   "costByIsee": {
    "low": 0,
-   "mid": 500,
-   "high": 900
+   "mid": 0,
+   "high": 0
   },
   "cityRent": 350,
   "employment1y": 93,
@@ -414,8 +414,8 @@
   ],
   "costByIsee": {
    "low": 0,
-   "mid": 500,
-   "high": 900
+   "mid": 0,
+   "high": 0
   },
   "cityRent": 350,
   "employment1y": 93,
@@ -463,8 +463,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1300,
-   "high": 3400
+   "mid": 1200,
+   "high": 4100
   },
   "cityRent": 620,
   "employment1y": 89,
@@ -512,8 +512,8 @@
   ],
   "costByIsee": {
    "low": 0,
-   "mid": 600,
-   "high": 1000
+   "mid": 0,
+   "high": 0
   },
   "cityRent": 620,
   "employment1y": 91,
@@ -561,8 +561,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1300,
-   "high": 3400
+   "mid": 1200,
+   "high": 4100
   },
   "cityRent": 620,
   "employment1y": 85,
@@ -609,9 +609,9 @@
    "Mathematics"
   ],
   "costByIsee": {
-   "low": 4000,
-   "mid": 8500,
-   "high": 14000
+   "low": 3000,
+   "mid": 9000,
+   "high": 17000
   },
   "cityRent": 620,
   "employment1y": 96,
@@ -659,8 +659,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1300,
-   "high": 3400
+   "mid": 1200,
+   "high": 4100
   },
   "cityRent": 620,
   "employment1y": 89,
@@ -709,8 +709,8 @@
   ],
   "costByIsee": {
    "low": 156,
-   "mid": 1300,
-   "high": 3400
+   "mid": 1200,
+   "high": 4100
   },
   "cityRent": 620,
   "employment1y": 85,

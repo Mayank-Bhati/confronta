@@ -879,7 +879,7 @@ export default function CareerCompass() {
                 <div>
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("isee_label")}</div>
                   <div className="flex gap-2">
-                    {[["low", "< €15k"], ["mid", "€15–35k"], ["high", "> €35k"]].map(([v, l]) => (
+                    {[["low", "≤ €22k (no-tax area)"], ["mid", "€22–30k"], ["high", "> €30k"]].map(([v, l]) => (
                       <ChipBtn key={v} active={profile.isee === v} onClick={() => setProfile((p) => ({ ...p, isee: v }))}>{l}</ChipBtn>
                     ))}
                   </div>
