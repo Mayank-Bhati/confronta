@@ -41,6 +41,9 @@ def main():
         elif target == "polimi":
             from careercompass_pipeline.adapters import polimi
             print(polimi.ingest())
+        elif target == "polimi-llm":
+            from careercompass_pipeline.adapters import polimi
+            print(polimi.enrich_subjects())
         elif target == "mur":
             from careercompass_pipeline.adapters import mur
             print(mur.ingest())

@@ -8,12 +8,13 @@ the pipeline stays fully runnable offline.
 """
 import json
 import os
+import time
 
 import requests
 
 from . import env  # noqa: F401  (loads pipeline/.env before reading GEMINI_API_KEY)
 
-MODEL = "gemini-1.5-flash"
+MODEL = "gemini-2.5-flash"
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
 
 PROMPT = """You are a data extraction service. From the following university web page text,
@@ -26,7 +27,7 @@ PAGE TEXT:
 """
 
 
-def extract_subjects(page_text):
+def extract_subjects(page_text, max_retries=3):
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         return None  # step skipped — no key configured
@@ -34,7 +35,13 @@ def extract_subjects(page_text):
         "contents": [{"parts": [{"text": PROMPT + page_text[:28000]}]}],
         "generationConfig": {"temperature": 0, "responseMimeType": "application/json"},
     }
-    resp = requests.post(ENDPOINT.format(model=MODEL, key=key), json=body, timeout=60)
-    resp.raise_for_status()
-    text = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
-    return json.loads(text).get("subjects", [])
+    for attempt in range(max_retries + 1):
+        resp = requests.post(ENDPOINT.format(model=MODEL, key=key), json=body, timeout=60)
+        if resp.status_code == 429 and attempt < max_retries:
+            time.sleep(30 * (attempt + 1))  # free-tier rate limit: back off and retry
+            continue
+        if resp.status_code != 200:
+            # never include the URL in errors — it contains the API key
+            raise RuntimeError(f"Gemini API error {resp.status_code}: {resp.text[:200]}")
+        text = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
+        return json.loads(text).get("subjects", [])
