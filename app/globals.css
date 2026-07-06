@@ -42,7 +42,7 @@ body {
 }
 
 @keyframes ccPulse {
-  0%, 100% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.35); }
+  0%, 100% { box-shadow: 0 0 30px rgba(37, 99, 235, 0.35); }
   50% { box-shadow: 0 0 55px rgba(236, 72, 153, 0.45); }
 }
 
@@ -56,11 +56,11 @@ body {
 }
 .cc-card:hover {
   transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(59, 130, 246, 0.35);
 }
 
 .cc-progress {
-  background: linear-gradient(90deg, #8b5cf6, #ec4899, #8b5cf6);
+  background: linear-gradient(90deg, #2563eb, #ec4899, #2563eb);
   background-size: 400px 100%;
   animation: ccShimmer 2.2s linear infinite;
 }

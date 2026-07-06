@@ -17,12 +17,12 @@ const PALETTES = {
     bg: "#07070E", card: "#12121D", card2: "#181826",
     line: "rgba(255,255,255,0.09)", lineStrong: "rgba(255,255,255,0.18)",
     ink: "#F2F3F8", grey: "#9CA3B8",
-    violet: "#8B5CF6", violetSoft: "rgba(139,92,246,0.16)", accent: "#A78BFA",
+    violet: "#3B82F6", violetSoft: "rgba(59,130,246,0.16)", accent: "#60A5FA",
     pink: "#EC4899",
     green: "#34D399", greenSoft: "rgba(52,211,153,0.14)",
     amber: "#FBBF24", amberSoft: "rgba(251,191,36,0.13)",
     red: "#F87171", redSoft: "rgba(248,113,113,0.13)",
-    grad: "linear-gradient(135deg,#8B5CF6,#EC4899)",
+    grad: "linear-gradient(135deg,#2563EB,#EC4899)",
     track: "rgba(255,255,255,0.08)",
     headerBg: "rgba(7,7,14,0.82)",
     chipIdle: "transparent",
@@ -32,12 +32,12 @@ const PALETTES = {
     bg: "#F5F5FB", card: "#FFFFFF", card2: "#F1F1F8",
     line: "rgba(20,20,60,0.10)", lineStrong: "rgba(20,20,60,0.22)",
     ink: "#1A1B2E", grey: "#5D6470",
-    violet: "#7C3AED", violetSoft: "rgba(124,58,237,0.10)", accent: "#7C3AED",
+    violet: "#2244BB", violetSoft: "rgba(34,68,187,0.10)", accent: "#2244BB",
     pink: "#DB2777",
     green: "#0E9F6E", greenSoft: "rgba(14,159,110,0.12)",
     amber: "#B45309", amberSoft: "rgba(245,158,11,0.16)",
     red: "#DC2626", redSoft: "rgba(220,38,38,0.10)",
-    grad: "linear-gradient(135deg,#7C3AED,#DB2777)",
+    grad: "linear-gradient(135deg,#2244BB,#DB2777)",
     track: "rgba(20,20,60,0.10)",
     headerBg: "rgba(245,245,251,0.85)",
     chipIdle: "#FFFFFF",
@@ -45,7 +45,7 @@ const PALETTES = {
   },
 };
 
-const WORLD_HUES = ["#8B5CF6", "#EC4899", "#38BDF8", "#FBBF24", "#34D399", "#F87171", "#A3E635"];
+const WORLD_HUES = ["#3B82F6", "#EC4899", "#38BDF8", "#FBBF24", "#34D399", "#F87171", "#A3E635"];
 
 const INTEREST_TAGS = [
   "Programming", "Mathematics", "Economics & finance", "Design & creativity",
@@ -85,6 +85,17 @@ const natureStyleFor = (T, nature) =>
 // entrance animations replay). Theme and shared handlers flow through context.
 const AppCtx = React.createContext(null);
 
+function PeopleIcon({ size = 18, color = "currentColor" }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={color} aria-hidden>
+      <circle cx="9" cy="8.3" r="3.4" />
+      <path d="M2.8 19.2c0-3.1 2.8-5.2 6.2-5.2s6.2 2.1 6.2 5.2V20H2.8z" />
+      <circle cx="16.6" cy="6.9" r="2.7" opacity="0.75" />
+      <path d="M15.9 13.7c2.7.3 4.9 2.1 4.9 4.6V20h-3.4v-.8c0-2.1-.5-3.9-1.5-5.5z" opacity="0.75" />
+    </svg>
+  );
+}
+
 function Bar({ score, color }) {
   const { T, scoreColor } = React.useContext(AppCtx);
   return (
@@ -102,7 +113,7 @@ function ChipBtn({ active, onClick, children }) {
         border: `1.5px solid ${active ? T.violet : T.line}`,
         background: active ? T.grad : T.chipIdle,
         color: active ? "#fff" : T.ink,
-        boxShadow: active ? "0 4px 18px rgba(139,92,246,0.35)" : "none",
+        boxShadow: active ? "0 4px 18px rgba(59,130,246,0.35)" : "none",
       }}>
       {children}
     </button>
@@ -217,7 +228,7 @@ function Logo({ size = 34 }) {
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden>
       <defs>
         <linearGradient id="ccLogoGrad" x1="0" y1="0" x2="48" y2="48">
-          <stop stopColor="#8B5CF6" />
+          <stop stopColor="#2563EB" />
           <stop offset="1" stopColor="#EC4899" />
         </linearGradient>
       </defs>
@@ -556,7 +567,7 @@ export default function CareerCompass() {
             <button onClick={() => setShowProfiles(true)} aria-label={t("nav_profile")}
               className="w-9 h-9 rounded-full font-bold text-sm flex items-center justify-center transition-transform hover:scale-105"
               style={{ background: activeProfile ? activeProfile.color : T.card2, color: activeProfile ? "#07070E" : T.grey, border: `1.5px solid ${activeProfile ? "transparent" : T.lineStrong}` }}>
-              {activeProfile ? activeProfile.name[0].toUpperCase() : "?"}
+              {activeProfile ? activeProfile.name[0].toUpperCase() : <PeopleIcon color={T.grey} />}
             </button>
           </nav>
         </div>
@@ -694,6 +705,27 @@ export default function CareerCompass() {
                 ))}
               </div>
             </Section>
+
+            {activeProfile && activeProfile.history.length > 0 && (
+              <Section>
+                <div className="text-xs uppercase tracking-widest mb-3" style={{ color: T.grey }}>{t("pf_history")}</div>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                  {activeProfile.history.map((r) => {
+                    const current = lastResult?.id === r.id;
+                    const title = t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`);
+                    return (
+                      <button key={r.id} onClick={() => openResult(r)} className="cc-card text-left rounded-xl p-3"
+                        style={{ background: current ? T.violetSoft : T.card2, border: `1.5px solid ${current ? T.violet : T.line}` }}>
+                        <div className="font-bold text-sm" style={{ ...display, color: current ? T.accent : T.ink }}>{title}</div>
+                        <div className="text-xs mt-1" style={{ ...mono, color: T.grey }}>
+                          {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </Section>
+            )}
 
             <Section>
               <h3 className="font-bold text-lg" style={display}>{t("check_title")}</h3>
@@ -1071,25 +1103,6 @@ export default function CareerCompass() {
                     </button>
                   </div>
 
-                  {p.id === store.activeId && (
-                    <div className="mt-3 pl-12">
-                      <div className="text-xs uppercase tracking-widest mb-1.5" style={{ color: T.grey }}>{t("pf_history")}</div>
-                      {p.history.length === 0 && <p className="text-xs" style={{ color: T.grey }}>{t("pf_empty")}</p>}
-                      <div className="space-y-1.5">
-                        {p.history.map((r) => (
-                          <div key={r.id} className="flex items-center justify-between gap-2 text-xs rounded-lg px-2.5 py-2" style={{ background: T.rowBg }}>
-                            <div className="min-w-0">
-                              <span className="font-bold">{t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`)}</span>
-                              <span className="ml-2" style={{ color: T.grey, ...mono }}>
-                                {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
-                              </span>
-                            </div>
-                            <button onClick={() => openResult(r)} className="font-bold shrink-0" style={{ color: T.accent }}>{t("pf_open")}</button>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
