@@ -56,6 +56,9 @@ def main():
         from careercompass_pipeline.export_app_json import export
         path, n = export()
         print(f"wrote {n} programs → {path}")
+    elif cmd == "export-site":
+        from careercompass_pipeline.export_site_data import export_site
+        print(export_site())
     else:
         print(__doc__)
         return 1

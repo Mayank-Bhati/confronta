@@ -1,627 +1,638 @@
 {
-  "worlds": [
+ "worlds": [
+  {
+   "id": "machines",
+   "name": "Machines in motion",
+   "tagline": "Robots, engines, automation — the physical world that moves",
+   "riasec": {
+    "R": 3,
+    "I": 2,
+    "A": 0,
+    "S": 0,
+    "E": 0,
+    "C": 1
+   },
+   "careers": [
     {
-      "id": "machines",
-      "name": "Machines in motion",
-      "tagline": "Robots, engines, automation — the physical world that moves",
-      "riasec": {
-        "R": 3,
-        "I": 2,
-        "A": 0,
-        "S": 0,
-        "E": 0,
-        "C": 1
-      },
-      "careers": [
-        {
-          "id": "mechatronics",
-          "name": "Mechatronics technician",
-          "riasec": {
-            "R": 3,
-            "I": 1,
-            "C": 1
-          },
-          "day": "Program, test and repair robotic production lines — half workshop, half laptop.",
-          "salary": 27000,
-          "demand": "high",
-          "pathTypes": [
-            "ITS"
-          ],
-          "courses": [
-            "its-mecc"
-          ],
-          "netMonthly": 1500
-        },
-        {
-          "id": "robotics-eng",
-          "name": "Automation & robotics engineer",
-          "riasec": {
-            "R": 2,
-            "I": 3
-          },
-          "day": "Design the control systems that make machines move precisely and safely.",
-          "salary": 32000,
-          "demand": "high",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "polimi-auto",
-            "polito-mecha"
-          ],
-          "netMonthly": 1770
-        },
-        {
-          "id": "auto-tech",
-          "name": "E-mobility technician",
-          "riasec": {
-            "R": 3,
-            "I": 1
-          },
-          "day": "Diagnose and service electric and hybrid vehicles with digital tools.",
-          "salary": 25000,
-          "demand": "growing",
-          "pathTypes": [
-            "ITS",
-            "Vocational"
-          ],
-          "courses": [
-            "its-emob"
-          ],
-          "netMonthly": 1380
-        },
-        {
-          "id": "maint-eng",
-          "name": "Maintenance & reliability engineer",
-          "riasec": {
-            "R": 2,
-            "I": 2,
-            "C": 2
-          },
-          "day": "Keep a whole plant alive: predict failures before they happen.",
-          "salary": 29000,
-          "demand": "stable",
-          "pathTypes": [
-            "University",
-            "ITS"
-          ],
-          "courses": [
-            "polito-mecc",
-            "its-manut"
-          ],
-          "netMonthly": 1610
-        }
-      ]
+     "id": "mechatronics",
+     "name": "Mechatronics technician",
+     "riasec": {
+      "R": 3,
+      "I": 1,
+      "C": 1
+     },
+     "day": "Program, test and repair robotic production lines — half workshop, half laptop.",
+     "salary": 27000,
+     "demand": "high",
+     "pathTypes": [
+      "ITS"
+     ],
+     "courses": [
+      "its-mecc"
+     ],
+     "netMonthly": 1500
     },
     {
-      "id": "digital",
-      "name": "The digital world",
-      "tagline": "Software, data, security — building what runs on screens and servers",
-      "riasec": {
-        "R": 1,
-        "I": 3,
-        "A": 1,
-        "S": 0,
-        "E": 0,
-        "C": 2
-      },
-      "careers": [
-        {
-          "id": "software-dev",
-          "name": "Software developer",
-          "riasec": {
-            "I": 3,
-            "R": 1,
-            "C": 1
-          },
-          "day": "Turn ideas into working apps and services, in a team, shipping weekly.",
-          "salary": 28000,
-          "demand": "high",
-          "pathTypes": [
-            "University",
-            "ITS"
-          ],
-          "courses": [
-            "polimi",
-            "polito",
-            "unimib"
-          ],
-          "netMonthly": 1550
-        },
-        {
-          "id": "data-analyst",
-          "name": "Data analyst",
-          "riasec": {
-            "I": 3,
-            "C": 2
-          },
-          "day": "Find the story hidden in a company's numbers and make it visible.",
-          "salary": 27000,
-          "demand": "high",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "polimi-mat",
-            "unimib-stat"
-          ],
-          "netMonthly": 1500
-        },
-        {
-          "id": "cyber",
-          "name": "Cybersecurity specialist",
-          "riasec": {
-            "I": 3,
-            "R": 1,
-            "C": 2
-          },
-          "day": "Think like an attacker to defend systems people depend on.",
-          "salary": 30000,
-          "demand": "high",
-          "pathTypes": [
-            "University",
-            "ITS"
-          ],
-          "courses": [
-            "polito-cyber",
-            "its-cyber"
-          ],
-          "netMonthly": 1660
-        },
-        {
-          "id": "cloud-tech",
-          "name": "Cloud & infrastructure technician",
-          "riasec": {
-            "R": 2,
-            "I": 2,
-            "C": 2
-          },
-          "day": "Build and run the invisible machinery behind every app.",
-          "salary": 26000,
-          "demand": "growing",
-          "pathTypes": [
-            "ITS"
-          ],
-          "courses": [
-            "its-ict"
-          ],
-          "netMonthly": 1440
-        }
-      ]
+     "id": "robotics-eng",
+     "name": "Automation & robotics engineer",
+     "riasec": {
+      "R": 2,
+      "I": 3
+     },
+     "day": "Design the control systems that make machines move precisely and safely.",
+     "salary": 32000,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "polimi-p3"
+     ],
+     "netMonthly": 1770
     },
     {
-      "id": "health",
-      "name": "Health & care",
-      "tagline": "Medicine, therapy, wellbeing — work that touches lives directly",
-      "riasec": {
-        "R": 1,
-        "I": 2,
-        "A": 0,
-        "S": 3,
-        "E": 0,
-        "C": 1
-      },
-      "careers": [
-        {
-          "id": "nurse",
-          "name": "Nurse",
-          "riasec": {
-            "S": 3,
-            "R": 1,
-            "I": 1
-          },
-          "day": "The person patients actually see: care, judgment and calm under pressure.",
-          "salary": 26000,
-          "demand": "high",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "unito-inf"
-          ],
-          "netMonthly": 1440
-        },
-        {
-          "id": "physio",
-          "name": "Physiotherapist",
-          "riasec": {
-            "S": 3,
-            "R": 2
-          },
-          "day": "Rebuild people's movement after injury, one session at a time.",
-          "salary": 27000,
-          "demand": "high",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [],
-          "netMonthly": 1500
-        },
-        {
-          "id": "biomed-tech",
-          "name": "Biomedical lab technician",
-          "riasec": {
-            "I": 3,
-            "R": 1,
-            "C": 2
-          },
-          "day": "Run the analyses behind every diagnosis — precision that saves lives.",
-          "salary": 25000,
-          "demand": "stable",
-          "pathTypes": [
-            "University",
-            "ITS"
-          ],
-          "courses": [],
-          "netMonthly": 1380
-        },
-        {
-          "id": "psychologist",
-          "name": "Psychologist",
-          "riasec": {
-            "S": 3,
-            "I": 2
-          },
-          "day": "Understand how minds work and help them heal — a long but deep path.",
-          "salary": 24000,
-          "demand": "growing",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [],
-          "netMonthly": 1330
-        }
-      ]
+     "id": "auto-tech",
+     "name": "E-mobility technician",
+     "riasec": {
+      "R": 3,
+      "I": 1
+     },
+     "day": "Diagnose and service electric and hybrid vehicles with digital tools.",
+     "salary": 25000,
+     "demand": "growing",
+     "pathTypes": [
+      "ITS",
+      "Vocational"
+     ],
+     "courses": [
+      "polito-p32",
+      "its-emob"
+     ],
+     "netMonthly": 1380
     },
     {
-      "id": "design",
-      "name": "Stories, design & media",
-      "tagline": "Visuals, products, content — making things people feel",
-      "riasec": {
-        "R": 0,
-        "I": 1,
-        "A": 3,
-        "S": 1,
-        "E": 1,
-        "C": 0
-      },
-      "careers": [
-        {
-          "id": "ux",
-          "name": "UX / product designer",
-          "riasec": {
-            "A": 3,
-            "I": 2
-          },
-          "day": "Decide how an app feels before a line of code is written.",
-          "salary": 27000,
-          "demand": "growing",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "polimi-des-dig"
-          ],
-          "netMonthly": 1500
-        },
-        {
-          "id": "graphic",
-          "name": "Graphic designer",
-          "riasec": {
-            "A": 3,
-            "C": 1
-          },
-          "day": "Give brands and ideas a face: logos, posters, campaigns.",
-          "salary": 23000,
-          "demand": "stable",
-          "pathTypes": [
-            "University",
-            "Vocational"
-          ],
-          "courses": [
-            "polimi-des-com"
-          ],
-          "netMonthly": 1270
-        },
-        {
-          "id": "videomaker",
-          "name": "Video maker / content creator",
-          "riasec": {
-            "A": 3,
-            "E": 1
-          },
-          "day": "Shoot, cut and publish stories that thousands watch.",
-          "salary": 22000,
-          "demand": "growing",
-          "pathTypes": [
-            "Vocational",
-            "University"
-          ],
-          "courses": [],
-          "netMonthly": 1220
-        },
-        {
-          "id": "industrial-design",
-          "name": "Product / industrial designer",
-          "riasec": {
-            "A": 3,
-            "R": 1,
-            "I": 1
-          },
-          "day": "Design physical objects people hold every day — form meets function.",
-          "salary": 26000,
-          "demand": "stable",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "polimi-design"
-          ],
-          "netMonthly": 1440
-        }
-      ]
-    },
-    {
-      "id": "business",
-      "name": "Business & money",
-      "tagline": "Markets, companies, deals — how value gets created and moved",
-      "riasec": {
-        "R": 0,
-        "I": 1,
-        "A": 0,
-        "S": 1,
-        "E": 3,
-        "C": 2
-      },
-      "careers": [
-        {
-          "id": "marketing",
-          "name": "Marketing specialist",
-          "riasec": {
-            "E": 3,
-            "A": 2
-          },
-          "day": "Figure out why people buy — then make them notice your product.",
-          "salary": 25000,
-          "demand": "stable",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "unimib-mark"
-          ],
-          "netMonthly": 1380
-        },
-        {
-          "id": "fin-analyst",
-          "name": "Financial analyst",
-          "riasec": {
-            "I": 2,
-            "C": 3,
-            "E": 1
-          },
-          "day": "Model where the money goes and advise decisions worth millions.",
-          "salary": 30000,
-          "demand": "stable",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "bocconi-fin"
-          ],
-          "netMonthly": 1660
-        },
-        {
-          "id": "export",
-          "name": "Export & sales manager",
-          "riasec": {
-            "E": 3,
-            "S": 1
-          },
-          "day": "Take Italian products to the world: negotiate across languages and borders.",
-          "salary": 27000,
-          "demand": "growing",
-          "pathTypes": [
-            "University",
-            "ITS"
-          ],
-          "courses": [
-            "unimib-econ"
-          ],
-          "netMonthly": 1500
-        },
-        {
-          "id": "entrepreneur",
-          "name": "Entrepreneur / startup founder",
-          "riasec": {
-            "E": 3,
-            "I": 1,
-            "A": 1
-          },
-          "day": "Build something from nothing — highest risk, highest ownership.",
-          "salary": 0,
-          "demand": "n/a",
-          "pathTypes": [
-            "Any"
-          ],
-          "courses": [
-            "bocconi"
-          ],
-          "netMonthly": 0
-        }
-      ]
-    },
-    {
-      "id": "science-env",
-      "name": "Science & environment",
-      "tagline": "Energy, nature, food, research — understanding and fixing the planet",
-      "riasec": {
-        "R": 2,
-        "I": 3,
-        "A": 0,
-        "S": 0,
-        "E": 0,
-        "C": 1
-      },
-      "careers": [
-        {
-          "id": "renewables",
-          "name": "Renewable energy technician",
-          "riasec": {
-            "R": 3,
-            "I": 2
-          },
-          "day": "Install and optimize the solar, wind and storage systems of the transition.",
-          "salary": 26000,
-          "demand": "high",
-          "pathTypes": [
-            "ITS",
-            "University"
-          ],
-          "courses": [
-            "its-energia",
-            "polito-ener"
-          ],
-          "netMonthly": 1440
-        },
-        {
-          "id": "env-eng",
-          "name": "Environmental engineer",
-          "riasec": {
-            "I": 3,
-            "R": 2
-          },
-          "day": "Design how cities handle water, waste and air — engineering with a mission.",
-          "salary": 28000,
-          "demand": "growing",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "polito-env"
-          ],
-          "netMonthly": 1550
-        },
-        {
-          "id": "food-tech",
-          "name": "Food technologist",
-          "riasec": {
-            "I": 2,
-            "R": 2,
-            "C": 2
-          },
-          "day": "The science behind everything Italy eats and exports.",
-          "salary": 25000,
-          "demand": "stable",
-          "pathTypes": [
-            "University",
-            "ITS"
-          ],
-          "courses": [],
-          "netMonthly": 1380
-        },
-        {
-          "id": "researcher",
-          "name": "Research scientist",
-          "riasec": {
-            "I": 3
-          },
-          "day": "Push the edge of what humanity knows — the longest, deepest path.",
-          "salary": 24000,
-          "demand": "competitive",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "unimib-fis",
-            "polimi-ing-fis"
-          ],
-          "netMonthly": 1330
-        }
-      ]
-    },
-    {
-      "id": "people",
-      "name": "People & society",
-      "tagline": "Teaching, tourism, community — work made of human connection",
-      "riasec": {
-        "R": 0,
-        "I": 0,
-        "A": 1,
-        "S": 3,
-        "E": 2,
-        "C": 1
-      },
-      "careers": [
-        {
-          "id": "teacher",
-          "name": "Teacher",
-          "riasec": {
-            "S": 3,
-            "A": 1
-          },
-          "day": "Shape how the next generation thinks — patience with a long echo.",
-          "salary": 24000,
-          "demand": "stable",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [],
-          "netMonthly": 1330
-        },
-        {
-          "id": "hr",
-          "name": "HR specialist",
-          "riasec": {
-            "S": 2,
-            "E": 2,
-            "C": 2
-          },
-          "day": "Find, grow and keep the people a company runs on.",
-          "salary": 25000,
-          "demand": "stable",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [
-            "unimib-org"
-          ],
-          "netMonthly": 1380
-        },
-        {
-          "id": "tourism",
-          "name": "Tourism & hospitality manager",
-          "riasec": {
-            "S": 2,
-            "E": 3
-          },
-          "day": "Run the experiences Italy is famous for — hotels, events, travel.",
-          "salary": 24000,
-          "demand": "growing",
-          "pathTypes": [
-            "ITS",
-            "University"
-          ],
-          "courses": [],
-          "netMonthly": 1330
-        },
-        {
-          "id": "social-worker",
-          "name": "Social worker",
-          "riasec": {
-            "S": 3,
-            "C": 1
-          },
-          "day": "Stand between people and the cracks in the system.",
-          "salary": 23000,
-          "demand": "high",
-          "pathTypes": [
-            "University"
-          ],
-          "courses": [],
-          "netMonthly": 1270
-        }
-      ]
+     "id": "maint-eng",
+     "name": "Maintenance & reliability engineer",
+     "riasec": {
+      "R": 2,
+      "I": 2,
+      "C": 2
+     },
+     "day": "Keep a whole plant alive: predict failures before they happen.",
+     "salary": 29000,
+     "demand": "stable",
+     "pathTypes": [
+      "University",
+      "ITS"
+     ],
+     "courses": [
+      "polito-p50",
+      "polito-p47",
+      "its-manut"
+     ],
+     "netMonthly": 1610
     }
-  ]
+   ]
+  },
+  {
+   "id": "digital",
+   "name": "The digital world",
+   "tagline": "Software, data, security — building what runs on screens and servers",
+   "riasec": {
+    "R": 1,
+    "I": 3,
+    "A": 1,
+    "S": 0,
+    "E": 0,
+    "C": 2
+   },
+   "careers": [
+    {
+     "id": "software-dev",
+     "name": "Software developer",
+     "riasec": {
+      "I": 3,
+      "R": 1,
+      "C": 1
+     },
+     "day": "Turn ideas into working apps and services, in a team, shipping weekly.",
+     "salary": 28000,
+     "demand": "high",
+     "pathTypes": [
+      "University",
+      "ITS"
+     ],
+     "courses": [
+      "polimi-p13",
+      "polito-p39",
+      "unimib"
+     ],
+     "netMonthly": 1550
+    },
+    {
+     "id": "data-analyst",
+     "name": "Data analyst",
+     "riasec": {
+      "I": 3,
+      "C": 2
+     },
+     "day": "Find the story hidden in a company's numbers and make it visible.",
+     "salary": 27000,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "polimi-p23",
+      "polito-p53",
+      "unimib-stat"
+     ],
+     "netMonthly": 1500
+    },
+    {
+     "id": "cyber",
+     "name": "Cybersecurity specialist",
+     "riasec": {
+      "I": 3,
+      "R": 1,
+      "C": 2
+     },
+     "day": "Think like an attacker to defend systems people depend on.",
+     "salary": 30000,
+     "demand": "high",
+     "pathTypes": [
+      "University",
+      "ITS"
+     ],
+     "courses": [
+      "its-cyber"
+     ],
+     "netMonthly": 1660
+    },
+    {
+     "id": "cloud-tech",
+     "name": "Cloud & infrastructure technician",
+     "riasec": {
+      "R": 2,
+      "I": 2,
+      "C": 2
+     },
+     "day": "Build and run the invisible machinery behind every app.",
+     "salary": 26000,
+     "demand": "growing",
+     "pathTypes": [
+      "ITS"
+     ],
+     "courses": [
+      "its-ict"
+     ],
+     "netMonthly": 1440
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Health & care",
+   "tagline": "Medicine, therapy, wellbeing — work that touches lives directly",
+   "riasec": {
+    "R": 1,
+    "I": 2,
+    "A": 0,
+    "S": 3,
+    "E": 0,
+    "C": 1
+   },
+   "careers": [
+    {
+     "id": "nurse",
+     "name": "Nurse",
+     "riasec": {
+      "S": 3,
+      "R": 1,
+      "I": 1
+     },
+     "day": "The person patients actually see: care, judgment and calm under pressure.",
+     "salary": 26000,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "unito-inf"
+     ],
+     "netMonthly": 1440
+    },
+    {
+     "id": "physio",
+     "name": "Physiotherapist",
+     "riasec": {
+      "S": 3,
+      "R": 2
+     },
+     "day": "Rebuild people's movement after injury, one session at a time.",
+     "salary": 27000,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": 1500
+    },
+    {
+     "id": "biomed-tech",
+     "name": "Biomedical lab technician",
+     "riasec": {
+      "I": 3,
+      "R": 1,
+      "C": 2
+     },
+     "day": "Run the analyses behind every diagnosis — precision that saves lives.",
+     "salary": 25000,
+     "demand": "stable",
+     "pathTypes": [
+      "University",
+      "ITS"
+     ],
+     "courses": [
+      "polimi-p4",
+      "polito-p33"
+     ],
+     "netMonthly": 1380
+    },
+    {
+     "id": "psychologist",
+     "name": "Psychologist",
+     "riasec": {
+      "S": 3,
+      "I": 2
+     },
+     "day": "Understand how minds work and help them heal — a long but deep path.",
+     "salary": 24000,
+     "demand": "growing",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": 1330
+    }
+   ]
+  },
+  {
+   "id": "design",
+   "name": "Stories, design & media",
+   "tagline": "Visuals, products, content — making things people feel",
+   "riasec": {
+    "R": 0,
+    "I": 1,
+    "A": 3,
+    "S": 1,
+    "E": 1,
+    "C": 0
+   },
+   "careers": [
+    {
+     "id": "ux",
+     "name": "UX / product designer",
+     "riasec": {
+      "A": 3,
+      "I": 2
+     },
+     "day": "Decide how an app feels before a line of code is written.",
+     "salary": 27000,
+     "demand": "growing",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "polimi-p19"
+     ],
+     "netMonthly": 1500
+    },
+    {
+     "id": "graphic",
+     "name": "Graphic designer",
+     "riasec": {
+      "A": 3,
+      "C": 1
+     },
+     "day": "Give brands and ideas a face: logos, posters, campaigns.",
+     "salary": 23000,
+     "demand": "stable",
+     "pathTypes": [
+      "University",
+      "Vocational"
+     ],
+     "courses": [
+      "polimi-p9"
+     ],
+     "netMonthly": 1270
+    },
+    {
+     "id": "videomaker",
+     "name": "Video maker / content creator",
+     "riasec": {
+      "A": 3,
+      "E": 1
+     },
+     "day": "Shoot, cut and publish stories that thousands watch.",
+     "salary": 22000,
+     "demand": "growing",
+     "pathTypes": [
+      "Vocational",
+      "University"
+     ],
+     "courses": [
+      "polito-p36"
+     ],
+     "netMonthly": 1220
+    },
+    {
+     "id": "industrial-design",
+     "name": "Product / industrial designer",
+     "riasec": {
+      "A": 3,
+      "R": 1,
+      "I": 1
+     },
+     "day": "Design physical objects people hold every day — form meets function.",
+     "salary": 26000,
+     "demand": "stable",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "polimi-p28"
+     ],
+     "netMonthly": 1440
+    }
+   ]
+  },
+  {
+   "id": "business",
+   "name": "Business & money",
+   "tagline": "Markets, companies, deals — how value gets created and moved",
+   "riasec": {
+    "R": 0,
+    "I": 1,
+    "A": 0,
+    "S": 1,
+    "E": 3,
+    "C": 2
+   },
+   "careers": [
+    {
+     "id": "marketing",
+     "name": "Marketing specialist",
+     "riasec": {
+      "E": 3,
+      "A": 2
+     },
+     "day": "Figure out why people buy — then make them notice your product.",
+     "salary": 25000,
+     "demand": "stable",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "unimib-mark"
+     ],
+     "netMonthly": 1380
+    },
+    {
+     "id": "fin-analyst",
+     "name": "Financial analyst",
+     "riasec": {
+      "I": 2,
+      "C": 3,
+      "E": 1
+     },
+     "day": "Model where the money goes and advise decisions worth millions.",
+     "salary": 30000,
+     "demand": "stable",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "bocconi-fin"
+     ],
+     "netMonthly": 1660
+    },
+    {
+     "id": "export",
+     "name": "Export & sales manager",
+     "riasec": {
+      "E": 3,
+      "S": 1
+     },
+     "day": "Take Italian products to the world: negotiate across languages and borders.",
+     "salary": 27000,
+     "demand": "growing",
+     "pathTypes": [
+      "University",
+      "ITS"
+     ],
+     "courses": [
+      "unimib-econ"
+     ],
+     "netMonthly": 1500
+    },
+    {
+     "id": "entrepreneur",
+     "name": "Entrepreneur / startup founder",
+     "riasec": {
+      "E": 3,
+      "I": 1,
+      "A": 1
+     },
+     "day": "Build something from nothing — highest risk, highest ownership.",
+     "salary": 0,
+     "demand": "n/a",
+     "pathTypes": [
+      "Any"
+     ],
+     "courses": [
+      "bocconi"
+     ],
+     "netMonthly": 0
+    }
+   ]
+  },
+  {
+   "id": "science-env",
+   "name": "Science & environment",
+   "tagline": "Energy, nature, food, research — understanding and fixing the planet",
+   "riasec": {
+    "R": 2,
+    "I": 3,
+    "A": 0,
+    "S": 0,
+    "E": 0,
+    "C": 1
+   },
+   "careers": [
+    {
+     "id": "renewables",
+     "name": "Renewable energy technician",
+     "riasec": {
+      "R": 3,
+      "I": 2
+     },
+     "day": "Install and optimize the solar, wind and storage systems of the transition.",
+     "salary": 26000,
+     "demand": "high",
+     "pathTypes": [
+      "ITS",
+      "University"
+     ],
+     "courses": [
+      "polito-p44",
+      "polimi-p12",
+      "its-energia"
+     ],
+     "netMonthly": 1440
+    },
+    {
+     "id": "env-eng",
+     "name": "Environmental engineer",
+     "riasec": {
+      "I": 3,
+      "R": 2
+     },
+     "day": "Design how cities handle water, waste and air — engineering with a mission.",
+     "salary": 28000,
+     "demand": "growing",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "polito-p46",
+      "polimi-p15"
+     ],
+     "netMonthly": 1550
+    },
+    {
+     "id": "food-tech",
+     "name": "Food technologist",
+     "riasec": {
+      "I": 2,
+      "R": 2,
+      "C": 2
+     },
+     "day": "The science behind everything Italy eats and exports.",
+     "salary": 25000,
+     "demand": "stable",
+     "pathTypes": [
+      "University",
+      "ITS"
+     ],
+     "courses": [
+      "polito-p35"
+     ],
+     "netMonthly": 1380
+    },
+    {
+     "id": "researcher",
+     "name": "Research scientist",
+     "riasec": {
+      "I": 3
+     },
+     "day": "Push the edge of what humanity knows — the longest, deepest path.",
+     "salary": 24000,
+     "demand": "competitive",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "polimi-p26",
+      "polito-p51",
+      "unimib-fis"
+     ],
+     "netMonthly": 1330
+    }
+   ]
+  },
+  {
+   "id": "people",
+   "name": "People & society",
+   "tagline": "Teaching, tourism, community — work made of human connection",
+   "riasec": {
+    "R": 0,
+    "I": 0,
+    "A": 1,
+    "S": 3,
+    "E": 2,
+    "C": 1
+   },
+   "careers": [
+    {
+     "id": "teacher",
+     "name": "Teacher",
+     "riasec": {
+      "S": 3,
+      "A": 1
+     },
+     "day": "Shape how the next generation thinks — patience with a long echo.",
+     "salary": 24000,
+     "demand": "stable",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": 1330
+    },
+    {
+     "id": "hr",
+     "name": "HR specialist",
+     "riasec": {
+      "S": 2,
+      "E": 2,
+      "C": 2
+     },
+     "day": "Find, grow and keep the people a company runs on.",
+     "salary": 25000,
+     "demand": "stable",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [
+      "unimib-org"
+     ],
+     "netMonthly": 1380
+    },
+    {
+     "id": "tourism",
+     "name": "Tourism & hospitality manager",
+     "riasec": {
+      "S": 2,
+      "E": 3
+     },
+     "day": "Run the experiences Italy is famous for — hotels, events, travel.",
+     "salary": 24000,
+     "demand": "growing",
+     "pathTypes": [
+      "ITS",
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": 1330
+    },
+    {
+     "id": "social-worker",
+     "name": "Social worker",
+     "riasec": {
+      "S": 3,
+      "C": 1
+     },
+     "day": "Stand between people and the cracks in the system.",
+     "salary": 23000,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": 1270
+    }
+   ]
+  }
+ ]
 }
