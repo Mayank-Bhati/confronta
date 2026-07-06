@@ -65,9 +65,43 @@ body {
   animation: ccShimmer 2.2s linear infinite;
 }
 
+/* Hero compass: the needle swings wide, overshoots and settles north */
+@keyframes ccNeedle {
+  0% { transform: rotate(-210deg); }
+  55% { transform: rotate(40deg); }
+  75% { transform: rotate(-14deg); }
+  90% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+.cc-needle {
+  transform-origin: 50% 50%;
+  animation: ccNeedle 2.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.cc-compass-float { animation: ccBlob 22s ease-in-out infinite; }
+
+/* Shine sweep across cards on hover */
+.cc-shine { position: relative; overflow: hidden; }
+.cc-shine::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -80%;
+  width: 45%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+.cc-shine:hover::after { left: 130%; }
+
+details.cc-year > summary { list-style: none; }
+details.cc-year > summary::-webkit-details-marker { display: none; }
+details.cc-year > summary::before { content: "▸ "; }
+details.cc-year[open] > summary::before { content: "▾ "; }
+
 @media (prefers-reduced-motion: reduce) {
-  .cc-fade-up, .cc-fade-in, .cc-blob, .cc-glow, .cc-progress { animation: none; }
+  .cc-fade-up, .cc-fade-in, .cc-blob, .cc-glow, .cc-progress, .cc-needle, .cc-compass-float { animation: none; }
   .cc-card, .cc-card:hover { transition: none; transform: none; }
+  .cc-shine::after { display: none; }
 }
 
 /* Dark scrollbar */

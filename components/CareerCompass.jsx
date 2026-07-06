@@ -10,6 +10,7 @@ import { rankWorlds, rankCareers } from "../lib/matchEngine";
 import { fitInterests, fitOutcome, fitEnvironment, estimateMonthlyCost, passesHardFilters, prepList, generateNarrative, haversineKm } from "../lib/fitEngine-v2";
 import { LANGS, makeT, makeTD } from "../lib/i18n";
 import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
+import { getSupabase } from "../lib/supabaseClient";
 
 // ————— Theme palettes: dark (cinematic) and light —————
 const PALETTES = {
@@ -166,7 +167,7 @@ function OfficialLink({ c }) {
 function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badge }) {
   const { T, t, scoreColor, isSavedOn, toggleSave } = React.useContext(AppCtx);
   return (
-    <div onClick={onCardClick} className={`cc-card w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
+    <div onClick={onCardClick} className={`cc-card cc-shine w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
       style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
       {badge && (
         <div className="mb-2 text-xs px-2.5 py-1 rounded-full inline-block" style={{ background: T.violetSoft, color: T.accent }}>
@@ -241,7 +242,7 @@ function Logo({ size = 34 }) {
 
 export default function CareerCompass() {
   // ————— Language + theme + profiles (device-local) —————
-  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en", theme: "dark" });
+  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en", theme: "dark", saved: [] });
   const [storeLoaded, setStoreLoaded] = useState(false);
   useEffect(() => { setStore((s) => ({ ...s, ...loadStore() })); setStoreLoaded(true); }, []);
   useEffect(() => { if (storeLoaded) saveStore(store); }, [store, storeLoaded]);
@@ -281,7 +282,8 @@ export default function CareerCompass() {
   const [worldId, setWorldId] = useState(null);
   const [careerId, setCareerId] = useState(null);
   const [prefs, setPrefs] = useState({ pathType: "any", maxDistance: 100, budget: 900 });
-  const [saved, setSaved] = useState([]); // [{ courseId, careerId, careerName, worldName }] — contextual per path
+  const saved = store.saved; // [{ courseId, careerId, careerName, worldName, resultId }] — persisted, contextual per path
+  const [savedFilter, setSavedFilter] = useState("all");
   const [finalists, setFinalists] = useState([]);
   const [narrative, setNarrative] = useState("");
   const [showProfiles, setShowProfiles] = useState(false);
@@ -350,8 +352,11 @@ export default function CareerCompass() {
   }
 
   function goInsights() {
-    if (hasResult) go("reveal");
-    else startSurvey();
+    if (hasResult) { go("reveal"); return; }
+    // No result in this session — but past results live in the stored profile.
+    const hist = activeProfile?.history || [];
+    if (hist.length) { openResult(hist[0]); return; }
+    startSurvey();
   }
 
   function pushSnapshot() {
@@ -384,6 +389,7 @@ export default function CareerCompass() {
     } else {
       setSavedToName("");
     }
+    cloudUpsertResults([result]);
     go("reveal");
   }
 
@@ -453,6 +459,16 @@ export default function CareerCompass() {
   const savedEntries = saved
     .map((s) => ({ ...s, course: COURSES.find((c) => c.id === s.courseId) }))
     .filter((s) => s.course);
+  const savedResultIds = [...new Set(savedEntries.map((s) => s.resultId || "none"))];
+  const filteredSavedEntries = savedFilter === "all"
+    ? savedEntries
+    : savedEntries.filter((s) => (s.resultId || "none") === savedFilter);
+  const resultLabel = (rid) => {
+    const r = (activeProfile?.history || []).find((h) => h.id === rid);
+    if (!r) return "—";
+    const title = t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`);
+    return `${title} · ${new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short" })}`;
+  };
 
   const compareDims = useMemo(() => {
     if (pair.length < 2) return [];
@@ -463,17 +479,22 @@ export default function CareerCompass() {
     ].map((r) => ({ ...r, scores: r.data.map((d) => d.score) }));
   }, [pair, profile, prefs, homeCity, t]);
 
-  // ————— Contextual saves: a course is saved on a specific career path —————
+  // ————— Contextual saves: a course is saved on a specific career path,
+  // tagged with the survey result it was saved under. Persisted + cloud-synced.
   function isSavedOn(courseId, cId) {
     return saved.some((s) => s.courseId === courseId && s.careerId === cId);
   }
   function toggleSave(course, ctx) {
     const cId = ctx?.careerId ?? null;
-    setSaved((prev) =>
-      prev.some((s) => s.courseId === course.id && s.careerId === cId)
-        ? prev.filter((s) => !(s.courseId === course.id && s.careerId === cId))
-        : [...prev, { courseId: course.id, careerId: cId, careerName: ctx?.careerName || "", worldName: ctx?.worldName || "" }]
-    );
+    const existing = saved.find((s) => s.courseId === course.id && s.careerId === cId);
+    if (existing) {
+      updateStore((s) => ({ ...s, saved: s.saved.filter((x) => !(x.courseId === course.id && x.careerId === cId)) }));
+      cloudDeleteSave(existing);
+    } else {
+      const entry = { courseId: course.id, careerId: cId, careerName: ctx?.careerName || "", worldName: ctx?.worldName || "", resultId: lastResult?.id || null };
+      updateStore((s) => ({ ...s, saved: [...s.saved, entry] }));
+      cloudUpsertSaves([entry]);
+    }
   }
 
   function toggleFinalist(id) {
@@ -488,6 +509,136 @@ export default function CareerCompass() {
   function cityCostBadge(cityName) {
     const c = CITIES.find((x) => x.name === cityName);
     return c ? t("cost_badge", { a: c.costRange[0], b: c.costRange[1] }) : "";
+  }
+
+  // ————— Account (Supabase email-code auth + cloud sync) —————
+  const [session, setSession] = useState(null);
+  const [authEmail, setAuthEmail] = useState("");
+  const [authCode, setAuthCode] = useState("");
+  const [authStage, setAuthStage] = useState("idle"); // idle | sent
+  const [authMsg, setAuthMsg] = useState("");
+
+  useEffect(() => {
+    const sb = getSupabase();
+    if (!sb) return;
+    sb.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: sub } = sb.auth.onAuthStateChange((_event, s) => setSession(s));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const syncedUser = React.useRef(null);
+  useEffect(() => {
+    if (session?.user?.id && storeLoaded && syncedUser.current !== session.user.id) {
+      syncedUser.current = session.user.id;
+      syncWithCloud(session);
+    }
+  }, [session, storeLoaded]);
+
+  async function sendCode() {
+    const sb = getSupabase();
+    if (!sb || !authEmail.includes("@")) return;
+    setAuthMsg("");
+    const { error } = await sb.auth.signInWithOtp({ email: authEmail.trim(), options: { shouldCreateUser: true } });
+    if (error) setAuthMsg(t("acct_err", { e: error.message }));
+    else { setAuthStage("sent"); setAuthMsg(t("acct_sent")); }
+  }
+
+  async function verifyCode() {
+    const sb = getSupabase();
+    if (!sb || !authCode.trim()) return;
+    const { error } = await sb.auth.verifyOtp({ email: authEmail.trim(), token: authCode.trim(), type: "email" });
+    if (error) setAuthMsg(t("acct_err", { e: error.message }));
+    else { setAuthStage("idle"); setAuthCode(""); setAuthMsg(""); }
+  }
+
+  async function signOut() {
+    const sb = getSupabase();
+    if (sb) await sb.auth.signOut();
+    setSession(null);
+    syncedUser.current = null;
+  }
+
+  function cloudUpsertResults(results) {
+    const sb = getSupabase();
+    if (!sb || !session?.user?.id) return;
+    sb.from("survey_results").upsert(results.map((r) => ({
+      user_id: session.user.id, local_id: r.id, letters: r.letters,
+      vector: r.vector, interests: r.interests, goals: r.goals,
+      taken_at: new Date(r.date).toISOString(),
+    })), { onConflict: "user_id,local_id" }).then(({ error }) => error && console.warn("sync result:", error.message));
+  }
+
+  function cloudDeleteResult(rid) {
+    const sb = getSupabase();
+    if (!sb || !session?.user?.id) return;
+    sb.from("survey_results").delete().eq("user_id", session.user.id).eq("local_id", rid)
+      .then(({ error }) => error && console.warn("delete result:", error.message));
+  }
+
+  function cloudUpsertSaves(entries) {
+    const sb = getSupabase();
+    if (!sb || !session?.user?.id) return;
+    sb.from("saved_courses").upsert(entries.map((e) => ({
+      user_id: session.user.id, result_local_id: e.resultId || "", course_id: e.courseId,
+      career_id: e.careerId || "", career_name: e.careerName, world_name: e.worldName,
+    })), { onConflict: "user_id,result_local_id,course_id,career_id" }).then(({ error }) => error && console.warn("sync save:", error.message));
+  }
+
+  function cloudDeleteSave(e) {
+    const sb = getSupabase();
+    if (!sb || !session?.user?.id) return;
+    sb.from("saved_courses").delete()
+      .eq("user_id", session.user.id).eq("course_id", e.courseId)
+      .eq("career_id", e.careerId || "").eq("result_local_id", e.resultId || "")
+      .then(({ error }) => error && console.warn("delete save:", error.message));
+  }
+
+  async function syncWithCloud(sess) {
+    const sb = getSupabase();
+    if (!sb || !sess?.user?.id) return;
+    setAuthMsg(t("acct_syncing"));
+    try {
+      const localHist = (store.profiles.find((p) => p.id === store.activeId)?.history) || [];
+      if (localHist.length) cloudUpsertResults(localHist);
+      if (store.saved.length) cloudUpsertSaves(store.saved);
+      const { data: rows } = await sb.from("survey_results").select("*");
+      const { data: saves } = await sb.from("saved_courses").select("*");
+      updateStore((s) => {
+        let profiles = s.profiles;
+        let activeId = s.activeId;
+        if (!profiles.find((p) => p.id === activeId)) {
+          const p = newProfile(sess.user.email?.split("@")[0] || "Me");
+          profiles = [...profiles, p];
+          activeId = p.id;
+        }
+        profiles = profiles.map((p) => {
+          if (p.id !== activeId) return p;
+          const have = new Set(p.history.map((h) => h.id));
+          const merged = [...p.history];
+          for (const r of rows || []) {
+            if (!have.has(r.local_id)) merged.push({
+              id: r.local_id, date: new Date(r.taken_at || r.created_at).getTime(),
+              letters: r.letters, vector: r.vector, interests: r.interests, goals: r.goals,
+            });
+          }
+          merged.sort((a, b) => b.date - a.date);
+          return { ...p, history: merged };
+        });
+        const haveS = new Set(s.saved.map((x) => `${x.resultId || ""}|${x.courseId}|${x.careerId || ""}`));
+        const mergedSaved = [...s.saved];
+        for (const r of saves || []) {
+          const k = `${r.result_local_id || ""}|${r.course_id}|${r.career_id || ""}`;
+          if (!haveS.has(k)) mergedSaved.push({
+            courseId: r.course_id, careerId: r.career_id || null,
+            careerName: r.career_name, worldName: r.world_name, resultId: r.result_local_id || null,
+          });
+        }
+        return { ...s, profiles, activeId, saved: mergedSaved };
+      });
+      setAuthMsg(t("acct_synced"));
+    } catch (e) {
+      setAuthMsg(t("acct_err", { e: String(e).slice(0, 80) }));
+    }
   }
 
   // ————— Profile actions —————
@@ -508,6 +659,7 @@ export default function CareerCompass() {
       ...s,
       profiles: s.profiles.map((p) => (p.id === s.activeId ? { ...p, history: p.history.filter((h) => h.id !== rid) } : p)),
     }));
+    cloudDeleteResult(rid);
   }
   function deleteProfile(id) {
     updateStore((s) => ({ ...s, profiles: s.profiles.filter((p) => p.id !== id), activeId: s.activeId === id ? null : s.activeId }));
@@ -584,8 +736,41 @@ export default function CareerCompass() {
         {/* ————— Welcome / hero ————— */}
         {stage === "welcome" && (
           <div className="relative overflow-hidden rounded-3xl cc-fade-up" style={{ border: `1px solid ${T.line}`, background: T.card }}>
-            <div className="cc-blob absolute -top-32 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(139,92,246,0.35), transparent 65%)", filter: "blur(40px)" }} />
-            <div className="cc-blob absolute -bottom-40 -right-24 w-[520px] h-[520px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(236,72,153,0.28), transparent 65%)", filter: "blur(40px)", animationDelay: "-7s" }} />
+            <div className="cc-blob absolute -top-32 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(37,99,235,0.30), transparent 65%)", filter: "blur(40px)" }} />
+            <div className="cc-blob absolute -bottom-40 -right-24 w-[520px] h-[520px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(236,72,153,0.24), transparent 65%)", filter: "blur(40px)", animationDelay: "-7s" }} />
+            {/* The compass finds its north as the page opens */}
+            <div className="cc-compass-float absolute -right-24 top-1/2 -translate-y-1/2 pointer-events-none hidden md:block" aria-hidden>
+              <svg width="560" height="560" viewBox="0 0 200 200" fill="none" style={{ opacity: theme === "dark" ? 0.22 : 0.14 }}>
+                <defs>
+                  <linearGradient id="ccHeroGrad" x1="0" y1="0" x2="200" y2="200">
+                    <stop stopColor="#2563EB" />
+                    <stop offset="1" stopColor="#EC4899" />
+                  </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="92" stroke="url(#ccHeroGrad)" strokeWidth="2.5" />
+                <circle cx="100" cy="100" r="76" stroke="url(#ccHeroGrad)" strokeWidth="1" opacity="0.6" />
+                {Array.from({ length: 24 }).map((_, i) => {
+                  const a = (i * 15 * Math.PI) / 180;
+                  const long = i % 6 === 0;
+                  const r1 = long ? 82 : 87, r2 = 92;
+                  // fixed precision: float formatting differs between prerender
+                  // and browser engines and would break hydration
+                  const f = (v) => v.toFixed(2);
+                  return (
+                    <line key={i}
+                      x1={f(100 + r1 * Math.sin(a))} y1={f(100 - r1 * Math.cos(a))}
+                      x2={f(100 + r2 * Math.sin(a))} y2={f(100 - r2 * Math.cos(a))}
+                      stroke="url(#ccHeroGrad)" strokeWidth={long ? 2 : 1} opacity={long ? 0.9 : 0.5} />
+                  );
+                })}
+                <text x="100" y="24" textAnchor="middle" fill="url(#ccHeroGrad)" fontSize="12" fontWeight="700" fontFamily="Outfit, sans-serif">N</text>
+                <g className="cc-needle">
+                  <path d="M100 30 L108 100 L100 114 L92 100 Z" fill="url(#ccHeroGrad)" />
+                  <path d="M100 170 L108 100 L100 114 L92 100 Z" fill="url(#ccHeroGrad)" opacity="0.35" />
+                </g>
+                <circle cx="100" cy="100" r="5" fill="url(#ccHeroGrad)" />
+              </svg>
+            </div>
             <div className="relative px-6 md:px-16 py-16 md:py-24">
               <div className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: T.accent, ...mono }}>{t("welcome_kicker")}</div>
               <h2 className="text-4xl md:text-6xl font-black leading-tight max-w-3xl" style={display}>
@@ -828,7 +1013,7 @@ export default function CareerCompass() {
                 const hue = WORLD_HUES[WORLDS_DATA.worlds.findIndex((x) => x.id === w.id) % WORLD_HUES.length];
                 return (
                   <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); go("career"); }}
-                    className="cc-card cc-fade-up relative overflow-hidden text-left rounded-2xl p-5 min-h-[150px]"
+                    className="cc-card cc-shine cc-fade-up relative overflow-hidden text-left rounded-2xl p-5 min-h-[150px]"
                     style={{ background: T.card, border: `1.5px solid ${i < 2 ? hue : T.line}`, animationDelay: `${i * 70}ms` }}>
                     <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full pointer-events-none" style={{ background: `radial-gradient(circle, ${hue}33, transparent 70%)` }} />
                     <div className="flex items-center justify-between relative">
@@ -851,7 +1036,7 @@ export default function CareerCompass() {
             <p className="text-sm -mt-2" style={{ color: T.grey }}>{td(world.tagline)}</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {rankedCareers.map((c, i) => (
-                <div key={c.id} className="cc-card cc-fade-up rounded-2xl p-5" style={{ background: T.card, border: `1px solid ${T.line}`, animationDelay: `${i * 60}ms` }}>
+                <div key={c.id} className="cc-card cc-shine cc-fade-up rounded-2xl p-5" style={{ background: T.card, border: `1px solid ${T.line}`, animationDelay: `${i * 60}ms` }}>
                   <div className="flex items-start justify-between gap-3 flex-wrap">
                     <div>
                       <div className="font-bold text-lg" style={display}>{c.name}</div>
@@ -943,11 +1128,20 @@ export default function CareerCompass() {
         {stage === "saved" && (
           <>
             <BackLink />
-            <h2 className="font-black text-2xl md:text-3xl" style={display}>{t("saved_title", { n: savedEntries.length })}</h2>
+            <h2 className="font-black text-2xl md:text-3xl" style={display}>{t("saved_title", { n: filteredSavedEntries.length })}</h2>
             <p className="text-sm -mt-2" style={{ color: T.grey }}>{t("saved_sub")}</p>
             {savedEntries.length === 0 && <Section><p className="text-sm" style={{ color: T.grey }}>{t("saved_empty")}</p></Section>}
+            {savedResultIds.length > 1 && (
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-xs uppercase tracking-widest" style={{ color: T.grey }}>{t("saved_filter_label")}</span>
+                <ChipBtn active={savedFilter === "all"} onClick={() => setSavedFilter("all")}>{t("saved_filter_all")}</ChipBtn>
+                {savedResultIds.map((rid) => (
+                  <ChipBtn key={rid} active={savedFilter === rid} onClick={() => setSavedFilter(rid)}>{resultLabel(rid === "none" ? null : rid)}</ChipBtn>
+                ))}
+              </div>
+            )}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {savedEntries.map((s) => (
+              {filteredSavedEntries.map((s) => (
                 <InstitutionCard key={`${s.courseId}::${s.careerId}`} c={s.course} chosen={finalists.includes(s.courseId)}
                   onCardClick={() => toggleFinalist(s.courseId)}
                   saveCtx={{ careerId: s.careerId, careerName: s.careerName, worldName: s.worldName }}
@@ -991,9 +1185,24 @@ export default function CareerCompass() {
                       <div className="mb-2 px-2 py-1 rounded-lg inline-block font-semibold" style={{ background: natureStyle(c.nature).bg, color: natureStyle(c.nature).fg }}>
                         {t(NATURE_KEY[c.nature])}
                       </div>
-                      {c.curriculum.map((s, i) => (
-                        <div key={i} style={{ fontWeight: /matemat|analisi/i.test(s) ? 700 : 400 }}>· {s}</div>
-                      ))}
+                      {c.curriculumByYear ? (
+                        ["1", "2", "3"].filter((y) => c.curriculumByYear[y]?.length).map((y) => (
+                          <details key={y} className="cc-year mb-1" open={y === "1"}>
+                            <summary className="cursor-pointer font-bold py-1 select-none" style={{ color: T.accent }}>
+                              {t("year_label", { n: y })} · {c.curriculumByYear[y].length}
+                            </summary>
+                            {c.curriculumByYear[y].map((s, i) => (
+                              <div key={i} className="pl-3" style={{ fontWeight: /matemat|analisi|mathem|algebra|calcul/i.test(s.name) ? 700 : 400 }}>
+                                · {s.name}{s.ects ? ` — ${s.ects} ECTS` : ""}
+                              </div>
+                            ))}
+                          </details>
+                        ))
+                      ) : (
+                        c.curriculum.map((s, i) => (
+                          <div key={i} style={{ fontWeight: /matemat|analisi|mathem|algebra|calcul/i.test(s) ? 700 : 400 }}>· {s}</div>
+                        ))
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1087,6 +1296,45 @@ export default function CareerCompass() {
               <button onClick={() => setShowProfiles(false)} className="w-8 h-8 rounded-full hover:opacity-70 transition-opacity" aria-label="Close">✕</button>
             </div>
             <p className="text-xs mt-1.5" style={{ color: T.grey }}>{t("pf_note")}</p>
+
+            {/* ————— Account: email-code sign-in, results & saves synced to Supabase ————— */}
+            <div className="mt-4 rounded-xl p-3.5" style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("acct_title")}</div>
+              {session ? (
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <span className="text-sm font-semibold">{t("acct_signed", { email: session.user.email })}</span>
+                  <button onClick={signOut} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.line}`, color: T.grey }}>
+                    {t("acct_out")}
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <p className="text-xs mb-2" style={{ color: T.grey }}>{t("acct_note")}</p>
+                  {authStage === "idle" ? (
+                    <div className="flex gap-2">
+                      <input value={authEmail} onChange={(e) => setAuthEmail(e.target.value)} onKeyDown={(e) => e.key === "Enter" && sendCode()}
+                        type="email" placeholder={t("acct_email_ph")}
+                        className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
+                        style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink }} />
+                      <button onClick={sendCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
+                        {t("acct_send")}
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex gap-2">
+                      <input value={authCode} onChange={(e) => setAuthCode(e.target.value)} onKeyDown={(e) => e.key === "Enter" && verifyCode()}
+                        inputMode="numeric" placeholder={t("acct_code_ph")}
+                        className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
+                        style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink, ...mono }} />
+                      <button onClick={verifyCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
+                        {t("acct_verify")}
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+              {authMsg && <p className="text-xs mt-2" style={{ color: T.accent }}>{authMsg}</p>}
+            </div>
 
             <div className="mt-4 flex gap-2">
               <input value={newName} onChange={(e) => setNewName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && createProfile()}

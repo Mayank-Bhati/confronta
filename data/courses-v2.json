@@ -40,6 +40,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Factory%20Automation",
   "url": "https://www.itslombardiameccatronica.it/corsi/#factory-automation",
   "curriculumUrl": null,
@@ -86,6 +87,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Process%20Automation",
   "url": "https://www.itslombardiameccatronica.it/corsi/#process-automation",
   "curriculumUrl": null,
@@ -140,6 +142,7 @@
    "Final project",
    "Mechatronic systems"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Automation%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/automation-engineering",
   "curriculumUrl": null,
@@ -187,6 +190,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20AI%20%26%20Robotics%20for%20Automation%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#ai-robotics-for-automation-specialist",
   "curriculumUrl": null,
@@ -240,6 +244,106 @@
    "Lingua inglese I livello",
    "Analisi matematica II"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Disegno tecnico industriale",
+     "ects": 10
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi matematica II",
+     "ects": 6
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Fisica II",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di meccanica strutturale",
+     "ects": 8
+    },
+    {
+     "name": "Fundamentals of electrical and electronic systems",
+     "ects": 8
+    },
+    {
+     "name": "Meccanica applicata alle macchine",
+     "ects": 10
+    },
+    {
+     "name": "Scienza e tecnologia dei materiali/Tecnologia dei materiali metallici",
+     "ects": 10
+    },
+    {
+     "name": "Termodinamica applicata e trasmissione del calore",
+     "ects": 8
+    }
+   ],
+   "3": [
+    {
+     "name": "Automatic control",
+     "ects": 8
+    },
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 66
+    },
+    {
+     "name": "Electrical machines",
+     "ects": 8
+    },
+    {
+     "name": "Final Project",
+     "ects": 33
+    },
+    {
+     "name": "Fundamentals of machine design",
+     "ects": 8
+    },
+    {
+     "name": "Manufacturing and assembly technologies",
+     "ects": 10
+    },
+    {
+     "name": "Motor vehicle design",
+     "ects": 8
+    },
+    {
+     "name": "Thermal Machines",
+     "ects": 8
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Automotive%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/automotive-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/automotive-engineering/programme-curriculum",
@@ -286,6 +390,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Automotive%20Tech%20Service%20Engineering",
   "url": "https://www.itslombardiameccatronica.it/corsi/#automotive-tech-service-engineering",
   "curriculumUrl": null,
@@ -340,6 +445,106 @@
    "Lingua inglese I livello",
    "Analisi matematica II"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Disegno tecnico industriale",
+     "ects": 10
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi matematica II",
+     "ects": 6
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Fisica II",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di meccanica strutturale",
+     "ects": 8
+    },
+    {
+     "name": "Meccanica applicata alle macchine",
+     "ects": 10
+    },
+    {
+     "name": "Metodologie per l'ispezione e il controllo della qualità",
+     "ects": 6
+    },
+    {
+     "name": "Scienza e tecnologia dei materiali/Tecnologia dei materiali metallici",
+     "ects": 10
+    },
+    {
+     "name": "Termodinamica applicata e trasmissione del calore",
+     "ects": 8
+    }
+   ],
+   "3": [
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 66
+    },
+    {
+     "name": "Elementi di costruzione di macchine",
+     "ects": 8
+    },
+    {
+     "name": "Elettrotecnica/Macchine elettriche",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti di macchine a fluido",
+     "ects": 10
+    },
+    {
+     "name": "Impianti industriali e sicurezza sul lavoro",
+     "ects": 10
+    },
+    {
+     "name": "Meccanica dei fluidi",
+     "ects": 6
+    },
+    {
+     "name": "Prova finale",
+     "ects": 3
+    },
+    {
+     "name": "Tecnologia meccanica",
+     "ects": 8
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Mechanical%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mechanical-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mechanical-engineering/programme-curriculum",
@@ -394,6 +599,102 @@
    "Fondamenti di fisica",
    "Fondamenti di matematica"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Elementi di Materiali e Tecnologie per l'industria manifatturiera",
+     "ects": 6
+    },
+    {
+     "name": "Elementi di economia e organizzazione aziendale",
+     "ects": 8
+    },
+    {
+     "name": "Elementi di meccanica (Dimensionamento, Meccanica delle macchine)",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di Sistemi Informativi Aziendali e IoT",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di chimica e materiali",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di disegno tecnico industriale e CAD",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di fisica",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di matematica",
+     "ects": 6
+    },
+    {
+     "name": "Inglese tecnico",
+     "ects": 3
+    },
+    {
+     "name": "Tirocinio Pratico Valutativo I",
+     "ects": 8
+    }
+   ],
+   "2": [
+    {
+     "name": "Fondamenti di gestione della produzione",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di impianti industriali e sicurezza sul lavoro",
+     "ects": 8
+    },
+    {
+     "name": "Laboratorio di Automazione industriale",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio di Programmazione Industriale",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio di gestione della qualità",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio di tecnologie digitali per l'industria 4.0",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio di tecnologie per la meccatronica",
+     "ects": 66
+    },
+    {
+     "name": "Tirocinio Pratico Valutativo II",
+     "ects": 16
+    }
+   ],
+   "3": [
+    {
+     "name": "Deontologia della Professione di Perito Industriale Laureato",
+     "ects": 33
+    },
+    {
+     "name": "Esame finale",
+     "ects": 3
+    },
+    {
+     "name": "Laboratorio di gestione dell'innovazione",
+     "ects": 66
+    },
+    {
+     "name": "Laboratorio di progetto (Project Work)",
+     "ects": 20
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Industrial%20Manufacturing%20Technologies",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/industrial-manufacturing-technologies",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/industrial-manufacturing-technologies/programme-curriculum",
@@ -448,6 +749,7 @@
    "Electronics",
    "Mathematics"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Engineering%20of%20Computing%20Systems",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/engineering-of-computing-systems",
   "curriculumUrl": null,
@@ -502,6 +804,106 @@
    "Tecniche di programmazione",
    "Algoritmi e strutture dati"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    },
+    {
+     "name": "Tecniche di programmazione",
+     "ects": 6
+    }
+   ],
+   "2": [
+    {
+     "name": "Algoritmi e strutture dati",
+     "ects": 8
+    },
+    {
+     "name": "Analisi matematica II",
+     "ects": 10
+    },
+    {
+     "name": "Basi di dati",
+     "ects": 8
+    },
+    {
+     "name": "Calcolatori elettronici",
+     "ects": 8
+    },
+    {
+     "name": "Elettromagnetismo e Teoria dei circuiti",
+     "ects": 12
+    },
+    {
+     "name": "Metodi matematici per l'ingegneria",
+     "ects": 10
+    },
+    {
+     "name": "Progettazione elettronica digitale",
+     "ects": 8
+    }
+   ],
+   "3": [
+    {
+     "name": "Automatic control",
+     "ects": 10
+    },
+    {
+     "name": "Computer networks",
+     "ects": 88
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 61
+    },
+    {
+     "name": "Insegnamento a scelta",
+     "ects": 8
+    },
+    {
+     "name": "Object oriented programming",
+     "ects": 88
+    },
+    {
+     "name": "Operating systems",
+     "ects": 66
+    },
+    {
+     "name": "Prova finale",
+     "ects": 1
+    },
+    {
+     "name": "Signal analysis and processing",
+     "ects": 88
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Computer%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/computer-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/computer-engineering/programme-curriculum",
@@ -549,6 +951,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Informatica",
   "url": "https://www.unimib.it#informatica",
   "curriculumUrl": null,
@@ -596,6 +999,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Software%20Architect%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#software-architect-specialist",
   "curriculumUrl": null,
@@ -643,6 +1047,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Mathematical%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/mathematical-engineering",
   "curriculumUrl": null,
@@ -697,6 +1102,102 @@
    "Lingua inglese I livello",
    "Analisi matematica II"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Complementi di matematica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi matematica II",
+     "ects": 8
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Fisica IIorFisica II",
+     "ects": 61
+    },
+    {
+     "name": "Geometria differenziale",
+     "ects": 6
+    },
+    {
+     "name": "Istituzioni di Algebra e Geometria",
+     "ects": 10
+    },
+    {
+     "name": "Meccanica razionale",
+     "ects": 8
+    },
+    {
+     "name": "Metodi matematici per l'ingegneria",
+     "ects": 10
+    },
+    {
+     "name": "Quantum physics",
+     "ects": 68
+    }
+   ],
+   "3": [
+    {
+     "name": "Analisi funzionale/Equazioni alle derivate parziali",
+     "ects": 12
+    },
+    {
+     "name": "Equazioni della fisica matematica",
+     "ects": 8
+    },
+    {
+     "name": "Insegnamento a scelta",
+     "ects": 8
+    },
+    {
+     "name": "Metodi numerici",
+     "ects": 8
+    },
+    {
+     "name": "Probabilità e statistica",
+     "ects": 10
+    },
+    {
+     "name": "Programmazione e calcolo scientifico",
+     "ects": 8
+    },
+    {
+     "name": "Prova finale",
+     "ects": 3
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Mathematics%20for%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mathematics-for-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mathematics-for-engineering/programme-curriculum",
@@ -744,6 +1245,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20Statistiche%20ed%20Economiche",
   "url": "https://www.unimib.it#scienze-statistiche-ed-economiche",
   "curriculumUrl": null,
@@ -791,6 +1293,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Big%20Data%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#big-data-specialist",
   "curriculumUrl": null,
@@ -837,6 +1340,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Cyber%20Defence%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#cyber-defence-specialist",
   "curriculumUrl": null,
@@ -883,6 +1387,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Network%20and%20Cloud%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#network-and-cloud-specialist",
   "curriculumUrl": null,
@@ -929,6 +1434,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Cloud%20Development%20Operations%20%28DevOps%29%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#cloud-development-operations-devops-specialist",
   "curriculumUrl": null,
@@ -975,6 +1481,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Infermieristica",
   "url": "https://www.unito.it#infermieristica",
   "curriculumUrl": null,
@@ -1029,6 +1536,7 @@
    "Biomechanics",
    "Biomedical instrumentation"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Biomedical%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/biomedical-engineering",
   "curriculumUrl": null,
@@ -1083,6 +1591,110 @@
    "Lingua inglese I livello",
    "Analisi dei segnali"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti di biologia, anatomia e fisiologia",
+     "ects": 6
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi dei segnali",
+     "ects": 8
+    },
+    {
+     "name": "Analisi matematica II",
+     "ects": 6
+    },
+    {
+     "name": "Disegno tecnico industriale",
+     "ects": 6
+    },
+    {
+     "name": "Elettronica",
+     "ects": 8
+    },
+    {
+     "name": "Elettrotecnica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica II",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti di meccanica strutturale",
+     "ects": 8
+    },
+    {
+     "name": "Meccanica delle macchine",
+     "ects": 8
+    },
+    {
+     "name": "Scienza e tecnologia dei materiali",
+     "ects": 6
+    }
+   ],
+   "3": [
+    {
+     "name": "Bioingegneria chimica/Bioingegneria meccanica",
+     "ects": 12
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 6
+    },
+    {
+     "name": "Dispositivi impiantabili attivi/Bioimmagini",
+     "ects": 10
+    },
+    {
+     "name": "Prova finale",
+     "ects": 3
+    },
+    {
+     "name": "Strumentazione biomedica e sicurezza",
+     "ects": 8
+    },
+    {
+     "name": "Termodinamica applicata e trasmissione del calore",
+     "ects": 8
+    },
+    {
+     "name": "Tirocinio",
+     "ects": 8
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Biomedical%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/biomedical-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/biomedical-engineering/programme-curriculum",
@@ -1130,6 +1742,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Meccatronica%20Biomedicale",
   "url": "https://www.itslombardiameccatronica.it/corsi/#meccatronica-biomedicale",
   "curriculumUrl": null,
@@ -1177,6 +1790,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Interaction%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/interaction-design",
   "curriculumUrl": null,
@@ -1230,6 +1844,7 @@
    "Typography",
    "Web design"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Communication%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/communication-design",
   "curriculumUrl": null,
@@ -1276,6 +1891,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Product%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/product-design",
   "curriculumUrl": null,
@@ -1330,6 +1946,106 @@
    "Linguaggio cinematografico",
    "Algoritmi e programmazione a oggetti"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    },
+    {
+     "name": "Linguaggio cinematografico",
+     "ects": 6
+    }
+   ],
+   "2": [
+    {
+     "name": "Algoritmi e programmazione a oggetti",
+     "ects": 8
+    },
+    {
+     "name": "Analisi matematica II",
+     "ects": 8
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Industrie Creative Digitali",
+     "ects": 6
+    },
+    {
+     "name": "Interactive Media",
+     "ects": 10
+    },
+    {
+     "name": "Metodi matematici per l'ingegneria",
+     "ects": 10
+    },
+    {
+     "name": "Produzione cinematografica",
+     "ects": 10
+    },
+    {
+     "name": "Tecnologie digitali",
+     "ects": 10
+    }
+   ],
+   "3": [
+    {
+     "name": "Basi di dati",
+     "ects": 6
+    },
+    {
+     "name": "Computer grafica",
+     "ects": 12
+    },
+    {
+     "name": "Computer networks",
+     "ects": 88
+    },
+    {
+     "name": "Elaborazione di immagine e video",
+     "ects": 6
+    },
+    {
+     "name": "Insegnamento a scelta",
+     "ects": 6
+    },
+    {
+     "name": "Prova finale",
+     "ects": 1
+    },
+    {
+     "name": "Signal analysis and processing",
+     "ects": 88
+    },
+    {
+     "name": "Transmedia",
+     "ects": 10
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Cinema%20and%20Digital%20Media%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/cinema-and-digital-media-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/cinema-and-digital-media-engineering/programme-curriculum",
@@ -1377,6 +2093,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Omnichannel%20Communication%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#omnichannel-communication-specialist",
   "curriculumUrl": null,
@@ -1424,6 +2141,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Marketing%2C%20Comunicazione%20Aziendale%20e%20Mercati%20Globali",
   "url": "https://www.unimib.it#marketing-comunicazione-aziendale-e-mercati-globali",
   "curriculumUrl": null,
@@ -1471,6 +2189,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Bocconi%20International%20Economics%20and%20Management%20%28BIEM%29",
   "url": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school#international-economics-and-management-biem",
   "curriculumUrl": null,
@@ -1518,6 +2237,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Digital%20Marketing%20Data%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#digital-marketing-data-specialist",
   "curriculumUrl": null,
@@ -1564,6 +2284,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Bocconi%20International%20Economics%20and%20Finance%20%28BIEF%29",
   "url": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school#international-economics-and-finance-bief",
   "curriculumUrl": null,
@@ -1611,6 +2332,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Economia%20e%20Commercio",
   "url": "https://www.unimib.it#economia-e-commercio",
   "curriculumUrl": null,
@@ -1658,6 +2380,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Bocconi%20Economics%2C%20Management%20and%20Computer%20Science%20%28BEMACS%29",
   "url": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school#economics-management-and-computer-science-bemacs",
   "curriculumUrl": null,
@@ -1712,6 +2435,106 @@
    "Scienza e tecnologia dei materiali per l'ingegneria energetica",
    "Analisi matematica II"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    },
+    {
+     "name": "Scienza e tecnologia dei materiali per l'ingegneria energetica",
+     "ects": 8
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi matematica II",
+     "ects": 6
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Disegno tecnico industriale",
+     "ects": 6
+    },
+    {
+     "name": "Elettrotecnica/Macchine elettriche",
+     "ects": 10
+    },
+    {
+     "name": "Fisica II",
+     "ects": 6
+    },
+    {
+     "name": "Scienza delle costruzioni",
+     "ects": 8
+    },
+    {
+     "name": "Termodinamica applicata e trasmissione del calore",
+     "ects": 8
+    },
+    {
+     "name": "Termofluidodinamica",
+     "ects": 10
+    }
+   ],
+   "3": [
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 64
+    },
+    {
+     "name": "Elementi di ingegneria nucleare",
+     "ects": 8
+    },
+    {
+     "name": "Energetica e fonti rinnovabili",
+     "ects": 8
+    },
+    {
+     "name": "Fisica dell'edificio e climatizzazione",
+     "ects": 8
+    },
+    {
+     "name": "Impianti di produzione di potenza e sostenibilità",
+     "ects": 10
+    },
+    {
+     "name": "Laboratorio computazionale di scambio termico e Fondamenti di macchine",
+     "ects": 12
+    },
+    {
+     "name": "Meccanica delle macchine",
+     "ects": 8
+    },
+    {
+     "name": "Prova finale",
+     "ects": 1
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Energy%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/energy-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/energy-engineering/programme-curriculum",
@@ -1766,6 +2589,7 @@
    "Electrical systems",
    "Industrial plants and management"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Energy%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/energy-engineering",
   "curriculumUrl": null,
@@ -1813,6 +2637,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Energia%20Piemonte%20Energy%20Manager",
   "url": "https://its-energiapiemonte.it/#energy-manager",
   "curriculumUrl": null,
@@ -1867,6 +2692,106 @@
    "Metodi per l'ingegneria ambientale",
    "Analisi matematica II"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    },
+    {
+     "name": "Metodi per l'ingegneria ambientale",
+     "ects": 6
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi matematica II",
+     "ects": 8
+    },
+    {
+     "name": "Chimica ambientale/Ecologia applicata all'ingegneria",
+     "ects": 12
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Disegno",
+     "ects": 6
+    },
+    {
+     "name": "Fisica II",
+     "ects": 6
+    },
+    {
+     "name": "Scienza e tecnologia dei materiali",
+     "ects": 6
+    },
+    {
+     "name": "Termodinamica applicata e trasmissione del calore",
+     "ects": 8
+    },
+    {
+     "name": "Topografia",
+     "ects": 6
+    }
+   ],
+   "3": [
+    {
+     "name": "Circular economy e sostenibilità ambientale",
+     "ects": 8
+    },
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 6
+    },
+    {
+     "name": "Geologia applicata/Geofisica",
+     "ects": 12
+    },
+    {
+     "name": "Geotecnica",
+     "ects": 10
+    },
+    {
+     "name": "Idraulica",
+     "ects": 10
+    },
+    {
+     "name": "Ingegneria sanitaria ambientale",
+     "ects": 8
+    },
+    {
+     "name": "Prova finale",
+     "ects": 3
+    },
+    {
+     "name": "Scienza delle costruzioni",
+     "ects": 10
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Environmental%20and%20Land%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/environmental-and-land-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/environmental-and-land-engineering/programme-curriculum",
@@ -1914,6 +2839,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Environmental%20and%20Land%20Planning%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/environmental-and-land-planning-engineering",
   "curriculumUrl": null,
@@ -1961,6 +2887,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "ITS%20Energia%20Piemonte%20Energy%20%26%20Circular%20Economy%20Specialist",
   "url": "https://its-energiapiemonte.it/#energy-circular-economy-specialist",
   "curriculumUrl": null,
@@ -2015,6 +2942,106 @@
    "Lingua inglese I livello",
    "Analisi matematica II"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Chimica organica per l'ingegneria chimica e alimentare",
+     "ects": 6
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi matematica II",
+     "ects": 6
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Disegno tecnico industriale",
+     "ects": 6
+    },
+    {
+     "name": "Fenomeni di trasporto e reattori chimici",
+     "ects": 12
+    },
+    {
+     "name": "Fisica II",
+     "ects": 6
+    },
+    {
+     "name": "Processi di separazione e Fondamenti di biologia molecolare e microbiologia",
+     "ects": 12
+    },
+    {
+     "name": "Scienza e tecnologia dei materiali",
+     "ects": 6
+    },
+    {
+     "name": "Termodinamica per l'ingegneria chimica",
+     "ects": 10
+    }
+   ],
+   "3": [
+    {
+     "name": "Chimica industriale",
+     "ects": 10
+    },
+    {
+     "name": "Controllo, strumentazione e sicurezza per i processi chimici",
+     "ects": 12
+    },
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 6
+    },
+    {
+     "name": "Elettrotecnica",
+     "ects": 6
+    },
+    {
+     "name": "Impianti per l'industria chimica e alimentare",
+     "ects": 10
+    },
+    {
+     "name": "Macchine a fluido",
+     "ects": 8
+    },
+    {
+     "name": "Prova finale",
+     "ects": 1
+    },
+    {
+     "name": "Scienza delle costruzioni",
+     "ects": 8
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Chemical%20and%20Food%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/chemical-and-food-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/chemical-and-food-engineering/programme-curriculum",
@@ -2061,6 +3088,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Politecnico%20di%20Milano%20Physics%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/physics-engineering",
   "curriculumUrl": null,
@@ -2114,6 +3142,106 @@
    "Lingua inglese I livello",
    "Advanced methods for physics and Quantum physics"
   ],
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra lineare e geometria",
+     "ects": 10
+    },
+    {
+     "name": "Analisi matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 8
+    },
+    {
+     "name": "Fisica I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica",
+     "ects": 8
+    },
+    {
+     "name": "Laboratorio di fisica",
+     "ects": 6
+    },
+    {
+     "name": "Lingua inglese I livello",
+     "ects": 3
+    }
+   ],
+   "2": [
+    {
+     "name": "Advanced methods for physics and Quantum physics",
+     "ects": 12
+    },
+    {
+     "name": "Analisi matematica IIorMathematical analysis II",
+     "ects": 88
+    },
+    {
+     "name": "Circuit theory and applications",
+     "ects": 10
+    },
+    {
+     "name": "Circuiti elettronici",
+     "ects": 88
+    },
+    {
+     "name": "Crediti liberi dal catalogo di Ateneo “Grandi Sfide Globali”",
+     "ects": 6
+    },
+    {
+     "name": "Dispositivi elettronici",
+     "ects": 66
+    },
+    {
+     "name": "Fisica IIorPhysics II",
+     "ects": 10
+    },
+    {
+     "name": "Mathematical methods",
+     "ects": 10
+    }
+   ],
+   "3": [
+    {
+     "name": "Applied electronics",
+     "ects": 10
+    },
+    {
+     "name": "Crediti liberi del 3° anno",
+     "ects": 61
+    },
+    {
+     "name": "Digital systems electronics",
+     "ects": 88
+    },
+    {
+     "name": "Elettromagnetismo applicato",
+     "ects": 8
+    },
+    {
+     "name": "Fisica dei sistemi complessi",
+     "ects": 66
+    },
+    {
+     "name": "Fisica dello stato solido",
+     "ects": 10
+    },
+    {
+     "name": "Prova finale",
+     "ects": 1
+    },
+    {
+     "name": "Tecnologie per le nanoscienze",
+     "ects": 6
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Torino%20Physical%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/physical-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/physical-engineering/programme-curriculum",
@@ -2160,6 +3288,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Fisica",
   "url": "https://www.unimib.it#fisica",
   "curriculumUrl": null,
@@ -2207,6 +3336,7 @@
   "curriculum": [
    "Study plan on the official page"
   ],
+  "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20dell%27Organizzazione",
   "url": "https://www.unimib.it#scienze-dell-organizzazione",
   "curriculumUrl": null,

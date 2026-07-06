@@ -178,10 +178,48 @@ def curriculum_of(prog):
     seen, names = set(), []
     for s in subs:
         n = s.name.strip()
+        n = clean_subject(n)
         if n.lower() not in seen:
             seen.add(n.lower())
             names.append(n if chosen != "llm" else n.capitalize())
     return names[:8]
+
+
+import re as _re
+
+
+def clean_subject(name):
+    """PoliTo alternative-course cells concatenate EN/IT variants without a
+    separator ("Operating systemsorSistemi operativi") and append UI text
+    ("(viewFull curriculum)") — keep the first variant, drop the junk."""
+    name = _re.sub(r"\s*\(view.*$", "", name).strip()
+    m = _re.match(r"^(.*?[a-zà-ù\)])or[A-ZÀ-Ù]", name)
+    if m:
+        name = m.group(1).strip()
+    return name
+
+
+def curriculum_by_year(prog):
+    """Full study plan grouped by year: {"1": [{name, ects}, ...], ...}.
+
+    Only table-parsed tracks carry reliable years; LLM themes without a year
+    are omitted here (they still feed the flat curriculum fallback).
+    """
+    tracks = []
+    for sub in prog.subjects:
+        if sub.track not in tracks:
+            tracks.append(sub.track)
+    chosen = next((t for t in tracks if t != "llm"), None)
+    if chosen is None:
+        return None
+    out = {}
+    seen = set()
+    for s in sorted((x for x in prog.subjects if x.track == chosen), key=lambda x: (x.year or 9, x.name)):
+        if not s.year or s.name.lower() in seen:
+            continue
+        seen.add(s.name.lower())
+        out.setdefault(str(s.year), []).append({"name": clean_subject(s.name), "ects": s.ects})
+    return out or None
 
 
 def build_course(prog, inst, career_id, cities_by_name):
@@ -217,6 +255,7 @@ def build_course(prog, inst, career_id, cities_by_name):
         "nature": a["nature"],
         "netMonthly": a["netMonthly"],
         "curriculum": curriculum_of(prog) or ["Study plan on the official page"],
+        "curriculumByYear": curriculum_by_year(prog),
         "googleQuery": urllib.parse.quote(f"{inst.name} {prog.name}"),
         "url": prog.url,
         "curriculumUrl": prog.curriculum_url,
