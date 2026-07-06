@@ -28,7 +28,8 @@
       "ITS"
      ],
      "courses": [
-      "its-mecc"
+      "its-lomb-mecc-p72",
+      "its-lomb-mecc-p73"
      ],
      "netMonthly": 1500
     },
@@ -46,7 +47,8 @@
       "University"
      ],
      "courses": [
-      "polimi-p3"
+      "polimi-p3",
+      "its-rizzoli-p89"
      ],
      "netMonthly": 1770
     },
@@ -66,7 +68,7 @@
      ],
      "courses": [
       "polito-p32",
-      "its-emob"
+      "its-lomb-mecc-p79"
      ],
      "netMonthly": 1380
     },
@@ -87,8 +89,7 @@
      ],
      "courses": [
       "polito-p50",
-      "polito-p47",
-      "its-manut"
+      "polito-p47"
      ],
      "netMonthly": 1610
     }
@@ -125,7 +126,8 @@
      "courses": [
       "polimi-p13",
       "polito-p39",
-      "unimib"
+      "unimib-p58",
+      "its-rizzoli-p80"
      ],
      "netMonthly": 1550
     },
@@ -145,7 +147,8 @@
      "courses": [
       "polimi-p23",
       "polito-p53",
-      "unimib-stat"
+      "unimib-p60",
+      "its-rizzoli-p87"
      ],
      "netMonthly": 1500
     },
@@ -165,7 +168,7 @@
       "ITS"
      ],
      "courses": [
-      "its-cyber"
+      "its-rizzoli-p86"
      ],
      "netMonthly": 1660
     },
@@ -184,7 +187,8 @@
       "ITS"
      ],
      "courses": [
-      "its-ict"
+      "its-rizzoli-p85",
+      "its-rizzoli-p83"
      ],
      "netMonthly": 1440
     }
@@ -218,7 +222,7 @@
       "University"
      ],
      "courses": [
-      "unito-inf"
+      "unito-p71"
      ],
      "netMonthly": 1440
     },
@@ -255,7 +259,8 @@
      ],
      "courses": [
       "polimi-p4",
-      "polito-p33"
+      "polito-p33",
+      "its-lomb-mecc-p77"
      ],
      "netMonthly": 1380
     },
@@ -342,7 +347,8 @@
       "University"
      ],
      "courses": [
-      "polito-p36"
+      "polito-p36",
+      "its-rizzoli-p92"
      ],
      "netMonthly": 1220
     },
@@ -394,7 +400,9 @@
       "University"
      ],
      "courses": [
-      "unimib-mark"
+      "unimib-p62",
+      "bocconi-p64",
+      "its-rizzoli-p91"
      ],
      "netMonthly": 1380
     },
@@ -413,7 +421,7 @@
       "University"
      ],
      "courses": [
-      "bocconi-fin"
+      "bocconi-p65"
      ],
      "netMonthly": 1660
     },
@@ -432,7 +440,7 @@
       "ITS"
      ],
      "courses": [
-      "unimib-econ"
+      "unimib-p61"
      ],
      "netMonthly": 1500
     },
@@ -451,7 +459,7 @@
       "Any"
      ],
      "courses": [
-      "bocconi"
+      "bocconi-p68"
      ],
      "netMonthly": 0
     }
@@ -487,7 +495,7 @@
      "courses": [
       "polito-p44",
       "polimi-p12",
-      "its-energia"
+      "its-energia-pi-p94"
      ],
      "netMonthly": 1440
     },
@@ -506,7 +514,8 @@
      ],
      "courses": [
       "polito-p46",
-      "polimi-p15"
+      "polimi-p15",
+      "its-energia-pi-p95"
      ],
      "netMonthly": 1550
     },
@@ -545,7 +554,7 @@
      "courses": [
       "polimi-p26",
       "polito-p51",
-      "unimib-fis"
+      "unimib-p59"
      ],
      "netMonthly": 1330
     }
@@ -595,7 +604,7 @@
       "University"
      ],
      "courses": [
-      "unimib-org"
+      "unimib-p63"
      ],
      "netMonthly": 1380
     },

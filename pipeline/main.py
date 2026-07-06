@@ -33,6 +33,9 @@ def main():
     init_db()
     if cmd == "init":
         print("tables ready")
+    elif cmd == "seed":
+        from careercompass_pipeline.seed_reference import seed
+        print(seed())
     elif cmd == "ingest":
         target = sys.argv[2] if len(sys.argv) > 2 else "polito"
         if target == "polito":

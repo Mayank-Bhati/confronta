@@ -84,6 +84,41 @@ class ProgramSubject(Base):
     program = relationship("Program", back_populates="subjects")
 
 
+class City(Base):
+    __tablename__ = "cities"
+    id = Column(Integer, primary_key=True)
+    slug = Column(String(64), unique=True, nullable=False)   # e.g. "milano"
+    name = Column(String(120), nullable=False)
+    lat = Column(Float)
+    lon = Column(Float)
+    size = Column(String(16))                                # small | medium | large
+    rent_single_room = Column(Integer)                       # €/month
+    utilities = Column(Integer)                              # €/month midpoint
+    food = Column(Integer)                                   # €/month, cooking at home
+    transport = Column(Integer)                              # €/month youth pass
+    vibe = Column(String(200))
+    source = Column(String(500))
+
+
+class IseeBand(Base):
+    __tablename__ = "isee_bands"
+    id = Column(Integer, primary_key=True)
+    band = Column(String(16), nullable=False)                # low | mid | high | dsu
+    isee_min = Column(Integer)
+    isee_max = Column(Integer)                               # NULL = unbounded
+    description = Column(String(300))
+    source = Column(String(500))
+
+
+class Benchmark(Base):
+    __tablename__ = "benchmarks"
+    id = Column(Integer, primary_key=True)
+    metric = Column(String(200), unique=True, nullable=False)
+    value = Column(String(80))
+    population = Column(String(200))
+    source = Column(String(500))
+
+
 class FetchLog(Base):
     __tablename__ = "fetch_log"
     id = Column(Integer, primary_key=True)

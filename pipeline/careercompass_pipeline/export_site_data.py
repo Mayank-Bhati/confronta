@@ -1,75 +1,122 @@
-"""Export DB programmes into the website's data files (Option A).
+"""Export DB → website data files (Option A).
 
-Replaces the invented PoliMi/PoliTo demo courses in data/courses-v2.json with
-real ingested programmes (real names, exact URLs, real curricula) and rewires
-data/worlds.json career→course references accordingly. Institutions not yet
-ingested (Bicocca, Bocconi, ITS, UniTo) keep their demo entries until their
-adapters land.
+Every course on the site now comes from the database (real institutions, real
+programme names, exact URLs, real curricula where parsed/extracted). Careers
+keep the one-course-one-path invariant, enforced by an assertion at the end.
+Cities are exported from the cities table (verified rents), merged over any
+extra city entries already in the app file.
 
 Engine fields the sources don't publish (fit statistics, selectivity, salary)
-use per-area estimates modelled on AlmaLaurea/portal data — same convention as
-the original dataset.
+use per-area estimates anchored to AlmaLaurea/INDIRE benchmarks.
 """
 import json
 import os
 import urllib.parse
 
-from .db import Institution, Program, ProgramSubject, Session
+from .db import City, Institution, Program, Session
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data")
 
 # career id → [(institution slug, exact programme name)]
 CAREER_MAP = {
-    "robotics-eng": [("polimi", "Automation Engineering")],
-    "auto-tech": [("polito", "Automotive Engineering")],
+    # machines
+    "mechatronics": [("its-lomb-mecc", "Factory Automation"), ("its-lomb-mecc", "Process Automation")],
+    "robotics-eng": [("polimi", "Automation Engineering"), ("its-rizzoli", "AI & Robotics for Automation Specialist")],
+    "auto-tech": [("polito", "Automotive Engineering"), ("its-lomb-mecc", "Automotive Tech Service Engineering")],
     "maint-eng": [("polito", "Mechanical Engineering"), ("polito", "Industrial Manufacturing Technologies")],
-    "software-dev": [("polimi", "Engineering of Computing Systems"), ("polito", "Computer Engineering")],
-    "data-analyst": [("polimi", "Mathematical Engineering"), ("polito", "Mathematics for Engineering")],
+    # digital
+    "software-dev": [("polimi", "Engineering of Computing Systems"), ("polito", "Computer Engineering"),
+                     ("unimib", "Informatica"), ("its-rizzoli", "Software Architect Specialist")],
+    "data-analyst": [("polimi", "Mathematical Engineering"), ("polito", "Mathematics for Engineering"),
+                     ("unimib", "Scienze Statistiche ed Economiche"), ("its-rizzoli", "Big Data Specialist")],
+    "cyber": [("its-rizzoli", "Cyber Defence Specialist")],
+    "cloud-tech": [("its-rizzoli", "Network and Cloud Specialist"), ("its-rizzoli", "Cloud Development Operations (DevOps) Specialist")],
+    # health
+    "nurse": [("unito", "Infermieristica")],
+    "biomed-tech": [("polimi", "Biomedical Engineering"), ("polito", "Biomedical Engineering"), ("its-lomb-mecc", "Meccatronica Biomedicale")],
+    # design & media
     "ux": [("polimi", "Interaction Design")],
     "graphic": [("polimi", "Communication Design")],
     "industrial-design": [("polimi", "Product Design")],
-    "videomaker": [("polito", "Cinema and Digital Media Engineering")],
-    "biomed-tech": [("polimi", "Biomedical Engineering"), ("polito", "Biomedical Engineering")],
-    "renewables": [("polito", "Energy Engineering"), ("polimi", "Energy Engineering")],
-    "env-eng": [("polito", "Environmental and Land Engineering"), ("polimi", "Environmental and Land Planning Engineering")],
+    "videomaker": [("polito", "Cinema and Digital Media Engineering"), ("its-rizzoli", "Omnichannel Communication Specialist")],
+    # business
+    "marketing": [("unimib", "Marketing, Comunicazione Aziendale e Mercati Globali"),
+                  ("bocconi", "International Economics and Management (BIEM)"), ("its-rizzoli", "Digital Marketing Data Specialist")],
+    "fin-analyst": [("bocconi", "International Economics and Finance (BIEF)")],
+    "export": [("unimib", "Economia e Commercio")],
+    "entrepreneur": [("bocconi", "Economics, Management and Computer Science (BEMACS)")],
+    # science & environment
+    "renewables": [("polito", "Energy Engineering"), ("polimi", "Energy Engineering"), ("its-energia-pi", "Energy Manager")],
+    "env-eng": [("polito", "Environmental and Land Engineering"), ("polimi", "Environmental and Land Planning Engineering"),
+                ("its-energia-pi", "Energy & Circular Economy Specialist")],
     "food-tech": [("polito", "Chemical and Food Engineering")],
-    "researcher": [("polimi", "Physics Engineering"), ("polito", "Physical Engineering")],
+    "researcher": [("polimi", "Physics Engineering"), ("polito", "Physical Engineering"), ("unimib", "Fisica")],
+    # people
+    "hr": [("unimib", "Scienze dell'Organizzazione")],
 }
 
 CAREER_TAGS = {
+    "mechatronics": ["Machines & hardware", "Building things"],
     "robotics-eng": ["Machines & hardware", "Programming", "Mathematics"],
     "auto-tech": ["Machines & hardware", "Building things"],
     "maint-eng": ["Machines & hardware", "Building things", "Mathematics"],
     "software-dev": ["Programming", "Mathematics", "Science & research"],
     "data-analyst": ["Mathematics", "Programming", "Economics & finance"],
+    "cyber": ["Programming", "Building things"],
+    "cloud-tech": ["Programming", "Machines & hardware"],
+    "nurse": ["Health & body", "People & communication"],
+    "biomed-tech": ["Health & body", "Science & research", "Machines & hardware"],
     "ux": ["Design & creativity", "Media & video", "Programming"],
     "graphic": ["Design & creativity", "Media & video"],
     "industrial-design": ["Design & creativity", "Building things"],
     "videomaker": ["Media & video", "Design & creativity", "Programming"],
-    "biomed-tech": ["Health & body", "Science & research", "Machines & hardware"],
+    "marketing": ["Economics & finance", "People & communication", "Media & video"],
+    "fin-analyst": ["Economics & finance", "Mathematics"],
+    "export": ["Economics & finance", "People & communication", "Languages & writing"],
+    "entrepreneur": ["Economics & finance", "Programming", "People & communication"],
     "renewables": ["Nature & environment", "Machines & hardware", "Mathematics"],
     "env-eng": ["Nature & environment", "Science & research", "Building things"],
     "food-tech": ["Food & hospitality", "Science & research", "Nature & environment"],
     "researcher": ["Science & research", "Mathematics"],
+    "hr": ["People & communication", "Law & society", "Economics & finance"],
 }
 
-CITY = {
-    "Milano": {"lat": 45.4782, "lon": 9.2272, "rent": 620, "size": "large", "vibe": "Big, fast, expensive, full of opportunities"},
-    "Torino": {"lat": 45.0625, "lon": 7.6620, "rent": 450, "size": "large", "vibe": "Elegant, livable, strong industrial tech scene"},
+CITY_FALLBACK = {
+    "Milano": {"lat": 45.4642, "lon": 9.19, "rent": 664, "size": "large", "vibe": "Big, fast, most opportunities, most expensive"},
+    "Torino": {"lat": 45.0703, "lon": 7.6869, "rent": 525, "size": "large", "vibe": "Elegant, livable, strong student scene"},
+    "Bologna": {"lat": 44.4949, "lon": 11.3426, "rent": 655, "size": "medium", "vibe": "Italy's classic student city"},
+    "Roma": {"lat": 41.9028, "lon": 12.4964, "rent": 600, "size": "large", "vibe": "Huge, historic, chaotic, endless options"},
+    "Bergamo": {"lat": 45.6983, "lon": 9.6773, "rent": 450, "size": "small", "vibe": "Quiet, industrial heartland, close-knit"},
     "Lecco": {"lat": 45.8566, "lon": 9.3977, "rent": 430, "size": "small", "vibe": "Lakeside campus town, quiet and outdoorsy"},
     "Cremona": {"lat": 45.1332, "lon": 10.0227, "rent": 380, "size": "small", "vibe": "Small, calm, low cost of living"},
     "Piacenza": {"lat": 45.0526, "lon": 9.6930, "rent": 400, "size": "small", "vibe": "Compact student city between Milano and Bologna"},
     "Mantova": {"lat": 45.1564, "lon": 10.7914, "rent": 380, "size": "small", "vibe": "Renaissance town, small campus community"},
+    "Sesto San Giovanni": {"lat": 45.5347, "lon": 9.2405, "rent": 550, "size": "large", "vibe": "Milan's industrial north — metro to the centre"},
 }
 
-# Verified fee anchors: PoliMi €157→€3,943 (2026/27 fee pages); PoliTo min €600,
-# cap per DR 722/2025 regulation (mid/high are estimates pending PDF extraction).
+# Verified fee anchors (research workbook, Universities + ISEE_Bands sheets).
 INST_FEES = {
     "polimi": {"low": 160, "mid": 1968, "high": 3943},
     "polito": {"low": 156, "mid": 1500, "high": 2800},
+    "unimib": {"low": 156, "mid": 1200, "high": 4100},
+    "bocconi": {"low": 3000, "mid": 9000, "high": 17000},
+    "unito": {"low": 156, "mid": 1400, "high": 2800},
+    "its-lomb-mecc": {"low": 0, "mid": 0, "high": 0},   # ITS Academy: MIM/ESF funded
+    "its-rizzoli": {"low": 0, "mid": 0, "high": 0},
+    "its-energia-pi": {"low": 0, "mid": 0, "high": 0},
 }
-INST_TEST = {"polimi": "TOL (PoliMi admission test)", "polito": "TIL-I (PoliTo admission test)"}
+INST_TEST = {
+    "polimi": "TOL (PoliMi admission test)",
+    "polito": "TIL-I (PoliTo admission test)",
+    "unimib": "TOLC",
+    "bocconi": "Bocconi admission test",
+    "unito": "TOLC / local admission test",
+    "its-lomb-mecc": "Internal selection test + interview",
+    "its-rizzoli": "Internal selection test + interview",
+    "its-energia-pi": "Internal selection test + interview",
+}
 
+# Per-area estimates anchored to AlmaLaurea 2025 / INDIRE 2025 benchmarks.
 AREA = {
     "engineering": {"nature": "scientific", "mathLoad": 5, "selectivity": 82, "employment1y": 93, "salary": 30000,
                     "mastersAccess": 5, "handsOn": 2, "netMonthly": 1700, "dropout": 23},
@@ -77,25 +124,45 @@ AREA = {
                "mastersAccess": 4, "handsOn": 4, "netMonthly": 1450, "dropout": 16},
     "architecture": {"nature": "mixed", "mathLoad": 3, "selectivity": 80, "employment1y": 85, "salary": 24000,
                      "mastersAccess": 5, "handsOn": 3, "netMonthly": 1400, "dropout": 20},
+    "economics": {"nature": "mixed", "mathLoad": 3, "selectivity": 78, "employment1y": 88, "salary": 27000,
+                  "mastersAccess": 5, "handsOn": 2, "netMonthly": 1550, "dropout": 15},
+    "nursing": {"nature": "mixed", "mathLoad": 2, "selectivity": 75, "employment1y": 95, "salary": 26000,
+                "mastersAccess": 2, "handsOn": 5, "netMonthly": 1450, "dropout": 10},
+    "science": {"nature": "scientific", "mathLoad": 5, "selectivity": 70, "employment1y": 82, "salary": 26000,
+                "mastersAccess": 5, "handsOn": 2, "netMonthly": 1500, "dropout": 26},
+    # ITS: INDIRE 2025 — 84% employed at 1y, 72.6% completion, heavy practice
+    "its": {"nature": "technical-practical", "mathLoad": 2, "selectivity": 60, "employment1y": 84, "salary": 26000,
+            "mastersAccess": 1, "handsOn": 5, "netMonthly": 1450, "dropout": 27},
 }
 
+ECON_HINTS = ("Econom", "Management", "Finance", "Marketing", "Organizzazione", "Statistiche", "Business", "Politics")
 
-def area_of(name):
+
+def area_of(prog, inst_kind):
+    if inst_kind == "its":
+        return "its"
+    name = prog.name
+    if "Infermieristica" in name:
+        return "nursing"
     if "Design" in name:
         return "design"
-    if "Architect" in name or name.startswith("Urban Planning") or "Landscape Planning" in name.replace("Land Planning", ""):
+    if "Architect" in name or name.startswith("Urban Planning"):
         return "architecture"
+    if any(h in name for h in ECON_HINTS):
+        return "economics"
+    if name in ("Fisica",):
+        return "science"
     return "engineering"
 
 
-def first_city(campus):
+def first_city(campus, default="Milano"):
     if not campus:
-        return "Milano"
+        return default
     token = campus.split(",")[0].strip()
-    for known in CITY:
+    for known in CITY_FALLBACK:
         if token.startswith(known):
             return known
-    return "Milano" if "Milano" in token else token
+    return default if "Milano" in token else token
 
 
 def curriculum_of(prog):
@@ -104,45 +171,38 @@ def curriculum_of(prog):
     for sub in prog.subjects:
         if sub.track not in tracks:
             tracks.append(sub.track)
-    chosen = None
-    for t in tracks:
-        if t != "llm":
-            chosen = t
-            break
-    if chosen is None and "llm" in tracks:
-        chosen = "llm"
+    chosen = next((t for t in tracks if t != "llm"), "llm" if "llm" in tracks else None)
     if chosen is None:
         return []
     subs = sorted((s for s in prog.subjects if s.track == chosen), key=lambda x: (x.year or 9, x.name))
     seen, names = set(), []
     for s in subs:
         n = s.name.strip()
-        key = n.lower()
-        if key not in seen:
-            seen.add(key)
+        if n.lower() not in seen:
+            seen.add(n.lower())
             names.append(n if chosen != "llm" else n.capitalize())
     return names[:8]
 
 
-def build_course(prog, inst_slug, inst_name, career_id):
-    a = AREA[area_of(prog.name)]
-    city = first_city(prog.campus)
-    c = CITY.get(city, CITY["Milano"])
+def build_course(prog, inst, career_id, cities_by_name):
+    a = AREA[area_of(prog, inst.kind)]
+    city = first_city(prog.campus, default=inst.city or "Milano")
+    c = cities_by_name.get(city) or CITY_FALLBACK.get(city) or CITY_FALLBACK["Milano"]
     lang = (prog.language or "ITA").upper()
     return {
-        "id": f"{inst_slug}-p{prog.id}",
+        "id": f"{inst.slug}-p{prog.id}",
         "name": prog.name,
-        "inst": inst_name,
-        "type": "University",
+        "inst": inst.name,
+        "type": "ITS" if inst.kind == "its" else "University",
         "city": city,
         "lat": c["lat"], "lon": c["lon"],
         "citySize": c["size"],
         "years": prog.years or 3,
-        "test": INST_TEST[inst_slug],
+        "test": INST_TEST[inst.slug],
         "selectivity": a["selectivity"],
         "mathLoad": a["mathLoad"],
         "subjects": CAREER_TAGS[career_id],
-        "costByIsee": INST_FEES[inst_slug],
+        "costByIsee": INST_FEES[inst.slug],
         "cityRent": c["rent"],
         "employment1y": a["employment1y"],
         "salary": a["salary"],
@@ -157,7 +217,7 @@ def build_course(prog, inst_slug, inst_name, career_id):
         "nature": a["nature"],
         "netMonthly": a["netMonthly"],
         "curriculum": curriculum_of(prog) or ["Study plan on the official page"],
-        "googleQuery": urllib.parse.quote(f"{inst_name} {prog.name}"),
+        "googleQuery": urllib.parse.quote(f"{inst.name} {prog.name}"),
         "url": prog.url,
         "curriculumUrl": prog.curriculum_url,
         "dataSource": prog.source,
@@ -167,10 +227,24 @@ def build_course(prog, inst_slug, inst_name, career_id):
 def export_site():
     courses_path = os.path.join(DATA_DIR, "courses-v2.json")
     worlds_path = os.path.join(DATA_DIR, "worlds.json")
-    courses = json.load(open(courses_path))
+    cities_path = os.path.join(DATA_DIR, "cities-v2.json")
     worlds = json.load(open(worlds_path))
+    app_cities = json.load(open(cities_path))
 
     with Session() as s:
+        # cities: DB rows (verified rents) override same-slug app entries
+        db_cities = s.query(City).all()
+        cities_by_name = {}
+        merged_cities = {c["id"]: c for c in app_cities}
+        for c in db_cities:
+            lo = int(round((c.rent_single_room + (c.utilities or 100) - 20 + (c.food or 180) - 30) / 10) * 10)
+            hi = int(round((c.rent_single_room + (c.utilities or 100) + 20 + (c.food or 180) + 30 + (c.transport or 25) + 60) / 10) * 10)
+            merged_cities[c.slug] = {
+                "id": c.slug, "name": c.name, "lat": c.lat, "lon": c.lon, "size": c.size,
+                "costRange": [lo, hi], "vibe": c.vibe,
+            }
+            cities_by_name[c.name] = {"lat": c.lat, "lon": c.lon, "size": c.size, "rent": c.rent_single_room, "vibe": c.vibe}
+
         insts = {i.slug: i for i in s.query(Institution).all()}
         new_courses, career_courses = [], {}
         for career_id, wanted in CAREER_MAP.items():
@@ -178,6 +252,7 @@ def export_site():
             for slug, prog_name in wanted:
                 inst = insts.get(slug)
                 if not inst:
+                    print(f"  ! institution not in DB: {slug}")
                     continue
                 prog = (s.query(Program)
                         .filter(Program.institution_id == inst.id, Program.name.ilike(prog_name))
@@ -185,32 +260,29 @@ def export_site():
                 if not prog:
                     print(f"  ! no DB match: {slug} / {prog_name}")
                     continue
-                course = build_course(prog, slug, inst.name, career_id)
+                course = build_course(prog, inst, career_id, cities_by_name)
                 new_courses.append(course)
                 ids.append(course["id"])
             career_courses[career_id] = ids
 
-    # drop old invented PoliMi/PoliTo entries, keep everything else
-    kept = [c for c in courses if c["inst"] not in ("Politecnico di Milano", "Politecnico di Torino")]
-    merged = kept + new_courses
-
-    removed_ids = {c["id"] for c in courses} - {c["id"] for c in kept}
     for w in worlds["worlds"]:
         for career in w["careers"]:
-            existing = [cid for cid in career["courses"] if cid not in removed_ids]
-            fresh = career_courses.get(career["id"], [])
-            career["courses"] = fresh + existing
+            career["courses"] = career_courses.get(career["id"], [])
 
-    json.dump(merged, open(courses_path, "w"), indent=1, ensure_ascii=False)
+    json.dump(new_courses, open(courses_path, "w"), indent=1, ensure_ascii=False)
     json.dump(worlds, open(worlds_path, "w"), indent=1, ensure_ascii=False)
+    json.dump(list(merged_cities.values()), open(cities_path, "w"), indent=1, ensure_ascii=False)
 
-    # sanity: every referenced id exists, no id in two careers
-    by_id = {c["id"] for c in merged}
+    # invariants: every referenced id exists, no course on two careers
+    by_id = {c["id"] for c in new_courses}
     seen = {}
+    empty = []
     for w in worlds["worlds"]:
         for career in w["careers"]:
+            if not career["courses"]:
+                empty.append(career["id"])
             for cid in career["courses"]:
                 assert cid in by_id, f"career {career['id']} references missing {cid}"
                 assert cid not in seen, f"{cid} appears in {seen[cid]} and {career['id']}"
                 seen[cid] = career["id"]
-    return {"courses_total": len(merged), "real_courses_added": len(new_courses), "demo_removed": len(removed_ids)}
+    return {"courses": len(new_courses), "cities": len(merged_cities), "careers_without_courses": empty}
