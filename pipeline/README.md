@@ -4,14 +4,18 @@ Ingests real Italian higher-education data (universities → bachelor programmes
 per-year subjects with ECTS) into a database, and exports app-shaped JSON for
 review before anything reaches the website.
 
-## Status (first run, 6 Jul 2026, from local machine)
+## Status (6 Jul 2026 — live in Supabase Postgres)
 
 | Source | Result |
 |---|---|
-| Politecnico di Torino | 24 programmes, **839 subject rows** (full curricula with ECTS), 0 errors |
-| Politecnico di Milano | 29 programmes with exact per-programme URLs (curricula need the Manifesto extractor or the LLM step) |
+| Politecnico di Torino | 24 programmes, **839 subject rows** (full curricula with ECTS from /programme-curriculum tables) |
+| Politecnico di Milano | 29 programmes with exact URLs, campus and language; subject THEMES extracted per programme via Gemini 2.5 Flash (`ingest polimi-llm`, track='llm') |
 | MUR Open Data (full Italian catalog) | ingester ready; portal is unreachable from non-EU networks → run from the EU-region backend |
 | Universitaly | behind a WAF (HTTP 202 challenge); adapter planned — best source for subjects nationwide |
+
+Lessons already baked in: Gemini free tier 429s after ~20 req (extractor now
+backs off 30/60/90s and never logs the key-bearing URL); SQLite needs WAL +
+fetch-before-write; PoliMi catalog anchors need structured parsing.
 
 ## Quick start
 
