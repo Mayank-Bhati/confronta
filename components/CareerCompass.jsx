@@ -7,7 +7,7 @@ import COURSES from "../data/courses-v2.json";
 import CITIES from "../data/cities-v2.json";
 import { emptyVector, applyAnswer, applyLikert, applyMulti, buildSurvey, pickLikert, normalize, identity, topDimensions, DIMS } from "../lib/scoreEngine";
 import { rankWorlds, rankCareers } from "../lib/matchEngine";
-import { fitInterests, fitOutcome, fitEnvironment, passesHardFilters, prepList, generateNarrative, haversineKm } from "../lib/fitEngine-v2";
+import { fitInterests, fitOutcome, fitEnvironment, estimateMonthlyCost, passesHardFilters, prepList, generateNarrative, haversineKm } from "../lib/fitEngine-v2";
 import { LANGS, makeT, makeTD } from "../lib/i18n";
 import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
 
@@ -436,7 +436,7 @@ export default function CareerCompass() {
     });
   }
 
-  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome: profile.awayFromHome, budget: profile.awayFromHome ? prefs.budget * 12 : null, maxDistance: !profile.awayFromHome && homeCity ? prefs.maxDistance : null };
+  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome: profile.awayFromHome, monthlyBudget: prefs.budget, maxDistance: !profile.awayFromHome && homeCity ? prefs.maxDistance : null };
 
   const institutions = useMemo(() => {
     if (!career) return [];
@@ -503,6 +503,12 @@ export default function CareerCompass() {
     setNewName("");
   }
   function switchProfile(id) { updateStore((s) => ({ ...s, activeId: id })); }
+  function deleteResult(rid) {
+    updateStore((s) => ({
+      ...s,
+      profiles: s.profiles.map((p) => (p.id === s.activeId ? { ...p, history: p.history.filter((h) => h.id !== rid) } : p)),
+    }));
+  }
   function deleteProfile(id) {
     updateStore((s) => ({ ...s, profiles: s.profiles.filter((p) => p.id !== id), activeId: s.activeId === id ? null : s.activeId }));
   }
@@ -714,13 +720,21 @@ export default function CareerCompass() {
                     const current = lastResult?.id === r.id;
                     const title = t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`);
                     return (
-                      <button key={r.id} onClick={() => openResult(r)} className="cc-card text-left rounded-xl p-3"
+                      <div key={r.id} onClick={() => openResult(r)} role="button" tabIndex={0}
+                        onKeyDown={(e) => e.key === "Enter" && openResult(r)}
+                        className="cc-card relative text-left rounded-xl p-3 cursor-pointer"
                         style={{ background: current ? T.violetSoft : T.card2, border: `1.5px solid ${current ? T.violet : T.line}` }}>
-                        <div className="font-bold text-sm" style={{ ...display, color: current ? T.accent : T.ink }}>{title}</div>
+                        <button onClick={(e) => { e.stopPropagation(); deleteResult(r.id); }}
+                          aria-label={t("pf_del")} title={t("pf_del")}
+                          className="absolute top-1.5 right-1.5 w-6 h-6 rounded-full text-xs flex items-center justify-center transition-colors hover:opacity-100 opacity-60"
+                          style={{ color: T.grey, border: `1px solid ${T.line}` }}>
+                          ✕
+                        </button>
+                        <div className="font-bold text-sm pr-6" style={{ ...display, color: current ? T.accent : T.ink }}>{title}</div>
                         <div className="text-xs mt-1" style={{ ...mono, color: T.grey }}>
                           {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
                         </div>
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
@@ -884,12 +898,11 @@ export default function CareerCompass() {
                     ))}
                   </div>
                 </div>
-                {profile.awayFromHome && (
-                  <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("budget_label", { n: prefs.budget.toLocaleString() })}</div>
-                    <input type="range" min="400" max="2000" step="50" value={prefs.budget} onChange={(e) => setPrefs((p) => ({ ...p, budget: +e.target.value }))} className="w-full" />
-                  </div>
-                )}
+                <div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("budget_label", { n: prefs.budget.toLocaleString() })}</div>
+                  <input type="range" min={profile.awayFromHome ? 400 : 100} max="2000" step="50" value={prefs.budget} onChange={(e) => setPrefs((p) => ({ ...p, budget: +e.target.value }))} className="w-full" />
+                  <p className="text-xs mt-1" style={{ color: T.grey }}>{t(profile.awayFromHome ? "budget_hint_away" : "budget_hint_home")}</p>
+                </div>
                 {!profile.awayFromHome && homeCity && (
                   <div>
                     <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("dist_label", { city: homeCity.name, n: prefs.maxDistance })}</div>
@@ -1024,6 +1037,11 @@ export default function CareerCompass() {
                       <div>{t("cmp_fees", { n: c.costByIsee[profile.isee].toLocaleString() })}</div>
                       {profile.awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
                       {!profile.awayFromHome && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
+                      {(() => { const est = estimateMonthlyCost(c, envPrefs, !profile.awayFromHome ? homeCity : null); const over = est.total - prefs.budget; return (
+                        <div style={{ color: over > 0 ? T.amber : T.green, fontWeight: 700 }}>
+                          {t("cmp_total", { n: est.total.toLocaleString(), b: prefs.budget.toLocaleString() })}
+                        </div>
+                      ); })()}
                       <div>{t("cmp_after", { n: c.netMonthly.toLocaleString() })}</div>
                     </div>
                   ))}
