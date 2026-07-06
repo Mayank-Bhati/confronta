@@ -11,6 +11,8 @@ import os
 
 import requests
 
+from . import env  # noqa: F401  (loads pipeline/.env before reading GEMINI_API_KEY)
+
 MODEL = "gemini-1.5-flash"
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
 

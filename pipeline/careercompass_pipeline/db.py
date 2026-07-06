@@ -8,6 +8,8 @@ Postgres (Supabase/Neon) and nothing else changes:
 import os
 from datetime import datetime
 
+from . import env  # noqa: F401  (loads pipeline/.env before reading DATABASE_URL)
+
 from sqlalchemy import (
     Column, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint,
     create_engine,
