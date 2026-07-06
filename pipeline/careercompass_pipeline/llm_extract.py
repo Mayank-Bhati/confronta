@@ -14,7 +14,7 @@ import requests
 
 from . import env  # noqa: F401  (loads pipeline/.env before reading GEMINI_API_KEY)
 
-MODEL = "gemini-2.5-flash"
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
 
 PROMPT = """You are a data extraction service. From the following university web page text,
