@@ -390,6 +390,10 @@ export default function CareerCompass() {
       setSavedToName("");
     }
     cloudUpsertResults([result]);
+    if (!session && !store.authPromptSeen) {
+      setShowAuth(true);
+      updateStore((st) => ({ ...st, authPromptSeen: true }));
+    }
     go("reveal");
   }
 
@@ -494,6 +498,7 @@ export default function CareerCompass() {
       const entry = { courseId: course.id, careerId: cId, careerName: ctx?.careerName || "", worldName: ctx?.worldName || "", resultId: lastResult?.id || null };
       updateStore((s) => ({ ...s, saved: [...s.saved, entry] }));
       cloudUpsertSaves([entry]);
+      if (!session && !saveNudged) { setShowAuth(true); setSaveNudged(true); }
     }
   }
 
@@ -517,12 +522,22 @@ export default function CareerCompass() {
   const [authCode, setAuthCode] = useState("");
   const [authStage, setAuthStage] = useState("idle"); // idle | sent
   const [authMsg, setAuthMsg] = useState("");
+  const [showAuth, setShowAuth] = useState(false);
+  const [saveNudged, setSaveNudged] = useState(false);
 
   useEffect(() => {
     const sb = getSupabase();
     if (!sb) return;
     sb.auth.getSession().then(({ data }) => setSession(data.session));
-    const { data: sub } = sb.auth.onAuthStateChange((_event, s) => setSession(s));
+    const { data: sub } = sb.auth.onAuthStateChange((_event, s) => {
+      setSession(s);
+      if (s) {
+        setShowAuth(false);
+        if (window.location.search.includes("code=")) {
+          window.history.replaceState({}, "", window.location.pathname);
+        }
+      }
+    });
     return () => sub.subscription.unsubscribe();
   }, []);
 
@@ -538,7 +553,10 @@ export default function CareerCompass() {
     const sb = getSupabase();
     if (!sb || !authEmail.includes("@")) return;
     setAuthMsg("");
-    const { error } = await sb.auth.signInWithOtp({ email: authEmail.trim(), options: { shouldCreateUser: true } });
+    const { error } = await sb.auth.signInWithOtp({
+      email: authEmail.trim(),
+      options: { shouldCreateUser: true, emailRedirectTo: window.location.origin + window.location.pathname },
+    });
     if (error) setAuthMsg(t("acct_err", { e: error.message }));
     else { setAuthStage("sent"); setAuthMsg(t("acct_sent")); }
   }
@@ -676,6 +694,47 @@ export default function CareerCompass() {
 
   const ctx = { T, t, scoreColor, scoreSoft, goBack, isSavedOn, toggleSave };
 
+  // Shared account panel — rendered inside the profile modal AND the sign-in pop-up
+  const accountPanel = (
+    <div className="mt-4 rounded-xl p-3.5" style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
+      <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("acct_title")}</div>
+      {session ? (
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <span className="text-sm font-semibold">{t("acct_signed", { email: session.user.email })}</span>
+          <button onClick={signOut} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.line}`, color: T.grey }}>
+            {t("acct_out")}
+          </button>
+        </div>
+      ) : (
+        <>
+          <p className="text-xs mb-2" style={{ color: T.grey }}>{t("acct_note")}</p>
+          {authStage === "idle" ? (
+            <div className="flex gap-2">
+              <input value={authEmail} onChange={(e) => setAuthEmail(e.target.value)} onKeyDown={(e) => e.key === "Enter" && sendCode()}
+                type="email" placeholder={t("acct_email_ph")}
+                className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
+                style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink }} />
+              <button onClick={sendCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
+                {t("acct_send")}
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-2">
+              <input value={authCode} onChange={(e) => setAuthCode(e.target.value)} onKeyDown={(e) => e.key === "Enter" && verifyCode()}
+                inputMode="numeric" placeholder={t("acct_code_ph")}
+                className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
+                style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink, ...mono }} />
+              <button onClick={verifyCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
+                {t("acct_verify")}
+              </button>
+            </div>
+          )}
+        </>
+      )}
+      {authMsg && <p className="text-xs mt-2" style={{ color: T.accent }}>{authMsg}</p>}
+    </div>
+  );
+
   return (
     <AppCtx.Provider value={ctx}>
     <div className="min-h-screen" style={{ background: T.bg, color: T.ink }}>
@@ -739,8 +798,9 @@ export default function CareerCompass() {
             <div className="cc-blob absolute -top-32 -left-24 w-[480px] h-[480px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(37,99,235,0.30), transparent 65%)", filter: "blur(40px)" }} />
             <div className="cc-blob absolute -bottom-40 -right-24 w-[520px] h-[520px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(236,72,153,0.24), transparent 65%)", filter: "blur(40px)", animationDelay: "-7s" }} />
             {/* The compass finds its north as the page opens */}
-            <div className="cc-compass-float absolute -right-24 top-1/2 -translate-y-1/2 pointer-events-none hidden md:block" aria-hidden>
-              <svg width="560" height="560" viewBox="0 0 200 200" fill="none" style={{ opacity: theme === "dark" ? 0.22 : 0.14 }}>
+            <div className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:block" aria-hidden
+              style={{ width: "clamp(220px, 34vw, 470px)" }}>
+              <svg viewBox="0 0 200 200" fill="none" style={{ width: "100%", height: "auto", display: "block", opacity: theme === "dark" ? 0.22 : 0.14 }}>
                 <defs>
                   <linearGradient id="ccHeroGrad" x1="0" y1="0" x2="200" y2="200">
                     <stop stopColor="#2563EB" />
@@ -1284,6 +1344,23 @@ export default function CareerCompass() {
         )}
       </main>
 
+      {/* ————— Sign-in pop-up (save nudge / post-survey) ————— */}
+      {showAuth && !session && (
+        <div className="cc-fade-in fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ background: "rgba(0,0,0,0.72)", backdropFilter: "blur(6px)" }}
+          onClick={() => setShowAuth(false)}>
+          <div className="cc-fade-up w-full max-w-md rounded-2xl p-6" style={{ background: T.card, border: `1px solid ${T.lineStrong}` }}
+            onClick={(e) => e.stopPropagation()}>
+            <h3 className="font-black text-xl" style={display}>{t("acct_modal_title")}</h3>
+            <p className="text-xs mt-1.5 mb-3" style={{ color: T.grey }}>{t("acct_modal_sub")}</p>
+            {accountPanel}
+            <button onClick={() => setShowAuth(false)} className="mt-3 text-xs font-semibold underline" style={{ color: T.grey }}>
+              {t("acct_skip")}
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ————— Profile manager ————— */}
       {showProfiles && (
         <div className="cc-fade-in fixed inset-0 z-50 flex items-start md:items-center justify-center p-4 overflow-y-auto"
@@ -1297,44 +1374,7 @@ export default function CareerCompass() {
             </div>
             <p className="text-xs mt-1.5" style={{ color: T.grey }}>{t("pf_note")}</p>
 
-            {/* ————— Account: email-code sign-in, results & saves synced to Supabase ————— */}
-            <div className="mt-4 rounded-xl p-3.5" style={{ background: T.card2, border: `1.5px solid ${T.line}` }}>
-              <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("acct_title")}</div>
-              {session ? (
-                <div className="flex items-center justify-between gap-2 flex-wrap">
-                  <span className="text-sm font-semibold">{t("acct_signed", { email: session.user.email })}</span>
-                  <button onClick={signOut} className="px-3 py-1 rounded-full text-xs font-bold" style={{ border: `1.5px solid ${T.line}`, color: T.grey }}>
-                    {t("acct_out")}
-                  </button>
-                </div>
-              ) : (
-                <>
-                  <p className="text-xs mb-2" style={{ color: T.grey }}>{t("acct_note")}</p>
-                  {authStage === "idle" ? (
-                    <div className="flex gap-2">
-                      <input value={authEmail} onChange={(e) => setAuthEmail(e.target.value)} onKeyDown={(e) => e.key === "Enter" && sendCode()}
-                        type="email" placeholder={t("acct_email_ph")}
-                        className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
-                        style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink }} />
-                      <button onClick={sendCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
-                        {t("acct_send")}
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="flex gap-2">
-                      <input value={authCode} onChange={(e) => setAuthCode(e.target.value)} onKeyDown={(e) => e.key === "Enter" && verifyCode()}
-                        inputMode="numeric" placeholder={t("acct_code_ph")}
-                        className="flex-1 rounded-xl px-3 py-2 text-sm outline-none"
-                        style={{ background: T.card, border: `1.5px solid ${T.line}`, color: T.ink, ...mono }} />
-                      <button onClick={verifyCode} className="px-3.5 py-2 rounded-xl text-xs font-bold text-white" style={{ background: T.grad }}>
-                        {t("acct_verify")}
-                      </button>
-                    </div>
-                  )}
-                </>
-              )}
-              {authMsg && <p className="text-xs mt-2" style={{ color: T.accent }}>{authMsg}</p>}
-            </div>
+            {accountPanel}
 
             <div className="mt-4 flex gap-2">
               <input value={newName} onChange={(e) => setNewName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && createProfile()}
