@@ -28,6 +28,11 @@ export default function Worlds() {
                       <span className="text-xs font-bold shrink-0" style={{ ...mono, color: scoreColor(w.fit) }}>{t("fit_you", { n: w.fit })}</span>
                     </div>
                     <div className="text-xs mt-2 relative" style={{ color: T.grey }}>{td(w.tagline)}</div>
+                    {w.reasonDim && (
+                      <div className="text-xs mt-2 relative font-semibold" style={{ color: T.accent }}>
+                        {t("world_because", { dim: t(`dim_${w.reasonDim}`) })}
+                      </div>
+                    )}
                   </button>
                 );
               })}

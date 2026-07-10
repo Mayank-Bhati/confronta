@@ -5,7 +5,7 @@ import { mono, display } from "../constants";
 import { ChipBtn, Section, InstitutionCard, BackLink } from "../ui";
 
 export default function SavedPage() {
-  const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel } = useApp();
+  const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel, td } = useApp();
   return (
     <>
           <>
@@ -36,7 +36,7 @@ export default function SavedPage() {
                 <InstitutionCard key={`${s.courseId}::${s.careerId}`} c={s.course} chosen={finalists.includes(s.courseId)}
                   onCardClick={() => toggleFinalist(s.courseId)}
                   saveCtx={{ careerId: s.careerId, careerName: s.careerName, worldName: s.worldName }}
-                  badge={s.careerName ? `${t("saved_from")}: ${s.worldName} → ${s.careerName}` : null} />
+                  badge={s.careerName ? `${t("saved_from")}: ${s.worldName} → ${td(s.careerName)}` : null} />
               ))}
             </div>
             {finalists.length === 2 && (

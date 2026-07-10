@@ -6,7 +6,7 @@ import WORLDS_DATA from "../data/worlds.json";
 import COURSES from "../data/courses-v2.json";
 import CITIES from "../data/cities-v2.json";
 import { emptyVector, applyAnswer, applyLikert, applyMulti, buildSurvey, pickLikert, normalize, identity, topDimensions, DIMS } from "../lib/scoreEngine";
-import { rankWorlds, rankCareers } from "../lib/matchEngine";
+import { rankWorlds, rankCareers, SCORE_VERSION } from "../lib/matchEngine";
 import { fitInterests, fitOutcome, fitEnvironment, estimateMonthlyCost, passesHardFilters, prepList, generateNarrative, haversineKm } from "../lib/fitEngine-v2";
 import { LANGS, makeT, makeTD } from "../lib/i18n";
 import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
@@ -65,10 +65,10 @@ export default function CareerCompass() {
   const [multiSel, setMultiSel] = useState([]);
   const [vector, setVector] = useState(emptyVector());
   const [qHistory, setQHistory] = useState([]); // snapshots for the survey back button
-  const [profile, setProfile] = useState({ interests: [], goals: ["work"], isee: "mid", awayFromHome: false, homeCityId: "", relocationCities: [], mathStrength: 3 });
+  const [profile, setProfile] = useState({ interests: [], goals: ["work"], isee: "mid", locationMode: "anywhere", homeCityId: "", relocationCities: [], mathStrength: 3 });
   const [worldId, setWorldId] = useState(null);
   const [careerId, setCareerId] = useState(null);
-  const [prefs, setPrefs] = useState({ pathType: "any", ownership: "any", maxDistance: 100, budget: 900 });
+  const [prefs, setPrefs] = useState({ pathType: "any", ownership: "any", maxDistance: 100, cityRadius: 60, budget: 900 });
   const saved = store.saved; // [{ courseId, careerId, careerName, worldName, resultId }] — persisted, contextual per path
   const [savedFilter, setSavedFilter] = useState("all");
   const [savedProfileFilter, setSavedProfileFilter] = useState("all");
@@ -82,6 +82,7 @@ export default function CareerCompass() {
   const totalQ = 10 + 5 + 5;
   const answered = phase === "binary" ? qIndex : phase === "multi" ? 10 + qIndex : 15 + qIndex;
   const homeCity = CITIES.find((c) => c.id === profile.homeCityId) || null;
+  const awayFromHome = profile.locationMode !== "home"; // cost model: anywhere/cities = living away
   const hasResult = lastResult !== null || DIMS.some((d) => vector[d] > 0);
   const historyList = activeProfile?.history?.length ? activeProfile.history : (store.guestHistory || []);
 
@@ -89,9 +90,9 @@ export default function CareerCompass() {
   const norm = useMemo(() => normalize(vector), [vector]);
   const ident = useMemo(() => identity(vector), [vector]);
   const identTitle = t(`pair_${ident.letters}`) === `pair_${ident.letters}` ? t("pair_XX") : t(`pair_${ident.letters}`);
-  const rankedWorlds = useMemo(() => rankWorlds(vector, WORLDS_DATA.worlds), [vector]);
+  const rankedWorlds = useMemo(() => rankWorlds(vector, WORLDS_DATA.worlds, profile.interests), [vector, profile.interests]);
   const world = rankedWorlds.find((w) => w.id === worldId);
-  const rankedCareers = useMemo(() => (world ? rankCareers(vector, world) : []), [vector, world]);
+  const rankedCareers = useMemo(() => (world ? rankCareers(vector, world, profile.interests) : []), [vector, world, profile.interests]);
   const career = rankedCareers.find((c) => c.id === careerId);
   const pair = finalists.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
 
@@ -166,7 +167,7 @@ export default function CareerCompass() {
     const tags = new Set();
     for (const d of topDimensions(v, 2)) for (const tg of DIM_TO_TAGS[d]) tags.add(tg);
     setProfile((p) => ({ ...p, interests: [...tags] }));
-    const result = { id: uid(), date: Date.now(), letters: identity(v).letters, vector: v, interests: [...tags], goals: profile.goals };
+    const result = { id: uid(), date: Date.now(), letters: identity(v).letters, vector: v, interests: [...tags], goals: profile.goals, scoreVersion: SCORE_VERSION };
     setLastResult(result);
     if (activeProfile) {
       updateStore((s) => ({
@@ -236,19 +237,21 @@ export default function CareerCompass() {
     });
   }
 
-  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome: profile.awayFromHome, monthlyBudget: prefs.budget, maxDistance: !profile.awayFromHome && homeCity ? prefs.maxDistance : null };
+  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, maxDistance: profile.locationMode === "home" && homeCity ? prefs.maxDistance : null };
 
   const institutions = useMemo(() => {
     if (!career) return [];
     let list = career.courses.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
     list = list.filter((c) => passesHardFilters(c, prefs));
-    if (profile.awayFromHome && profile.relocationCities.length) {
-      list = list.filter((c) => profile.relocationCities.includes(c.city.toLowerCase()));
+    if (profile.locationMode === "cities" && profile.relocationCities.length) {
+      const chosen = CITIES.filter((c) => profile.relocationCities.includes(c.id));
+      list = list.filter((course) =>
+        chosen.some((city) => haversineKm(city.lat, city.lon, course.lat, course.lon) <= prefs.cityRadius));
     }
     return list
-      .map((c) => ({ ...c, envFit: fitEnvironment(c, envPrefs, !profile.awayFromHome ? homeCity : null) }))
+      .map((c) => ({ ...c, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
       .sort((a, b) => b.envFit.score - a.envFit.score);
-  }, [career, prefs, profile, homeCity]);
+  }, [career, prefs, profile, homeCity, t]);
 
   const savedEntries = saved
     .map((s) => ({ ...s, course: COURSES.find((c) => c.id === s.courseId) }))
@@ -272,9 +275,9 @@ export default function CareerCompass() {
   const compareDims = useMemo(() => {
     if (pair.length < 2) return [];
     return [
-      { key: "interest", label: t("cmp_interest"), data: pair.map((c) => fitInterests(c, profile.interests)) },
-      { key: "outcome", label: t("cmp_outcome"), data: pair.map((c) => fitOutcome(c, profile.goals)) },
-      { key: "env", label: t("cmp_env"), data: pair.map((c) => { const f = fitEnvironment(c, envPrefs, !profile.awayFromHome ? homeCity : null); return { score: f.score, note: f.reasons[0] || "" }; }) },
+      { key: "interest", label: t("cmp_interest"), data: pair.map((c) => fitInterests(c, profile.interests, t)) },
+      { key: "outcome", label: t("cmp_outcome"), data: pair.map((c) => fitOutcome(c, profile.goals, t)) },
+      { key: "env", label: t("cmp_env"), data: pair.map((c) => { const f = fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t); return { score: f.score, note: f.reasons[0] || "" }; }) },
     ].map((r) => ({ ...r, scores: r.data.map((d) => d.score) }));
   }, [pair, profile, prefs, homeCity, t]);
 
@@ -565,7 +568,7 @@ export default function CareerCompass() {
     answerBinary, submitMulti, answerLikert, goBackQuestion,
     norm, ident, identTitle, rankedWorlds, world, rankedCareers, career,
     setWorldId, setCareerId, profile, setProfile, toggleGoal,
-    prefs, setPrefs, homeCity, institutions, envPrefs, cityCostBadge,
+    prefs, setPrefs, homeCity, awayFromHome, institutions, envPrefs, cityCostBadge,
     saved, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter,
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
     savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist,

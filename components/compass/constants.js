@@ -1,3 +1,5 @@
+export { DIM_TO_TAGS } from "../../lib/scoreEngine";
+
 // ————— Theme palettes: dark (cinematic) and light —————
 export const PALETTES = {
   dark: {
@@ -41,14 +43,6 @@ export const INTEREST_TAGS = [
   "Languages & writing", "Law & society", "Sport & movement", "Food & hospitality",
 ];
 
-export const DIM_TO_TAGS = {
-  R: ["Machines & hardware", "Building things", "Sport & movement"],
-  I: ["Mathematics", "Science & research", "Programming"],
-  A: ["Design & creativity", "Media & video", "Languages & writing"],
-  S: ["People & communication", "Teaching & mentoring", "Health & body"],
-  E: ["Economics & finance", "People & communication", "Law & society"],
-  C: ["Economics & finance", "Mathematics"],
-};
 
 export const NATURE_KEY = {
   scientific: "nat_scientific",

@@ -6,7 +6,7 @@ import { Bar, Section, BackLink, GoogleLink, OfficialLink } from "../ui";
 import { estimateMonthlyCost, prepList, generateNarrative, haversineKm } from "../../../lib/fitEngine-v2";
 
 export default function Compare() {
-  const { T, t, pair, profile, prefs, homeCity, compareDims, narrative, setNarrative, envPrefs, cityCostBadge, natureStyle, scoreColor, scoreSoft } = useApp();
+  const { T, t, pair, profile, prefs, homeCity, compareDims, narrative, setNarrative, envPrefs, cityCostBadge, natureStyle, scoreColor, scoreSoft, td, awayFromHome } = useApp();
   return (
     <>
           <>
@@ -83,7 +83,7 @@ export default function Compare() {
                       <div><b>{c.env.wouldChooseAgain}%</b> {t("cmp_again")}</div>
                       <div><b>{c.env.teachSat}%</b> {t("cmp_teach")}</div>
                       <div><b>{c.env.dropout}%</b> {t("cmp_drop")}</div>
-                      <div style={{ color: T.grey }}>{c.env.cityVibe}</div>
+                      <div style={{ color: T.grey }}>{td(c.env.cityVibe)}</div>
                     </div>
                   ))}
                 </div>
@@ -95,9 +95,9 @@ export default function Compare() {
                   {pair.map((c) => (
                     <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1px solid ${T.line}`, ...mono }}>
                       <div>{t("cmp_fees", { n: c.costByIsee[profile.isee].toLocaleString() })}</div>
-                      {profile.awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
-                      {!profile.awayFromHome && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
-                      {(() => { const est = estimateMonthlyCost(c, envPrefs, !profile.awayFromHome ? homeCity : null); const over = est.total - prefs.budget; return (
+                      {awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
+                      {profile.locationMode === "home" && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
+                      {(() => { const est = estimateMonthlyCost(c, envPrefs, profile.locationMode === "home" ? homeCity : null); const over = est.total - prefs.budget; return (
                         <div style={{ color: over > 0 ? T.amber : T.green, fontWeight: 700 }}>
                           {t("cmp_total", { n: est.total.toLocaleString(), b: prefs.budget.toLocaleString() })}
                         </div>
@@ -113,7 +113,7 @@ export default function Compare() {
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
                     <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ background: T.amberSoft }}>
-                      {prepList(c, profile).map((item, i) => <div key={i}>→ {item}</div>)}
+                      {prepList(c, profile, t).map((item, i) => <div key={i}>→ {item}</div>)}
                     </div>
                   ))}
                 </div>
@@ -124,7 +124,7 @@ export default function Compare() {
               </p>
 
               <div className="mt-6">
-                <button onClick={() => setNarrative(generateNarrative(pair, compareDims, profile))}
+                <button onClick={() => setNarrative(generateNarrative(pair, compareDims, profile, t))}
                   className="px-5 py-2.5 rounded-full font-semibold text-sm text-white transition-transform hover:scale-105" style={{ background: T.grad }}>
                   {t("cmp_explain")}
                 </button>

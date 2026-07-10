@@ -98,12 +98,13 @@ export default function Reveal() {
               <div className="mt-6">
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("living_title")}</div>
                 <div className="flex gap-2 flex-wrap">
-                  <ChipBtn active={!profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: false }))}>{t("living_home")}</ChipBtn>
-                  <ChipBtn active={profile.awayFromHome} onClick={() => setProfile((p) => ({ ...p, awayFromHome: true }))}>{t("living_away")}</ChipBtn>
+                  <ChipBtn active={profile.locationMode === "anywhere"} onClick={() => setProfile((p) => ({ ...p, locationMode: "anywhere" }))}>{t("loc_anywhere")}</ChipBtn>
+                  <ChipBtn active={profile.locationMode === "home"} onClick={() => setProfile((p) => ({ ...p, locationMode: "home" }))}>{t("living_home")}</ChipBtn>
+                  <ChipBtn active={profile.locationMode === "cities"} onClick={() => setProfile((p) => ({ ...p, locationMode: "cities" }))}>{t("living_away")}</ChipBtn>
                 </div>
               </div>
 
-              {!profile.awayFromHome && (
+              {profile.locationMode === "home" && (
                 <div className="mt-4">
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("city_label")}</div>
                   <select value={profile.homeCityId} onChange={(e) => setProfile((p) => ({ ...p, homeCityId: e.target.value }))}
@@ -114,7 +115,7 @@ export default function Reveal() {
                 </div>
               )}
 
-              {profile.awayFromHome && (
+              {profile.locationMode === "cities" && (
                 <div className="mt-4">
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("reloc_label")}</div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">

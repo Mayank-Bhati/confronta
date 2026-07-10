@@ -17,10 +17,10 @@ export default function Careers() {
                 <div key={c.id} className="cc-card cc-shine cc-fade-up rounded-2xl p-5" style={{ background: T.card, border: `1px solid ${T.line}`, animationDelay: `${i * 60}ms` }}>
                   <div className="flex items-start justify-between gap-3 flex-wrap">
                     <div>
-                      <div className="font-bold text-lg" style={display}>{c.name}</div>
-                      <div className="text-sm mt-1" style={{ color: T.grey }}>{c.day}</div>
+                      <div className="font-bold text-lg" style={display}>{td(c.name)}</div>
+                      <div className="text-sm mt-1" style={{ color: T.grey }}>{td(c.day)}</div>
                       <div className="text-xs mt-2" style={{ ...mono, color: T.grey }}>
-                        {c.netMonthly ? t("career_net", { n: c.netMonthly.toLocaleString() }) : t("career_var")} · {t("career_demand")}: {c.demand} · {t("career_via")} {c.pathTypes.join(" / ")}
+                        {c.netMonthly ? t("career_net", { n: c.netMonthly.toLocaleString() }) : t("career_var")} · {t("career_demand")}: {t(`demand_${c.demand}`)} · {t("career_via")} {c.pathTypes.join(" / ")}
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-2">
