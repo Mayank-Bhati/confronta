@@ -105,6 +105,9 @@ INST_FEES = {
     "its-rizzoli": {"low": 0, "mid": 0, "high": 0},
     "its-energia-pi": {"low": 0, "mid": 0, "high": 0},
 }
+# Ownership: private universities set their own fees/aid (Bocconi via Bocconi4Access)
+INST_OWNERSHIP = {"bocconi": "private"}
+
 INST_TEST = {
     "polimi": "TOL (PoliMi admission test)",
     "polito": "TIL-I (PoliTo admission test)",
@@ -232,6 +235,7 @@ def build_course(prog, inst, career_id, cities_by_name):
         "name": prog.name,
         "inst": inst.name,
         "type": "ITS" if inst.kind == "its" else "University",
+        "ownership": INST_OWNERSHIP.get(inst.slug, "public"),
         "city": city,
         "lat": c["lat"], "lon": c["lon"],
         "citySize": c["size"],
