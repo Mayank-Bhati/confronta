@@ -1,0 +1,64 @@
+name: Data pipeline
+
+# The Italian registries (MUR open data, Universitaly/Cineca) block requests
+# from some networks. This workflow runs the pipeline from GitHub's runners:
+# probe first; when reachable, the same workflow is the scheduled ingestion
+# runner — no extra hosting needed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "probe | mur | universitaly-sample"
+        required: false
+        default: "probe"
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pipeline deps
+        run: pip install -r pipeline/requirements.txt psycopg2-binary
+
+      - name: Probe registries
+        run: |
+          echo "runner egress IP: $(curl -s -m 10 https://api.ipify.org || echo unknown)"
+          for url in \
+            "https://dati-ustat.mur.gov.it/" \
+            "https://dati-ustat.mur.gov.it/api/3/action/package_search?q=offerta+formativa&rows=1" \
+            "https://www.universitaly.it/" \
+            "https://www.universitaly.it/cerca-corsi" \
+            "https://universitaly-backend.cineca.it/" ; do
+            code=$(curl -s -L -m 25 -o /tmp/last_probe -w "%{http_code}" "$url" || echo "FAIL")
+            size=$(wc -c < /tmp/last_probe 2>/dev/null || echo 0)
+            echo "PROBE $code ${size}b $url"
+          done
+
+      - name: MUR discovery + ingest
+        if: inputs.task == 'mur'
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        working-directory: pipeline
+        run: python main.py ingest mur
+
+      - name: Universitaly sample dump
+        if: inputs.task == 'universitaly-sample'
+        run: |
+          mkdir -p /tmp/unidump
+          curl -s -L -m 30 -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+            "https://www.universitaly.it/cerca-corsi" -o /tmp/unidump/cerca-corsi.html -w "cerca-corsi %{http_code}\n" || true
+          curl -s -L -m 30 "https://dati-ustat.mur.gov.it/api/3/action/package_search?q=offerta+formativa&rows=10" \
+            -o /tmp/unidump/mur-packages.json -w "mur-packages %{http_code}\n" || true
+          ls -la /tmp/unidump
+
+      - uses: actions/upload-artifact@v4
+        if: inputs.task == 'universitaly-sample'
+        with:
+          name: registry-dump
+          path: /tmp/unidump
