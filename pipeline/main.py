@@ -50,6 +50,11 @@ def main():
         elif target == "polimi-llm":
             from careercompass_pipeline.adapters import polimi
             print(polimi.enrich_subjects())
+        elif target == "universitaly":
+            from careercompass_pipeline.adapters import universitaly
+            import sys as _sys
+            cap = int(_sys.argv[3]) if len(_sys.argv) > 3 else None
+            print(universitaly.ingest(max_pages=cap))
         elif target == "mur":
             from careercompass_pipeline.adapters import mur
             print(mur.ingest())

@@ -9,9 +9,13 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest"
         required: false
         default: "probe"
+      pages:
+        description: "max pages for universitaly-ingest (empty = all)"
+        required: false
+        default: ""
 
 jobs:
   pipeline:
@@ -39,6 +43,13 @@ jobs:
             size=$(wc -c < /tmp/last_probe 2>/dev/null || echo 0)
             echo "PROBE $code ${size}b $url"
           done
+
+      - name: Universitaly full-catalog ingest
+        if: inputs.task == 'universitaly-ingest'
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        working-directory: pipeline
+        run: python main.py ingest universitaly ${{ inputs.pages || '' }}
 
       - name: MUR discovery + ingest
         if: inputs.task == 'mur'
