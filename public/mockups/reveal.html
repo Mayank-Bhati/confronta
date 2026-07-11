@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup C — Rivelazione risultato · CareerCompass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#14192E;--blue:#2244BB;--deep:#101B4D;--mint:#8FE3C0}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,system-ui,sans-serif;background:#0C1440;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;-webkit-font-smoothing:antialiased}
+
+  /* the shareable card */
+  .card{position:relative;width:100%;max-width:420px;border-radius:28px;overflow:hidden;color:#fff;
+    background:linear-gradient(160deg,#16255F 0%,#2244BB 55%,#4D3FB8 100%);
+    box-shadow:0 30px 80px rgba(0,0,0,.5);padding:44px 30px 30px}
+  .grain{position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:22px 22px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#AAB8E8;animation:pop .6s ease .2s both}
+  h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(38px,10vw,52px);line-height:1.05;letter-spacing:-.01em;margin-top:10px;animation:pop .7s cubic-bezier(.2,1.4,.4,1) .45s both}
+  .sub{margin-top:12px;font-size:14px;color:#D8DFF6;max-width:34ch;animation:pop .6s ease .8s both}
+
+  .dims{margin-top:30px;display:grid;gap:11px}
+  .dim{display:grid;grid-template-columns:96px 1fr 30px;gap:12px;align-items:center;font-size:13px;animation:pop .5s ease both}
+  .dim:nth-child(1){animation-delay:1.0s}.dim:nth-child(2){animation-delay:1.1s}.dim:nth-child(3){animation-delay:1.2s}
+  .dim:nth-child(4){animation-delay:1.3s}.dim:nth-child(5){animation-delay:1.4s}.dim:nth-child(6){animation-delay:1.5s}
+  .track{height:9px;border-radius:99px;background:rgba(255,255,255,.18);overflow:hidden}
+  .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#8FE3C0,#CFF3E3);width:0;animation:grow 1s cubic-bezier(.2,.9,.3,1) forwards}
+  .dim:nth-child(1) .fill{animation-delay:1.05s}.dim:nth-child(2) .fill{animation-delay:1.15s}.dim:nth-child(3) .fill{animation-delay:1.25s}
+  .dim:nth-child(4) .fill{animation-delay:1.35s}.dim:nth-child(5) .fill{animation-delay:1.45s}.dim:nth-child(6) .fill{animation-delay:1.55s}
+  .num{font-family:"IBM Plex Mono",monospace;color:#CFF3E3;text-align:right}
+
+  .tops{margin-top:28px;border-top:1px solid rgba(255,255,255,.22);padding-top:20px;animation:pop .6s ease 1.7s both}
+  .tops h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#AAB8E8;margin-bottom:12px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;font-size:16px}
+  .top b{font-family:Fraunces,serif;font-weight:600;font-size:19px}
+  .top span{font-family:"IBM Plex Mono",monospace;color:var(--mint);font-size:14px}
+
+  .brandline{display:flex;align-items:center;gap:8px;margin-top:26px;font-size:13px;color:#AAB8E8;animation:pop .6s ease 1.9s both}
+  .date{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11px}
+
+  @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+  @keyframes grow{from{width:0}to{width:var(--w)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}.fill{width:var(--w)!important}}
+
+  .actions{position:fixed;left:0;right:0;bottom:0;padding:14px 16px calc(14px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;background:linear-gradient(transparent,rgba(12,20,64,.9) 40%)}
+  .btn{padding:13px 22px;border-radius:99px;font-weight:600;font-size:14px;text-decoration:none}
+  .wa{background:#25D366;color:#062B16}
+  .go{background:#fff;color:#16255F}
+  .hint{position:fixed;top:14px;left:0;right:0;text-align:center;color:#AAB8E8;font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="hint">📸 Fai uno screenshot e mandalo a chi vuoi</div>
+
+<div class="card">
+  <div class="grain"></div>
+  <div class="kicker">Il tuo profilo · CareerCompass</div>
+  <h1>L'Artigiano-<br>creativo</h1>
+  <p class="sub">Prima Costruttore (mani, attrezzi, il mondo fisico), poi Creativo (idee, design, originalità). Oggi — non per sempre.</p>
+
+  <div class="dims">
+    <div class="dim"><span>Costruttore</span><div class="track"><div class="fill" style="--w:100%"></div></div><span class="num">100</span></div>
+    <div class="dim"><span>Creativo</span><div class="track"><div class="fill" style="--w:82%"></div></div><span class="num">82</span></div>
+    <div class="dim"><span>Pensatore</span><div class="track"><div class="fill" style="--w:64%"></div></div><span class="num">64</span></div>
+    <div class="dim"><span>Leader</span><div class="track"><div class="fill" style="--w:41%"></div></div><span class="num">41</span></div>
+    <div class="dim"><span>Altruista</span><div class="track"><div class="fill" style="--w:33%"></div></div><span class="num">33</span></div>
+    <div class="dim"><span>Organizzatore</span><div class="track"><div class="fill" style="--w:20%"></div></div><span class="num">20</span></div>
+  </div>
+
+  <div class="tops">
+    <h2>I tuoi mondi</h2>
+    <div class="top"><b>Macchine in movimento</b><span>92%</span></div>
+    <div class="top"><b>Storie, design e media</b><span>85%</span></div>
+    <div class="top"><b>Il mondo digitale</b><span>73%</span></div>
+  </div>
+
+  <div class="brandline">
+    <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#AAB8E8" stroke-width="3.4"/><path d="M32 16 L26.6 26.6 L16 32 L21.4 21.4 Z" fill="#AAB8E8"/></svg>
+    careercompass · trova il tuo nord
+    <span class="date">10 · 07 · 2026</span>
+  </div>
+</div>
+
+<div class="actions">
+  <a class="btn wa" href="#">Condividi su WhatsApp</a>
+  <a class="btn go" href="#">Scopri i tuoi mondi →</a>
+</div>
+
+</body>
+</html>
