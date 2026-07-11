@@ -78,6 +78,95 @@ def enrich_subjects(pause_seconds=7.0):
     return stats
 
 
+MANIFESTO_BASE = "https://onlineservices.polimi.it"
+
+
+def _clean_name(name):
+    # cell text may append access notes ("... Insegnamento a numero chiuso")
+    name = re.split(r"\s+Insegnamento\b", name)[0].strip()
+    return name.title()
+
+
+def parse_manifesto(html):
+    """Yield (year, name, ects, semester) from a ManifestoPublic page.
+
+    The full 3-year plan is one page; rows are 11-cell subject rows and the
+    current year comes from inline "N o Anno" marker rows.
+    """
+    soup = BeautifulSoup(html, "lxml")
+    year = None
+    for tr in soup.find_all("tr"):
+        cells = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
+        marker = next((c for c in cells[:2] if re.match(r"^\s*[123]\s*o\s*Anno", c or "")), None)
+        if marker:
+            year = int(marker.strip()[0])
+            continue
+        if year and len(cells) >= 10 and re.fullmatch(r"\d{6}", cells[0] or ""):
+            name = _clean_name(cells[4])
+            if not name:
+                continue
+            m = re.match(r"(\d+(?:\.\d+)?)", cells[9] or "")
+            ects = int(float(m.group(1))) if m else None
+            yield year, name, ects, (cells[8] or "")[:8]
+
+
+def ingest_manifesto():
+    """Year-by-year study plans for every PoliMi programme, from the public
+    Manifesto degli Studi (onlineservices.polimi.it — no login needed)."""
+    stats = {"programs": 0, "subjects": 0, "errors": []}
+    with Session() as s:
+        inst = ensure_institution(s)
+        progs = s.query(Program).filter_by(institution_id=inst.id).order_by(Program.name).all()
+        for prog in progs:
+            try:
+                if any(x.track == "manifesto" for x in prog.subjects):
+                    continue  # already extracted
+                detail = fetch(prog.url).text
+                m = re.search(r"k_corso_la=(\d+)", detail)
+                if not m:
+                    # EN pages sometimes omit the Manifesto link — follow the IT detail page
+                    it_link = re.search(r'href="(/formazione/corsi-di-laurea/dettaglio-corso/[a-z0-9-]+)"', detail)
+                    if it_link:
+                        detail_it = fetch("https://www.polimi.it" + it_link.group(1)).text
+                        m = re.search(r"k_corso_la=(\d+)", detail_it)
+                if not m:
+                    stats["errors"].append(f"{prog.name}: no k_corso_la on detail page")
+                    continue
+                corso = m.group(1)
+                indirizzi = fetch(f"https://aunicalogin.polimi.it/aunicalogin/getservizio.xml?id_servizio=401&k_corso_la={corso}").text
+                link = re.search(r'href="(/manifesti/manifesti/controller/ManifestoPublic\.do[^"]*aa=\d+[^"]*)"', indirizzi)
+                if not link:
+                    stats["errors"].append(f"{prog.name}: no ManifestoPublic link")
+                    continue
+                url = MANIFESTO_BASE + link.group(1).replace("&amp;", "&")
+                rows = list(parse_manifesto(fetch(url).text))
+                if not rows:
+                    stats["errors"].append(f"{prog.name}: manifesto parsed 0 rows")
+                    continue
+                from ..db import ProgramSubject
+                s.query(ProgramSubject).filter_by(program_id=prog.id, track="manifesto").delete()
+                seen = set()
+                n = 0
+                for year, name, ects, sem in rows:
+                    key = (year, name.lower())
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    s.add(ProgramSubject(program_id=prog.id, track="manifesto", year=year,
+                                         semester=sem, name=name[:300], ects=ects))
+                    n += 1
+                prog.curriculum_url = url
+                s.commit()
+                stats["programs"] += 1
+                stats["subjects"] += n
+                print(f"  ✓ {prog.name} — {n} subjects across years")
+            except Exception as exc:
+                s.rollback()
+                stats["errors"].append(f"{prog.name}: {exc}")
+                print(f"  ✗ {prog.name}: {exc}")
+    return stats
+
+
 def ingest():
     stats = {"programs": 0, "errors": []}
     with Session() as s:

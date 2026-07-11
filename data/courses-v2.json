@@ -10,7 +10,8 @@
   "lon": 9.2405,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -58,7 +59,8 @@
   "lon": 9.2405,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -106,7 +108,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -136,19 +139,142 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Applied mechanics",
-   "Automatic controls",
-   "Basics of industrial automation",
-   "Fundamentals of electronics",
-   "System dynamics",
-   "Advanced control systems",
-   "Final project",
-   "Mechatronic systems"
+   "Analisi Matematica 1",
+   "Economia E Organizzazione Aziendale",
+   "Elettrotecnica",
+   "Fisica",
+   "Fondamenti Di Informatica",
+   "Geometria E Algebra Lineare",
+   "Analisi Matematica 2 (Per L'Automazione)",
+   "Fisica Tecnica E Macchine"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Analisi Matematica 1",
+     "ects": 10
+    },
+    {
+     "name": "Economia E Organizzazione Aziendale",
+     "ects": 10
+    },
+    {
+     "name": "Elettrotecnica",
+     "ects": 10
+    },
+    {
+     "name": "Fisica",
+     "ects": 12
+    },
+    {
+     "name": "Fondamenti Di Informatica",
+     "ects": 10
+    },
+    {
+     "name": "Geometria E Algebra Lineare",
+     "ects": 8
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi Matematica 2 (Per L'Automazione)",
+     "ects": 8
+    },
+    {
+     "name": "Fisica Tecnica E Macchine",
+     "ects": 8
+    },
+    {
+     "name": "Fondamenti Di Automatica",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Elettronica",
+     "ects": 10
+    },
+    {
+     "name": "Modellistica Dei Sistemi Meccanici",
+     "ects": 10
+    },
+    {
+     "name": "Reti Di Telecomunicazione",
+     "ects": 5
+    },
+    {
+     "name": "Sistemi Informatici",
+     "ects": 8
+    }
+   ],
+   "3": [
+    {
+     "name": "Basi Di Dati 1",
+     "ects": 5
+    },
+    {
+     "name": "Calcolo Delle Probabilità E Statistica",
+     "ects": 10
+    },
+    {
+     "name": "Chimica Generale",
+     "ects": 5
+    },
+    {
+     "name": "Controllo Dei Processi",
+     "ects": 7
+    },
+    {
+     "name": "Discrete Event Systems",
+     "ects": 5
+    },
+    {
+     "name": "Elementi Di Analisi Funzionale E Trasformate",
+     "ects": 5
+    },
+    {
+     "name": "Fondamenti Di Probabilità L'Insegnamento Copre La Prima Parte Del Programma Dell'Insegnamento 088697 - Calcolo Delle Probabilita' E Statistica. Non È Possibile Selezionare Entrambi Gli Insegnamenti A Piano Di Studi.",
+     "ects": 5
+    },
+    {
+     "name": "Fondamenti Di Robotica",
+     "ects": 5
+    },
+    {
+     "name": "Foundations Of Operations Research (For Automation)",
+     "ects": 5
+    },
+    {
+     "name": "Impianti Industriali E Gestione Della Produzione",
+     "ects": 9
+    },
+    {
+     "name": "Macchine Elettriche E Azionamenti",
+     "ects": 9
+    },
+    {
+     "name": "Onde Elettromagnetiche E Mezzi Trasmissivi",
+     "ects": 5
+    },
+    {
+     "name": "Prova Finale",
+     "ects": 3
+    },
+    {
+     "name": "Sistemi A Eventi Discreti",
+     "ects": 5
+    },
+    {
+     "name": "Sistemi Per L'Automazione E La Comunicazione Industriale",
+     "ects": 5
+    },
+    {
+     "name": "Tirocinio (Ingegneria Dell'Automazione)",
+     "ects": 15
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Automation%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/automation-engineering",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=519&ac_ins=0&k_indir=A1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -162,7 +288,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -211,7 +338,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -365,7 +493,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -413,7 +542,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -568,7 +698,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -719,7 +850,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -749,19 +881,102 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Computer science specialization (software/hardware)",
-   "Telecommunications specialization",
-   "Automation engineering",
-   "Computer networks",
-   "Databases",
-   "Electrical engineering",
-   "Electronics",
-   "Mathematics"
+   "Analisi Matematica 1",
+   "Elettrotecnica",
+   "Fisica",
+   "Fondamenti Di Comunicazioni E Internet",
+   "Fondamenti Di Informatica",
+   "Geometria E Algebra Lineare",
+   "Analisi Matematica 2",
+   "Architettura Dei Calcolatori E Sistemi Operativi"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Analisi Matematica 1",
+     "ects": 10
+    },
+    {
+     "name": "Elettrotecnica",
+     "ects": 10
+    },
+    {
+     "name": "Fisica",
+     "ects": 12
+    },
+    {
+     "name": "Fondamenti Di Comunicazioni E Internet",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Informatica",
+     "ects": 10
+    },
+    {
+     "name": "Geometria E Algebra Lineare",
+     "ects": 8
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi Matematica 2",
+     "ects": 10
+    },
+    {
+     "name": "Architettura Dei Calcolatori E Sistemi Operativi",
+     "ects": 10
+    },
+    {
+     "name": "Elettromagnetismo E Campi",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Automatica",
+     "ects": 10
+    },
+    {
+     "name": "Informazione E Stima (Per Ingegneria Informatica)",
+     "ects": 10
+    },
+    {
+     "name": "Logica E Algebra",
+     "ects": 5
+    },
+    {
+     "name": "Probabilità E Statistica Per L'Informatica",
+     "ects": 10
+    },
+    {
+     "name": "Prova Finale (Progetto Di Algoritmi E Strutture Dati)",
+     "ects": 1
+    },
+    {
+     "name": "Prova Finale (Progetto Di Segnali Per Le Comunicazioni)",
+     "ects": 1
+    }
+   ],
+   "3": [
+    {
+     "name": "Chimica Generale",
+     "ects": 5
+    },
+    {
+     "name": "Fisica Tecnica",
+     "ects": 5
+    },
+    {
+     "name": "Misure",
+     "ects": 5
+    },
+    {
+     "name": "Onde Elettromagnetiche E Mezzi Trasmissivi",
+     "ects": 5
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Engineering%20of%20Computing%20Systems",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/engineering-of-computing-systems",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=531&ac_ins=0&k_indir=IT1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -775,7 +990,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -930,7 +1146,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC",
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -979,7 +1196,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -1028,7 +1246,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -1058,12 +1277,174 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Study plan on the official page"
+   "Algebra Lineare E Geometria",
+   "Analisi Matematica I",
+   "Chimica",
+   "Economia E Organizzazione Aziendale",
+   "Fisica Sperimentale I",
+   "Informatica A",
+   "Statistica",
+   "Analisi Matematica Ii"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra Lineare E Geometria",
+     "ects": 8
+    },
+    {
+     "name": "Analisi Matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Chimica",
+     "ects": 7
+    },
+    {
+     "name": "Economia E Organizzazione Aziendale",
+     "ects": 7
+    },
+    {
+     "name": "Fisica Sperimentale I",
+     "ects": 10
+    },
+    {
+     "name": "Informatica A",
+     "ects": 10
+    },
+    {
+     "name": "Statistica",
+     "ects": 5
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi Matematica Ii",
+     "ects": 10
+    },
+    {
+     "name": "Elettrotecnica",
+     "ects": 10
+    },
+    {
+     "name": "Fisica Sperimentale Ii",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Automatica",
+     "ects": 10
+    },
+    {
+     "name": "Matematica Numerica",
+     "ects": 10
+    },
+    {
+     "name": "Probabilita'",
+     "ects": 10
+    }
+   ],
+   "3": [
+    {
+     "name": "Algoritmi E Architetture Per Il Calcolo Ad Alte Prestazioni",
+     "ects": 10
+    },
+    {
+     "name": "Algoritmi E Principi Dell'Informatica",
+     "ects": 10
+    },
+    {
+     "name": "Analisi Matematica Iii",
+     "ects": 5
+    },
+    {
+     "name": "Bioinformatics Algorithms",
+     "ects": 5
+    },
+    {
+     "name": "Complementi Di Controlli Automatici",
+     "ects": 5
+    },
+    {
+     "name": "Elettronica La Scelta Di Questo Insegnamento Comporta Che Il Titolo Di Laurea Apparterrà Alla Classe L-8 Delle Lauree In Ingegneria Dell'Informazione. Si Veda Il Punto 5.1 Del Regolamento Didattico.",
+     "ects": 10
+    },
+    {
+     "name": "Finanza Matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Fluidodinamica",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Ricerca Operativa",
+     "ects": 5
+    },
+    {
+     "name": "Gestione Dei Sistemi Logistici E Produttivi",
+     "ects": 10
+    },
+    {
+     "name": "Introduzione Alla Fisica Dei Quanti",
+     "ects": 10
+    },
+    {
+     "name": "Macchine Elettriche",
+     "ects": 5
+    },
+    {
+     "name": "Meccanica Dei Solidi E Delle Strutture",
+     "ects": 10
+    },
+    {
+     "name": "Meccanica Razionale E Dei Continui",
+     "ects": 10
+    },
+    {
+     "name": "Metodi Analitici Delle E.D.P.",
+     "ects": 5
+    },
+    {
+     "name": "Metodi Analitici E Numerici Delle E.D.P.",
+     "ects": 10
+    },
+    {
+     "name": "Metodi Numerici Delle E.D.P.",
+     "ects": 5
+    },
+    {
+     "name": "Microcontrollori",
+     "ects": 5
+    },
+    {
+     "name": "Optoelettronica",
+     "ects": 5
+    },
+    {
+     "name": "Prova Finale (Lp Mtm)",
+     "ects": 3
+    },
+    {
+     "name": "Segnali Per Le Comunicazioni",
+     "ects": 10
+    },
+    {
+     "name": "Statistica Applicata",
+     "ects": 10
+    },
+    {
+     "name": "Termodinamica E Processi Energetici La Scelta Di Questo Insegnamento Comporta Che Il Titolo Di Laurea Apparterrà Alla  Classe L-9 Delle Lauree In Ingegneria Industriale. Si Veda Il Punto 5.1 Del Regolamento Didattico.",
+     "ects": 10
+    },
+    {
+     "name": "Tirocinio (Lp Mtm)",
+     "ects": 10
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Mathematical%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/mathematical-engineering",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=532&ac_ins=0&k_indir=MTM&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -1077,7 +1458,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -1228,7 +1610,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC",
+  "test": "TOLC-E (CISIA), non-selective",
+  "admission": "open",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [
@@ -1277,7 +1660,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -1326,7 +1710,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -1374,7 +1759,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -1422,7 +1808,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -1470,7 +1857,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC / local admission test",
+  "test": "National healthcare admission test",
+  "admission": "national",
   "selectivity": 75,
   "mathLoad": 2,
   "subjects": [
@@ -1518,7 +1906,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -1548,19 +1937,138 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Chemistry",
-   "Mathematics",
-   "Physics",
-   "Biochemistry",
-   "Bioelectromagnetism",
-   "Biomaterials",
-   "Biomechanics",
-   "Biomedical instrumentation"
+   "Analisi Matematica 1",
+   "Analisi Matematica 2",
+   "Fisica",
+   "Fondamenti Di Costruzione E Organizzazione Degli Edifici",
+   "Fondamenti Di Disegno E Programmazione",
+   "Materiali Per Le Costruzioni",
+   "Storia Dell'Architettura E Delle Tecniche Costruttive",
+   "Building Information Modelling"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Analisi Matematica 1",
+     "ects": 9
+    },
+    {
+     "name": "Analisi Matematica 2",
+     "ects": 9
+    },
+    {
+     "name": "Fisica",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti Di Costruzione E Organizzazione Degli Edifici",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti Di Disegno E Programmazione",
+     "ects": 12
+    },
+    {
+     "name": "Materiali Per Le Costruzioni",
+     "ects": 15
+    },
+    {
+     "name": "Storia Dell'Architettura E Delle Tecniche Costruttive",
+     "ects": 6
+    }
+   ],
+   "2": [
+    {
+     "name": "Building Information Modelling",
+     "ects": 6
+    },
+    {
+     "name": "Fisica Dell'Edificio",
+     "ects": 12
+    },
+    {
+     "name": "Idraulica Applicata",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Di Componenti E Sistemi Edilizi E Impiantistici",
+     "ects": 12
+    },
+    {
+     "name": "Meccanica Delle Strutture",
+     "ects": 15
+    },
+    {
+     "name": "Meccanica Razionale",
+     "ects": 6
+    }
+   ],
+   "3": [
+    {
+     "name": "Adattabilita' E Rigenerazione Degli Edifici",
+     "ects": 6
+    },
+    {
+     "name": "Avviamento Al Tirocinio E Tirocinio",
+     "ects": 3
+    },
+    {
+     "name": "Data Science Per Gli Edifici",
+     "ects": 6
+    },
+    {
+     "name": "Economia Della Localizzazione E Degli Investimenti Nel Settore Delle Costruzioni",
+     "ects": 6
+    },
+    {
+     "name": "Ingegneria Della Sicurezza Antincendio",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Di Architettura Tecnica",
+     "ects": 9
+    },
+    {
+     "name": "Laboratorio Di Cantiere",
+     "ects": 9
+    },
+    {
+     "name": "Laboratorio Di Integrazione Impiantistica",
+     "ects": 9
+    },
+    {
+     "name": "Laboratorio Di Prove Non Distruttive",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Di Tecnica Delle Costruzioni",
+     "ects": 9
+    },
+    {
+     "name": "Preparazione All'Esame Di Laurea",
+     "ects": 3
+    },
+    {
+     "name": "Principi Diconservazione Degli Edifici",
+     "ects": 6
+    },
+    {
+     "name": "Strategic Visions For The Building Engineering Of The Future",
+     "ects": 6
+    },
+    {
+     "name": "Topografia E Rilievo Digitale",
+     "ects": 6
+    },
+    {
+     "name": "Valutazione Economica Delle Trasformazioni Urbane",
+     "ects": 6
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Biomedical%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/biomedical-engineering",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=222&k_corso_la=1030&ac_ins=0&k_indir=IE1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -1574,7 +2082,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -1733,7 +2242,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -1782,7 +2292,8 @@
   "lon": 9.3977,
   "citySize": "small",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL-D (PoliMi design test)",
+  "admission": "programmed",
   "selectivity": 84,
   "mathLoad": 2,
   "subjects": [
@@ -1812,12 +2323,106 @@
   "nature": "mixed",
   "netMonthly": 1450,
   "curriculum": [
-   "Study plan on the official page"
+   "Architecture Of Embedded And Connected Systems",
+   "Basics Of Programming",
+   "History Of Design & Interfaces",
+   "Interaction Design Basics Studio",
+   "Prototyping Studio",
+   "Theories Of Interaction Design",
+   "User Interface Design Studio",
+   "Front-End Development"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Architecture Of Embedded And Connected Systems",
+     "ects": 6
+    },
+    {
+     "name": "Basics Of Programming",
+     "ects": 6
+    },
+    {
+     "name": "History Of Design & Interfaces",
+     "ects": 6
+    },
+    {
+     "name": "Interaction Design Basics Studio",
+     "ects": 12
+    },
+    {
+     "name": "Prototyping Studio",
+     "ects": 12
+    },
+    {
+     "name": "Theories Of Interaction Design",
+     "ects": 6
+    },
+    {
+     "name": "User Interface Design Studio",
+     "ects": 12
+    }
+   ],
+   "2": [
+    {
+     "name": "Front-End Development",
+     "ects": 6
+    },
+    {
+     "name": "History Of Information Technology",
+     "ects": 6
+    },
+    {
+     "name": "Statistics And Data Analysis",
+     "ects": 6
+    },
+    {
+     "name": "Sustainable Interaction Design",
+     "ects": 6
+    },
+    {
+     "name": "Sustainable Interaction Design Studio",
+     "ects": 12
+    },
+    {
+     "name": "Ux Design Studio",
+     "ects": 12
+    },
+    {
+     "name": "Vr/Ar Design Studio",
+     "ects": 12
+    }
+   ],
+   "3": [
+    {
+     "name": "Envisioning Future Technologies",
+     "ects": 6
+    },
+    {
+     "name": "Ethics For Interaction Design",
+     "ects": 6
+    },
+    {
+     "name": "Interaction Design Studio",
+     "ects": 12
+    },
+    {
+     "name": "Semiotics For Interaction Design",
+     "ects": 6
+    },
+    {
+     "name": "Thesis",
+     "ects": 6
+    },
+    {
+     "name": "Workshop",
+     "ects": 6
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Interaction%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/interaction-design",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1014&ac_ins=0&k_indir=IDE&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -1831,7 +2436,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL-D (PoliMi design test)",
+  "admission": "programmed",
   "selectivity": 84,
   "mathLoad": 2,
   "subjects": [
@@ -1860,19 +2466,90 @@
   "nature": "mixed",
   "netMonthly": 1450,
   "curriculum": [
-   "Audiovisual communication",
-   "Fundamentals of visual representation",
-   "Graphic design",
-   "Management of coordinated, multi-platform communication systems",
-   "Multimedia and interactive communication",
-   "Photography",
-   "Typography",
-   "Web design"
+   "Culture Visive E Sistemi Iconografici",
+   "Curve E Superfici Per Il Design",
+   "Fondamenti Di Informatica Per Il Web Design",
+   "Laboratorio Del Disegno",
+   "Laboratorio Di Elementi Visivi Del Progetto Di Comunicazione",
+   "Laboratorio Di Grafica Editoriale",
+   "Storia Del Design E Dell'Architettura",
+   "Typographic Design"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Culture Visive E Sistemi Iconografici",
+     "ects": 6
+    },
+    {
+     "name": "Curve E Superfici Per Il Design",
+     "ects": 6
+    },
+    {
+     "name": "Fondamenti Di Informatica Per Il Web Design",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Del Disegno",
+     "ects": 9
+    },
+    {
+     "name": "Laboratorio Di Elementi Visivi Del Progetto Di Comunicazione",
+     "ects": 9
+    },
+    {
+     "name": "Laboratorio Di Grafica Editoriale",
+     "ects": 12
+    },
+    {
+     "name": "Storia Del Design E Dell'Architettura",
+     "ects": 6
+    },
+    {
+     "name": "Typographic Design",
+     "ects": 6
+    }
+   ],
+   "2": [
+    {
+     "name": "Fototestualita': Progetto Verbo-Visuale E Artefatti Mnestici",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Di Metaprogetto",
+     "ects": 12
+    },
+    {
+     "name": "Processi E Metodi Per I Digital Media",
+     "ects": 6
+    },
+    {
+     "name": "Storia Delle Comunicazioni Visive",
+     "ects": 6
+    },
+    {
+     "name": "Strategia, Economia  E Gestione Del Progetto",
+     "ects": 6
+    },
+    {
+     "name": "Type Design",
+     "ects": 6
+    }
+   ],
+   "3": [
+    {
+     "name": "Preparazione Elaborato Di Laurea (P.E.L.)",
+     "ects": 6
+    },
+    {
+     "name": "Storia Del Cinema",
+     "ects": 6
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Communication%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/communication-design",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1021&ac_ins=0&k_indir=C1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -1886,7 +2563,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL-D (PoliMi design test)",
+  "admission": "programmed",
   "selectivity": 84,
   "mathLoad": 2,
   "subjects": [
@@ -1915,12 +2593,82 @@
   "nature": "mixed",
   "netMonthly": 1450,
   "curriculum": [
-   "Study plan on the official page"
+   "Curve E Superfici Per Il Design",
+   "Laboratorio Del Disegno",
+   "Laboratorio Di Design Del Prodotto Industriale 1",
+   "Laboratorio Di Elementi Visivi Del Progetto",
+   "Laboratorio Di Strumenti E Metodi Del Progetto",
+   "Materiali Per Il Design",
+   "Storia Del Design",
+   "Design Per La Sostenibilità Ambientale"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Curve E Superfici Per Il Design",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Del Disegno",
+     "ects": 9
+    },
+    {
+     "name": "Laboratorio Di Design Del Prodotto Industriale 1",
+     "ects": 12
+    },
+    {
+     "name": "Laboratorio Di Elementi Visivi Del Progetto",
+     "ects": 12
+    },
+    {
+     "name": "Laboratorio Di Strumenti E Metodi Del Progetto",
+     "ects": 9
+    },
+    {
+     "name": "Materiali Per Il Design",
+     "ects": 10
+    },
+    {
+     "name": "Storia Del Design",
+     "ects": 6
+    }
+   ],
+   "2": [
+    {
+     "name": "Design Per La Sostenibilità Ambientale",
+     "ects": 6
+    },
+    {
+     "name": "Laboratorio Di Metaprogetto",
+     "ects": 12
+    },
+    {
+     "name": "Laboratorio Di Rappresentazione Digitale",
+     "ects": 10
+    },
+    {
+     "name": "Modellazione Cad",
+     "ects": 6
+    },
+    {
+     "name": "Tecnologie E Strutture",
+     "ects": 10
+    }
+   ],
+   "3": [
+    {
+     "name": "Preparazione Prova Finale",
+     "ects": 3
+    },
+    {
+     "name": "Strategia, Economia  E Gestione Del Progetto",
+     "ects": 6
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Product%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/product-design",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1020&ac_ins=0&k_indir=P1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -1934,7 +2682,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -2089,7 +2838,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -2138,7 +2888,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC",
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [
@@ -2188,6 +2939,7 @@
   "citySize": "large",
   "years": 3,
   "test": "Bocconi admission test",
+  "admission": "programmed",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [
@@ -2236,7 +2988,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -2286,6 +3039,7 @@
   "citySize": "large",
   "years": 3,
   "test": "Bocconi admission test",
+  "admission": "programmed",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [
@@ -2333,7 +3087,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC",
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [
@@ -2383,6 +3138,7 @@
   "citySize": "large",
   "years": 3,
   "test": "Bocconi admission test",
+  "admission": "programmed",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [
@@ -2431,7 +3187,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -2586,7 +3343,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -2616,19 +3374,84 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Chemistry",
-   "Computer science",
-   "Materials science",
-   "Mathematics",
-   "Physics",
-   "Technical drawing",
-   "Electrical systems",
-   "Industrial plants and management"
+   "Analisi E Geometria 1",
+   "Analisi E Geometria 2",
+   "Fondamenti Di Chimica",
+   "Fondamenti Di Fisica Sperimentale",
+   "Informatica B",
+   "Metallurgia E Materiali Non Metallici",
+   "Metodi Di Rappresentazione Tecnica",
+   "Fisica Tecnica"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Analisi E Geometria 1",
+     "ects": 10
+    },
+    {
+     "name": "Analisi E Geometria 2",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Chimica",
+     "ects": 7
+    },
+    {
+     "name": "Fondamenti Di Fisica Sperimentale",
+     "ects": 12
+    },
+    {
+     "name": "Informatica B",
+     "ects": 7
+    },
+    {
+     "name": "Metallurgia E Materiali Non Metallici",
+     "ects": 7
+    },
+    {
+     "name": "Metodi Di Rappresentazione Tecnica",
+     "ects": 7
+    }
+   ],
+   "2": [
+    {
+     "name": "Fisica Tecnica",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Meccanica Teorica Ed Applicata",
+     "ects": 8
+    },
+    {
+     "name": "Impianti Industriali E Organizzazione D'Impresa",
+     "ects": 10
+    },
+    {
+     "name": "Meccanica Dei Fluidi",
+     "ects": 8
+    },
+    {
+     "name": "Meccanica Dei Solidi",
+     "ects": 8
+    },
+    {
+     "name": "Onde E Ottica",
+     "ects": 6
+    },
+    {
+     "name": "Principi Di Sistemi Elettrici",
+     "ects": 10
+    },
+    {
+     "name": "Statistica",
+     "ects": 6
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Energy%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/energy-engineering",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=524&ac_ins=0&k_indir=ENN&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -2642,7 +3465,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -2691,7 +3515,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -2846,7 +3671,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -2876,12 +3702,34 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Study plan on the official page"
+   "--",
+   "Geotecnica",
+   "Idrologia",
+   "Pianificazione Territoriale"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "3": [
+    {
+     "name": "--",
+     "ects": 3
+    },
+    {
+     "name": "Geotecnica",
+     "ects": 7
+    },
+    {
+     "name": "Idrologia",
+     "ects": 7
+    },
+    {
+     "name": "Pianificazione Territoriale",
+     "ects": 7
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Environmental%20and%20Land%20Planning%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/environmental-and-land-planning-engineering",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=1&k_corso_la=346&ac_ins=0&k_indir=M1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -2895,7 +3743,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 2,
-  "test": "Internal selection test + interview",
+  "test": "Internal test + interview",
+  "admission": "selection",
   "selectivity": 60,
   "mathLoad": 2,
   "subjects": [
@@ -2944,7 +3793,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -3099,7 +3949,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOL (PoliMi admission test)",
+  "test": "TOL (PoliMi test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -3128,12 +3979,88 @@
   "nature": "scientific",
   "netMonthly": 1700,
   "curriculum": [
-   "Study plan on the official page"
+   "Algebra Lineare",
+   "Analisi Matematica I",
+   "Analisi Matematica Ii",
+   "Chimica E Materiali",
+   "Fisica Sperimentale I",
+   "Fondamenti Di Telecomunicazioni",
+   "Informatica A",
+   "Analisi Matematica Iii A La Scelta Di Questo Insegnamento Comporta Che Il Titolo Di Laurea Apparterrà Alla Classe L-8 Delle Lauree In Ingegneria Dell'Informazione. È Obbligatorio Scegliere Uno Dei Due Insegnamenti"
   ],
-  "curriculumByYear": null,
+  "curriculumByYear": {
+   "1": [
+    {
+     "name": "Algebra Lineare",
+     "ects": 5
+    },
+    {
+     "name": "Analisi Matematica I",
+     "ects": 10
+    },
+    {
+     "name": "Analisi Matematica Ii",
+     "ects": 10
+    },
+    {
+     "name": "Chimica E Materiali",
+     "ects": 10
+    },
+    {
+     "name": "Fisica Sperimentale I",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Telecomunicazioni",
+     "ects": 5
+    },
+    {
+     "name": "Informatica A",
+     "ects": 10
+    }
+   ],
+   "2": [
+    {
+     "name": "Analisi Matematica Iii A La Scelta Di Questo Insegnamento Comporta Che Il Titolo Di Laurea Apparterrà Alla Classe L-8 Delle Lauree In Ingegneria Dell'Informazione. È Obbligatorio Scegliere Uno Dei Due Insegnamenti",
+     "ects": 10
+    },
+    {
+     "name": "Analisi Matematica Iii B È Obbligatorio Scegliere Uno Dei Due Insegnamenti",
+     "ects": 5
+    },
+    {
+     "name": "Circuiti E Misure Elettroniche",
+     "ects": 10
+    },
+    {
+     "name": "Fisica Sperimentale Ii",
+     "ects": 10
+    },
+    {
+     "name": "Fondamenti Di Automatica (Per Ingegneria Fisica)",
+     "ects": 10
+    },
+    {
+     "name": "Introduzione Alla Fisica Dei Quanti",
+     "ects": 10
+    },
+    {
+     "name": "Meccanica Applicata",
+     "ects": 5
+    },
+    {
+     "name": "Probabilita' E Statistica",
+     "ects": 5
+    },
+    {
+     "name": "Sistemi Energetici Per Ingegneria Fisica Scelta Propedeutica Per Chi Intende Proseguire Sul Corso Di Laurea Magistrale In Nuclear Engineering",
+     "ects": 5
+    }
+   ]
+  },
   "googleQuery": "Politecnico%20di%20Milano%20Physics%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/physics-engineering",
-  "curriculumUrl": null,
+  "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=526&ac_ins=0&k_indir=F1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
  },
  {
@@ -3147,7 +4074,8 @@
   "lon": 7.6869,
   "citySize": "large",
   "years": 3,
-  "test": "TIL-I (PoliTo admission test)",
+  "test": "TIL-I (PoliTo test)",
+  "admission": "programmed",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -3301,7 +4229,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC",
+  "test": "TOLC-S (CISIA), non-selective",
+  "admission": "open",
   "selectivity": 70,
   "mathLoad": 5,
   "subjects": [
@@ -3349,7 +4278,8 @@
   "lon": 9.19,
   "citySize": "large",
   "years": 3,
-  "test": "TOLC",
+  "test": "TOLC-E (CISIA), non-selective",
+  "admission": "open",
   "selectivity": 78,
   "mathLoad": 3,
   "subjects": [

@@ -100,6 +100,15 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
               {c.type} · {c.years}y · {c.city}
             </span>
             <NatureBadge c={c} />
+            {c.admission && (
+              <span className="text-xs px-2 py-0.5 rounded-full"
+                style={{
+                  background: c.admission === "open" ? T.greenSoft : c.admission === "selection" ? T.violetSoft : T.amberSoft,
+                  color: c.admission === "open" ? T.green : c.admission === "selection" ? T.accent : T.amber,
+                }}>
+                {t(`adm_${c.admission}`)}
+              </span>
+            )}
             <GoogleLink c={c} />
           </div>
           <div className="font-bold mt-2" style={display}>{c.name}</div>

@@ -23,6 +23,7 @@ export default function Compare() {
                       <GoogleLink c={c} />
                     </div>
                     <div className="text-xs" style={{ color: T.grey }}>{c.inst} · {c.city}</div>
+                    {c.admission && <div className="text-xs mt-0.5" style={{ color: c.admission === "open" ? T.green : T.amber }}>{t(`adm_${c.admission}`)} · {c.test}</div>}
                     <OfficialLink c={c} />
                   </div>
                 ))}

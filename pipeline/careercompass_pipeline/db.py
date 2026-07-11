@@ -65,6 +65,8 @@ class Program(Base):
     language = Column(String(64))
     years = Column(Integer, default=3)
     campus = Column(String(200))
+    admission_type = Column(String(24))                      # open | programmed | national | selection
+    admission_test = Column(String(120))                     # e.g. "TOLC-I (CISIA)", "TOL", "TIL-I"
     source = Column(String(500))                             # where this row came from
     fetched_at = Column(DateTime, default=datetime.utcnow)
     institution = relationship("Institution", back_populates="programs")
