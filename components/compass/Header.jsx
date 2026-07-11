@@ -11,8 +11,8 @@ export default function Header() {
       <header className="sticky top-0 z-40" style={{ background: T.headerBg, backdropFilter: "blur(14px)", borderBottom: `1px solid ${T.line}` }}>
         <div className="max-w-[1500px] mx-auto px-3 md:px-10 py-2 md:py-3 flex items-center justify-between gap-2 md:gap-3 flex-wrap">
           <button onClick={goHome} className="flex items-center gap-2.5 group">
-            <Logo />
-            <span className="hidden sm:inline text-xl md:text-2xl font-extrabold tracking-tight" style={{ ...display, backgroundImage: T.grad, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <Logo color={T.violet} />
+            <span className="hidden sm:inline text-lg md:text-xl font-semibold tracking-tight" style={{ color: T.ink }}>
               CareerCompass
             </span>
             <span className="hidden lg:inline text-xs ml-1" style={{ color: T.grey, ...mono }}>{t("tagline")}</span>

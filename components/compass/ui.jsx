@@ -83,7 +83,8 @@ export function OfficialLink({ c }) {
 }
 
 export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badge }) {
-  const { T, t, scoreColor, isSavedOn, toggleSave } = React.useContext(AppCtx);
+  const { T, t, scoreColor, isSavedOn, toggleSave, profile } = React.useContext(AppCtx);
+  const fees = c.costByIsee?.[profile?.isee || "mid"];
   return (
     <div onClick={onCardClick} className={`cc-card cc-shine w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
       style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
@@ -130,8 +131,27 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           {chosen && <div className="mt-1 text-xs font-bold" style={{ color: T.accent }}>{t("card_finalist")}</div>}
         </div>
       </div>
+      {/* Statistics strip — big, scannable, per tester feedback */}
+      <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
+        <div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.green, letterSpacing: "-.02em" }}>{c.employment1y}%</div>
+          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_emp")}</div>
+        </div>
+        <div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.ink, letterSpacing: "-.02em" }}>~€{Math.round(c.netMonthly / 100) / 10}k</div>
+          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_net")}</div>
+        </div>
+        <div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: c.env.dropout >= 22 ? T.amber : T.ink, letterSpacing: "-.02em" }}>{c.env.dropout}%</div>
+          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_drop")}</div>
+        </div>
+        <div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{fees === 0 ? "€0" : `~€${fees?.toLocaleString?.() ?? "—"}`}</div>
+          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_fees")}</div>
+        </div>
+      </div>
       {showFit && c.envFit && (
-        <div className="mt-2 text-xs space-y-0.5" style={{ color: T.grey }}>
+        <div className="mt-2.5 text-xs space-y-0.5" style={{ color: T.grey }}>
           {c.envFit.reasons.slice(0, 2).map((r, i) => <div key={i}>· {r}</div>)}
         </div>
       )}
@@ -148,18 +168,12 @@ export function BackLink({ onClick, label }) {
   );
 }
 
-export function Logo({ size = 34 }) {
+export function Logo({ size = 34, color = "#2244BB" }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden>
-      <defs>
-        <linearGradient id="ccLogoGrad" x1="0" y1="0" x2="48" y2="48">
-          <stop stopColor="#2563EB" />
-          <stop offset="1" stopColor="#EC4899" />
-        </linearGradient>
-      </defs>
-      <circle cx="24" cy="24" r="20.5" stroke="url(#ccLogoGrad)" strokeWidth="3.5" />
-      <path d="M32.5 15.5 L26.8 26.8 L15.5 32.5 L21.2 21.2 Z" fill="url(#ccLogoGrad)" />
-      <circle cx="24" cy="24" r="2.4" fill="#07070E" />
+      <circle cx="24" cy="24" r="20.5" stroke={color} strokeWidth="3.5" />
+      <path d="M32.5 15.5 L26.8 26.8 L15.5 32.5 L21.2 21.2 Z" fill={color} />
+      <circle cx="24" cy="24" r="2.4" fill="#FAF9F6" />
     </svg>
   );
 }

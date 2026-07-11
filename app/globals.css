@@ -1,14 +1,14 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
 
 :root {
-  --bg: #07070e;
-  --ink: #f2f3f8;
+  --bg: #faf9f6;
+  --ink: #14192e;
 }
 
 html {
   background: var(--bg);
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -42,8 +42,8 @@ body {
 }
 
 @keyframes ccPulse {
-  0%, 100% { box-shadow: 0 0 30px rgba(37, 99, 235, 0.35); }
-  50% { box-shadow: 0 0 55px rgba(236, 72, 153, 0.45); }
+  0%, 100% { box-shadow: 0 0 26px rgba(34, 68, 187, 0.30); }
+  50% { box-shadow: 0 0 44px rgba(22, 37, 95, 0.38); }
 }
 
 .cc-fade-up { animation: ccFadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
@@ -56,28 +56,29 @@ body {
 }
 .cc-card:hover {
   transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 12px 32px rgba(20, 25, 46, 0.14), 0 0 0 1px rgba(34, 68, 187, 0.25);
 }
 
 .cc-progress {
-  background: linear-gradient(90deg, #2563eb, #ec4899, #2563eb);
+  background: linear-gradient(90deg, #16255f, #2244bb, #16255f);
   background-size: 400px 100%;
   animation: ccShimmer 2.2s linear infinite;
 }
 
-/* Hero compass: the needle swings wide, overshoots and settles north */
-@keyframes ccNeedle {
-  0% { transform: rotate(-210deg); }
-  55% { transform: rotate(40deg); }
-  75% { transform: rotate(-14deg); }
-  90% { transform: rotate(6deg); }
-  100% { transform: rotate(0deg); }
-}
-.cc-needle {
-  transform-origin: 50% 50%;
-  animation: ccNeedle 2.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-.cc-compass-float { animation: ccBlob 22s ease-in-out infinite; }
+/* Living compass (approved mockup): journey line, rotating ring, settling
+   then breathing needle, radiating pulse. Coordinates match the 560x316 SVG. */
+.cc-route { fill: none; stroke: rgba(255,255,255,.75); stroke-width: 2; stroke-dasharray: 7 9; stroke-linecap: round; animation: ccRoute 3s ease .3s both; }
+@keyframes ccRoute { from { stroke-dashoffset: 640; } to { stroke-dashoffset: 0; } }
+.cc-traveler { offset-path: path('M8 268 C 96 236 128 160 196 158 C 244 156 260 196 320 186'); offset-rotate: 0deg; animation: ccTravel 3s ease .3s both; }
+@keyframes ccTravel { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+.cc-ringspin { transform-origin: 392px 158px; animation: ccSpin 70s linear infinite; }
+@keyframes ccSpin { to { transform: rotate(360deg); } }
+.cc-settle { transform-origin: 392px 158px; animation: ccSettle 2.6s cubic-bezier(.24,1.25,.4,1) .9s both; }
+@keyframes ccSettle { 0% { transform: rotate(-200deg); } 55% { transform: rotate(30deg); } 80% { transform: rotate(-10deg); } 100% { transform: rotate(0deg); } }
+.cc-breathe { transform-origin: 392px 158px; animation: ccBreathe 5.5s ease-in-out 3.5s infinite alternate; }
+@keyframes ccBreathe { from { transform: rotate(-2.6deg); } to { transform: rotate(2.6deg); } }
+.cc-pulse { transform-origin: 392px 158px; animation: ccPulseRing 3.2s ease-out 1.2s infinite; }
+@keyframes ccPulseRing { 0% { transform: scale(.6); opacity: .5; } 70% { transform: scale(1.25); opacity: 0; } 100% { transform: scale(1.25); opacity: 0; } }
 
 /* Shine sweep across cards on hover */
 .cc-shine { position: relative; overflow: hidden; }
@@ -99,15 +100,15 @@ details.cc-year > summary::before { content: "▸ "; }
 details.cc-year[open] > summary::before { content: "▾ "; }
 
 @media (prefers-reduced-motion: reduce) {
-  .cc-fade-up, .cc-fade-in, .cc-blob, .cc-glow, .cc-progress, .cc-needle, .cc-compass-float { animation: none; }
+  .cc-fade-up, .cc-fade-in, .cc-blob, .cc-glow, .cc-progress, .cc-route, .cc-traveler, .cc-ringspin, .cc-settle, .cc-breathe, .cc-pulse { animation: none; }
+  .cc-route { stroke-dashoffset: 0; }
   .cc-card, .cc-card:hover { transition: none; transform: none; }
   .cc-shine::after { display: none; }
 }
 
-/* Dark scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #0b0b14; }
-::-webkit-scrollbar-thumb { background: #26263a; border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: #373752; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c9c6ba; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #aeab9e; }
 
-input[type="range"] { accent-color: #8b5cf6; }
+input[type="range"] { accent-color: #2244bb; }

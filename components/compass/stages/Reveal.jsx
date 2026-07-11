@@ -12,34 +12,36 @@ export default function Reveal() {
     <>
           <div className="max-w-4xl mx-auto space-y-5">
             <BackLink />
-            <Section>
-              <div className="text-xs uppercase tracking-[0.25em]" style={{ color: T.grey, ...mono }}>{t("reveal_youare")}</div>
-              <h2 className="text-4xl md:text-5xl font-black mt-2" style={{ ...display, backgroundImage: T.grad, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <div className="cc-fade-up rounded-3xl p-7 md:p-10" style={{ background: "linear-gradient(160deg,#16255F 0%,#2244BB 55%,#4D3FB8 100%)", color: "#fff", backgroundImage: "radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(160deg,#16255F 0%,#2244BB 55%,#4D3FB8 100%)", backgroundSize: "22px 22px, cover" }}>
+              <div className="text-xs uppercase" style={{ ...mono, letterSpacing: ".28em", color: "#AAB8E8" }}>{t("reveal_youare")}</div>
+              <h2 className="font-bold mt-2" style={{ ...display, fontSize: "clamp(36px,7vw,54px)", lineHeight: 1.05, letterSpacing: "-.01em" }}>
                 {identTitle}
               </h2>
-              <p className="mt-3 text-sm md:text-base" style={{ color: T.grey }}>
+              <p className="mt-3 text-sm md:text-base" style={{ color: "#D8DFF6", maxWidth: "48ch" }}>
                 {t("reveal_blurb", {
                   a: t(`dim_${ident.letters[0]}`), ad: t(`dimd_${ident.letters[0]}`).toLowerCase(),
                   b: t(`dim_${ident.letters[1]}`), bd: t(`dimd_${ident.letters[1]}`).toLowerCase(),
                 })}
               </p>
               {savedToName ? (
-                <p className="mt-3 text-xs font-semibold" style={{ color: T.green }}>{t("reveal_saved_to", { name: savedToName })}</p>
+                <p className="mt-3 text-xs font-semibold" style={{ color: "#8FE3C0" }}>{t("reveal_saved_to", { name: savedToName })}</p>
               ) : lastResult ? (
-                <button onClick={() => setShowProfiles(true)} className="mt-3 text-xs font-bold underline" style={{ color: T.accent }}>
+                <button onClick={() => setShowProfiles(true)} className="mt-3 text-xs font-bold underline" style={{ color: "#AAB8E8" }}>
                   {t("reveal_create_prompt")}
                 </button>
               ) : null}
               <div className="mt-6 space-y-2.5">
                 {DIMS.map((d) => (
                   <div key={d} className="flex items-center gap-3">
-                    <span className="w-28 text-xs font-semibold">{t(`dim_${d}`)}</span>
-                    <div className="flex-1"><Bar score={norm[d]} color={T.violet} /></div>
-                    <span className="w-8 text-xs text-right" style={{ ...mono, color: T.grey }}>{norm[d]}</span>
+                    <span className="w-28 text-xs font-semibold" style={{ color: "#D8DFF6" }}>{t(`dim_${d}`)}</span>
+                    <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.18)" }}>
+                      <div className="h-2 rounded-full transition-all duration-500" style={{ width: `${norm[d]}%`, background: "linear-gradient(90deg,#8FE3C0,#CFF3E3)" }} />
+                    </div>
+                    <span className="w-8 text-xs text-right" style={{ ...mono, color: "#CFF3E3" }}>{norm[d]}</span>
                   </div>
                 ))}
               </div>
-            </Section>
+            </div>
 
             {historyList.length > 0 && (
               <Section>

@@ -29,7 +29,7 @@ import Compare from "./compass/stages/Compare";
 
 export default function CareerCompass() {
   // ————— Language + theme + profiles (device-local) —————
-  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en", theme: "dark", saved: [] });
+  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en", theme: "light", saved: [] });
   const [storeLoaded, setStoreLoaded] = useState(false);
   useEffect(() => { setStore((s) => ({ ...s, ...loadStore() })); setStoreLoaded(true); }, []);
   useEffect(() => { if (storeLoaded) saveStore(store); }, [store, storeLoaded]);

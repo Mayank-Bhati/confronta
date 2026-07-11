@@ -11,26 +11,26 @@ export const PALETTES = {
     green: "#34D399", greenSoft: "rgba(52,211,153,0.14)",
     amber: "#FBBF24", amberSoft: "rgba(251,191,36,0.13)",
     red: "#F87171", redSoft: "rgba(248,113,113,0.13)",
-    grad: "linear-gradient(135deg,#2563EB,#EC4899)",
+    grad: "linear-gradient(135deg,#2563EB,#4D3FB8)",
     track: "rgba(255,255,255,0.08)",
     headerBg: "rgba(7,7,14,0.82)",
     chipIdle: "transparent",
     rowBg: "rgba(255,255,255,0.04)",
   },
   light: {
-    bg: "#F5F5FB", card: "#FFFFFF", card2: "#F1F1F8",
-    line: "rgba(20,20,60,0.10)", lineStrong: "rgba(20,20,60,0.22)",
-    ink: "#1A1B2E", grey: "#5D6470",
-    violet: "#2244BB", violetSoft: "rgba(34,68,187,0.10)", accent: "#2244BB",
-    pink: "#DB2777",
-    green: "#0E9F6E", greenSoft: "rgba(14,159,110,0.12)",
-    amber: "#B45309", amberSoft: "rgba(245,158,11,0.16)",
-    red: "#DC2626", redSoft: "rgba(220,38,38,0.10)",
-    grad: "linear-gradient(135deg,#2244BB,#DB2777)",
-    track: "rgba(20,20,60,0.10)",
-    headerBg: "rgba(245,245,251,0.85)",
+    bg: "#FAF9F6", card: "#FFFFFF", card2: "#F4F3EE",
+    line: "#E4E2DA", lineStrong: "#CBC8BC",
+    ink: "#14192E", grey: "#5A6072",
+    violet: "#2244BB", violetSoft: "#EEF1FB", accent: "#2244BB",
+    pink: "#16255F",
+    green: "#0E7C5B", greenSoft: "rgba(14,124,91,0.10)",
+    amber: "#B45309", amberSoft: "rgba(180,83,9,0.12)",
+    red: "#C2410C", redSoft: "rgba(194,65,12,0.10)",
+    grad: "linear-gradient(135deg,#16255F,#2244BB)",
+    track: "#E7E5DC",
+    headerBg: "rgba(250,249,246,0.92)",
     chipIdle: "#FFFFFF",
-    rowBg: "rgba(20,20,60,0.04)",
+    rowBg: "#F4F3EE",
   },
 };
 
@@ -51,8 +51,8 @@ export const NATURE_KEY = {
   "technical-practical": "nat_technical",
 };
 
-export const mono = { fontFamily: "'Space Mono', monospace" };
-export const display = { fontFamily: "'Outfit', system-ui, sans-serif" };
+export const mono = { fontFamily: "'IBM Plex Mono', monospace" };
+export const display = { fontFamily: "'Fraunces', Georgia, serif" };
 export const DATE_LOCALE = { en: "en-GB", it: "it-IT", hi: "hi-IN" };
 
 export const natureStyleFor = (T, nature) =>

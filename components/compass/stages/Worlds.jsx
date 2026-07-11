@@ -1,43 +1,40 @@
 import React from "react";
 
 import { useApp } from "../context";
-import { WORLD_HUES, mono, display } from "../constants";
+import { mono, display } from "../constants";
 import { BackLink } from "../ui";
-import WORLDS_DATA from "../../../data/worlds.json";
 
 export default function Worlds() {
   const { T, t, td, rankedWorlds, setWorldId, setCareerId, go, identTitle, scoreColor } = useApp();
   return (
     <>
-          <>
-            <BackLink />
-            <h2 className="font-black text-2xl md:text-4xl cc-fade-up" style={display}>
-              {t("worlds_title", { t: identTitle })}
-            </h2>
-            <p className="text-sm -mt-2 cc-fade-up" style={{ color: T.grey }}>{t("worlds_sub")}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {rankedWorlds.map((w, i) => {
-                const hue = WORLD_HUES[WORLDS_DATA.worlds.findIndex((x) => x.id === w.id) % WORLD_HUES.length];
-                return (
-                  <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); go("career"); }}
-                    className="cc-card cc-shine cc-fade-up relative overflow-hidden text-left rounded-2xl p-5 min-h-[150px]"
-                    style={{ background: T.card, border: `1.5px solid ${i < 2 ? hue : T.line}`, animationDelay: `${i * 70}ms` }}>
-                    <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full pointer-events-none" style={{ background: `radial-gradient(circle, ${hue}33, transparent 70%)` }} />
-                    <div className="flex items-center justify-between relative">
-                      <span className="font-extrabold text-lg" style={{ ...display, color: hue }}>{td(w.name)}</span>
-                      <span className="text-xs font-bold shrink-0" style={{ ...mono, color: scoreColor(w.fit) }}>{t("fit_you", { n: w.fit })}</span>
-                    </div>
-                    <div className="text-xs mt-2 relative" style={{ color: T.grey }}>{td(w.tagline)}</div>
-                    {w.reasonDim && (
-                      <div className="text-xs mt-2 relative font-semibold" style={{ color: T.accent }}>
-                        {t("world_because", { dim: t(`dim_${w.reasonDim}`) })}
-                      </div>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          </>
+          <BackLink />
+          <h2 className="cc-fade-up font-semibold" style={{ ...display, fontSize: "clamp(28px,4.6vw,42px)", letterSpacing: "-.01em" }}>
+            {t("worlds_title", { t: identTitle })}
+          </h2>
+          <p className="text-sm -mt-2 cc-fade-up" style={{ color: T.grey }}>{t("worlds_sub")}</p>
+          <div className="cc-fade-up" style={{ borderTop: `1px solid ${T.line}` }}>
+            {rankedWorlds.map((w, i) => (
+              <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); go("career"); }}
+                className="w-full text-left flex items-baseline justify-between gap-4 py-5 transition-all hover:pl-3"
+                style={{ borderBottom: `1px solid ${T.line}` }}>
+                <span>
+                  <span className="font-semibold block" style={{ ...display, fontSize: "clamp(22px,4.2vw,32px)", color: i < 2 ? T.violet : T.ink }}>
+                    {td(w.name)}
+                  </span>
+                  <small className="block mt-0.5" style={{ color: T.grey, fontSize: 13 }}>{td(w.tagline)}</small>
+                  {w.reasonDim && (
+                    <small className="block mt-1 font-semibold" style={{ color: T.accent, fontSize: 12 }}>
+                      {t("world_because", { dim: t(`dim_${w.reasonDim}`) })}
+                    </small>
+                  )}
+                </span>
+                <span className="shrink-0 font-semibold" style={{ ...mono, fontSize: 15, color: scoreColor(w.fit) }}>
+                  {t("fit_you", { n: w.fit })}
+                </span>
+              </button>
+            ))}
+          </div>
     </>
   );
 }
