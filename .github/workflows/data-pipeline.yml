@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample"
+        description: "probe | mur | universitaly-sample | universitaly-api"
         required: false
         default: "probe"
 
@@ -57,8 +57,33 @@ jobs:
             -o /tmp/unidump/mur-packages.json -w "mur-packages %{http_code}\n" || true
           ls -la /tmp/unidump
 
+      - name: Universitaly API discovery
+        if: inputs.task == 'universitaly-api'
+        run: |
+          mkdir -p /tmp/unidump
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
+          curl -s -L -m 30 -A "$UA" "https://www.universitaly.it/cerca-corsi" -o /tmp/page.html
+          # download every nuxt chunk and mine it for backend API paths
+          grep -o '/_nuxt/[A-Za-z0-9_.-]*\.js' /tmp/page.html | sort -u > /tmp/chunks.txt
+          wc -l /tmp/chunks.txt
+          : > /tmp/unidump/api-paths.txt
+          while read -r chunk; do
+            curl -s -m 30 -A "$UA" "https://www.universitaly.it$chunk" -o /tmp/chunk.js || continue
+            grep -o -E '"/[a-zA-Z0-9_/${}.-]{3,80}"' /tmp/chunk.js | sort -u >> /tmp/unidump/api-paths.txt || true
+            grep -o -E 'universitaly-backend[^"]{0,120}' /tmp/chunk.js >> /tmp/unidump/api-paths.txt || true
+          done < /tmp/chunks.txt
+          sort -u /tmp/unidump/api-paths.txt -o /tmp/unidump/api-paths.txt
+          wc -l /tmp/unidump/api-paths.txt
+          # blind-try a few likely endpoints
+          for p in "/api/corsi/search?page=0&size=2" "/api/corsi?page=0&size=2" "/cs/search?page=0" "/api/search/corsi?anno=2025"; do
+            code=$(curl -s -m 20 -A "$UA" -o /tmp/try.json -w "%{http_code}" "https://universitaly-backend.cineca.it$p" || echo FAIL)
+            echo "TRY $code $p" | tee -a /tmp/unidump/tries.txt
+            head -c 300 /tmp/try.json >> /tmp/unidump/tries.txt || true
+            echo "" >> /tmp/unidump/tries.txt
+          done
+
       - uses: actions/upload-artifact@v4
-        if: inputs.task == 'universitaly-sample'
+        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api'
         with:
           name: registry-dump
           path: /tmp/unidump
