@@ -110,16 +110,18 @@ jobs:
                           calls.append(entry)
 
                   page.on("response", on_response)
-                  await page.goto("https://www.universitaly.it/cerca-corsi", wait_until="networkidle", timeout=60000)
-                  await page.wait_for_timeout(4000)
-                  # try typing a query to trigger search calls
                   try:
-                      box = page.locator("input").first
-                      await box.fill("ingegneria informatica")
-                      await page.keyboard.press("Enter")
-                      await page.wait_for_timeout(6000)
+                      await page.goto("https://www.universitaly.it/cerca-corsi", wait_until="domcontentloaded", timeout=45000)
+                      await page.wait_for_timeout(9000)
+                      try:
+                          box = page.locator("input").first
+                          await box.fill("ingegneria informatica")
+                          await page.keyboard.press("Enter")
+                          await page.wait_for_timeout(9000)
+                      except Exception as e:
+                          calls.append({"note": f"search interaction failed: {e}"})
                   except Exception as e:
-                      calls.append({"note": f"search interaction failed: {e}"})
+                      calls.append({"note": f"goto failed: {e}"})
                   await browser.close()
               with open("/tmp/unidump/network-calls.json", "w") as f:
                   json.dump(calls, f, indent=1)
