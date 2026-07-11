@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har"
         required: false
         default: "probe"
 
@@ -82,8 +82,53 @@ jobs:
             echo "" >> /tmp/unidump/tries.txt
           done
 
+      - name: Universitaly network capture (headless browser)
+        if: inputs.task == 'universitaly-har'
+        run: |
+          pip install playwright
+          python -m playwright install chromium --with-deps
+          mkdir -p /tmp/unidump
+          python - << 'EOF'
+          import json, asyncio
+          from playwright.async_api import async_playwright
+
+          async def main():
+              calls = []
+              async with async_playwright() as p:
+                  browser = await p.chromium.launch()
+                  page = await browser.new_page()
+
+                  async def on_response(resp):
+                      url = resp.url
+                      if "cineca.it" in url or "/api/" in url:
+                          entry = {"url": url, "status": resp.status}
+                          try:
+                              body = await resp.text()
+                              entry["body_head"] = body[:1200]
+                          except Exception:
+                              pass
+                          calls.append(entry)
+
+                  page.on("response", on_response)
+                  await page.goto("https://www.universitaly.it/cerca-corsi", wait_until="networkidle", timeout=60000)
+                  await page.wait_for_timeout(4000)
+                  # try typing a query to trigger search calls
+                  try:
+                      box = page.locator("input").first
+                      await box.fill("ingegneria informatica")
+                      await page.keyboard.press("Enter")
+                      await page.wait_for_timeout(6000)
+                  except Exception as e:
+                      calls.append({"note": f"search interaction failed: {e}"})
+                  await browser.close()
+              with open("/tmp/unidump/network-calls.json", "w") as f:
+                  json.dump(calls, f, indent=1)
+              print(f"captured {len(calls)} backend calls")
+          asyncio.run(main())
+          EOF
+
       - uses: actions/upload-artifact@v4
-        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api'
+        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api' || inputs.task == 'universitaly-har'
         with:
           name: registry-dump
           path: /tmp/unidump
