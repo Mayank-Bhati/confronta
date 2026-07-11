@@ -6,6 +6,8 @@ name: Data pipeline
 # runner — no extra hosting needed.
 
 on:
+  schedule:
+    - cron: "0 3 1 * *"   # monthly refresh of the Universitaly catalog
   workflow_dispatch:
     inputs:
       task:
@@ -45,7 +47,7 @@ jobs:
           done
 
       - name: Universitaly full-catalog ingest
-        if: inputs.task == 'universitaly-ingest'
+        if: inputs.task == 'universitaly-ingest' || github.event_name == 'schedule'
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         working-directory: pipeline
