@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mockup B — Pagina corso · CareerCompass</title>
+<title>Mockup B — Course page · CareerCompass</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -85,43 +85,43 @@
     <svg width="26" height="26" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#2244BB" stroke-width="3.4"/><path d="M32 16 L26.6 26.6 L16 32 L21.4 21.4 Z" fill="#2244BB"/></svg>
     CareerCompass
   </a>
-  <span class="crumb"><a href="#">Il mondo digitale</a> → <a href="#">Sviluppatore software</a></span>
+  <span class="crumb"><span style="display:inline-flex;gap:10px;align-items:center"><button class="lang" id="langBtn" style="border:1.5px solid var(--rule);background:none;color:var(--grey);border-radius:99px;padding:6px 12px;font-weight:600;font-size:12px;cursor:pointer;font-family:Inter">IT</button><span><a href="#" data-t="crumb1">The digital world</a> → <a href="#" data-t="crumb2">Software developer</a></span></span></span>
 </div></nav>
 
 <header class="course"><div class="wrap">
-  <div class="kicker">Università · Triennale · Pubblica</div>
+  <div class="kicker" data-t="kicker">University · Bachelor · Public</div>
   <h1>Computer Engineering</h1>
   <div class="inst">Politecnico di Torino — Torino</div>
   <div class="meta">
-    <span>Durata <b>3 anni</b></span>
-    <span>Lingua <b>Italiano / Inglese</b></span>
-    <span>Ammissione <b>TIL-I (test PoliTo)</b></span>
-    <span>Classe <b>L-8</b></span>
+    <span data-t="m1">Duration <b>3 years</b></span>
+    <span data-t="m2">Language <b>Italian / English</b></span>
+    <span data-t="m3">Admission <b>TIL-I (PoliTo test)</b></span>
+    <span data-t="m4">Class <b>L-8</b></span>
   </div>
   <div class="links">
-    <a href="https://www.polito.it/en/education/bachelor-s-degree-programmes/computer-engineering">Pagina ufficiale ↗</a>
-    <a href="#">Vedi su Google ↗</a>
-    <a href="#" style="color:var(--grey)">Fonte dati ↗</a>
+    <a href="https://www.polito.it/en/education/bachelor-s-degree-programmes/computer-engineering" data-t="l1">Official page ↗</a>
+    <a href="#" data-t="l2">View on Google ↗</a>
+    <a href="#" style="color:var(--grey)" data-t="l3">Data source ↗</a>
   </div>
-  <div class="fitline"><b>84/100</b> di fit ambiente per te — ~€245/mese tutto compreso (tasse €13 + vita €232), rientra nel tuo budget di €800.</div>
+  <div class="fitline" data-t="fitline"><b>84/100</b> environment fit for you — ~€245/month all-in (fees €13 + living €232), fits your €800 budget.</div>
 </div></header>
 
 <section class="stats"><div class="wrap">
-  <h2>Statistiche</h2>
-  <p class="stats-note">Grandi, chiare e con la fonte — come devono essere.</p>
+  <h2 data-t="stats_h">Statistics</h2>
+  <p class="stats-note" data-t="stats_note">Big, clear, and sourced — the way they should be.</p>
   <div class="stat-grid">
-    <div class="stat"><b class="good">93%</b><span>occupati a 1 anno dalla laurea</span><a href="https://www.almalaurea.it/news/rapporto-almalaurea-2025">AlmaLaurea 2025 ↗</a></div>
-    <div class="stat"><b>~€1.700</b><span>netti al mese, livello d'ingresso</span><a href="https://www.almalaurea.it/news/rapporto-almalaurea-2025">AlmaLaurea 2025 ↗</a></div>
-    <div class="stat"><b class="warn">23%</b><span>fuori corso — valuta il carico onestamente</span><a href="#">Ustat/MUR ↗</a></div>
-    <div class="stat"><b class="good">~€156</b><span>di tasse all'anno con la tua fascia ISEE (≤ €22k)</span><a href="https://www.polito.it/en/education/services-and-life-at-politecnico/right-to-education-and-tuition-fees/tuition-fee-from-25-26">Regolamento PoliTo ↗</a></div>
+    <div class="stat"><b class="good">93%</b><span data-t="st1">employed one year after graduating</span><a href="https://www.almalaurea.it/news/rapporto-almalaurea-2025">AlmaLaurea 2025 ↗</a></div>
+    <div class="stat"><b>~€1.700</b><span data-t="st2">net per month, entry-level</span><a href="https://www.almalaurea.it/news/rapporto-almalaurea-2025">AlmaLaurea 2025 ↗</a></div>
+    <div class="stat"><b class="warn">23%</b><span data-t="st3">off-schedule — judge the workload honestly</span><a href="#">Ustat/MUR ↗</a></div>
+    <div class="stat"><b class="good">~€156</b><span data-t="st4">tuition per year in your ISEE band (≤ €22k)</span><a href="https://www.polito.it/en/education/services-and-life-at-politecnico/right-to-education-and-tuition-fees/tuition-fee-from-25-26">Regolamento PoliTo ↗</a></div>
   </div>
 </div></section>
 
 <section class="body"><div class="wrap">
-  <h2>Cosa studierai davvero</h2>
-  <p class="stats-note" style="margin-bottom:14px">Piano di studi ufficiale — materie di matematica in grassetto.</p>
+  <h2 data-t="study_h">What you'll actually study</h2>
+  <p class="stats-note" style="margin-bottom:14px" data-t="study_note">Official study plan — maths subjects in bold.</p>
   <details open>
-    <summary>Anno 1 <span class="mono" style="font-size:14px;color:var(--grey)">7 materie</span></summary>
+    <summary><span data-t="y1">Year 1</span> <span class="mono" style="font-size:14px;color:var(--grey)" data-t="y1n">7 subjects</span></summary>
     <div class="subjects">
       <div class="subj"><em class="math">Analisi matematica I</em><span>10 ECTS</span></div>
       <div class="subj"><em class="math">Algebra lineare e geometria</em><span>10 ECTS</span></div>
@@ -133,7 +133,7 @@
     </div>
   </details>
   <details>
-    <summary>Anno 2 <span class="mono" style="font-size:14px;color:var(--grey)">7 materie</span></summary>
+    <summary><span data-t="y2">Year 2</span> <span class="mono" style="font-size:14px;color:var(--grey)" data-t="y2n">7 subjects</span></summary>
     <div class="subjects">
       <div class="subj"><em class="math">Analisi matematica II</em><span>10 ECTS</span></div>
       <div class="subj"><em>Algoritmi e strutture dati</em><span>8 ECTS</span></div>
@@ -143,7 +143,7 @@
     </div>
   </details>
   <details>
-    <summary>Anno 3 <span class="mono" style="font-size:14px;color:var(--grey)">9 materie</span></summary>
+    <summary><span data-t="y3">Year 3</span> <span class="mono" style="font-size:14px;color:var(--grey)" data-t="y3n">9 subjects</span></summary>
     <div class="subjects">
       <div class="subj"><em>Sistemi operativi</em><span>6 ECTS</span></div>
       <div class="subj"><em>Reti di calcolatori</em><span>8 ECTS</span></div>
@@ -154,24 +154,58 @@
 </div></section>
 
 <section class="cost"><div class="wrap">
-  <h2>Quanto costa davvero, al mese</h2>
+  <h2 data-t="cost_h">What it really costs, per month</h2>
   <div class="bar">
     <div class="bar-track"><div class="bar-fees"></div><div class="bar-liv"></div></div>
     <div class="bar-legend">
-      <span><i class="dot" style="background:var(--blue-deep)"></i>Tasse ~€13/mese (fascia ISEE bassa)</span>
-      <span><i class="dot" style="background:var(--blue)"></i>Vita da pendolare ~€232/mese</span>
-      <span><i class="dot" style="background:#E7E5DC"></i>Margine sul tuo budget</span>
+      <span data-t="cb1"><i class="dot" style="background:var(--blue-deep)"></i>Fees ~€13/month (low ISEE band)</span>
+      <span data-t="cb2"><i class="dot" style="background:var(--blue)"></i>Commuting life ~€232/month</span>
+      <span data-t="cb3"><i class="dot" style="background:#E7E5DC"></i>Headroom in your budget</span>
     </div>
-    <div class="bar-total">Totale stimato <b>~€245/mese</b> · il tuo budget: €800/mese ✓</div>
+    <div class="bar-total" data-t="cb_total">Estimated total <b>~€245/month</b> · your budget: €800/month ✓</div>
   </div>
 </div></section>
 
 <div class="wrap ctas">
-  <a class="btn primary" href="#">☆ Salva questo percorso</a>
-  <a class="btn ghost" href="#">Confronta con un altro</a>
+  <a class="btn primary" href="#" data-t="cta1">☆ Save this path</a>
+  <a class="btn ghost" href="#" data-t="cta2">Compare with another</a>
 </div>
 
-<footer><div class="wrap">Fonti: AlmaLaurea 2025 · INDIRE 2025 · pagine ufficiali dell'ateneo — linkate sopra, sempre.</div></footer>
+<footer><div class="wrap" data-t="footer">Sources: AlmaLaurea 2025 · INDIRE 2025 · official university pages — always linked above.</div></footer>
 
+
+<script>
+const I18N = { it: {
+  crumb1:"Il mondo digitale", crumb2:"Sviluppatore software",
+  kicker:"Università · Triennale · Pubblica",
+  m1:"Durata <b>3 anni</b>", m2:"Lingua <b>Italiano / Inglese</b>", m3:"Ammissione <b>TIL-I (test PoliTo)</b>", m4:"Classe <b>L-8</b>",
+  l1:"Pagina ufficiale ↗", l2:"Vedi su Google ↗", l3:"Fonte dati ↗",
+  fitline:"<b>84/100</b> di fit ambiente per te — ~€245/mese tutto compreso (tasse €13 + vita €232), rientra nel tuo budget di €800.",
+  stats_h:"Statistiche", stats_note:"Grandi, chiare e con la fonte — come devono essere.",
+  st1:"occupati a 1 anno dalla laurea", st2:"netti al mese, livello d'ingresso",
+  st3:"fuori corso — valuta il carico onestamente", st4:"di tasse all'anno con la tua fascia ISEE (≤ €22k)",
+  study_h:"Cosa studierai davvero", study_note:"Piano di studi ufficiale — materie di matematica in grassetto.",
+  y1:"Anno 1", y1n:"7 materie", y2:"Anno 2", y2n:"7 materie", y3:"Anno 3", y3n:"9 materie",
+  cost_h:"Quanto costa davvero, al mese",
+  cb1:'<i class="dot" style="background:var(--blue-deep)"></i>Tasse ~€13/mese (fascia ISEE bassa)',
+  cb2:'<i class="dot" style="background:var(--blue)"></i>Vita da pendolare ~€232/mese',
+  cb3:'<i class="dot" style="background:#E7E5DC"></i>Margine sul tuo budget',
+  cb_total:"Totale stimato <b>~€245/mese</b> · il tuo budget: €800/mese ✓",
+  cta1:"☆ Salva questo percorso", cta2:"Confronta con un altro",
+  footer:"Fonti: AlmaLaurea 2025 · INDIRE 2025 · pagine ufficiali dell'ateneo — linkate sopra, sempre.",
+}};
+const EN = {};
+document.querySelectorAll('[data-t]').forEach(el => { EN[el.dataset.t] = el.innerHTML; });
+function applyLang(l){
+  document.querySelectorAll('[data-t]').forEach(el => {
+    el.innerHTML = (l === 'it' ? I18N.it[el.dataset.t] : EN[el.dataset.t]) ?? el.innerHTML;
+  });
+  document.documentElement.lang = l;
+  document.getElementById('langBtn').textContent = l === 'it' ? 'EN' : 'IT';
+  localStorage.setItem('mockupLang', l);
+}
+document.getElementById('langBtn').onclick = () => applyLang(localStorage.getItem('mockupLang') === 'it' ? 'en' : 'it');
+if (localStorage.getItem('mockupLang') === 'it') applyLang('it');
+</script>
 </body>
 </html>

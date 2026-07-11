@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,46 +14,60 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .serif{font-family:Fraunces,Georgia,serif}
-  .mono{font-family:"IBM Plex Mono",monospace}
   .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
 
-  /* nav */
   nav{position:sticky;top:0;background:rgba(250,249,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);z-index:10}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1060px;margin:0 auto}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 22px;max-width:1060px;margin:0 auto}
   .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px;color:var(--ink);text-decoration:none}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .lang{border:1.5px solid var(--rule);background:none;color:var(--grey);border-radius:99px;padding:8px 14px;font-weight:600;font-size:13px;cursor:pointer;font-family:Inter}
   .cta{background:var(--blue);color:#fff;text-decoration:none;padding:10px 20px;border-radius:99px;font-weight:600;font-size:14px;transition:transform .15s}
   .cta:hover{transform:scale(1.04)}
 
-  /* hero — on blue */
-  .hero{background:linear-gradient(168deg,var(--blue-deep),var(--blue) 90%);color:#fff;padding:84px 0 96px;text-align:left}
-  .hero h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(42px,8vw,84px);line-height:1.04;letter-spacing:-.01em;max-width:11ch}
+  .hero{background:linear-gradient(168deg,var(--blue-deep),var(--blue) 90%);color:#fff;padding:84px 0 96px}
+  .hero h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(42px,8vw,84px);line-height:1.04;letter-spacing:-.01em;max-width:14ch}
   .hero p{margin-top:22px;font-size:clamp(16px,2.4vw,19px);max-width:46ch;color:#D8DFF6}
   .hero .cta{display:inline-block;margin-top:34px;background:#fff;color:var(--blue-deep);font-size:16px;padding:15px 30px}
   .hero small{display:block;margin-top:18px;color:#AAB8E8;font-size:13px}
 
-  /* hand-drawn compass */
-  .draw{padding:72px 0 56px;text-align:center;border-bottom:1px solid var(--rule)}
-  .draw svg{width:min(78vw,380px);height:auto}
-  .draw figcaption{margin-top:10px;font-size:14px;color:var(--grey);font-style:italic}
-  .draw path,.draw circle.d{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-  .sketch{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.1s ease forwards}
-  .sketch.s2{animation-delay:.5s}.sketch.s3{animation-delay:1s}.sketch.s4{animation-delay:1.35s}
-  @keyframes draw{to{stroke-dashoffset:0}}
-  .needle{transform-origin:190px 150px;animation:settle 2.4s cubic-bezier(.25,1.2,.4,1) 1.9s both}
-  @keyframes settle{0%{transform:rotate(-160deg)}55%{transform:rotate(28deg)}80%{transform:rotate(-9deg)}100%{transform:rotate(8deg)}}
-  @media (prefers-reduced-motion:reduce){.sketch{animation:none;stroke-dashoffset:0}.needle{animation:none;transform:rotate(8deg)}}
+  /* ——— dynamic compass: journey line + living compass rose ——— */
+  .draw{padding:64px 0 52px;text-align:center;border-bottom:1px solid var(--rule);overflow:hidden}
+  .scene{position:relative;width:min(92vw,560px);margin:0 auto}
+  .scene svg{width:100%;height:auto;display:block}
+  .draw figcaption{margin-top:8px;font-size:14px;color:var(--grey);font-style:italic}
 
-  /* steps — editorial, no boxes */
+  .route{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:7 9;stroke-linecap:round;opacity:.75;
+    animation:routedraw 3s ease .3s both}
+  @keyframes routedraw{from{stroke-dashoffset:640}to{stroke-dashoffset:0}}
+
+  .traveler{offset-path:path('M8 268 C 96 236 128 160 196 158 C 244 156 260 196 320 186');
+    offset-rotate:0deg;animation:travel 3s ease .3s both}
+  @keyframes travel{from{offset-distance:0%}to{offset-distance:100%}}
+
+  .ringspin{transform-origin:392px 158px;animation:spin 70s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .needle-settle{transform-origin:392px 158px;animation:settle 2.6s cubic-bezier(.24,1.25,.4,1) .9s both}
+  @keyframes settle{0%{transform:rotate(-200deg)}55%{transform:rotate(30deg)}80%{transform:rotate(-10deg)}100%{transform:rotate(0deg)}}
+  .needle-breathe{transform-origin:392px 158px;animation:breathe 5.5s ease-in-out 3.5s infinite alternate}
+  @keyframes breathe{from{transform:rotate(-2.6deg)}to{transform:rotate(2.6deg)}}
+
+  .pulse{transform-origin:392px 158px;animation:pulse 3.2s ease-out 1.2s infinite}
+  @keyframes pulse{0%{transform:scale(.6);opacity:.5}70%{transform:scale(1.25);opacity:0}100%{transform:scale(1.25);opacity:0}}
+
+  @media (prefers-reduced-motion:reduce){
+    .route,.traveler,.ringspin,.needle-settle,.needle-breathe,.pulse{animation:none}
+    .route{stroke-dashoffset:0}
+  }
+
   .steps{padding:72px 0}
-  .steps h2, .band h2, .cred h2{font-family:Fraunces,serif;font-size:clamp(28px,4.6vw,42px);font-weight:600;letter-spacing:-.01em}
+  .steps h2,.band h2,.cred h2{font-family:Fraunces,serif;font-size:clamp(28px,4.6vw,42px);font-weight:600;letter-spacing:-.01em}
   .step{display:grid;grid-template-columns:74px 1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--rule);align-items:baseline}
   .step:last-child{border-bottom:none}
   .step b{font-family:Fraunces,serif;font-size:56px;font-weight:400;color:var(--blue);line-height:1}
   .step h3{font-size:19px;font-weight:600;margin-bottom:4px}
   .step p{color:var(--grey);font-size:15px;max-width:58ch}
 
-  /* worlds band — typographic, on blue */
   .band{background:var(--blue-deep);color:#fff;padding:72px 0}
   .band h2{color:#fff}
   .band p.sub{color:#AAB8E8;margin-top:6px;font-size:15px}
@@ -64,14 +78,13 @@
   .world span.fit{font-family:"IBM Plex Mono",monospace;font-size:15px;color:#8FE3C0;white-space:nowrap}
   .world small{display:block;color:#AAB8E8;font-size:13px;font-family:Inter}
 
-  /* credibility */
   .cred{padding:72px 0}
-  .cred-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:26px}
+  .cred-grid{display:grid;grid-template-columns:1fr;margin-top:26px}
   .cred-item{padding:26px 0;border-bottom:1px solid var(--rule)}
   .cred-item:last-child{border-bottom:none}
   .cred b{font-family:"IBM Plex Mono",monospace;font-size:clamp(38px,7vw,54px);font-weight:600;color:var(--blue);letter-spacing:-.02em}
-  .cred span{display:block;color:var(--ink);font-size:15px;margin-top:2px}
-  .cred a{color:var(--grey);font-size:13px;text-decoration:underline}
+  .cred span{display:block;font-size:15px;margin-top:2px}
+  .cred a{color:var(--grey);font-size:13px}
   @media(min-width:700px){.cred-grid{grid-template-columns:repeat(3,1fr);gap:36px}.cred-item{border-bottom:none;border-left:1px solid var(--rule);padding:6px 0 6px 26px}.cred-item:first-child{border-left:none;padding-left:0}}
 
   footer{border-top:1px solid var(--rule);padding:34px 0 60px;color:var(--grey);font-size:13px}
@@ -80,71 +93,142 @@
 <body>
 
 <nav><div class="nav-in">
-  <a class="brand" href="#">
+  <a class="brand" href="index.html">
     <svg width="26" height="26" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#2244BB" stroke-width="3.4"/><path d="M32 16 L26.6 26.6 L16 32 L21.4 21.4 Z" fill="#2244BB"/></svg>
     CareerCompass
   </a>
-  <a class="cta" href="#">Inizia il test</a>
+  <div class="nav-right">
+    <button class="lang" id="langBtn">IT</button>
+    <a class="cta" href="#" data-t="nav_cta">Start the test</a>
+  </div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <h1>Cosa diventerai?</h1>
-  <p>Un test di 4 minuti, mondi di carriere che ti somigliano, e i percorsi reali per arrivarci — con costi veri, materie vere, numeri veri.</p>
-  <a class="cta" href="#">Inizia · ~4 minuti</a>
-  <small>Gratuito · anonimo · niente risposte sbagliate</small>
+  <h1 data-t="h1">What will you become?</h1>
+  <p data-t="hero_p">A 4-minute test, worlds of careers that fit who you are, and the real paths to get there — with real costs, real subjects, real numbers.</p>
+  <a class="cta" href="#" data-t="hero_cta">Start · ~4 minutes</a>
+  <small data-t="hero_small">Free · anonymous · no wrong answers</small>
 </div></header>
 
-<figure class="draw" aria-label="Una mano disegnata raccoglie una bussola">
-  <svg viewBox="0 0 380 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- hand: simplified line-art, palm + thumb reaching from bottom-left -->
-    <path class="sketch" d="M28 296 C40 250 52 224 78 208 C96 197 118 194 132 200 C122 188 118 176 126 170 C136 163 150 172 160 186
-      M96 214 C88 196 88 182 98 176 C108 171 120 180 128 194
-      M64 236 C52 214 52 198 62 192 C72 187 84 196 94 214" />
-    <path class="sketch s2" d="M160 186 C170 196 180 202 192 206 C176 214 160 226 152 242 C146 254 146 268 152 280 C130 282 108 288 92 296" />
-    <!-- compass body -->
-    <circle class="d sketch s3" cx="190" cy="150" r="64"/>
-    <circle class="d sketch s3" cx="190" cy="150" r="52"/>
-    <!-- ticks -->
-    <path class="sketch s4" d="M190 92 v10 M190 198 v10 M132 150 h10 M238 150 h10 M150 110 l7 7 M230 190 l-7 -7 M230 110 l-7 7 M150 190 l7 -7"/>
-    <!-- needle -->
-    <g class="needle">
-      <path class="d" d="M190 108 L198 150 L190 164 L182 150 Z" fill="#14192E"/>
-    </g>
-    <circle cx="190" cy="150" r="4" fill="#14192E"/>
-    <!-- N -->
-    <text x="190" y="84" text-anchor="middle" font-family="Fraunces,serif" font-size="16" fill="#14192E">N</text>
-  </svg>
-  <figcaption>Trova il tuo nord.</figcaption>
+<figure class="draw" aria-label="An animated compass finding its north">
+  <div class="scene">
+    <svg viewBox="0 0 560 316" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- journey route: dashed line drawing toward the compass -->
+      <path class="route" d="M8 268 C 96 236 128 160 196 158 C 244 156 260 196 320 186"/>
+      <!-- traveling dot -->
+      <circle class="traveler" r="5" fill="#2244BB"/>
+
+      <!-- pulse ring -->
+      <circle class="pulse" cx="392" cy="158" r="104" stroke="#2244BB" stroke-width="1.6"/>
+
+      <!-- compass: slowly rotating tick ring (ticks generated by JS) -->
+      <g class="ringspin" id="ticks" stroke="#14192E" stroke-width="1.6" opacity=".85"></g>
+      <circle cx="392" cy="158" r="104" stroke="#14192E" stroke-width="2.6"/>
+      <circle cx="392" cy="158" r="84" stroke="#14192E" stroke-width="1.2" opacity=".55"/>
+
+      <!-- cardinal letters -->
+      <g font-family="Fraunces,serif" font-size="17" fill="#14192E" text-anchor="middle">
+        <text x="392" y="46">N</text>
+        <text x="510" y="164">E</text>
+        <text x="392" y="284">S</text>
+        <text x="274" y="164">W</text>
+      </g>
+
+      <!-- needle: settles, then breathes -->
+      <g class="needle-settle"><g class="needle-breathe">
+        <path d="M392 76 L403 158 L392 180 L381 158 Z" fill="#2244BB"/>
+        <path d="M392 240 L403 158 L392 180 L381 158 Z" fill="#14192E" opacity=".28"/>
+      </g></g>
+      <circle cx="392" cy="158" r="6" fill="#14192E"/>
+      <circle cx="392" cy="158" r="2.4" fill="#FAF9F6"/>
+    </svg>
+  </div>
+  <figcaption data-t="caption">Find your north.</figcaption>
 </figure>
 
 <section class="steps"><div class="wrap">
-  <h2>Come funziona</h2>
-  <div class="step"><b>1</b><div><h3>Rispondi d'istinto</h3><p>~20 domande rapide, diverse ogni volta. Nessuna risposta è sbagliata: vince quello che ti piace davvero.</p></div></div>
-  <div class="step"><b>2</b><div><h3>Scopri i tuoi mondi</h3><p>Sette mondi di carriere, ordinati su di te — con il perché di ogni percentuale. Anche strade che non sapevi esistessero.</p></div></div>
-  <div class="step"><b>3</b><div><h3>Confronta i percorsi reali</h3><p>Università e ITS veri: materie anno per anno, tasse per la tua fascia ISEE, costo della vita, ammissione. Tutto con la fonte.</p></div></div>
+  <h2 data-t="how">How it works</h2>
+  <div class="step"><b>1</b><div><h3 data-t="s1h">Answer by instinct</h3><p data-t="s1p">~20 quick questions, different every time. There are no wrong answers: what you genuinely enjoy wins.</p></div></div>
+  <div class="step"><b>2</b><div><h3 data-t="s2h">Discover your worlds</h3><p data-t="s2p">Seven worlds of careers, ranked for you — with the reason behind every percentage. Including paths you didn't know existed.</p></div></div>
+  <div class="step"><b>3</b><div><h3 data-t="s3h">Compare real paths</h3><p data-t="s3p">Real universities and ITS academies: subjects year by year, fees for your ISEE band, cost of living, admission. Everything with its source.</p></div></div>
 </div></section>
 
 <section class="band"><div class="wrap">
-  <h2>I tuoi mondi ti aspettano</h2>
-  <p class="sub">Un assaggio — le percentuali sono su di te, non su una media.</p>
+  <h2 data-t="worlds_h">Your worlds are waiting</h2>
+  <p class="sub" data-t="worlds_sub">A taste — the percentages are about you, not an average.</p>
   <div class="worlds">
-    <a class="world" href="#"><span class="name">Macchine in movimento<small>Robot, motori, automazione</small></span><span class="fit">92% te</span></a>
-    <a class="world" href="#"><span class="name">Il mondo digitale<small>Software, dati, sicurezza</small></span><span class="fit">87% te</span></a>
-    <a class="world" href="#"><span class="name">Scienza e ambiente<small>Energia, natura, ricerca</small></span><span class="fit">71% te</span></a>
-    <a class="world" href="#"><span class="name">Storie, design e media<small>Immagini, prodotti, contenuti</small></span><span class="fit">64% te</span></a>
+    <a class="world" href="#"><span class="name" data-t="w1">Machines in motion<small>Robots, engines, automation</small></span><span class="fit" data-t="fit1">92% you</span></a>
+    <a class="world" href="#"><span class="name" data-t="w2">The digital world<small>Software, data, security</small></span><span class="fit" data-t="fit2">87% you</span></a>
+    <a class="world" href="#"><span class="name" data-t="w3">Science & environment<small>Energy, nature, research</small></span><span class="fit" data-t="fit3">71% you</span></a>
+    <a class="world" href="#"><span class="name" data-t="w4">Stories, design & media<small>Visuals, products, content</small></span><span class="fit" data-t="fit4">64% you</span></a>
   </div>
 </div></section>
 
 <section class="cred"><div class="wrap">
-  <h2>Numeri veri, fonti vere</h2>
+  <h2 data-t="cred_h">Real numbers, real sources</h2>
   <div class="cred-grid">
-    <div class="cred-item"><b>78,6%</b><span>dei laureati triennali lavora a un anno dal titolo</span><a href="https://www.almalaurea.it/news/rapporto-almalaurea-2025">AlmaLaurea 2025 ↗</a></div>
-    <div class="cred-item"><b>84%</b><span>dei diplomati ITS trova lavoro entro un anno</span><a href="https://www.indire.it/2025/04/17/its-academy-ad-un-anno-dal-diploma-l84-dei-diplomati-trova-lavoro/">INDIRE 2025 ↗</a></div>
-    <div class="cred-item"><b>€0</b><span>di tasse universitarie con ISEE fino a 22.000 € (no-tax area)</span><a href="https://www.studenti.it/fasce-isee-universita-2026-guida-al-calcolo-delle-tasse-universitarie-e-alla-no-tax-area.html">L.232/2016 ↗</a></div>
+    <div class="cred-item"><b>78.6%</b><span data-t="c1">of bachelor graduates are employed one year after the degree</span><a href="https://www.almalaurea.it/news/rapporto-almalaurea-2025">AlmaLaurea 2025 ↗</a></div>
+    <div class="cred-item"><b>84%</b><span data-t="c2">of ITS graduates find a job within one year</span><a href="https://www.indire.it/2025/04/17/its-academy-ad-un-anno-dal-diploma-l84-dei-diplomati-trova-lavoro/">INDIRE 2025 ↗</a></div>
+    <div class="cred-item"><b>€0</b><span data-t="c3">university tuition with ISEE up to €22,000 (no-tax area)</span><a href="https://www.studenti.it/fasce-isee-universita-2026-guida-al-calcolo-delle-tasse-universitarie-e-alla-no-tax-area.html">L.232/2016 ↗</a></div>
   </div>
 </div></section>
 
-<footer><div class="wrap">CareerCompass · orientamento, non consigli · ogni corso è collegato alla sua fonte ufficiale</div></footer>
+<footer><div class="wrap" data-t="footer">CareerCompass · guidance, not advice · every course links to its official source</div></footer>
 
+<script>
+// compass ticks
+(() => {
+  const g = document.getElementById('ticks');
+  let out = '';
+  for (let i = 0; i < 60; i++) {
+    const a = i * 6 * Math.PI / 180, long = i % 15 === 0, mid = i % 5 === 0;
+    const r1 = long ? 88 : mid ? 93 : 97, r2 = 104;
+    const x1 = (392 + r1 * Math.sin(a)).toFixed(1), y1 = (158 - r1 * Math.cos(a)).toFixed(1);
+    const x2 = (392 + r2 * Math.sin(a)).toFixed(1), y2 = (158 - r2 * Math.cos(a)).toFixed(1);
+    out += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke-width="${long ? 2.4 : mid ? 1.8 : 1}" opacity="${long ? 1 : mid ? .8 : .45}"/>`;
+  }
+  g.innerHTML = out;
+})();
+
+// EN/IT toggle (persists across mockup pages)
+const I18N = {
+  it: {
+    nav_cta: "Inizia il test",
+    h1: "Cosa diventerai?",
+    hero_p: "Un test di 4 minuti, mondi di carriere che ti somigliano, e i percorsi reali per arrivarci — con costi veri, materie vere, numeri veri.",
+    hero_cta: "Inizia · ~4 minuti",
+    hero_small: "Gratuito · anonimo · niente risposte sbagliate",
+    caption: "Trova il tuo nord.",
+    how: "Come funziona",
+    s1h: "Rispondi d'istinto", s1p: "~20 domande rapide, diverse ogni volta. Nessuna risposta è sbagliata: vince quello che ti piace davvero.",
+    s2h: "Scopri i tuoi mondi", s2p: "Sette mondi di carriere, ordinati su di te — con il perché di ogni percentuale. Anche strade che non sapevi esistessero.",
+    s3h: "Confronta i percorsi reali", s3p: "Università e ITS veri: materie anno per anno, tasse per la tua fascia ISEE, costo della vita, ammissione. Tutto con la fonte.",
+    worlds_h: "I tuoi mondi ti aspettano",
+    worlds_sub: "Un assaggio — le percentuali sono su di te, non su una media.",
+    w1: "Macchine in movimento<small>Robot, motori, automazione</small>", fit1: "92% te",
+    w2: "Il mondo digitale<small>Software, dati, sicurezza</small>", fit2: "87% te",
+    w3: "Scienza e ambiente<small>Energia, natura, ricerca</small>", fit3: "71% te",
+    w4: "Storie, design e media<small>Immagini, prodotti, contenuti</small>", fit4: "64% te",
+    cred_h: "Numeri veri, fonti vere",
+    c1: "dei laureati triennali lavora a un anno dal titolo",
+    c2: "dei diplomati ITS trova lavoro entro un anno",
+    c3: "di tasse universitarie con ISEE fino a 22.000 € (no-tax area)",
+    footer: "CareerCompass · orientamento, non consigli · ogni corso è collegato alla sua fonte ufficiale",
+  },
+};
+const EN = {};
+document.querySelectorAll('[data-t]').forEach(el => { EN[el.dataset.t] = el.innerHTML; });
+function applyLang(l) {
+  document.querySelectorAll('[data-t]').forEach(el => {
+    el.innerHTML = (l === 'it' ? I18N.it[el.dataset.t] : EN[el.dataset.t]) ?? el.innerHTML;
+  });
+  document.documentElement.lang = l;
+  document.getElementById('langBtn').textContent = l === 'it' ? 'EN' : 'IT';
+  localStorage.setItem('mockupLang', l);
+}
+document.getElementById('langBtn').onclick = () =>
+  applyLang(localStorage.getItem('mockupLang') === 'it' ? 'en' : 'it');
+if (localStorage.getItem('mockupLang') === 'it') applyLang('it');
+</script>
 </body>
 </html>
