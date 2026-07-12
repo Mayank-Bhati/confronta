@@ -63,6 +63,36 @@ CAREER_MAP = {
                      ("unimi", "Scienze psicologiche per la prevenzione e la cura")],
 }
 
+# southern + central expansion (Universitaly catalog, 2026-07-12)
+SOUTH = {
+    "software-dev": [(s, "Informatica") for s in ("sapienza", "federico2", "unibo", "unifi", "unipa", "uniba")],
+    "data-analyst": [("sapienza", "Statistica gestionale"), ("federico2", "Statistica e Tecnologie per l'Analisi dei Dati"),
+                     ("unibo", "Scienze statistiche"), ("unifi", "Statistica"),
+                     ("unipa", "Statistica e Data Science"), ("uniba", "Scienze statistiche")],
+    "nurse": [(s, "Infermieristica") for s in ("sapienza", "federico2", "unibo", "unifi", "unipa", "uniba")],
+    "physio": [(s, "Fisioterapia") for s in ("sapienza", "federico2", "unibo", "unifi", "unipa", "uniba")],
+    "psychologist": [("sapienza", "Psicologia e processi sociali")] +
+                    [(s, "Scienze e tecniche psicologiche") for s in ("federico2", "unibo", "unifi", "unipa", "uniba")],
+    "teacher": [(s, "Scienze della formazione primaria") for s in ("sapienza", "unibo", "unifi", "unipa", "uniba")],
+    "tourism": [("sapienza", "Scienze del turismo sostenibile"), ("federico2", "Scienze del turismo ad indirizzo manageriale"),
+                ("unipa", "Turismo, Territori e Imprese"), ("uniba", "Nuovi turismi")],
+    "social-worker": [("sapienza", "Servizio sociale"), ("federico2", "Scienze del servizio sociale"),
+                      ("unibo", "Servizio sociale"), ("unifi", "Servizio sociale"), ("unipa", "Servizio sociale"),
+                      ("uniba", "Scienze del servizio sociale e sociologia")],
+    "marketing": [("federico2", "Economia aziendale"), ("unibo", "Economia aziendale"),
+                  ("unipa", "Economia e amministrazione aziendale"), ("uniba", "Economia aziendale")],
+    "export": [("sapienza", "Economia e finanza"), ("federico2", "Economia e commercio"),
+               ("unibo", "Economia, mercati e istituzioni"), ("unifi", "Economia e commercio")],
+    "env-eng": [("sapienza", "Ingegneria per l'Ambiente e il Territorio"), ("federico2", "Civil and Environmental Engineering"),
+                ("unibo", "Ingegneria per l'ambiente e il territorio"), ("unifi", "Ingegneria ambientale"),
+                ("unipa", "Ingegneria Ambientale per lo Sviluppo Sostenibile")],
+    "researcher": [("sapienza", "Fisica"), ("federico2", "Fisica"), ("unibo", "Fisica"),
+                   ("unifi", "Fisica e Astrofisica"), ("unipa", "Scienze Fisiche"), ("uniba", "Fisica")],
+    "renewables": [("unibo", "Ingegneria dell'energia elettrica")],
+}
+for cid, entries in SOUTH.items():
+    CAREER_MAP[cid] = CAREER_MAP[cid] + entries
+
 CAREER_TAGS = {
     "mechatronics": ["Machines & hardware", "Building things"],
     "robotics-eng": ["Machines & hardware", "Programming", "Mathematics"],
@@ -106,6 +136,10 @@ CITY_FALLBACK = {
     "Mantova": {"lat": 45.1564, "lon": 10.7914, "rent": 380, "size": "small", "vibe": "Renaissance town, small campus community"},
     "Sesto San Giovanni": {"lat": 45.5347, "lon": 9.2405, "rent": 550, "size": "large", "vibe": "Milan's industrial north — metro to the centre"},
     "Monza": {"lat": 45.5845, "lon": 9.2744, "rent": 500, "size": "medium", "vibe": "Green, orderly, a train away from Milan"},
+    "Napoli": {"lat": 40.8518, "lon": 14.2681, "rent": 450, "size": "large", "vibe": "Intense, warm, cheapest big city"},
+    "Bari": {"lat": 41.1171, "lon": 16.8719, "rent": 400, "size": "medium", "vibe": "Seaside, growing, affordable"},
+    "Palermo": {"lat": 38.1157, "lon": 13.3615, "rent": 350, "size": "large", "vibe": "Beautiful, affordable, far from the north"},
+    "Firenze": {"lat": 43.7696, "lon": 11.2558, "rent": 620, "size": "medium", "vibe": "Art everywhere, tourist prices"},
 }
 
 # Verified fee anchors (research workbook, Universities + ISEE_Bands sheets).
@@ -116,6 +150,12 @@ INST_FEES = {
     "bocconi": {"low": 3000, "mid": 9000, "high": 17000},
     "unito": {"low": 156, "mid": 1400, "high": 2800},
     "unimi": {"low": 156, "mid": 1500, "high": 3500},
+    "sapienza": {"low": 156, "mid": 1300, "high": 2900},
+    "federico2": {"low": 156, "mid": 1200, "high": 3000},
+    "unibo": {"low": 157, "mid": 1600, "high": 3500},
+    "unifi": {"low": 156, "mid": 1400, "high": 3000},
+    "unipa": {"low": 156, "mid": 1100, "high": 2600},
+    "uniba": {"low": 156, "mid": 1200, "high": 2700},
     "its-lomb-mecc": {"low": 0, "mid": 0, "high": 0},   # ITS Academy: MIM/ESF funded
     "its-rizzoli": {"low": 0, "mid": 0, "high": 0},
     "its-energia-pi": {"low": 0, "mid": 0, "high": 0},
@@ -130,6 +170,12 @@ INST_TEST = {
     "bocconi": "Bocconi admission test",
     "unito": "TOLC / local admission test",
     "unimi": "TOLC / local admission test",
+    "sapienza": "TOLC (CISIA)",
+    "federico2": "TOLC (CISIA)",
+    "unibo": "TOLC (CISIA)",
+    "unifi": "TOLC (CISIA)",
+    "unipa": "TOLC (CISIA)",
+    "uniba": "TOLC (CISIA)",
     "its-lomb-mecc": "Internal selection test + interview",
     "its-rizzoli": "Internal selection test + interview",
     "its-energia-pi": "Internal selection test + interview",
@@ -180,14 +226,20 @@ def area_of(prog, inst_kind):
         return "nursing"
     if "fisioterapia" in low:
         return "healthprof"
-    if "psicologiche" in low:
+    if "infermieristica" in low:
+        return "nursing"
+    if "psicolog" in low:
         return "psychology"
     if "formazione primaria" in low or "educazione" in low:
         return "education"
-    if "turismo" in low:
+    if "turism" in low:
         return "tourism"
     if "servizio sociale" in low:
         return "social"
+    if "statistic" in low or "econom" in low:
+        return "economics"
+    if low.startswith("fisica") or "astrofisica" in low or low == "scienze fisiche":
+        return "science"
     if "Design" in name:
         return "design"
     if "Architect" in name or name.startswith("Urban Planning"):

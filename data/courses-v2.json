@@ -1236,6 +1236,306 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/"
  },
  {
+  "id": "sapienza-p111",
+  "name": "Informatica",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Programming",
+   "Mathematics",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Informatica",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33503",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p122",
+  "name": "Informatica",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Programming",
+   "Mathematics",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Informatica",
+  "url": "http://informatica.dieti.unina.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p133",
+  "name": "Informatica",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Programming",
+   "Mathematics",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Informatica",
+  "url": "http://corsi.unibo.it/informatica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p145",
+  "name": "Informatica",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Programming",
+   "Mathematics",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Informatica",
+  "url": "http://informatica.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p155",
+  "name": "Informatica",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Programming",
+   "Mathematics",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Informatica",
+  "url": "https://www.unipa.it/dipartimenti/matematicaeinformatica/cds/informatica2086",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p166",
+  "name": "Informatica",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Programming",
+   "Mathematics",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Informatica",
+  "url": "https://www.uniba.it/it/corsi/informatica/corso-di-laurea-in-informatica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "polimi-p23",
   "name": "Mathematical Engineering",
   "inst": "Politecnico di Milano",
@@ -1700,6 +2000,306 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/"
  },
  {
+  "id": "sapienza-p112",
+  "name": "Statistica gestionale",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Mathematics",
+   "Programming",
+   "Economics & finance"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Statistica%20gestionale",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33507",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p123",
+  "name": "Statistica e Tecnologie per l'Analisi dei Dati",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Mathematics",
+   "Programming",
+   "Economics & finance"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Statistica%20e%20Tecnologie%20per%20l%27Analisi%20dei%20Dati",
+  "url": "http://www.scienzepolitiche.unina.it/?p=7472",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p134",
+  "name": "Scienze statistiche",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Mathematics",
+   "Programming",
+   "Economics & finance"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20statistiche",
+  "url": "http://corsi.unibo.it/Laurea/ScienzeStatistiche",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p146",
+  "name": "Statistica",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Mathematics",
+   "Programming",
+   "Economics & finance"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Statistica",
+  "url": "http://www.statistica.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p156",
+  "name": "Statistica e Data Science",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Mathematics",
+   "Programming",
+   "Economics & finance"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Statistica%20e%20Data%20Science",
+  "url": "http://statistica.unipa.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p174",
+  "name": "Scienze statistiche",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Mathematics",
+   "Programming",
+   "Economics & finance"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20statistiche",
+  "url": "https://www.uniba.it/it/corsi/scienze-statistiche/l-41",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "its-rizzoli-p86",
   "name": "Cyber Defence Specialist",
   "inst": "ITS Angelo Rizzoli",
@@ -1894,6 +2494,300 @@
   "url": "https://www.unito.it#infermieristica",
   "curriculumUrl": null,
   "dataSource": "https://www.unito.it"
+ },
+ {
+  "id": "sapienza-p113",
+  "name": "Infermieristica",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 75,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 95,
+  "salary": 26000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "mixed",
+  "netMonthly": 1450,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Infermieristica",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/30010",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p124",
+  "name": "Infermieristica",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 75,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 95,
+  "salary": 26000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1450,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Infermieristica",
+  "url": "http://m75.corsidistudio.unina.it/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p135",
+  "name": "Infermieristica",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 75,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 95,
+  "salary": 26000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1450,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Infermieristica",
+  "url": "http://corsi.unibo.it/InfermieristicaBologna",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p147",
+  "name": "Infermieristica",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 75,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 95,
+  "salary": 26000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "mixed",
+  "netMonthly": 1450,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Infermieristica",
+  "url": "http://www.infermieristica.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p157",
+  "name": "Infermieristica",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 75,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 95,
+  "salary": 26000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "mixed",
+  "netMonthly": 1450,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Infermieristica",
+  "url": "http://www.unipa.it/dipartimenti/promise/cds/infermieristica2172",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p167",
+  "name": "Infermieristica",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 75,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 95,
+  "salary": 26000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "mixed",
+  "netMonthly": 1450,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Infermieristica",
+  "url": "https://www.uniba.it/corsi/infermieristica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
  {
   "id": "polimi-p4",
@@ -3028,6 +3922,206 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/"
  },
  {
+  "id": "federico2-p129",
+  "name": "Economia aziendale",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Media & video"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Economia%20aziendale",
+  "url": "https://www.demi.unina.it/didattica/corsi-di-laurea/lauree-triennali/1484097-economia-aziendale/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p140",
+  "name": "Economia aziendale",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Media & video"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Economia%20aziendale",
+  "url": "http://corsi.unibo.it/Laurea/EconomiaAziendale",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p163",
+  "name": "Economia e amministrazione aziendale",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Media & video"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Economia%20e%20amministrazione%20aziendale",
+  "url": "https://www.unipa.it/dipartimenti/seas/cds/economiaeamministrazioneaziendale2077",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p172",
+  "name": "Economia aziendale",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Media & video"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Economia%20aziendale",
+  "url": "https://www.uniba.it/it/corsi/economia-aziendale/corso-di-laurea-in-economia-aziendale",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "bocconi-p65",
   "name": "International Economics and Finance (BIEF)",
   "inst": "Università Bocconi",
@@ -3125,6 +4219,206 @@
   "url": "https://www.unimib.it#economia-e-commercio",
   "curriculumUrl": null,
   "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+ },
+ {
+  "id": "sapienza-p121",
+  "name": "Economia e finanza",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Economia%20e%20finanza",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33438",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p130",
+  "name": "Economia e commercio",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 2,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Economia%20e%20commercio",
+  "url": "http://www.dises.unina.it/didattica/corsi-di-laurea/lauree-magistrali/1484696-economia-e-commercio/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p141",
+  "name": "Economia, mercati e istituzioni",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Economia%2C%20mercati%20e%20istituzioni",
+  "url": "http://corsi.unibo.it/Laurea/EconomiaMercatiIstituzioni",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p152",
+  "name": "Economia e commercio",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-E (CISIA)",
+  "admission": "programmed",
+  "selectivity": 78,
+  "mathLoad": 3,
+  "subjects": [
+   "Economics & finance",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 88,
+  "salary": 27000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 15,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "mixed",
+  "netMonthly": 1550,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Economia%20e%20commercio",
+  "url": "http://www.ec.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
  {
   "id": "bocconi-p68",
@@ -3505,6 +4799,56 @@
   "dataSource": "https://its-energiapiemonte.it/"
  },
  {
+  "id": "unibo-p144",
+  "name": "Ingegneria dell'energia elettrica",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Nature & environment",
+   "Machines & hardware",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Ingegneria%20dell%27energia%20elettrica",
+  "url": "http://corsi.unibo.it/elettrica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "polito-p46",
   "name": "Environmental and Land Engineering",
   "inst": "Politecnico di Torino",
@@ -3781,6 +5125,256 @@
   "url": "https://its-energiapiemonte.it/#energy-circular-economy-specialist",
   "curriculumUrl": null,
   "dataSource": "https://its-energiapiemonte.it/"
+ },
+ {
+  "id": "sapienza-p119",
+  "name": "Ingegneria per l'Ambiente e il Territorio",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Nature & environment",
+   "Science & research",
+   "Building things"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Ingegneria%20per%20l%27Ambiente%20e%20il%20Territorio",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33473",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p131",
+  "name": "Civil and Environmental Engineering",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Nature & environment",
+   "Science & research",
+   "Building things"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "eng",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Civil%20and%20Environmental%20Engineering",
+  "url": "https://www.civil-environmental.unina.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p142",
+  "name": "Ingegneria per l'ambiente e il territorio",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Nature & environment",
+   "Science & research",
+   "Building things"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Ingegneria%20per%20l%27ambiente%20e%20il%20territorio",
+  "url": "http://corsi.unibo.it/ingegneriambienterritorioL",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p153",
+  "name": "Ingegneria ambientale",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Nature & environment",
+   "Science & research",
+   "Building things"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Ingegneria%20ambientale",
+  "url": "https://www.ing-ial.unifi.it/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p164",
+  "name": "Ingegneria Ambientale per lo Sviluppo Sostenibile",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-I (CISIA)",
+  "admission": "programmed",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Nature & environment",
+   "Science & research",
+   "Building things"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 93,
+  "salary": 30000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 23,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "scientific",
+  "netMonthly": 1700,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Ingegneria%20Ambientale%20per%20lo%20Sviluppo%20Sostenibile",
+  "url": "https://www.unipa.it/dipartimenti/ingegneria/cds/ingegneriaambientaleperlosvilupposostenibile2303",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
  {
   "id": "polito-p35",
@@ -4268,6 +5862,300 @@
   "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
  },
  {
+  "id": "sapienza-p120",
+  "name": "Fisica",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-S (CISIA)",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 5,
+  "subjects": [
+   "Science & research",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 82,
+  "salary": 26000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 26,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Fisica",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33588",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p132",
+  "name": "Fisica",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 2,
+  "test": "TOLC-S (CISIA)",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 5,
+  "subjects": [
+   "Science & research",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 82,
+  "salary": 26000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 26,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Fisica",
+  "url": "http://www.fisica.unina.it/corso-di-laurea-magistrale-in-fisica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p143",
+  "name": "Fisica",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-S (CISIA)",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 5,
+  "subjects": [
+   "Science & research",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 82,
+  "salary": 26000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 26,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "scientific",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Fisica",
+  "url": "https://corsi.unibo.it/laurea/fisica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p154",
+  "name": "Fisica e Astrofisica",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-S (CISIA)",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 5,
+  "subjects": [
+   "Science & research",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 82,
+  "salary": 26000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 26,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "scientific",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Fisica%20e%20Astrofisica",
+  "url": "http://www.fis-astro.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p165",
+  "name": "Scienze Fisiche",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-S (CISIA)",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 5,
+  "subjects": [
+   "Science & research",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 82,
+  "salary": 26000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 26,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "scientific",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20Fisiche",
+  "url": "http://portale.unipa.it/dipartimenti/dipartimentofisicaechimica/cds/scienzefisiche2124",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p173",
+  "name": "Fisica",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-S (CISIA)",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 5,
+  "subjects": [
+   "Science & research",
+   "Mathematics"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 82,
+  "salary": 26000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 26,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "scientific",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Fisica",
+  "url": "https://www.uniba.it/it/ricerca/dipartimenti/fisica/didattica/corsi-di-laurea/fisica/fisica",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "unimib-p63",
   "name": "Scienze dell'Organizzazione",
   "inst": "Università Milano-Bicocca",
@@ -4468,6 +6356,256 @@
   "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
  {
+  "id": "sapienza-p116",
+  "name": "Scienze della formazione primaria",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Scienze%20della%20formazione%20primaria",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/30040",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p138",
+  "name": "Scienze della formazione primaria",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20della%20formazione%20primaria",
+  "url": "http://corsi.unibo.it/Laurea/ScienzeFormazionePrimaria",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p150",
+  "name": "Scienze della formazione primaria",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Scienze%20della%20formazione%20primaria",
+  "url": "http://www.formazioneprimaria.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p160",
+  "name": "Scienze della formazione primaria",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20della%20formazione%20primaria",
+  "url": "https://www.unipa.it/dipartimenti/sc.psicol.pedag.edellaformazione/cds/scienzedellaformazioneprimaria2183/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p170",
+  "name": "Scienze della formazione primaria",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20della%20formazione%20primaria",
+  "url": "https://manageweb.ict.uniba.it/ricerca/dipartimenti/forpsicom/didattica/corsi/magistrale-a-ciclo-unico/scienze-formazione-primaria",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "unito-p107",
   "name": "Lingue e culture per il turismo",
   "inst": "Università di Torino",
@@ -4568,6 +6706,206 @@
   "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
  {
+  "id": "sapienza-p117",
+  "name": "Scienze del turismo sostenibile",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 60,
+  "mathLoad": 1,
+  "subjects": [
+   "Food & hospitality",
+   "Languages & writing",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 76,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 3,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 18,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "classical",
+  "netMonthly": 1300,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Scienze%20del%20turismo%20sostenibile",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33536",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p127",
+  "name": "Scienze del turismo ad indirizzo manageriale",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 60,
+  "mathLoad": 1,
+  "subjects": [
+   "Food & hospitality",
+   "Languages & writing",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 76,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 3,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 18,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "classical",
+  "netMonthly": 1300,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20del%20turismo%20ad%20indirizzo%20manageriale",
+  "url": "http://www.dises.unina.it/didattica/corsi-di-laurea/lauree-triennali/1484142-scienze-del-turismo-ad-indirizzo-manageriale/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p161",
+  "name": "Turismo, Territori e Imprese",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 60,
+  "mathLoad": 1,
+  "subjects": [
+   "Food & hospitality",
+   "Languages & writing",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 76,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 3,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 18,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "classical",
+  "netMonthly": 1300,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Turismo%2C%20Territori%20e%20Imprese",
+  "url": "https://www.unipa.it/dipartimenti/seas/cds/turismoterritorieimpresesedepa2269",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p175",
+  "name": "Nuovi turismi",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 60,
+  "mathLoad": 1,
+  "subjects": [
+   "Food & hospitality",
+   "Languages & writing",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 76,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 3,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 18,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "classical",
+  "netMonthly": 1300,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Nuovi%20turismi",
+  "url": "https://www.uniba.it/it/corsi/nuovi-turismi/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "unito-p109",
   "name": "Servizio sociale",
   "inst": "Università di Torino",
@@ -4664,6 +7002,306 @@
   "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Servizio%20sociale",
   "url": "https://www.unimib.it/servizio-sociale",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "sapienza-p118",
+  "name": "Servizio sociale",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Servizio%20sociale",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33572",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p128",
+  "name": "Scienze del servizio sociale",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20del%20servizio%20sociale",
+  "url": "http://www.scienzepolitiche.unina.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p139",
+  "name": "Servizio sociale",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Servizio%20sociale",
+  "url": "http://corsi.unibo.it/Laurea/ServizioSociale",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p151",
+  "name": "Servizio sociale",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Servizio%20sociale",
+  "url": "http://www.serviziosociale.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p162",
+  "name": "Servizio sociale",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Servizio%20sociale",
+  "url": "https://www.unipa.it/dipartimenti/cultureesocieta/cds/serviziosocialesedeag2136   https://www.unipa.it/dipartimenti/cultureesocieta/cds/serviziosocialesedepa2137",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p171",
+  "name": "Scienze del servizio sociale e sociologia",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20del%20servizio%20sociale%20e%20sociologia",
+  "url": "https://www.uniba.it/it/corsi/cdl-scienze-servizio-sociale-sociologia",
   "curriculumUrl": null,
   "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
@@ -4818,6 +7456,306 @@
   "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  },
  {
+  "id": "sapienza-p114",
+  "name": "Fisioterapia",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Fisioterapia",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/30017",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p125",
+  "name": "Fisioterapia",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Fisioterapia",
+  "url": "http://M78.corsidistudio.unina.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p136",
+  "name": "Fisioterapia",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Fisioterapia",
+  "url": "http://corsi.unibo.it/fisioterapia",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p148",
+  "name": "Fisioterapia",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Fisioterapia",
+  "url": "http://www.fisioterapia.unifi.it/index.php",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p158",
+  "name": "Fisioterapia",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Fisioterapia",
+  "url": "http://www.unipa.it/dipartimenti/bi.n.d./cds/fisioterapia2170",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p168",
+  "name": "Fisioterapia",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Fisioterapia",
+  "url": "https://www.uniba.it/it/corsi/fisioterapia",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
   "id": "unito-p101",
   "name": "Scienze e tecniche psicologiche",
   "inst": "Università di Torino",
@@ -4964,6 +7902,306 @@
   "curriculumByYear": null,
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Scienze%20psicologiche%20per%20la%20prevenzione%20e%20la%20cura",
   "url": "https://scienze-psicologiche.cdl.unimi.it/it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "sapienza-p115",
+  "name": "Psicologia e processi sociali",
+  "inst": "Sapienza Università di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1300,
+   "high": 2900
+  },
+  "cityRent": 600,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Psicologia%20e%20processi%20sociali",
+  "url": "https://corsidilaurea.uniroma1.it/it/course/33569",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "federico2-p126",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università di Napoli Federico II",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 3000
+  },
+  "cityRent": 450,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "https://www.studiumanistici.unina.it/corsi/scienze-e-tecniche-psicologiche/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unibo-p137",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 157,
+   "mid": 1600,
+   "high": 3500
+  },
+  "cityRent": 655,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "http://corsi.unibo.it/laurea/ScienzeTecnichePsicologiche",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unifi-p149",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università degli Studi di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 3000
+  },
+  "cityRent": 620,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "http://www.scienzetecnichepsicologiche.unifi.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unipa-p159",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università degli Studi di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1100,
+   "high": 2600
+  },
+  "cityRent": 350,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "http://portale.unipa.it/dipartimenti/dipsicologia/cds/scienzeetecnichepsicologiche2121",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "uniba-p169",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università degli Studi di Bari Aldo Moro",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bari",
+  "lat": 41.1171,
+  "lon": 16.8719,
+  "citySize": "medium",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 2700
+  },
+  "cityRent": 400,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Seaside, growing, affordable"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "https://manageweb.ict.uniba.it/ricerca/dipartimenti/forpsicom/didattica/corsi/triennali/scienze-tecniche-psicologiche",
   "curriculumUrl": null,
   "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  }

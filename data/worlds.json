@@ -127,7 +127,13 @@
       "polimi-p13",
       "polito-p39",
       "unimib-p58",
-      "its-rizzoli-p80"
+      "its-rizzoli-p80",
+      "sapienza-p111",
+      "federico2-p122",
+      "unibo-p133",
+      "unifi-p145",
+      "unipa-p155",
+      "uniba-p166"
      ],
      "netMonthly": 1550
     },
@@ -148,7 +154,13 @@
       "polimi-p23",
       "polito-p53",
       "unimib-p60",
-      "its-rizzoli-p87"
+      "its-rizzoli-p87",
+      "sapienza-p112",
+      "federico2-p123",
+      "unibo-p134",
+      "unifi-p146",
+      "unipa-p156",
+      "uniba-p174"
      ],
      "netMonthly": 1500
     },
@@ -222,7 +234,13 @@
       "University"
      ],
      "courses": [
-      "unito-p71"
+      "unito-p71",
+      "sapienza-p113",
+      "federico2-p124",
+      "unibo-p135",
+      "unifi-p147",
+      "unipa-p157",
+      "uniba-p167"
      ],
      "netMonthly": 1440
     },
@@ -242,7 +260,13 @@
      "courses": [
       "unito-p98",
       "unimib-p99",
-      "unimi-p100"
+      "unimi-p100",
+      "sapienza-p114",
+      "federico2-p125",
+      "unibo-p136",
+      "unifi-p148",
+      "unipa-p158",
+      "uniba-p168"
      ],
      "netMonthly": 1500
     },
@@ -284,7 +308,13 @@
      "courses": [
       "unito-p101",
       "unimib-p102",
-      "unimi-p103"
+      "unimi-p103",
+      "sapienza-p115",
+      "federico2-p126",
+      "unibo-p137",
+      "unifi-p149",
+      "unipa-p159",
+      "uniba-p169"
      ],
      "netMonthly": 1330
     }
@@ -410,7 +440,11 @@
      "courses": [
       "unimib-p62",
       "bocconi-p64",
-      "its-rizzoli-p91"
+      "its-rizzoli-p91",
+      "federico2-p129",
+      "unibo-p140",
+      "unipa-p163",
+      "uniba-p172"
      ],
      "netMonthly": 1380
     },
@@ -448,7 +482,11 @@
       "ITS"
      ],
      "courses": [
-      "unimib-p61"
+      "unimib-p61",
+      "sapienza-p121",
+      "federico2-p130",
+      "unibo-p141",
+      "unifi-p152"
      ],
      "netMonthly": 1500
     },
@@ -503,7 +541,8 @@
      "courses": [
       "polito-p44",
       "polimi-p12",
-      "its-energia-pi-p94"
+      "its-energia-pi-p94",
+      "unibo-p144"
      ],
      "netMonthly": 1440
     },
@@ -523,7 +562,12 @@
      "courses": [
       "polito-p46",
       "polimi-p15",
-      "its-energia-pi-p95"
+      "its-energia-pi-p95",
+      "sapienza-p119",
+      "federico2-p131",
+      "unibo-p142",
+      "unifi-p153",
+      "unipa-p164"
      ],
      "netMonthly": 1550
     },
@@ -562,7 +606,13 @@
      "courses": [
       "polimi-p26",
       "polito-p51",
-      "unimib-p59"
+      "unimib-p59",
+      "sapienza-p120",
+      "federico2-p132",
+      "unibo-p143",
+      "unifi-p154",
+      "unipa-p165",
+      "uniba-p173"
      ],
      "netMonthly": 1330
     }
@@ -597,7 +647,12 @@
      "courses": [
       "unito-p104",
       "unimib-p105",
-      "unito-p106"
+      "unito-p106",
+      "sapienza-p116",
+      "unibo-p138",
+      "unifi-p150",
+      "unipa-p160",
+      "uniba-p170"
      ],
      "netMonthly": 1330
     },
@@ -636,7 +691,11 @@
      ],
      "courses": [
       "unito-p107",
-      "unimib-p108"
+      "unimib-p108",
+      "sapienza-p117",
+      "federico2-p127",
+      "unipa-p161",
+      "uniba-p175"
      ],
      "netMonthly": 1330
     },
@@ -655,7 +714,13 @@
      ],
      "courses": [
       "unito-p109",
-      "unimib-p110"
+      "unimib-p110",
+      "sapienza-p118",
+      "federico2-p128",
+      "unibo-p139",
+      "unifi-p151",
+      "unipa-p162",
+      "uniba-p171"
      ],
      "netMonthly": 1270
     }
