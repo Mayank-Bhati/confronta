@@ -49,7 +49,10 @@ jobs:
       - name: Verify admission access types
         if: inputs.task == 'verify-access'
         working-directory: pipeline
-        run: python -m careercompass_pipeline.verify_access
+        run: |
+          pip install playwright
+          python -m playwright install chromium --with-deps
+          python -m careercompass_pipeline.verify_access
 
       - name: Universitaly full-catalog ingest
         if: inputs.task == 'universitaly-ingest' || github.event_name == 'schedule'
