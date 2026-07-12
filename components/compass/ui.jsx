@@ -97,7 +97,7 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
         <div>
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: c.type === "ITS" ? T.greenSoft : T.violetSoft, color: c.type === "ITS" ? T.green : T.accent, ...mono }}>
-              {c.type} · {c.years}y · {c.city}
+              {c.type} · {c.years}y · {c.city}{c.distKm != null ? ` · ${c.distKm} km` : ""}
             </span>
             <NatureBadge c={c} />
             {c.admission && (

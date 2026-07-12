@@ -5,6 +5,7 @@ import POOLS from "../data/questions-v2.json";
 import WORLDS_DATA from "../data/worlds.json";
 import COURSES from "../data/courses-v2.json";
 import CITIES from "../data/cities-v2.json";
+import HOME_CITIES from "../data/home-cities.json";
 import { emptyVector, applyAnswer, applyLikert, applyMulti, buildSurvey, pickLikert, normalize, identity, topDimensions, DIMS } from "../lib/scoreEngine";
 import { rankWorlds, rankCareers, SCORE_VERSION } from "../lib/matchEngine";
 import { fitInterests, fitOutcome, fitEnvironment, estimateMonthlyCost, passesHardFilters, prepList, generateNarrative, haversineKm } from "../lib/fitEngine-v2";
@@ -81,7 +82,7 @@ export default function CareerCompass() {
 
   const totalQ = 10 + 5 + 5;
   const answered = phase === "binary" ? qIndex : phase === "multi" ? 10 + qIndex : 15 + qIndex;
-  const homeCity = CITIES.find((c) => c.id === profile.homeCityId) || null;
+  const homeCity = HOME_CITIES.find((c) => c.id === profile.homeCityId) || CITIES.find((c) => c.id === profile.homeCityId) || null;
   const awayFromHome = profile.locationMode !== "home"; // cost model: anywhere/cities = living away
   const hasResult = lastResult !== null || DIMS.some((d) => vector[d] > 0);
   const historyList = activeProfile?.history?.length ? activeProfile.history : (store.guestHistory || []);
@@ -243,13 +244,23 @@ export default function CareerCompass() {
     if (!career) return [];
     let list = career.courses.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
     list = list.filter((c) => passesHardFilters(c, prefs));
-    if (profile.locationMode === "cities" && profile.relocationCities.length) {
+    // Location is a soft filter made visible: courses beyond the chosen range
+    // stay listed (collapsed) up to 2× the slider, then disappear entirely —
+    // a hidden best answer is the failure mode we exist to prevent.
+    let rangeLimit = null;
+    let distOf = () => null;
+    if (profile.locationMode === "home" && homeCity) {
+      rangeLimit = prefs.maxDistance;
+      distOf = (course) => haversineKm(homeCity.lat, homeCity.lon, course.lat, course.lon);
+    } else if (profile.locationMode === "cities" && profile.relocationCities.length) {
       const chosen = CITIES.filter((c) => profile.relocationCities.includes(c.id));
-      list = list.filter((course) =>
-        chosen.some((city) => haversineKm(city.lat, city.lon, course.lat, course.lon) <= prefs.cityRadius));
+      rangeLimit = prefs.cityRadius;
+      distOf = (course) => Math.min(...chosen.map((city) => haversineKm(city.lat, city.lon, course.lat, course.lon)));
     }
     return list
-      .map((c) => ({ ...c, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
+      .map((c) => ({ ...c, distKm: rangeLimit != null ? Math.round(distOf(c)) : null }))
+      .filter((c) => c.distKm == null || c.distKm <= rangeLimit * 2)
+      .map((c) => ({ ...c, beyondRange: c.distKm != null && c.distKm > rangeLimit, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
       .sort((a, b) => b.envFit.score - a.envFit.score);
   }, [career, prefs, profile, homeCity, t]);
 

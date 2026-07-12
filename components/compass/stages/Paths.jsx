@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useApp } from "../context";
 import { mono, display } from "../constants";
@@ -7,6 +7,7 @@ import CITIES from "../../../data/cities-v2.json";
 
 export default function Paths() {
   const { T, t, td, career, world, prefs, setPrefs, profile, setProfile, homeCity, institutions, finalists, toggleFinalist, go, awayFromHome } = useApp();
+  const [beyondOpen, setBeyondOpen] = useState(false);
   return (
     <>
           <>
@@ -78,12 +79,38 @@ export default function Paths() {
               <Section><p className="text-sm" style={{ color: T.grey }}>{t("no_match")}</p></Section>
             )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {institutions.map((c) => (
+            {(() => {
+              const within = institutions.filter((c) => !c.beyondRange);
+              const beyond = institutions.filter((c) => c.beyondRange);
+              const card = (c) => (
                 <InstitutionCard key={c.id} c={c} showFit chosen={finalists.includes(c.id)} onCardClick={() => toggleFinalist(c.id)}
                   saveCtx={{ careerId: career.id, careerName: career.name, worldName: td(world.name) }} />
-              ))}
-            </div>
+              );
+              return (
+                <>
+                  {beyond.length > 0 && within.length > 0 && (
+                    <div className="text-xs uppercase tracking-widest" style={{ color: T.grey }}>{t("within_range")}</div>
+                  )}
+                  {within.length === 0 && institutions.length > 0 && (
+                    <Section><p className="text-sm" style={{ color: T.grey }}>{t("none_within_range")}</p></Section>
+                  )}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">{within.map(card)}</div>
+                  {beyond.length > 0 && (
+                    <div className="mt-2">
+                      <button onClick={() => setBeyondOpen((o) => !o)} className="text-sm font-bold py-2" style={{ color: T.grey }}>
+                        {beyondOpen ? "▾ " : "▸ "}{t("beyond_range", { n: beyond.length })}
+                      </button>
+                      {beyondOpen && (
+                        <>
+                          <p className="text-xs mb-3" style={{ color: T.grey }}>{t("beyond_range_hint")}</p>
+                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">{beyond.map(card)}</div>
+                        </>
+                      )}
+                    </div>
+                  )}
+                </>
+              );
+            })()}
 
             {finalists.length === 2 && (
               <button onClick={() => go("compare")} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>

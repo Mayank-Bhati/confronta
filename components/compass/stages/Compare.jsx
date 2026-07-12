@@ -41,18 +41,18 @@ export default function Compare() {
                         ["1", "2", "3"].filter((y) => c.curriculumByYear[y]?.length).map((y) => (
                           <details key={y} className="cc-year mb-1" open={y === "1"}>
                             <summary className="cursor-pointer font-bold py-1 select-none" style={{ color: T.accent }}>
-                              {t("year_label", { n: y })} · {c.curriculumByYear[y].length}
+                              {t("year_label", { n: y })} — {t("subjects_count", { n: c.curriculumByYear[y].length })}
                             </summary>
                             {c.curriculumByYear[y].map((s, i) => (
-                              <div key={i} className="pl-3" style={{ fontWeight: /matemat|analisi|mathem|algebra|calcul/i.test(s.name) ? 700 : 400 }}>
-                                · {s.name}{s.ects ? ` — ${s.ects} ECTS` : ""}
+                              <div key={i} className="pl-3 py-0.5" style={{ borderLeft: `2px solid ${T.line}`, fontWeight: /matemat|analisi|mathem|algebra|calcul/i.test(s.name) ? 700 : 400 }}>
+                                {s.name}{s.ects ? ` — ${s.ects} ECTS` : ""}
                               </div>
                             ))}
                           </details>
                         ))
                       ) : (
                         c.curriculum.map((s, i) => (
-                          <div key={i} style={{ fontWeight: /matemat|analisi|mathem|algebra|calcul/i.test(s) ? 700 : 400 }}>· {s}</div>
+                          <div key={i} className="pl-3 py-0.5" style={{ borderLeft: `2px solid ${T.line}`, fontWeight: /matemat|analisi|mathem|algebra|calcul/i.test(s) ? 700 : 400 }}>{s}</div>
                         ))
                       )}
                     </div>

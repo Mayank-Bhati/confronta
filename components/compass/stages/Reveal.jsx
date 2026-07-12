@@ -5,6 +5,7 @@ import { INTEREST_TAGS, DATE_LOCALE, mono, display } from "../constants";
 import { Bar, ChipBtn, Section, BackLink } from "../ui";
 import { DIMS } from "../../../lib/scoreEngine";
 import CITIES from "../../../data/cities-v2.json";
+import HOME_CITIES from "../../../data/home-cities.json";
 
 export default function Reveal() {
   const { T, t, td, lang, norm, ident, identTitle, profile, setProfile, toggleGoal, savedToName, lastResult, setShowProfiles, activeProfile, openResult, deleteResult, go, historyList } = useApp();
@@ -112,7 +113,7 @@ export default function Reveal() {
                   <select value={profile.homeCityId} onChange={(e) => setProfile((p) => ({ ...p, homeCityId: e.target.value }))}
                     className="w-full rounded-xl px-3 py-2.5 text-sm" style={{ border: `1.5px solid ${T.line}`, background: T.card2, color: T.ink }}>
                     <option value="">{t("city_choose")}</option>
-                    {CITIES.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                    {HOME_CITIES.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
                   </select>
                 </div>
               )}
