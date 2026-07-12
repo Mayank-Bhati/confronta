@@ -294,22 +294,21 @@ export default function CareerCompass() {
     ].map((r) => ({ ...r, scores: r.data.map((d) => d.score) }));
   }, [pair, profile, prefs, homeCity, t]);
 
-  // ————— Contextual saves: a course is saved on a specific career path,
-  // tagged with the survey result it was saved under. Persisted + cloud-synced.
-  // Identity is (course, career, result): the same course can be saved under
-  // different survey results without one save cancelling the other.
+  // ————— Contextual saves: a course is saved on a specific career path.
+  // The star is per (course, career) — the same everywhere, whatever result
+  // is open, so a refresh or an old result never shows a saved course as
+  // unsaved (that caused doubles). resultId stays as a tag for filtering.
   const currentResultId = () => lastResult?.id || null;
   function isSavedOn(courseId, cId) {
-    const rid = currentResultId();
-    return saved.some((s) => s.courseId === courseId && s.careerId === cId && (s.resultId || null) === rid);
+    return saved.some((s) => s.courseId === courseId && s.careerId === cId);
   }
   function toggleSave(course, ctx) {
     const cId = ctx?.careerId ?? null;
     const rid = currentResultId();
-    const existing = saved.find((s) => s.courseId === course.id && s.careerId === cId && (s.resultId || null) === rid);
-    if (existing) {
-      updateStore((s) => ({ ...s, saved: s.saved.filter((x) => x !== existing && !(x.courseId === course.id && x.careerId === cId && (x.resultId || null) === rid)) }));
-      cloudDeleteSave(existing);
+    const existing = saved.filter((s) => s.courseId === course.id && s.careerId === cId);
+    if (existing.length) {
+      updateStore((s) => ({ ...s, saved: s.saved.filter((x) => !(x.courseId === course.id && x.careerId === cId)) }));
+      existing.forEach(cloudDeleteSave);
     } else {
       const entry = {
         courseId: course.id, careerId: cId, careerName: ctx?.careerName || "", worldName: ctx?.worldName || "",
@@ -474,14 +473,18 @@ export default function CareerCompass() {
           merged.sort((a, b) => b.date - a.date);
           return { ...p, history: merged };
         });
-        const haveS = new Set(s.saved.map((x) => `${x.resultId || ""}|${x.courseId}|${x.careerId || ""}`));
+        // dedupe by (course, career) — the star identity; resultId is only a tag
+        const haveS = new Set(s.saved.map((x) => `${x.courseId}|${x.careerId || ""}`));
         const mergedSaved = [...s.saved];
         for (const r of saves || []) {
-          const k = `${r.result_local_id || ""}|${r.course_id}|${r.career_id || ""}`;
-          if (!haveS.has(k)) mergedSaved.push({
-            courseId: r.course_id, careerId: r.career_id || null,
-            careerName: r.career_name, worldName: r.world_name, resultId: r.result_local_id || null,
-          });
+          const k = `${r.course_id}|${r.career_id || ""}`;
+          if (!haveS.has(k)) {
+            haveS.add(k);
+            mergedSaved.push({
+              courseId: r.course_id, careerId: r.career_id || null,
+              careerName: r.career_name, worldName: r.world_name, resultId: r.result_local_id || null,
+            });
+          }
         }
         return { ...s, profiles, activeId, saved: mergedSaved };
       });
@@ -517,6 +520,19 @@ export default function CareerCompass() {
   function deleteProfile(id) {
     updateStore((s) => ({ ...s, profiles: s.profiles.filter((p) => p.id !== id), activeId: s.activeId === id ? null : s.activeId }));
   }
+  // The final question: record the chosen course on the current result,
+  // persisted with the result (profile history or guest history).
+  function chooseFinal(courseId) {
+    setLastResult((r) => (r ? { ...r, finalChoice: courseId } : r));
+    const rid = lastResult?.id;
+    if (!rid) return;
+    updateStore((s) => ({
+      ...s,
+      profiles: s.profiles.map((p) => ({ ...p, history: p.history.map((h) => (h.id === rid ? { ...h, finalChoice: courseId } : h)) })),
+      guestHistory: (s.guestHistory || []).map((h) => (h.id === rid ? { ...h, finalChoice: courseId } : h)),
+    }));
+  }
+
   function openResult(r) {
     setVector(r.vector);
     setProfile((p) => ({ ...p, interests: r.interests, goals: r.goals?.length ? r.goals : ["work"] }));
@@ -586,7 +602,7 @@ export default function CareerCompass() {
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
     savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist,
     pair, compareDims, narrative, setNarrative,
-    lastResult, savedToName, activeProfile, openResult, deleteResult,
+    lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal,
     showProfiles, setShowProfiles, newName, setNewName,
     createProfile, switchProfile, deleteProfile,
     session, showAuth, setShowAuth, accountPanel,

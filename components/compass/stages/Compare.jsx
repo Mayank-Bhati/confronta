@@ -6,7 +6,7 @@ import { Bar, Section, BackLink, GoogleLink, OfficialLink } from "../ui";
 import { estimateMonthlyCost, prepList, generateNarrative, haversineKm } from "../../../lib/fitEngine-v2";
 
 export default function Compare() {
-  const { T, t, pair, profile, prefs, homeCity, compareDims, narrative, setNarrative, envPrefs, cityCostBadge, natureStyle, scoreColor, scoreSoft, td, awayFromHome } = useApp();
+  const { T, t, pair, profile, prefs, homeCity, compareDims, narrative, setNarrative, envPrefs, cityCostBadge, natureStyle, scoreColor, scoreSoft, td, awayFromHome, lastResult, chooseFinal } = useApp();
   return (
     <>
           <>
@@ -22,18 +22,30 @@ export default function Compare() {
                       <div className="font-extrabold text-sm md:text-base" style={{ ...display, color: T.accent }}>{c.name}</div>
                       <GoogleLink c={c} />
                     </div>
-                    <div className="text-xs" style={{ color: T.grey }}>{c.inst} · {c.city}</div>
-                    {c.admission && <div className="text-xs mt-0.5" style={{ color: c.admission === "open" ? T.green : T.amber }}>{t(`adm_${c.admission}`)} · {c.test}</div>}
+                    <div className="text-sm" style={{ color: T.grey }}>{c.inst} · {c.city}</div>
+                    {c.admission && <div className="text-sm mt-0.5 font-semibold" style={{ color: c.admission === "open" ? T.green : T.amber }}>{t(`adm_${c.admission}`)} · {c.test}</div>}
                     <OfficialLink c={c} />
                   </div>
                 ))}
+              </div>
+
+              {/* preparation sits right under the admission info it refers to */}
+              <div className="mt-3">
+                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_prep")}</div>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  {pair.map((c) => (
+                    <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ background: T.amberSoft }}>
+                      {prepList(c, profile, t).map((item, i) => <div key={i}>→ {item}</div>)}
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="mt-5">
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_study")}</div>
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs" style={{ border: `1px solid ${T.line}` }}>
+                    <div key={c.id} className="rounded-xl p-3 text-sm" style={{ border: `1px solid ${T.line}` }}>
                       <div className="mb-2 px-2 py-1 rounded-lg inline-block font-semibold" style={{ background: natureStyle(c.nature).bg, color: natureStyle(c.nature).fg }}>
                         {t(NATURE_KEY[c.nature])}
                       </div>
@@ -67,9 +79,9 @@ export default function Compare() {
                   <div className="grid grid-cols-2 gap-3 md:gap-4">
                     {row.data.map((d, i) => (
                       <div key={i} className="rounded-xl p-3" style={{ background: scoreSoft(d.score) }}>
-                        <div className="text-sm font-bold mb-1" style={{ ...mono, color: scoreColor(d.score) }}>{d.score}/100</div>
+                        <div className="text-base font-bold mb-1" style={{ ...mono, color: scoreColor(d.score) }}>{d.score}/100</div>
                         <Bar score={d.score} />
-                        <div className="mt-1.5 text-xs">{d.note}</div>
+                        <div className="mt-1.5 text-sm">{d.note}</div>
                       </div>
                     ))}
                   </div>
@@ -80,7 +92,7 @@ export default function Compare() {
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_reality")}</div>
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1px solid ${T.line}` }}>
+                    <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ border: `1px solid ${T.line}` }}>
                       <div><b>{c.env.wouldChooseAgain}%</b> {t("cmp_again")}</div>
                       <div><b>{c.env.teachSat}%</b> {t("cmp_teach")}</div>
                       <div><b>{c.env.dropout}%</b> {t("cmp_drop")}</div>
@@ -94,7 +106,7 @@ export default function Compare() {
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_money")}</div>
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ border: `1px solid ${T.line}`, ...mono }}>
+                    <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ border: `1px solid ${T.line}`, ...mono }}>
                       <div>{t("cmp_fees", { n: c.costByIsee[profile.isee].toLocaleString() })}</div>
                       {awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
                       {profile.locationMode === "home" && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
@@ -104,17 +116,6 @@ export default function Compare() {
                         </div>
                       ); })()}
                       <div>{t("cmp_after", { n: c.netMonthly.toLocaleString() })}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-5">
-                <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_prep")}</div>
-                <div className="grid grid-cols-2 gap-3 md:gap-4">
-                  {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-xs space-y-1" style={{ background: T.amberSoft }}>
-                      {prepList(c, profile, t).map((item, i) => <div key={i}>→ {item}</div>)}
                     </div>
                   ))}
                 </div>
@@ -133,6 +134,31 @@ export default function Compare() {
                   <div className="cc-fade-up mt-3 rounded-xl p-4 text-sm whitespace-pre-wrap leading-relaxed" style={{ background: T.card2, border: `1.5px dashed ${T.violet}` }}>
                     {narrative}
                   </div>
+                )}
+              </div>
+
+              {/* the final question */}
+              <div className="mt-7 rounded-2xl p-4 md:p-5" style={{ background: T.wash || T.card2, border: `1.5px solid ${T.line}` }}>
+                <h3 className="font-black text-lg mb-3" style={display}>{t("cmp_choose_q")}</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {pair.map((c) => {
+                    const chosen = lastResult?.finalChoice === c.id;
+                    return (
+                      <button key={c.id} onClick={() => chooseFinal(c.id)}
+                        className="rounded-xl p-3 text-sm font-bold text-left transition-all"
+                        style={{
+                          border: `2px solid ${chosen ? T.green : T.line}`,
+                          background: chosen ? T.greenSoft : "transparent",
+                          color: chosen ? T.green : T.ink,
+                        }}>
+                        {chosen ? "✓ " : ""}{c.name}
+                        <div className="text-xs font-normal mt-0.5" style={{ color: T.grey }}>{c.inst}</div>
+                      </button>
+                    );
+                  })}
+                </div>
+                {lastResult?.finalChoice && (
+                  <p className="text-sm mt-3 font-semibold" style={{ color: T.green }}>{t("cmp_choose_done")}</p>
                 )}
               </div>
             </Section>

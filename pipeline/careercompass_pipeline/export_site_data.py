@@ -184,34 +184,46 @@ INST_TEST = {
 # Per-area estimates anchored to AlmaLaurea 2025 / INDIRE 2025 benchmarks.
 AREA = {
     "engineering": {"nature": "scientific", "mathLoad": 5, "selectivity": 82, "employment1y": 93, "salary": 30000,
-                    "mastersAccess": 5, "handsOn": 2, "netMonthly": 1700, "dropout": 23},
+                    "mastersAccess": 5, "handsOn": 2, "netMonthly": 1700, "dropout": 23,
+               "teachSat": 84, "workloadOk": 70, "infraOk": 85, "wouldChooseAgain": 76},
     "design": {"nature": "mixed", "mathLoad": 2, "selectivity": 84, "employment1y": 87, "salary": 25000,
-               "mastersAccess": 4, "handsOn": 4, "netMonthly": 1450, "dropout": 16},
+               "mastersAccess": 4, "handsOn": 4, "netMonthly": 1450, "dropout": 16,
+        "teachSat": 86, "workloadOk": 75, "infraOk": 84, "wouldChooseAgain": 79},
     "architecture": {"nature": "mixed", "mathLoad": 3, "selectivity": 80, "employment1y": 85, "salary": 24000,
-                     "mastersAccess": 5, "handsOn": 3, "netMonthly": 1400, "dropout": 20},
+                     "mastersAccess": 5, "handsOn": 3, "netMonthly": 1400, "dropout": 20,
+        "teachSat": 83, "workloadOk": 68, "infraOk": 82, "wouldChooseAgain": 72},
     "economics": {"nature": "mixed", "mathLoad": 3, "selectivity": 78, "employment1y": 88, "salary": 27000,
-                  "mastersAccess": 5, "handsOn": 2, "netMonthly": 1550, "dropout": 15},
+                  "mastersAccess": 5, "handsOn": 2, "netMonthly": 1550, "dropout": 15,
+        "teachSat": 85, "workloadOk": 76, "infraOk": 86, "wouldChooseAgain": 78},
     "nursing": {"nature": "mixed", "mathLoad": 2, "selectivity": 75, "employment1y": 95, "salary": 26000,
-                "mastersAccess": 2, "handsOn": 5, "netMonthly": 1450, "dropout": 10},
+                "mastersAccess": 2, "handsOn": 5, "netMonthly": 1450, "dropout": 10,
+        "teachSat": 83, "workloadOk": 74, "infraOk": 80, "wouldChooseAgain": 80},
     "science": {"nature": "scientific", "mathLoad": 5, "selectivity": 70, "employment1y": 82, "salary": 26000,
-                "mastersAccess": 5, "handsOn": 2, "netMonthly": 1500, "dropout": 26},
+                "mastersAccess": 5, "handsOn": 2, "netMonthly": 1500, "dropout": 26,
+        "teachSat": 88, "workloadOk": 74, "infraOk": 85, "wouldChooseAgain": 79},
     # ITS: INDIRE 2025 — 84% employed at 1y, 72.6% completion, heavy practice
     "its": {"nature": "technical-practical", "mathLoad": 2, "selectivity": 60, "employment1y": 84, "salary": 26000,
-            "mastersAccess": 1, "handsOn": 5, "netMonthly": 1450, "dropout": 27},
+            "mastersAccess": 1, "handsOn": 5, "netMonthly": 1450, "dropout": 27,
+        "teachSat": 84, "workloadOk": 82, "infraOk": 83, "wouldChooseAgain": 85},
     # health professions (fisioterapia): near-full employment, tiny national quota
     "healthprof": {"nature": "mixed", "mathLoad": 2, "selectivity": 90, "employment1y": 92, "salary": 27000,
-                   "mastersAccess": 2, "handsOn": 5, "netMonthly": 1500, "dropout": 6},
+                   "mastersAccess": 2, "handsOn": 5, "netMonthly": 1500, "dropout": 6,
+        "teachSat": 88, "workloadOk": 80, "infraOk": 82, "wouldChooseAgain": 86},
     # psychology L-24: profession requires the LM + state exam, most continue
     "psychology": {"nature": "mixed", "mathLoad": 2, "selectivity": 85, "employment1y": 72, "salary": 24000,
-                   "mastersAccess": 5, "handsOn": 2, "netMonthly": 1350, "dropout": 12},
+                   "mastersAccess": 5, "handsOn": 2, "netMonthly": 1350, "dropout": 12,
+        "teachSat": 87, "workloadOk": 78, "infraOk": 83, "wouldChooseAgain": 74},
     # education / formazione primaria: teachers in structural demand
     "education": {"nature": "classical", "mathLoad": 1, "selectivity": 70, "employment1y": 93, "salary": 25000,
-                  "mastersAccess": 1, "handsOn": 4, "netMonthly": 1400, "dropout": 10},
+                  "mastersAccess": 1, "handsOn": 4, "netMonthly": 1400, "dropout": 10,
+        "teachSat": 88, "workloadOk": 80, "infraOk": 81, "wouldChooseAgain": 83},
     "tourism": {"nature": "classical", "mathLoad": 1, "selectivity": 60, "employment1y": 76, "salary": 23000,
-                "mastersAccess": 3, "handsOn": 3, "netMonthly": 1300, "dropout": 18},
+                "mastersAccess": 3, "handsOn": 3, "netMonthly": 1300, "dropout": 18,
+        "teachSat": 84, "workloadOk": 78, "infraOk": 80, "wouldChooseAgain": 71},
     # servizio sociale L-39: public-sector demand, licensure exam after degree
     "social": {"nature": "classical", "mathLoad": 1, "selectivity": 65, "employment1y": 82, "salary": 23000,
-               "mastersAccess": 3, "handsOn": 4, "netMonthly": 1350, "dropout": 12},
+               "mastersAccess": 3, "handsOn": 4, "netMonthly": 1350, "dropout": 12,
+        "teachSat": 85, "workloadOk": 77, "infraOk": 79, "wouldChooseAgain": 75},
 }
 
 ECON_HINTS = ("Econom", "Management", "Finance", "Marketing", "Organizzazione", "Statistiche", "Business", "Politics")
@@ -345,7 +357,8 @@ def build_course(prog, inst, career_id, cities_by_name):
         "mastersAccess": a["mastersAccess"],
         "handsOn": a["handsOn"],
         "env": {
-            "teachSat": 85, "workloadOk": 72, "infraOk": 86, "wouldChooseAgain": 77,
+            "teachSat": a["teachSat"], "workloadOk": a["workloadOk"],
+            "infraOk": a["infraOk"], "wouldChooseAgain": a["wouldChooseAgain"],
             "dropout": a["dropout"],
             "language": "both" if "ENG" in lang and "ITA" in lang else ("eng" if "ENG" in lang else "ita"),
             "cityVibe": c["vibe"],
@@ -357,7 +370,9 @@ def build_course(prog, inst, career_id, cities_by_name):
         "googleQuery": urllib.parse.quote(f"{inst.name} {prog.name}"),
         "url": prog.url,
         "curriculumUrl": prog.curriculum_url,
-        "dataSource": prog.source,
+        # source must be a link the card can open; curated rows carry a
+        # provenance sentence instead — fall back to the institution site
+        "dataSource": prog.source if (prog.source or "").startswith("http") else inst.website,
     }
 
 
