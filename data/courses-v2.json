@@ -4316,5 +4316,655 @@
   "url": "https://www.unimib.it#scienze-dell-organizzazione",
   "curriculumUrl": null,
   "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+ },
+ {
+  "id": "unito-p104",
+  "name": "Scienze della formazione primaria",
+  "inst": "Università di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 2800
+  },
+  "cityRent": 525,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20della%20formazione%20primaria",
+  "url": "http://formazioneprimaria.campusnet.unito.it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimib-p105",
+  "name": "Scienze della formazione primaria",
+  "inst": "Università Milano-Bicocca",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 5,
+  "test": "National primary-education test",
+  "admission": "national",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 4100
+  },
+  "cityRent": 664,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20della%20formazione%20primaria",
+  "url": "https://www.formazione.unimib.it/didattica/corsi-di-laurea",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unito-p106",
+  "name": "Scienze dell'educazione",
+  "inst": "Università di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 3,
+  "test": "Local admission test",
+  "admission": "programmed",
+  "selectivity": 70,
+  "mathLoad": 1,
+  "subjects": [
+   "Teaching & mentoring",
+   "People & communication",
+   "Languages & writing"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 2800
+  },
+  "cityRent": 525,
+  "employment1y": 93,
+  "salary": 25000,
+  "mastersAccess": 1,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "classical",
+  "netMonthly": 1400,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20dell%27educazione",
+  "url": "http://educazione.campusnet.unito.it/do/home.pl",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unito-p107",
+  "name": "Lingue e culture per il turismo",
+  "inst": "Università di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 3,
+  "test": "TARM / TOLC-SU (orientation)",
+  "admission": "open",
+  "selectivity": 60,
+  "mathLoad": 1,
+  "subjects": [
+   "Food & hospitality",
+   "Languages & writing",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 2800
+  },
+  "cityRent": 525,
+  "employment1y": 76,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 3,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 18,
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "classical",
+  "netMonthly": 1300,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Torino%20Lingue%20e%20culture%20per%20il%20turismo",
+  "url": "http://www.lingue.unito.it/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimib-p108",
+  "name": "Scienze del turismo e comunità locale",
+  "inst": "Università Milano-Bicocca",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 60,
+  "mathLoad": 1,
+  "subjects": [
+   "Food & hospitality",
+   "Languages & writing",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 4100
+  },
+  "cityRent": 664,
+  "employment1y": 76,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 3,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 18,
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "classical",
+  "netMonthly": 1300,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20del%20turismo%20e%20comunit%C3%A0%20locale",
+  "url": "https://www.unimib.it/ateneo/dipartimenti/sociologia-e-ricerca-sociale",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unito-p109",
+  "name": "Servizio sociale",
+  "inst": "Università di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 3,
+  "test": "Local admission test",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 2800
+  },
+  "cityRent": 525,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Torino%20Servizio%20sociale",
+  "url": "http://www.didattica-cps.unito.it/do/home.pl",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimib-p110",
+  "name": "Servizio sociale",
+  "inst": "Università Milano-Bicocca",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-SU (CISIA)",
+  "admission": "programmed",
+  "selectivity": 65,
+  "mathLoad": 1,
+  "subjects": [
+   "People & communication",
+   "Law & society",
+   "Health & body"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 4100
+  },
+  "cityRent": 664,
+  "employment1y": 82,
+  "salary": 23000,
+  "mastersAccess": 3,
+  "handsOn": 4,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "classical",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Servizio%20sociale",
+  "url": "https://www.unimib.it/servizio-sociale",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unito-p98",
+  "name": "Fisioterapia",
+  "inst": "Università di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 2800
+  },
+  "cityRent": 525,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Torino%20Fisioterapia",
+  "url": "http://medcto.campusnet.unito.it/do/home.pl",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimib-p99",
+  "name": "Fisioterapia",
+  "inst": "Università Milano-Bicocca",
+  "type": "University",
+  "ownership": "public",
+  "city": "Monza",
+  "lat": 45.5845,
+  "lon": 9.2744,
+  "citySize": "medium",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 4100
+  },
+  "cityRent": 500,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Green, orderly, a train away from Milan"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Fisioterapia",
+  "url": "https://www.medicina.unimib.it/it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimi-p100",
+  "name": "Fisioterapia",
+  "inst": "Università degli Studi di Milano",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "National healthcare professions test",
+  "admission": "national",
+  "selectivity": 90,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "Sport & movement",
+   "People & communication"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1500,
+   "high": 3500
+  },
+  "cityRent": 664,
+  "employment1y": 92,
+  "salary": 27000,
+  "mastersAccess": 2,
+  "handsOn": 5,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 6,
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "mixed",
+  "netMonthly": 1500,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Fisioterapia",
+  "url": "https://fisioterapia.cdl.unimi.it/",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unito-p101",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1400,
+   "high": 2800
+  },
+  "cityRent": 525,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "http://www.triennalepsicologia.unito.it/do/home.pl",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimib-p102",
+  "name": "Scienze e tecniche psicologiche",
+  "inst": "Università Milano-Bicocca",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "TOLC-PSI (CISIA)",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1200,
+   "high": 4100
+  },
+  "cityRent": 664,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20e%20tecniche%20psicologiche",
+  "url": "https://didattica.unimib.it/E2403P",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
+ },
+ {
+  "id": "unimi-p103",
+  "name": "Scienze psicologiche per la prevenzione e la cura",
+  "inst": "Università degli Studi di Milano",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "Local admission test",
+  "admission": "programmed",
+  "selectivity": 85,
+  "mathLoad": 2,
+  "subjects": [
+   "Health & body",
+   "People & communication",
+   "Science & research"
+  ],
+  "costByIsee": {
+   "low": 156,
+   "mid": 1500,
+   "high": 3500
+  },
+  "cityRent": 664,
+  "employment1y": 72,
+  "salary": 24000,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "teachSat": 85,
+   "workloadOk": 72,
+   "infraOk": 86,
+   "wouldChooseAgain": 77,
+   "dropout": 12,
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "mixed",
+  "netMonthly": 1350,
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Scienze%20psicologiche%20per%20la%20prevenzione%20e%20la%20cura",
+  "url": "https://scienze-psicologiche.cdl.unimi.it/it",
+  "curriculumUrl": null,
+  "dataSource": "Universitaly catalog (Cineca API) + institution admission pages"
  }
 ]

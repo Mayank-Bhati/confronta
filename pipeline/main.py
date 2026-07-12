@@ -36,6 +36,12 @@ def main():
     elif cmd == "seed":
         from careercompass_pipeline.seed_reference import seed
         print(seed())
+    elif cmd == "seed-admissions":
+        from careercompass_pipeline.seed_admissions import seed_admissions
+        print(seed_admissions())
+    elif cmd == "seed-five-careers":
+        from careercompass_pipeline.seed_five_careers import seed_five_careers
+        print(seed_five_careers())
     elif cmd == "ingest":
         target = sys.argv[2] if len(sys.argv) > 2 else "polito"
         if target == "polito":

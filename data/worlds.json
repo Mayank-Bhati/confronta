@@ -239,7 +239,11 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unito-p98",
+      "unimib-p99",
+      "unimi-p100"
+     ],
      "netMonthly": 1500
     },
     {
@@ -277,7 +281,11 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unito-p101",
+      "unimib-p102",
+      "unimi-p103"
+     ],
      "netMonthly": 1330
     }
    ]
@@ -586,7 +594,11 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unito-p104",
+      "unimib-p105",
+      "unito-p106"
+     ],
      "netMonthly": 1330
     },
     {
@@ -622,7 +634,10 @@
       "ITS",
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unito-p107",
+      "unimib-p108"
+     ],
      "netMonthly": 1330
     },
     {
@@ -638,7 +653,10 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unito-p109",
+      "unimib-p110"
+     ],
      "netMonthly": 1270
     }
    ]

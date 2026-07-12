@@ -53,6 +53,14 @@ CAREER_MAP = {
     "researcher": [("polimi", "Physics Engineering"), ("polito", "Physical Engineering"), ("unimib", "Fisica")],
     # people
     "hr": [("unimib", "Scienze dell'Organizzazione")],
+    "teacher": [("unito", "Scienze della formazione primaria"), ("unimib", "Scienze della formazione primaria"),
+                ("unito", "Scienze dell'educazione")],
+    "tourism": [("unito", "Lingue e culture per il turismo"), ("unimib", "Scienze del turismo e comunità locale")],
+    "social-worker": [("unito", "Servizio sociale"), ("unimib", "Servizio sociale")],
+    # health (five-careers batch, sourced from the Universitaly catalog)
+    "physio": [("unito", "Fisioterapia"), ("unimib", "Fisioterapia"), ("unimi", "Fisioterapia")],
+    "psychologist": [("unito", "Scienze e tecniche psicologiche"), ("unimib", "Scienze e tecniche psicologiche"),
+                     ("unimi", "Scienze psicologiche per la prevenzione e la cura")],
 }
 
 CAREER_TAGS = {
@@ -79,6 +87,11 @@ CAREER_TAGS = {
     "food-tech": ["Food & hospitality", "Science & research", "Nature & environment"],
     "researcher": ["Science & research", "Mathematics"],
     "hr": ["People & communication", "Law & society", "Economics & finance"],
+    "physio": ["Health & body", "Sport & movement", "People & communication"],
+    "psychologist": ["Health & body", "People & communication", "Science & research"],
+    "teacher": ["Teaching & mentoring", "People & communication", "Languages & writing"],
+    "tourism": ["Food & hospitality", "Languages & writing", "People & communication"],
+    "social-worker": ["People & communication", "Law & society", "Health & body"],
 }
 
 CITY_FALLBACK = {
@@ -92,6 +105,7 @@ CITY_FALLBACK = {
     "Piacenza": {"lat": 45.0526, "lon": 9.6930, "rent": 400, "size": "small", "vibe": "Compact student city between Milano and Bologna"},
     "Mantova": {"lat": 45.1564, "lon": 10.7914, "rent": 380, "size": "small", "vibe": "Renaissance town, small campus community"},
     "Sesto San Giovanni": {"lat": 45.5347, "lon": 9.2405, "rent": 550, "size": "large", "vibe": "Milan's industrial north — metro to the centre"},
+    "Monza": {"lat": 45.5845, "lon": 9.2744, "rent": 500, "size": "medium", "vibe": "Green, orderly, a train away from Milan"},
 }
 
 # Verified fee anchors (research workbook, Universities + ISEE_Bands sheets).
@@ -101,6 +115,7 @@ INST_FEES = {
     "unimib": {"low": 156, "mid": 1200, "high": 4100},
     "bocconi": {"low": 3000, "mid": 9000, "high": 17000},
     "unito": {"low": 156, "mid": 1400, "high": 2800},
+    "unimi": {"low": 156, "mid": 1500, "high": 3500},
     "its-lomb-mecc": {"low": 0, "mid": 0, "high": 0},   # ITS Academy: MIM/ESF funded
     "its-rizzoli": {"low": 0, "mid": 0, "high": 0},
     "its-energia-pi": {"low": 0, "mid": 0, "high": 0},
@@ -114,6 +129,7 @@ INST_TEST = {
     "unimib": "TOLC",
     "bocconi": "Bocconi admission test",
     "unito": "TOLC / local admission test",
+    "unimi": "TOLC / local admission test",
     "its-lomb-mecc": "Internal selection test + interview",
     "its-rizzoli": "Internal selection test + interview",
     "its-energia-pi": "Internal selection test + interview",
@@ -136,6 +152,20 @@ AREA = {
     # ITS: INDIRE 2025 — 84% employed at 1y, 72.6% completion, heavy practice
     "its": {"nature": "technical-practical", "mathLoad": 2, "selectivity": 60, "employment1y": 84, "salary": 26000,
             "mastersAccess": 1, "handsOn": 5, "netMonthly": 1450, "dropout": 27},
+    # health professions (fisioterapia): near-full employment, tiny national quota
+    "healthprof": {"nature": "mixed", "mathLoad": 2, "selectivity": 90, "employment1y": 92, "salary": 27000,
+                   "mastersAccess": 2, "handsOn": 5, "netMonthly": 1500, "dropout": 6},
+    # psychology L-24: profession requires the LM + state exam, most continue
+    "psychology": {"nature": "mixed", "mathLoad": 2, "selectivity": 85, "employment1y": 72, "salary": 24000,
+                   "mastersAccess": 5, "handsOn": 2, "netMonthly": 1350, "dropout": 12},
+    # education / formazione primaria: teachers in structural demand
+    "education": {"nature": "classical", "mathLoad": 1, "selectivity": 70, "employment1y": 93, "salary": 25000,
+                  "mastersAccess": 1, "handsOn": 4, "netMonthly": 1400, "dropout": 10},
+    "tourism": {"nature": "classical", "mathLoad": 1, "selectivity": 60, "employment1y": 76, "salary": 23000,
+                "mastersAccess": 3, "handsOn": 3, "netMonthly": 1300, "dropout": 18},
+    # servizio sociale L-39: public-sector demand, licensure exam after degree
+    "social": {"nature": "classical", "mathLoad": 1, "selectivity": 65, "employment1y": 82, "salary": 23000,
+               "mastersAccess": 3, "handsOn": 4, "netMonthly": 1350, "dropout": 12},
 }
 
 ECON_HINTS = ("Econom", "Management", "Finance", "Marketing", "Organizzazione", "Statistiche", "Business", "Politics")
@@ -145,8 +175,19 @@ def area_of(prog, inst_kind):
     if inst_kind == "its":
         return "its"
     name = prog.name
+    low = name.lower()
     if "Infermieristica" in name:
         return "nursing"
+    if "fisioterapia" in low:
+        return "healthprof"
+    if "psicologiche" in low:
+        return "psychology"
+    if "formazione primaria" in low or "educazione" in low:
+        return "education"
+    if "turismo" in low:
+        return "tourism"
+    if "servizio sociale" in low:
+        return "social"
     if "Design" in name:
         return "design"
     if "Architect" in name or name.startswith("Urban Planning"):
