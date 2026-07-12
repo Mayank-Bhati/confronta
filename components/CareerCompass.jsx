@@ -238,7 +238,8 @@ export default function CareerCompass() {
     });
   }
 
-  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, maxDistance: profile.locationMode === "home" && homeCity ? prefs.maxDistance : null };
+  // Slider at max (500) means "all of Italy": no distance cap at all.
+  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, maxDistance: profile.locationMode === "home" && homeCity && prefs.maxDistance < 500 ? prefs.maxDistance : null };
 
   const institutions = useMemo(() => {
     if (!career) return [];
@@ -247,20 +248,21 @@ export default function CareerCompass() {
     // Location is a soft filter made visible: courses beyond the chosen range
     // stay listed (collapsed) up to 2× the slider, then disappear entirely —
     // a hidden best answer is the failure mode we exist to prevent.
+    // A slider at max (500) means "all of Italy": distances still shown, no cap.
     let rangeLimit = null;
-    let distOf = () => null;
+    let distOf = null;
     if (profile.locationMode === "home" && homeCity) {
-      rangeLimit = prefs.maxDistance;
+      if (prefs.maxDistance < 500) rangeLimit = prefs.maxDistance;
       distOf = (course) => haversineKm(homeCity.lat, homeCity.lon, course.lat, course.lon);
     } else if (profile.locationMode === "cities" && profile.relocationCities.length) {
       const chosen = CITIES.filter((c) => profile.relocationCities.includes(c.id));
-      rangeLimit = prefs.cityRadius;
+      if (prefs.cityRadius < 500) rangeLimit = prefs.cityRadius;
       distOf = (course) => Math.min(...chosen.map((city) => haversineKm(city.lat, city.lon, course.lat, course.lon)));
     }
     return list
-      .map((c) => ({ ...c, distKm: rangeLimit != null ? Math.round(distOf(c)) : null }))
-      .filter((c) => c.distKm == null || c.distKm <= rangeLimit * 2)
-      .map((c) => ({ ...c, beyondRange: c.distKm != null && c.distKm > rangeLimit, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
+      .map((c) => ({ ...c, distKm: distOf ? Math.round(distOf(c)) : null }))
+      .filter((c) => rangeLimit == null || c.distKm <= rangeLimit * 2)
+      .map((c) => ({ ...c, beyondRange: rangeLimit != null && c.distKm > rangeLimit, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
       .sort((a, b) => b.envFit.score - a.envFit.score);
   }, [career, prefs, profile, homeCity, t]);
 

@@ -47,7 +47,7 @@ export default function Paths() {
                 </div>
                 {profile.locationMode === "home" && homeCity && (
                   <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("dist_label", { city: homeCity.name, n: prefs.maxDistance })}</div>
+                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{prefs.maxDistance >= 500 ? t("dist_label_all", { city: homeCity.name }) : t("dist_label", { city: homeCity.name, n: prefs.maxDistance })}</div>
                     <input type="range" min="10" max="500" step="10" value={prefs.maxDistance} onChange={(e) => setPrefs((p) => ({ ...p, maxDistance: +e.target.value }))} className="w-full" />
                     <div className="flex gap-2 mt-1.5 flex-wrap">
                       {[[30, t("preset_prov")], [120, t("preset_reg")], [500, t("preset_all")]].map(([v, l]) => (
@@ -58,7 +58,7 @@ export default function Paths() {
                 )}
                 {profile.locationMode === "cities" && profile.relocationCities.length > 0 && (
                   <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("radius_label", { n: prefs.cityRadius })}</div>
+                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{prefs.cityRadius >= 500 ? t("radius_label_all") : t("radius_label", { n: prefs.cityRadius })}</div>
                     <input type="range" min="10" max="500" step="10" value={prefs.cityRadius} onChange={(e) => setPrefs((p) => ({ ...p, cityRadius: +e.target.value }))} className="w-full" />
                     <div className="flex gap-2 mt-1.5 flex-wrap">
                       {[[30, t("preset_prov")], [120, t("preset_reg")], [500, t("preset_all")]].map(([v, l]) => (

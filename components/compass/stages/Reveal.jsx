@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useApp } from "../context";
 import { INTEREST_TAGS, DATE_LOCALE, mono, display } from "../constants";
@@ -6,6 +6,40 @@ import { Bar, ChipBtn, Section, BackLink } from "../ui";
 import { DIMS } from "../../../lib/scoreEngine";
 import CITIES from "../../../data/cities-v2.json";
 import HOME_CITIES from "../../../data/home-cities.json";
+
+// accent-insensitive match: "forli" finds Forlì, "aqu" finds L'Aquila
+const fold = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z]/g, "");
+
+function CityPicker({ T, t, value, onPick }) {
+  const selected = HOME_CITIES.find((c) => c.id === value) || null;
+  const [query, setQuery] = useState(null); // null = not editing, show selection
+  const shown = query === null ? (selected ? selected.name : "") : query;
+  const matches = query === null ? [] : HOME_CITIES.filter((c) => fold(c.name).startsWith(fold(query))).slice(0, 8);
+  return (
+    <div className="relative">
+      <input
+        type="text" value={shown} placeholder={t("city_type")}
+        onChange={(e) => setQuery(e.target.value)}
+        onFocus={(e) => { setQuery(""); e.target.select(); }}
+        onBlur={() => setTimeout(() => setQuery(null), 150)}
+        className="w-full rounded-xl px-3 py-2.5 text-sm"
+        style={{ border: `1.5px solid ${T.line}`, background: T.card2, color: T.ink }}
+      />
+      {query !== null && query.length > 0 && (
+        <div className="absolute z-20 mt-1 w-full rounded-xl overflow-hidden shadow-lg" style={{ border: `1.5px solid ${T.line}`, background: T.card2 }}>
+          {matches.length === 0 && <div className="px-3 py-2.5 text-sm" style={{ color: T.grey }}>{t("city_none")}</div>}
+          {matches.map((c) => (
+            <button key={c.id} onMouseDown={() => { onPick(c.id); setQuery(null); }}
+              className="block w-full text-left px-3 py-2.5 text-sm hover:opacity-80"
+              style={{ color: T.ink, background: c.id === value ? T.violetSoft : "transparent" }}>
+              {c.name}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Reveal() {
   const { T, t, td, lang, norm, ident, identTitle, profile, setProfile, toggleGoal, savedToName, lastResult, setShowProfiles, activeProfile, openResult, deleteResult, go, historyList } = useApp();
@@ -110,11 +144,7 @@ export default function Reveal() {
               {profile.locationMode === "home" && (
                 <div className="mt-4">
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("city_label")}</div>
-                  <select value={profile.homeCityId} onChange={(e) => setProfile((p) => ({ ...p, homeCityId: e.target.value }))}
-                    className="w-full rounded-xl px-3 py-2.5 text-sm" style={{ border: `1.5px solid ${T.line}`, background: T.card2, color: T.ink }}>
-                    <option value="">{t("city_choose")}</option>
-                    {HOME_CITIES.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
-                  </select>
+                  <CityPicker T={T} t={t} value={profile.homeCityId} onPick={(id) => setProfile((p) => ({ ...p, homeCityId: id }))} />
                 </div>
               )}
 
