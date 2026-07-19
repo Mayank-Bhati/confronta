@@ -74,6 +74,8 @@ export default function CareerCompass() {
   const [savedFilter, setSavedFilter] = useState("all");
   const [savedProfileFilter, setSavedProfileFilter] = useState("all");
   const [finalists, setFinalists] = useState([]);
+  const [tourQueue, setTourQueue] = useState(null); // null = not in tournament
+  const [roundChoice, setRoundChoice] = useState(null);
   const [narrative, setNarrative] = useState("");
   const [showProfiles, setShowProfiles] = useState(false);
   const [newName, setNewName] = useState("");
@@ -523,6 +525,7 @@ export default function CareerCompass() {
   // The final question: record the chosen course on the current result,
   // persisted with the result (profile history or guest history).
   function chooseFinal(courseId) {
+    setRoundChoice(courseId);
     setLastResult((r) => (r ? { ...r, finalChoice: courseId } : r));
     const rid = lastResult?.id;
     if (!rid) return;
@@ -531,6 +534,33 @@ export default function CareerCompass() {
       profiles: s.profiles.map((p) => ({ ...p, history: p.history.map((h) => (h.id === rid ? { ...h, finalChoice: courseId } : h)) })),
       guestHistory: (s.guestHistory || []).map((h) => (h.id === rid ? { ...h, finalChoice: courseId } : h)),
     }));
+  }
+
+  // ————— Tournament: with 3+ saved paths, the chosen course faces the next
+  // saved course, round after round, until one champion remains (pinned on
+  // the Saved page). Requested by testers: "winner out of all".
+  function startTournament() {
+    const ids = [...new Set(savedEntries.map((e) => e.course.id))];
+    if (ids.length < 2) return;
+    setFinalists([ids[0], ids[1]]);
+    setTourQueue(ids.slice(2));
+    setRoundChoice(null);
+    go("compare");
+  }
+  function nextRound(winnerId) {
+    setTourQueue((q) => {
+      const [next, ...rest] = q;
+      setFinalists([winnerId, next]);
+      return rest;
+    });
+    setRoundChoice(null);
+  }
+  function crownChampion(courseId) {
+    updateStore((s) => ({ ...s, champion: { courseId, date: Date.now() } }));
+    setTourQueue(null);
+  }
+  function clearChampion() {
+    updateStore((s) => ({ ...s, champion: null }));
   }
 
   function openResult(r) {
@@ -603,6 +633,7 @@ export default function CareerCompass() {
     savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist,
     pair, compareDims, narrative, setNarrative,
     lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal,
+    tourQueue, roundChoice, startTournament, nextRound, crownChampion, clearChampion, champion: store.champion || null,
     showProfiles, setShowProfiles, newName, setNewName,
     createProfile, switchProfile, deleteProfile,
     session, showAuth, setShowAuth, accountPanel,

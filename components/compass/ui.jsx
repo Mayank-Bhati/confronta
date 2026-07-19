@@ -2,6 +2,7 @@ import React from "react";
 
 import { AppCtx } from "./context";
 import { NATURE_KEY, mono, display, natureStyleFor } from "./constants";
+import { estimateMonthlyCost } from "../../lib/fitEngine-v2";
 
 
 export function PeopleIcon({ size = 18, color = "currentColor" }) {
@@ -83,8 +84,22 @@ export function OfficialLink({ c }) {
 }
 
 export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badge }) {
-  const { T, t, scoreColor, isSavedOn, toggleSave, profile } = React.useContext(AppCtx);
+  const { T, t, scoreColor, isSavedOn, toggleSave, profile, prefs, setPrefs, envPrefs, homeCity } = React.useContext(AppCtx);
   const fees = c.costByIsee?.[profile?.isee || "mid"];
+  // cost stat is a 3-way toggle (tester feedback: "distinguish taxes from
+  // living costs with a click"): fees/yr → living/mo → all-in/mo
+  const costView = prefs?.costView || "fees";
+  const est = estimateMonthlyCost(c, envPrefs || { isee: profile?.isee, awayFromHome: true }, homeCity);
+  const cycleCost = (e) => {
+    e.stopPropagation();
+    const next = { fees: "living", living: "total", total: "fees" }[costView];
+    setPrefs?.((p) => ({ ...p, costView: next }));
+  };
+  const costStat = costView === "living"
+    ? { n: `~€${est.living.toLocaleString()}`, label: t("stat_living") }
+    : costView === "total"
+      ? { n: `~€${est.total.toLocaleString()}`, label: t("stat_total") }
+      : { n: fees === 0 ? "€0" : `~€${fees?.toLocaleString?.() ?? "—"}`, label: t("stat_fees") };
   return (
     <div onClick={onCardClick} className={`cc-card cc-shine w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
       style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>
@@ -154,10 +169,10 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           <div className="font-semibold" style={{ ...mono, fontSize: 21, color: c.env.dropout >= 22 ? T.amber : T.ink, letterSpacing: "-.02em" }}>{c.env.dropout}%</div>
           <div style={{ fontSize: 11, color: T.grey }}>{t("stat_drop")}</div>
         </div>
-        <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{fees === 0 ? "€0" : `~€${fees?.toLocaleString?.() ?? "—"}`}</div>
-          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_fees")}</div>
-        </div>
+        <button onClick={cycleCost} className="text-left" title={t("stat_cost_hint")}>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: costView === "fees" && fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{costStat.n}</div>
+          <div style={{ fontSize: 11, color: T.accent, textDecoration: "underline", textDecorationStyle: "dotted" }}>{costStat.label} ↺</div>
+        </button>
       </div>
       {showFit && c.envFit && (
         <div className="mt-2.5 text-xs space-y-0.5" style={{ color: T.grey }}>

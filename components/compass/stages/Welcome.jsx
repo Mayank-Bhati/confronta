@@ -87,6 +87,11 @@ export default function Welcome() {
 
           <p className="text-xs pt-2" style={{ color: T.grey }}>{t("welcome_privacy")}</p>
           <p className="text-xs" style={{ color: T.grey }}>{t("welcome_sources")}</p>
+          <p className="text-xs pt-1" style={{ color: T.grey }}>
+            <a href="privacy/" className="underline">{t("footer_privacy")}</a>
+            {" · "}
+            <a href="terms/" className="underline">{t("footer_terms")}</a>
+          </p>
     </>
   );
 }

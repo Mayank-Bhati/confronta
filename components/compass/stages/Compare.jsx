@@ -4,9 +4,11 @@ import { useApp } from "../context";
 import { NATURE_KEY, mono, display } from "../constants";
 import { Bar, Section, BackLink, GoogleLink, OfficialLink } from "../ui";
 import { estimateMonthlyCost, prepList, generateNarrative, haversineKm } from "../../../lib/fitEngine-v2";
+import COURSES from "../../../data/courses-v2.json";
 
 export default function Compare() {
-  const { T, t, pair, profile, prefs, homeCity, compareDims, narrative, setNarrative, envPrefs, cityCostBadge, natureStyle, scoreColor, scoreSoft, td, awayFromHome, lastResult, chooseFinal } = useApp();
+  const { T, t, pair, profile, prefs, homeCity, compareDims, narrative, setNarrative, envPrefs, cityCostBadge, natureStyle, scoreColor, scoreSoft, td, awayFromHome, lastResult, chooseFinal, tourQueue, roundChoice, nextRound, crownChampion, champion } = useApp();
+  const chosenId = roundChoice ?? lastResult?.finalChoice ?? null;
   return (
     <>
           <>
@@ -142,7 +144,7 @@ export default function Compare() {
                 <h3 className="font-black text-lg mb-3" style={display}>{t("cmp_choose_q")}</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {pair.map((c) => {
-                    const chosen = lastResult?.finalChoice === c.id;
+                    const chosen = chosenId === c.id;
                     return (
                       <button key={c.id} onClick={() => chooseFinal(c.id)}
                         className="rounded-xl p-3 text-sm font-bold text-left transition-all"
@@ -157,8 +159,25 @@ export default function Compare() {
                     );
                   })}
                 </div>
-                {lastResult?.finalChoice && (
+                {chosenId && tourQueue == null && (
                   <p className="text-sm mt-3 font-semibold" style={{ color: T.green }}>{t("cmp_choose_done")}</p>
+                )}
+                {chosenId && tourQueue && tourQueue.length > 0 && (
+                  <button onClick={() => nextRound(chosenId)}
+                    className="mt-3 px-5 py-2.5 rounded-full font-bold text-sm text-white transition-transform hover:scale-105"
+                    style={{ background: T.grad }}>
+                    {t("cmp_next_round", { name: COURSES.find((x) => x.id === tourQueue[0])?.name || "…" })}
+                  </button>
+                )}
+                {chosenId && tourQueue && tourQueue.length === 0 && champion?.courseId !== chosenId && (
+                  <button onClick={() => crownChampion(chosenId)}
+                    className="mt-3 px-5 py-2.5 rounded-full font-bold text-sm text-white transition-transform hover:scale-105"
+                    style={{ background: T.grad }}>
+                    🏆 {pair.find((c) => c.id === chosenId)?.name}
+                  </button>
+                )}
+                {champion?.courseId && chosenId === champion.courseId && (
+                  <p className="text-sm mt-3 font-semibold" style={{ color: T.green }}>{t("cmp_champion")}</p>
                 )}
               </div>
             </Section>
