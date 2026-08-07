@@ -143,15 +143,19 @@ def discover():
                   "&aggregacodicione=1&condocc=2&LANG=it&CONFIG=occupazione")
         _visit(page, "visualizza_sample", sample, findings)
 
-        # 4. the script that builds the dropdowns — it names the real endpoints
-        for js in ("profilo.js", "occupazione.js"):
-            try:
-                r = ctx.request.get(f"{BASE}/{js}")
-                if r.ok:
-                    _dump(js, r.text())
-                    print(f"  fetched {js} ({len(r.text())} chars)")
-            except Exception as e:
-                print(f"  {js} failed: {str(e)[:120]}")
+        # 3b. same query without the narrowing condocc filter — the sample above
+        # returned "numero di occupati 0" because it excluded most graduates.
+        full = ("https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php"
+                "?anno=2023&annolau=1&corstipo=L&ateneo=70135&facolta=tutti&gruppo=tutti"
+                "&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti"
+                "&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione")
+        _visit(page, "visualizza_full", full, findings)
+
+        # 4. solotendine.php is where the ateneo / degree-class codes live —
+        # it is the dropdown fragment the query builder loads.
+        for label, cfg, anno in (("solotendine_occupazione", "occupazione", 2024),
+                                 ("solotendine_profilo", "profilo", 2025)):
+            _visit(page, label, f"{BASE}/solotendine.php?anno={anno}&LANG=it&CONFIG={cfg}", findings)
 
         browser.close()
     _dump("network.json", json.dumps(calls, indent=1)[:200000])
