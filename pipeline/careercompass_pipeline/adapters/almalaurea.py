@@ -114,9 +114,18 @@ def discover():
     from playwright.sync_api import sync_playwright
 
     findings = {}
+    calls = []
     with sync_playwright() as p:
         browser, ctx = _browser(p)
         page = ctx.new_page()
+
+        def on_response(resp):
+            u = resp.url
+            if "almalaurea" in u and not any(u.endswith(x) for x in (".css", ".png", ".jpg", ".svg", ".woff", ".woff2")):
+                calls.append({"url": u[:300], "status": resp.status,
+                              "type": (resp.headers or {}).get("content-type", "")[:60]})
+        page.on("response", on_response)
+
         # 1. landing pages — establish session + dismiss the cookie wall
         _visit(page, "profilo_landing", f"{PROFILO}?LANG=it", findings)
         _visit(page, "occupazione_landing", f"{OCC}?LANG=it", findings)
@@ -124,7 +133,32 @@ def discover():
         for label, cfg, anno in (("tendine_profilo", "profilo", 2025),
                                  ("tendine_occupazione", "occupazione", 2024)):
             _visit(page, label, f"{BASE}/tendine.php?LANG=it&config={cfg}&anno={anno}", findings)
+
+        # 3. the results endpoint itself, inside the now-established session.
+        # These params come from a public AlmaLaurea result link: ateneo 70135,
+        # 1 year after a triennale, employment section.
+        sample = ("https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php"
+                  "?anno=2023&annolau=1&corstipo=L&ateneo=70135&facolta=tutti&gruppo=tutti"
+                  "&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti"
+                  "&aggregacodicione=1&condocc=2&LANG=it&CONFIG=occupazione")
+        _visit(page, "visualizza_sample", sample, findings)
+
+        # 4. the script that builds the dropdowns — it names the real endpoints
+        for js in ("profilo.js", "occupazione.js"):
+            try:
+                r = ctx.request.get(f"{BASE}/{js}")
+                if r.ok:
+                    _dump(js, r.text())
+                    print(f"  fetched {js} ({len(r.text())} chars)")
+            except Exception as e:
+                print(f"  {js} failed: {str(e)[:120]}")
+
         browser.close()
+    _dump("network.json", json.dumps(calls, indent=1)[:200000])
+    print("\n=== network calls ===")
+    for c in calls:
+        if any(k in c["url"] for k in ("statistiche", "cgi-php", "json", "php?")):
+            print(f"   {c['status']} {c['type'][:24]:24} {c['url'][:150]}")
     _dump("discover.json", json.dumps(findings, indent=1, ensure_ascii=False))
     return findings
 
