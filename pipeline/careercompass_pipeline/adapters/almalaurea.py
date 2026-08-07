@@ -167,9 +167,182 @@ def discover():
     return findings
 
 
+# ————————————————————————————————————————————————————————————————
+# Ingest: real outcomes per (university × disciplinary group × course level)
+# ————————————————————————————————————————————————————————————————
+
+# Our institution slug → AlmaLaurea "ateneo" code (codes from solotendine.php).
+# None = NOT an AlmaLaurea member, so there is no survey data and the site must
+# say so rather than substitute a number. Politecnico di Milano and Bocconi are
+# genuinely absent from the consortium list; ITS academies are outside it too
+# (their source is INDIRE).
+ATENEO = {
+    "polito": "70032",      # Torino Politecnico
+    "unito": "70031",       # Torino
+    "unimib": "70132",      # Milano Bicocca
+    "unimi": "70015",       # Milano
+    "sapienza": "70026",    # Roma Sapienza
+    "federico2": "70018",   # Napoli Federico II
+    "unibo": "70003",       # Bologna
+    "unifi": "70010",       # Firenze
+    "unipa": "70020",       # Palermo
+    "uniba": "70002",       # Bari
+    "polimi": None,         # not an AlmaLaurea member
+    "bocconi": None,        # not an AlmaLaurea member
+    "its-lomb-mecc": None, "its-rizzoli": None, "its-energia-pi": None,
+}
+
+# Disciplinary group codes (solotendine "gruppo"). Our courses map onto these.
+GRUPPO = {
+    "ict": "10",            # Informatica e Tecnologie ICT
+    "ing_ind": "12",        # Ingegneria industriale e dell'informazione
+    "ing_civ": "11",        # Architettura e Ingegneria civile
+    "economico": "7",
+    "medico": "14",         # Medico-Sanitario e Farmaceutico
+    "psicologico": "6",
+    "educazione": "1",      # Educazione e Formazione
+    "politico_sociale": "5",
+    "scientifico": "9",
+    "linguistico": "4",
+    "arte_design": "2",
+}
+
+OCC_YEAR = 2024      # latest "Condizione occupazionale" survey
+PROF_YEAR = 2025     # latest "Profilo dei laureati" survey
+
+# Numbers we want, and the label that precedes them on the results page.
+# Values sit in the lines that follow the label (Uomini / Donne / Totale).
+WANTED_OCC = {
+    "employment_rate": "Tasso di occupazione",
+    "unemployment_rate": "Tasso di disoccupazione",
+    "net_pay": "Retribuzione mensile netta",
+}
+WANTED_PROF = {
+    "would_choose_again": "Si iscriverebbe di nuovo",
+    "teaching_satisfaction": "rapporti con i docenti",
+    "on_time": "Laureati in corso",
+}
+
+
+def _num(s):
+    """'54,6' → 54.6 ; '-' → None ; '1.492' → 1492.0"""
+    s = (s or "").strip().replace(" ", " ")
+    if not s or s in {"-", "–", "n.d."}:
+        return None
+    s = s.replace(".", "").replace(",", ".")
+    m = re.match(r"^-?\d+(\.\d+)?$", s)
+    return float(s) if m else None
+
+
+def _lines(html):
+    body = re.search(r"<body.*?</body>", html, re.S)
+    txt = body.group(0) if body else html
+    txt = re.sub(r"<(script|style).*?</\1>", " ", txt, flags=re.S)
+    txt = re.sub(r"<[^>]+>", "\n", txt)
+    txt = txt.replace("&nbsp;", " ")
+    return [l.strip() for l in txt.split("\n") if l.strip()]
+
+
+def _pick(lines, label, window=8):
+    """Find `label`, then return the value after 'Totale' (or the first number)."""
+    for i, l in enumerate(lines):
+        if label.lower() in l.lower():
+            chunk = lines[i + 1:i + 1 + window]
+            for j, c in enumerate(chunk):
+                if c.strip().lower() == "totale" and j + 1 < len(chunk):
+                    v = _num(chunk[j + 1])
+                    if v is not None:
+                        return v
+            for c in chunk:
+                v = _num(c)
+                if v is not None:
+                    return v
+    return None
+
+
+def _query_url(config, ateneo, gruppo, corstipo, anno, annolau=1):
+    return ("https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php"
+            f"?anno={anno}&annolau={annolau}&corstipo={corstipo}&ateneo={ateneo}"
+            f"&facolta=tutti&gruppo={gruppo}&classe=tutti&isstella=0&areageografica=tutti"
+            f"&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti"
+            f"&LANG=it&CONFIG={config}")
+
+
+def ingest(combos=None, delay=1.2):
+    """Fetch real outcomes for the (ateneo, gruppo, corstipo) combos our
+    catalogue actually uses and write pipeline/out/almalaurea.json.
+
+    combos: list of [inst_slug, gruppo_key, corstipo]. Defaults to the full
+    matrix of our AlmaLaurea-member institutions × the groups we teach.
+    """
+    from playwright.sync_api import sync_playwright
+
+    if combos is None:
+        members = [s for s, code in ATENEO.items() if code]
+        groups = ["ict", "ing_ind", "ing_civ", "economico", "medico",
+                  "psicologico", "educazione", "politico_sociale", "scientifico", "linguistico"]
+        combos = [[s, g, "L"] for s in members for g in groups]
+        # 5-year single-cycle: primary-teaching degrees (LM-85 bis)
+        combos += [[s, "educazione", "LSE"] for s in members]
+
+    rows, misses = {}, []
+    with sync_playwright() as p:
+        browser, ctx = _browser(p)
+        page = ctx.new_page()
+        # establish the session that unlocks occupazione.php
+        page.goto(f"{PROFILO}?LANG=it", wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(2500)
+        _accept_cookies(page)
+        page.goto(f"{OCC}?LANG=it", wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(1500)
+
+        for idx, (slug, gkey, corstipo) in enumerate(combos, 1):
+            ateneo, gruppo = ATENEO[slug], GRUPPO[gkey]
+            key = f"{slug}|{gkey}|{corstipo}"
+            entry = {"institution": slug, "group": gkey, "level": corstipo,
+                     "ateneo_code": ateneo, "gruppo_code": gruppo}
+            for config, wanted, anno in (("occupazione", WANTED_OCC, OCC_YEAR),
+                                         ("profilo", WANTED_PROF, PROF_YEAR)):
+                url = _query_url(config, ateneo, gruppo, corstipo, anno)
+                try:
+                    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(1200)
+                    lines = _lines(page.content())
+                    got = {k: _pick(lines, lab) for k, lab in wanted.items()}
+                    entry.update({k: v for k, v in got.items()})
+                    entry[f"{config}_year"] = anno
+                    entry[f"{config}_source"] = url
+                    if all(v is None for v in got.values()):
+                        misses.append(f"{key}/{config}")
+                except Exception as e:
+                    misses.append(f"{key}/{config}: {str(e)[:80]}")
+                page.wait_for_timeout(int(delay * 1000))
+            rows[key] = entry
+            if idx % 10 == 0 or idx == len(combos):
+                print(f"  {idx}/{len(combos)} combos · {len(misses)} empty sections")
+        browser.close()
+
+    out = {"generated": OCC_YEAR, "surveys": {"occupazione": OCC_YEAR, "profilo": PROF_YEAR},
+           "note": "AlmaLaurea consortium data, per university x disciplinary group x course level. "
+                   "Institutions absent from the consortium (Politecnico di Milano, Bocconi, all ITS) have no rows.",
+           "rows": rows, "empty": misses}
+    os.makedirs("out", exist_ok=True)
+    with open("out/almalaurea.json", "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=1, ensure_ascii=False)
+    filled = sum(1 for r in rows.values() if r.get("employment_rate") is not None)
+    print(f"\nwrote out/almalaurea.json — {len(rows)} combos, {filled} with an employment rate")
+    return out
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "discover"
     if cmd == "discover":
         discover()
+    elif cmd == "ingest":
+        ingest()
+    elif cmd == "sample":
+        # small run to validate parsing before the full matrix
+        ingest(combos=[["unibo", "economico", "L"], ["unito", "medico", "L"],
+                       ["sapienza", "ict", "L"], ["unipa", "educazione", "LSE"]])
     else:
         print(f"unknown command {cmd}")

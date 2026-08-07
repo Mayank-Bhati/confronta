@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest"
         required: false
         default: "probe"
       pages:
@@ -45,6 +45,21 @@ jobs:
             size=$(wc -c < /tmp/last_probe 2>/dev/null || echo 0)
             echo "PROBE $code ${size}b $url"
           done
+
+      - name: AlmaLaurea ingest (real outcomes)
+        if: inputs.task == 'almalaurea-sample' || inputs.task == 'almalaurea-ingest'
+        working-directory: pipeline
+        run: |
+          pip install playwright
+          python -m playwright install chromium --with-deps
+          python -m careercompass_pipeline.adapters.almalaurea ${{ inputs.task == 'almalaurea-sample' && 'sample' || 'ingest' }}
+
+      - name: Upload AlmaLaurea data
+        if: inputs.task == 'almalaurea-sample' || inputs.task == 'almalaurea-ingest'
+        uses: actions/upload-artifact@v4
+        with:
+          name: almalaurea-data
+          path: pipeline/out/almalaurea.json
 
       - name: AlmaLaurea discovery (headless browser)
         if: inputs.task == 'almalaurea-discover'
