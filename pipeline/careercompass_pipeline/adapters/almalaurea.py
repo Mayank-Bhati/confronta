@@ -54,11 +54,62 @@ def _dump(name, text):
     print(f"  wrote {path} ({len(text)} chars)")
 
 
-def discover():
-    """Step 1: can a real browser reach it, and what does the query form offer?
+SELECT_JS = """els => els.map(s => ({
+    name: s.name,
+    total: s.options.length,
+    options: Array.from(s.options).slice(0, 14).map(o => ({ value: o.value, label: (o.textContent || '').trim().slice(0, 70) })),
+}))"""
 
-    Dumps the page HTML plus every <select> and its options, so the ingest can
-    be written against the actual university / degree-class codes.
+
+def _accept_cookies(page):
+    """The Drupal EU-cookie banner blocks interaction until dismissed."""
+    for sel in ("button.agree-button", ".eu-cookie-compliance-default-button",
+                "button:has-text('Accetta')", "button:has-text('Accetto')"):
+        try:
+            el = page.locator(sel).first
+            if el.count() and el.is_visible():
+                el.click(timeout=3000)
+                page.wait_for_timeout(800)
+                print(f"  cookie banner dismissed via {sel}")
+                return True
+        except Exception:
+            pass
+    return False
+
+
+def _visit(page, label, url, findings):
+    try:
+        resp = page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(2500)
+        _accept_cookies(page)
+        status = resp.status if resp else None
+        html = page.content()
+        _dump(f"{label}.html", html)
+        selects = page.eval_on_selector_all("select", SELECT_JS)
+        # the results page is a table, not a form
+        tables = page.eval_on_selector_all(
+            "table", "els => els.slice(0,3).map(t => (t.innerText||'').trim().slice(0, 900))")
+        findings[label] = {"status": status, "title": page.title(), "chars": len(html),
+                           "selects": selects, "tables": tables}
+        print(f"\n=== {label}: HTTP {status} · {len(html)} chars · title={page.title()!r}")
+        for s in selects:
+            print(f"   select {s['name']!r} ({s['total']} options)")
+            for o in s["options"][:8]:
+                print(f"      {o['value']!r} = {o['label']}")
+        for i, tb in enumerate(tables):
+            if tb:
+                print(f"   --- table {i} ---\n{tb[:600]}")
+        return True
+    except Exception as e:
+        findings[label] = {"error": str(e)[:200]}
+        print(f"\n=== {label}: FAILED {str(e)[:200]}")
+        return False
+
+
+def discover():
+    """Walk the real navigation path: landing page (sets cookies/session) →
+    tendine.php (the dropdown query builder, where the ateneo and degree-class
+    codes live) → a sample results query.
     """
     from playwright.sync_api import sync_playwright
 
@@ -66,28 +117,13 @@ def discover():
     with sync_playwright() as p:
         browser, ctx = _browser(p)
         page = ctx.new_page()
-        for label, url in (("occupazione", OCC), ("profilo", PROFILO)):
-            try:
-                resp = page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                page.wait_for_timeout(4000)
-                status = resp.status if resp else None
-                html = page.content()
-                _dump(f"{label}.html", html)
-                selects = page.eval_on_selector_all("select", """els => els.map(s => ({
-                    name: s.name,
-                    options: Array.from(s.options).slice(0, 12).map(o => ({ value: o.value, label: (o.textContent || '').trim().slice(0, 60) })),
-                    total: s.options.length,
-                }))""")
-                findings[label] = {"status": status, "title": page.title(), "selects": selects,
-                                   "chars": len(html)}
-                print(f"\n=== {label}: HTTP {status} · {len(html)} chars · title={page.title()!r}")
-                for s in selects:
-                    print(f"   select name={s['name']!r} ({s['total']} options)")
-                    for o in s["options"][:6]:
-                        print(f"      {o['value']!r} = {o['label']}")
-            except Exception as e:
-                findings[label] = {"error": str(e)[:200]}
-                print(f"\n=== {label}: FAILED {str(e)[:200]}")
+        # 1. landing pages — establish session + dismiss the cookie wall
+        _visit(page, "profilo_landing", f"{PROFILO}?LANG=it", findings)
+        _visit(page, "occupazione_landing", f"{OCC}?LANG=it", findings)
+        # 2. the query builders, where university / class codes are listed
+        for label, cfg, anno in (("tendine_profilo", "profilo", 2025),
+                                 ("tendine_occupazione", "occupazione", 2024)):
+            _visit(page, label, f"{BASE}/tendine.php?LANG=it&config={cfg}&anno={anno}", findings)
         browser.close()
     _dump("discover.json", json.dumps(findings, indent=1, ensure_ascii=False))
     return findings
