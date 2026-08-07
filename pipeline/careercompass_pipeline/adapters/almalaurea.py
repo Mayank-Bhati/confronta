@@ -340,6 +340,23 @@ if __name__ == "__main__":
         discover()
     elif cmd == "ingest":
         ingest()
+    elif cmd == "labels":
+        # dump the exact label/value lines of one result page per config, so the
+        # parsers can be written against reality instead of guessed strings
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            browser, ctx = _browser(p)
+            page = ctx.new_page()
+            page.goto(f"{PROFILO}?LANG=it", wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(2500)
+            _accept_cookies(page)
+            for config, anno in (("occupazione", OCC_YEAR), ("profilo", PROF_YEAR)):
+                url = _query_url(config, ATENEO["unibo"], GRUPPO["economico"], "L", anno)
+                page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(1500)
+                lines = _lines(page.content())
+                _dump(f"labels_{config}.txt", "\n".join(f"{i:4} {l}" for i, l in enumerate(lines)))
+            browser.close()
     elif cmd == "sample":
         # small run to validate parsing before the full matrix
         ingest(combos=[["unibo", "economico", "L"], ["unito", "medico", "L"],

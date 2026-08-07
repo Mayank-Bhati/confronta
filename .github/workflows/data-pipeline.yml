@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels"
         required: false
         default: "probe"
       pages:
@@ -47,19 +47,21 @@ jobs:
           done
 
       - name: AlmaLaurea ingest (real outcomes)
-        if: inputs.task == 'almalaurea-sample' || inputs.task == 'almalaurea-ingest'
+        if: startsWith(inputs.task, 'almalaurea-') && inputs.task != 'almalaurea-probe' && inputs.task != 'almalaurea-discover'
         working-directory: pipeline
         run: |
           pip install playwright
           python -m playwright install chromium --with-deps
-          python -m careercompass_pipeline.adapters.almalaurea ${{ inputs.task == 'almalaurea-sample' && 'sample' || 'ingest' }}
+          python -m careercompass_pipeline.adapters.almalaurea ${{ inputs.task == 'almalaurea-sample' && 'sample' || inputs.task == 'almalaurea-labels' && 'labels' || 'ingest' }}
 
       - name: Upload AlmaLaurea data
-        if: inputs.task == 'almalaurea-sample' || inputs.task == 'almalaurea-ingest'
+        if: startsWith(inputs.task, 'almalaurea-') && inputs.task != 'almalaurea-probe' && inputs.task != 'almalaurea-discover'
         uses: actions/upload-artifact@v4
         with:
           name: almalaurea-data
-          path: pipeline/out/almalaurea.json
+          path: |
+            pipeline/out/almalaurea.json
+            /tmp/aldump/labels_*.txt
 
       - name: AlmaLaurea discovery (headless browser)
         if: inputs.task == 'almalaurea-discover'
