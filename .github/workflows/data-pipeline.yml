@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe"
         required: false
         default: "probe"
       pages:
@@ -45,6 +45,24 @@ jobs:
             size=$(wc -c < /tmp/last_probe 2>/dev/null || echo 0)
             echo "PROBE $code ${size}b $url"
           done
+
+      - name: AlmaLaurea reachability + shape probe
+        if: inputs.task == 'almalaurea-probe'
+        run: |
+          mkdir -p /tmp/aldump
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
+          for url in \
+            "https://www2.almalaurea.it/cgi-php/universita/statistiche/tendine.php?config=occupazione" \
+            "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/occupazione.php" \
+            "https://www2.almalaurea.it/cgi-php/universita/statistiche/tendine.php?config=profilo" ; do
+            code=$(curl -s -L -m 40 -A "$UA" -o /tmp/aldump/page.html -w "%{http_code}" "$url" || echo FAIL)
+            echo "PROBE $code $(wc -c < /tmp/aldump/page.html)b $url"
+            cp /tmp/aldump/page.html "/tmp/aldump/$(echo $url | md5sum | cut -c1-8).html"
+          done
+          echo "--- university codes found in dropdowns ---"
+          grep -o 'value="[0-9]\{4,5\}"[^>]*>[^<]\{0,45\}' /tmp/aldump/*.html | head -30 || true
+          echo "--- degree-class options ---"
+          grep -o 'name="classe"' -A2 /tmp/aldump/*.html | head -5 || true
 
       - name: Verify admission access types
         if: inputs.task == 'verify-access'
@@ -151,7 +169,9 @@ jobs:
           EOF
 
       - uses: actions/upload-artifact@v4
-        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api' || inputs.task == 'universitaly-har'
+        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api' || inputs.task == 'universitaly-har' || inputs.task == 'almalaurea-probe'
         with:
           name: registry-dump
-          path: /tmp/unidump
+          path: |
+            /tmp/unidump
+            /tmp/aldump
