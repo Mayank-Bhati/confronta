@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover"
         required: false
         default: "probe"
       pages:
@@ -45,6 +45,14 @@ jobs:
             size=$(wc -c < /tmp/last_probe 2>/dev/null || echo 0)
             echo "PROBE $code ${size}b $url"
           done
+
+      - name: AlmaLaurea discovery (headless browser)
+        if: inputs.task == 'almalaurea-discover'
+        working-directory: pipeline
+        run: |
+          pip install playwright
+          python -m playwright install chromium --with-deps
+          python -m careercompass_pipeline.adapters.almalaurea discover
 
       - name: AlmaLaurea reachability + shape probe
         if: inputs.task == 'almalaurea-probe'
@@ -169,7 +177,7 @@ jobs:
           EOF
 
       - uses: actions/upload-artifact@v4
-        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api' || inputs.task == 'universitaly-har' || inputs.task == 'almalaurea-probe'
+        if: inputs.task == 'universitaly-sample' || inputs.task == 'universitaly-api' || inputs.task == 'universitaly-har' || inputs.task == 'almalaurea-probe' || inputs.task == 'almalaurea-discover'
         with:
           name: registry-dump
           path: |
