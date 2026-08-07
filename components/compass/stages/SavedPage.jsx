@@ -56,11 +56,7 @@ export default function SavedPage() {
                   badge={s.careerName ? `${t("saved_from")}: ${s.worldName} → ${td(s.careerName)}` : null} />
               ))}
             </div>
-            {finalists.length === 2 && (
-              <button onClick={() => go("compare")} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
-                {t("saved_compare")}
-              </button>
-            )}
+
           </>
     </>
   );

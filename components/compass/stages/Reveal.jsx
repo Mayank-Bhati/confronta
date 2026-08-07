@@ -6,6 +6,7 @@ import { Bar, ChipBtn, Section, BackLink } from "../ui";
 import { DIMS } from "../../../lib/scoreEngine";
 import CITIES from "../../../data/cities-v2.json";
 import HOME_CITIES from "../../../data/home-cities.json";
+import COURSES from "../../../data/courses-v2.json";
 
 // accent-insensitive match: "forli" finds Forlì, "aqu" finds L'Aquila
 const fold = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z]/g, "");
@@ -52,12 +53,20 @@ export default function Reveal() {
               <h2 className="font-bold mt-2" style={{ ...display, fontSize: "clamp(36px,7vw,54px)", lineHeight: 1.05, letterSpacing: "-.01em" }}>
                 {identTitle}
               </h2>
-              <p className="mt-3 text-sm md:text-base" style={{ color: "#D8DFF6", maxWidth: "48ch" }}>
-                {t("reveal_blurb", {
-                  a: t(`dim_${ident.letters[0]}`), ad: t(`dimd_${ident.letters[0]}`).toLowerCase(),
-                  b: t(`dim_${ident.letters[1]}`), bd: t(`dimd_${ident.letters[1]}`).toLowerCase(),
-                })}
-              </p>
+              {/* Two plain bullets, each a full sentence — testers found the
+                  single run-on paragraph heavy to read. */}
+              <ul className="mt-3 space-y-1.5 text-sm md:text-base" style={{ color: "#D8DFF6", maxWidth: "52ch" }}>
+                {[0, 1].map((i) => (
+                  <li key={i} className="flex gap-2">
+                    <span aria-hidden style={{ color: "#8FE3C0" }}>•</span>
+                    <span>
+                      <b style={{ color: "#fff" }}>{t(`dim_${ident.letters[i]}`)}</b>
+                      {" — "}{t(`dimd_${ident.letters[i]}`).toLowerCase()}.
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2.5 text-sm" style={{ color: "#AAB8E8", maxWidth: "48ch" }}>{t("reveal_blurb")}</p>
               {savedToName ? (
                 <p className="mt-3 text-xs font-semibold" style={{ color: "#8FE3C0" }}>{t("reveal_saved_to", { name: savedToName })}</p>
               ) : lastResult ? (
@@ -100,6 +109,13 @@ export default function Reveal() {
                         <div className="text-xs mt-1" style={{ ...mono, color: T.grey }}>
                           {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
                         </div>
+                        {/* the choice made in Compare, shown with its result */}
+                        {r.finalChoice && COURSES.find((c) => c.id === r.finalChoice) && (
+                          <div className="text-xs mt-1.5 font-semibold" style={{ color: T.green }}>
+                            ✓ {t("res_choice")}: {COURSES.find((c) => c.id === r.finalChoice).name}
+                            <span style={{ color: T.grey, fontWeight: 400 }}> — {COURSES.find((c) => c.id === r.finalChoice).inst}</span>
+                          </div>
+                        )}
                       </div>
                     );
                   })}

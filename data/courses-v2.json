@@ -24,21 +24,21 @@
    "high": 0
   },
   "cityRent": 550,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Milan's industrial north — metro to the centre"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -73,21 +73,21 @@
    "high": 0
   },
   "cityRent": 550,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Milan's industrial north — metro to the centre"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -123,21 +123,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Analisi Matematica 1",
    "Economia E Organizzazione Aziendale",
@@ -303,21 +303,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -352,21 +352,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "both",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -507,21 +507,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -557,21 +557,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "both",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -713,21 +713,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Elementi di Materiali e Tecnologie per l'industria manifatturiera",
    "Elementi di economia e organizzazione aziendale",
@@ -865,21 +865,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Analisi Matematica 1",
    "Elettrotecnica",
@@ -1005,21 +1005,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "both",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -1161,21 +1161,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1211,21 +1211,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1283,7 +1283,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Informatica",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33503",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p122",
@@ -1311,21 +1311,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 86,
+  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 73,
+   "dropout": 26,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1333,7 +1333,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Informatica",
   "url": "http://informatica.dieti.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p133",
@@ -1361,21 +1361,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1383,7 +1383,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Informatica",
   "url": "http://corsi.unibo.it/informatica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p145",
@@ -1433,7 +1433,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Informatica",
   "url": "http://informatica.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p155",
@@ -1461,21 +1461,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 86,
+  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 73,
+   "dropout": 26,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1483,7 +1483,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Informatica",
   "url": "https://www.unipa.it/dipartimenti/matematicaeinformatica/cds/informatica2086",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p166",
@@ -1511,21 +1511,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 86,
+  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 73,
+   "dropout": 26,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1533,7 +1533,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Informatica",
   "url": "https://www.uniba.it/it/corsi/informatica/corso-di-laurea-in-informatica",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "polimi-p23",
@@ -1561,21 +1561,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra Lineare E Geometria",
    "Analisi Matematica I",
@@ -1773,21 +1773,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -1925,21 +1925,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1975,21 +1975,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2047,7 +2047,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Statistica%20gestionale",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33507",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p123",
@@ -2075,21 +2075,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2097,7 +2097,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Statistica%20e%20Tecnologie%20per%20l%27Analisi%20dei%20Dati",
   "url": "http://www.scienzepolitiche.unina.it/?p=7472",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p134",
@@ -2125,21 +2125,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2147,7 +2147,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20statistiche",
   "url": "http://corsi.unibo.it/Laurea/ScienzeStatistiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p146",
@@ -2197,7 +2197,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Statistica",
   "url": "http://www.statistica.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p156",
@@ -2225,21 +2225,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2247,7 +2247,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Statistica%20e%20Data%20Science",
   "url": "http://statistica.unipa.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p174",
@@ -2275,21 +2275,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2297,7 +2297,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20statistiche",
   "url": "https://www.uniba.it/it/corsi/scienze-statistiche/l-41",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "its-rizzoli-p86",
@@ -2324,21 +2324,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2373,21 +2373,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2422,21 +2422,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2471,21 +2471,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 95,
-  "salary": 26000,
+  "employment1y": 98,
+  "salary": 27000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 83,
    "workloadOk": 74,
    "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
+   "wouldChooseAgain": 82,
+   "dropout": 8,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2493,7 +2493,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Infermieristica",
   "url": "https://www.unito.it#infermieristica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "sapienza-p113",
@@ -2542,7 +2542,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Infermieristica",
   "url": "https://corsidilaurea.uniroma1.it/it/course/30010",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p124",
@@ -2569,21 +2569,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 95,
-  "salary": 26000,
+  "employment1y": 88,
+  "salary": 24200,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 83,
    "workloadOk": 74,
    "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
+   "wouldChooseAgain": 77,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2591,7 +2591,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Infermieristica",
   "url": "http://m75.corsidistudio.unina.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p135",
@@ -2618,21 +2618,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 95,
-  "salary": 26000,
+  "employment1y": 98,
+  "salary": 27000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 83,
    "workloadOk": 74,
    "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
+   "wouldChooseAgain": 82,
+   "dropout": 8,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2640,7 +2640,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Infermieristica",
   "url": "http://corsi.unibo.it/InfermieristicaBologna",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p147",
@@ -2689,7 +2689,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Infermieristica",
   "url": "http://www.infermieristica.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p157",
@@ -2716,21 +2716,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 95,
-  "salary": 26000,
+  "employment1y": 88,
+  "salary": 24200,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 83,
    "workloadOk": 74,
    "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
+   "wouldChooseAgain": 77,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2738,7 +2738,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Infermieristica",
   "url": "http://www.unipa.it/dipartimenti/promise/cds/infermieristica2172",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p167",
@@ -2765,21 +2765,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 95,
-  "salary": 26000,
+  "employment1y": 88,
+  "salary": 24200,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 83,
    "workloadOk": 74,
    "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
+   "wouldChooseAgain": 77,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2787,7 +2787,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Infermieristica",
   "url": "https://www.uniba.it/corsi/infermieristica",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "polimi-p4",
@@ -2815,21 +2815,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Analisi Matematica 1",
    "Analisi Matematica 2",
@@ -2991,21 +2991,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -3151,21 +3151,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3201,21 +3201,21 @@
    "high": 3943
   },
   "cityRent": 430,
-  "employment1y": 87,
-  "salary": 25000,
+  "employment1y": 90,
+  "salary": 26000,
   "mastersAccess": 4,
   "handsOn": 4,
   "env": {
    "teachSat": 86,
    "workloadOk": 75,
    "infraOk": 84,
-   "wouldChooseAgain": 79,
-   "dropout": 16,
+   "wouldChooseAgain": 81,
+   "dropout": 14,
    "language": "eng",
    "cityVibe": "Lakeside campus town, quiet and outdoorsy"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Architecture Of Embedded And Connected Systems",
    "Basics Of Programming",
@@ -3344,21 +3344,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 25000,
+  "employment1y": 90,
+  "salary": 26000,
   "mastersAccess": 4,
   "handsOn": 4,
   "env": {
    "teachSat": 86,
    "workloadOk": 75,
    "infraOk": 84,
-   "wouldChooseAgain": 79,
-   "dropout": 16,
+   "wouldChooseAgain": 81,
+   "dropout": 14,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Culture Visive E Sistemi Iconografici",
    "Curve E Superfici Per Il Design",
@@ -3471,21 +3471,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 25000,
+  "employment1y": 90,
+  "salary": 26000,
   "mastersAccess": 4,
   "handsOn": 4,
   "env": {
    "teachSat": 86,
    "workloadOk": 75,
    "infraOk": 84,
-   "wouldChooseAgain": 79,
-   "dropout": 16,
+   "wouldChooseAgain": 81,
+   "dropout": 14,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Curve E Superfici Per Il Design",
    "Laboratorio Del Disegno",
@@ -3591,21 +3591,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -3747,21 +3747,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3797,21 +3797,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3847,21 +3847,21 @@
    "high": 17000
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "eng",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3897,21 +3897,21 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3947,21 +3947,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3969,7 +3969,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Economia%20aziendale",
   "url": "https://www.demi.unina.it/didattica/corsi-di-laurea/lauree-triennali/1484097-economia-aziendale/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p140",
@@ -3997,21 +3997,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4019,7 +4019,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Economia%20aziendale",
   "url": "http://corsi.unibo.it/Laurea/EconomiaAziendale",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p163",
@@ -4047,21 +4047,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4069,7 +4069,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Economia%20e%20amministrazione%20aziendale",
   "url": "https://www.unipa.it/dipartimenti/seas/cds/economiaeamministrazioneaziendale2077",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p172",
@@ -4097,21 +4097,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4119,7 +4119,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Economia%20aziendale",
   "url": "https://www.uniba.it/it/corsi/economia-aziendale/corso-di-laurea-in-economia-aziendale",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "bocconi-p65",
@@ -4146,21 +4146,21 @@
    "high": 17000
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "eng",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4196,21 +4196,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4268,7 +4268,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Economia%20e%20finanza",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33438",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p130",
@@ -4296,21 +4296,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 81,
+  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 75,
+   "dropout": 18,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4318,7 +4318,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Economia%20e%20commercio",
   "url": "http://www.dises.unina.it/didattica/corsi-di-laurea/lauree-magistrali/1484696-economia-e-commercio/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p141",
@@ -4346,21 +4346,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4368,7 +4368,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Economia%2C%20mercati%20e%20istituzioni",
   "url": "http://corsi.unibo.it/Laurea/EconomiaMercatiIstituzioni",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p152",
@@ -4418,7 +4418,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Economia%20e%20commercio",
   "url": "http://www.ec.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "bocconi-p68",
@@ -4446,21 +4446,21 @@
    "high": 17000
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "eng",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4496,21 +4496,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -4652,21 +4652,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Analisi E Geometria 1",
    "Analisi E Geometria 2",
@@ -4774,21 +4774,21 @@
    "high": 0
   },
   "cityRent": 525,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4824,21 +4824,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4846,7 +4846,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Ingegneria%20dell%27energia%20elettrica",
   "url": "http://corsi.unibo.it/elettrica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "polito-p46",
@@ -4874,21 +4874,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -5030,21 +5030,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "--",
    "Geotecnica",
@@ -5102,21 +5102,21 @@
    "high": 0
   },
   "cityRent": 525,
-  "employment1y": 84,
-  "salary": 26000,
+  "employment1y": 87,
+  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
    "teachSat": 84,
    "workloadOk": 82,
    "infraOk": 83,
-   "wouldChooseAgain": 85,
-   "dropout": 27,
+   "wouldChooseAgain": 87,
+   "dropout": 25,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "technical-practical",
-  "netMonthly": 1450,
+  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5174,7 +5174,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Ingegneria%20per%20l%27Ambiente%20e%20il%20Territorio",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33473",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p131",
@@ -5202,21 +5202,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 86,
+  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 73,
+   "dropout": 26,
    "language": "eng",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5224,7 +5224,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Civil%20and%20Environmental%20Engineering",
   "url": "https://www.civil-environmental.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p142",
@@ -5252,21 +5252,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5274,7 +5274,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Ingegneria%20per%20l%27ambiente%20e%20il%20territorio",
   "url": "http://corsi.unibo.it/ingegneriambienterritorioL",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p153",
@@ -5324,7 +5324,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Ingegneria%20ambientale",
   "url": "https://www.ing-ial.unifi.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p164",
@@ -5352,21 +5352,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 86,
+  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 73,
+   "dropout": 26,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5374,7 +5374,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Ingegneria%20Ambientale%20per%20lo%20Sviluppo%20Sostenibile",
   "url": "https://www.unipa.it/dipartimenti/ingegneria/cds/ingegneriaambientaleperlosvilupposostenibile2303",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "polito-p35",
@@ -5402,21 +5402,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -5557,21 +5557,21 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra Lineare",
    "Analisi Matematica I",
@@ -5682,21 +5682,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 30000,
+  "employment1y": 96,
+  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 84,
    "workloadOk": 70,
    "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
+   "wouldChooseAgain": 78,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
+  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -5837,21 +5837,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 82,
-  "salary": 26000,
+  "employment1y": 85,
+  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 88,
    "workloadOk": 74,
    "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
+   "wouldChooseAgain": 81,
+   "dropout": 24,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
+  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5908,7 +5908,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Fisica",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33588",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p132",
@@ -5935,21 +5935,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 82,
-  "salary": 26000,
+  "employment1y": 75,
+  "salary": 24200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 88,
    "workloadOk": 74,
    "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
+   "wouldChooseAgain": 76,
+   "dropout": 29,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5957,7 +5957,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Fisica",
   "url": "http://www.fisica.unina.it/corso-di-laurea-magistrale-in-fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p143",
@@ -5984,21 +5984,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 82,
-  "salary": 26000,
+  "employment1y": 85,
+  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 88,
    "workloadOk": 74,
    "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
+   "wouldChooseAgain": 81,
+   "dropout": 24,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
+  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6006,7 +6006,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Fisica",
   "url": "https://corsi.unibo.it/laurea/fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p154",
@@ -6055,7 +6055,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Fisica%20e%20Astrofisica",
   "url": "http://www.fis-astro.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p165",
@@ -6082,21 +6082,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 82,
-  "salary": 26000,
+  "employment1y": 75,
+  "salary": 24200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 88,
    "workloadOk": 74,
    "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
+   "wouldChooseAgain": 76,
+   "dropout": 29,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6104,7 +6104,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20Fisiche",
   "url": "http://portale.unipa.it/dipartimenti/dipartimentofisicaechimica/cds/scienzefisiche2124",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p173",
@@ -6131,21 +6131,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 82,
-  "salary": 26000,
+  "employment1y": 75,
+  "salary": 24200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 88,
    "workloadOk": 74,
    "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
+   "wouldChooseAgain": 76,
+   "dropout": 29,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6153,7 +6153,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Fisica",
   "url": "https://www.uniba.it/it/ricerca/dipartimenti/fisica/didattica/corsi-di-laurea/fisica/fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimib-p63",
@@ -6181,21 +6181,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 88,
-  "salary": 27000,
+  "employment1y": 91,
+  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 85,
    "workloadOk": 76,
    "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
+  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6231,21 +6231,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 25000,
+  "employment1y": 96,
+  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
+   "wouldChooseAgain": 85,
+   "dropout": 8,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1400,
+  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6253,7 +6253,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20della%20formazione%20primaria",
   "url": "http://formazioneprimaria.campusnet.unito.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimib-p105",
@@ -6281,21 +6281,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 93,
-  "salary": 25000,
+  "employment1y": 96,
+  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
+   "wouldChooseAgain": 85,
+   "dropout": 8,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "classical",
-  "netMonthly": 1400,
+  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6303,7 +6303,7 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20della%20formazione%20primaria",
   "url": "https://www.formazione.unimib.it/didattica/corsi-di-laurea",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unito-p106",
@@ -6331,21 +6331,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 93,
-  "salary": 25000,
+  "employment1y": 96,
+  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
+   "wouldChooseAgain": 85,
+   "dropout": 8,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1400,
+  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6353,7 +6353,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20dell%27educazione",
   "url": "http://educazione.campusnet.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "sapienza-p116",
@@ -6403,7 +6403,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Scienze%20della%20formazione%20primaria",
   "url": "https://corsidilaurea.uniroma1.it/it/course/30040",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p138",
@@ -6431,21 +6431,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 93,
-  "salary": 25000,
+  "employment1y": 96,
+  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
+   "wouldChooseAgain": 85,
+   "dropout": 8,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "classical",
-  "netMonthly": 1400,
+  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6453,7 +6453,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20della%20formazione%20primaria",
   "url": "http://corsi.unibo.it/Laurea/ScienzeFormazionePrimaria",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p150",
@@ -6503,7 +6503,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Scienze%20della%20formazione%20primaria",
   "url": "http://www.formazioneprimaria.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p160",
@@ -6531,21 +6531,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 93,
-  "salary": 25000,
+  "employment1y": 86,
+  "salary": 23200,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "classical",
-  "netMonthly": 1400,
+  "netMonthly": 1300,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6553,7 +6553,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20della%20formazione%20primaria",
   "url": "https://www.unipa.it/dipartimenti/sc.psicol.pedag.edellaformazione/cds/scienzedellaformazioneprimaria2183/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p170",
@@ -6581,21 +6581,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 93,
-  "salary": 25000,
+  "employment1y": 86,
+  "salary": 23200,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
+   "wouldChooseAgain": 80,
+   "dropout": 13,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "classical",
-  "netMonthly": 1400,
+  "netMonthly": 1300,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6603,7 +6603,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20della%20formazione%20primaria",
   "url": "https://manageweb.ict.uniba.it/ricerca/dipartimenti/forpsicom/didattica/corsi/magistrale-a-ciclo-unico/scienze-formazione-primaria",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unito-p107",
@@ -6631,21 +6631,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 76,
-  "salary": 23000,
+  "employment1y": 79,
+  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
    "teachSat": 84,
    "workloadOk": 78,
    "infraOk": 80,
-   "wouldChooseAgain": 71,
-   "dropout": 18,
+   "wouldChooseAgain": 73,
+   "dropout": 16,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1300,
+  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6653,7 +6653,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Lingue%20e%20culture%20per%20il%20turismo",
   "url": "http://www.lingue.unito.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimib-p108",
@@ -6681,21 +6681,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 76,
-  "salary": 23000,
+  "employment1y": 79,
+  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
    "teachSat": 84,
    "workloadOk": 78,
    "infraOk": 80,
-   "wouldChooseAgain": 71,
-   "dropout": 18,
+   "wouldChooseAgain": 73,
+   "dropout": 16,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "classical",
-  "netMonthly": 1300,
+  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6703,7 +6703,7 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20del%20turismo%20e%20comunit%C3%A0%20locale",
   "url": "https://www.unimib.it/ateneo/dipartimenti/sociologia-e-ricerca-sociale",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "sapienza-p117",
@@ -6753,7 +6753,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Scienze%20del%20turismo%20sostenibile",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33536",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p127",
@@ -6781,21 +6781,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 76,
-  "salary": 23000,
+  "employment1y": 69,
+  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
    "teachSat": 84,
    "workloadOk": 78,
    "infraOk": 80,
-   "wouldChooseAgain": 71,
-   "dropout": 18,
+   "wouldChooseAgain": 68,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "classical",
-  "netMonthly": 1300,
+  "netMonthly": 1210,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6803,7 +6803,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20del%20turismo%20ad%20indirizzo%20manageriale",
   "url": "http://www.dises.unina.it/didattica/corsi-di-laurea/lauree-triennali/1484142-scienze-del-turismo-ad-indirizzo-manageriale/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p161",
@@ -6831,21 +6831,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 76,
-  "salary": 23000,
+  "employment1y": 69,
+  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
    "teachSat": 84,
    "workloadOk": 78,
    "infraOk": 80,
-   "wouldChooseAgain": 71,
-   "dropout": 18,
+   "wouldChooseAgain": 68,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "classical",
-  "netMonthly": 1300,
+  "netMonthly": 1210,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6853,7 +6853,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Turismo%2C%20Territori%20e%20Imprese",
   "url": "https://www.unipa.it/dipartimenti/seas/cds/turismoterritorieimpresesedepa2269",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p175",
@@ -6881,21 +6881,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 76,
-  "salary": 23000,
+  "employment1y": 69,
+  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
    "teachSat": 84,
    "workloadOk": 78,
    "infraOk": 80,
-   "wouldChooseAgain": 71,
-   "dropout": 18,
+   "wouldChooseAgain": 68,
+   "dropout": 21,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "classical",
-  "netMonthly": 1300,
+  "netMonthly": 1210,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6903,7 +6903,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Nuovi%20turismi",
   "url": "https://www.uniba.it/it/corsi/nuovi-turismi/",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unito-p109",
@@ -6931,21 +6931,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 82,
-  "salary": 23000,
+  "employment1y": 85,
+  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
    "teachSat": 85,
    "workloadOk": 77,
    "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6953,7 +6953,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Servizio%20sociale",
   "url": "http://www.didattica-cps.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimib-p110",
@@ -6981,21 +6981,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 82,
-  "salary": 23000,
+  "employment1y": 85,
+  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
    "teachSat": 85,
    "workloadOk": 77,
    "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "classical",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7003,7 +7003,7 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Servizio%20sociale",
   "url": "https://www.unimib.it/servizio-sociale",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "sapienza-p118",
@@ -7053,7 +7053,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Servizio%20sociale",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33572",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p128",
@@ -7081,21 +7081,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 82,
-  "salary": 23000,
+  "employment1y": 75,
+  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
    "teachSat": 85,
    "workloadOk": 77,
    "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
+   "wouldChooseAgain": 72,
+   "dropout": 15,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "classical",
-  "netMonthly": 1350,
+  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7103,7 +7103,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20del%20servizio%20sociale",
   "url": "http://www.scienzepolitiche.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p139",
@@ -7131,21 +7131,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 82,
-  "salary": 23000,
+  "employment1y": 85,
+  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
    "teachSat": 85,
    "workloadOk": 77,
    "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
+   "wouldChooseAgain": 77,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "classical",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7153,7 +7153,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Servizio%20sociale",
   "url": "http://corsi.unibo.it/Laurea/ServizioSociale",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p151",
@@ -7203,7 +7203,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Servizio%20sociale",
   "url": "http://www.serviziosociale.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p162",
@@ -7231,21 +7231,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 82,
-  "salary": 23000,
+  "employment1y": 75,
+  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
    "teachSat": 85,
    "workloadOk": 77,
    "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
+   "wouldChooseAgain": 72,
+   "dropout": 15,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "classical",
-  "netMonthly": 1350,
+  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7253,7 +7253,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Servizio%20sociale",
   "url": "https://www.unipa.it/dipartimenti/cultureesocieta/cds/serviziosocialesedeag2136   https://www.unipa.it/dipartimenti/cultureesocieta/cds/serviziosocialesedepa2137",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p171",
@@ -7281,21 +7281,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 82,
-  "salary": 23000,
+  "employment1y": 75,
+  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
    "teachSat": 85,
    "workloadOk": 77,
    "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
+   "wouldChooseAgain": 72,
+   "dropout": 15,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "classical",
-  "netMonthly": 1350,
+  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7303,7 +7303,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20del%20servizio%20sociale%20e%20sociologia",
   "url": "https://www.uniba.it/it/corsi/cdl-scienze-servizio-sociale-sociologia",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unito-p98",
@@ -7331,21 +7331,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 95,
+  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 88,
+   "dropout": 4,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7353,7 +7353,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Fisioterapia",
   "url": "http://medcto.campusnet.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimib-p99",
@@ -7381,21 +7381,21 @@
    "high": 4100
   },
   "cityRent": 500,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 95,
+  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 88,
+   "dropout": 4,
    "language": "ita",
    "cityVibe": "Green, orderly, a train away from Milan"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7403,7 +7403,7 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Fisioterapia",
   "url": "https://www.medicina.unimib.it/it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimi-p100",
@@ -7431,21 +7431,21 @@
    "high": 3500
   },
   "cityRent": 664,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 95,
+  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 88,
+   "dropout": 4,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7453,7 +7453,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Fisioterapia",
   "url": "https://fisioterapia.cdl.unimi.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "sapienza-p114",
@@ -7503,7 +7503,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Fisioterapia",
   "url": "https://corsidilaurea.uniroma1.it/it/course/30017",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p125",
@@ -7531,21 +7531,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 85,
+  "salary": 25100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 83,
+   "dropout": 9,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7553,7 +7553,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Fisioterapia",
   "url": "http://M78.corsidistudio.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p136",
@@ -7581,21 +7581,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 95,
+  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 88,
+   "dropout": 4,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7603,7 +7603,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Fisioterapia",
   "url": "http://corsi.unibo.it/fisioterapia",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p148",
@@ -7653,7 +7653,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Fisioterapia",
   "url": "http://www.fisioterapia.unifi.it/index.php",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p158",
@@ -7681,21 +7681,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 85,
+  "salary": 25100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 83,
+   "dropout": 9,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7703,7 +7703,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Fisioterapia",
   "url": "http://www.unipa.it/dipartimenti/bi.n.d./cds/fisioterapia2170",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p168",
@@ -7731,21 +7731,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 92,
-  "salary": 27000,
+  "employment1y": 85,
+  "salary": 25100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
    "teachSat": 88,
    "workloadOk": 80,
    "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
+   "wouldChooseAgain": 83,
+   "dropout": 9,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7753,7 +7753,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Fisioterapia",
   "url": "https://www.uniba.it/it/corsi/fisioterapia",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unito-p101",
@@ -7781,21 +7781,21 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 75,
+  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 76,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7803,7 +7803,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://www.triennalepsicologia.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.unito.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimib-p102",
@@ -7831,21 +7831,21 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 75,
+  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 76,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7853,7 +7853,7 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20e%20tecniche%20psicologiche",
   "url": "https://didattica.unimib.it/E2403P",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unimi-p103",
@@ -7881,21 +7881,21 @@
    "high": 3500
   },
   "cityRent": 664,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 75,
+  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 76,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7903,7 +7903,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Scienze%20psicologiche%20per%20la%20prevenzione%20e%20la%20cura",
   "url": "https://scienze-psicologiche.cdl.unimi.it/it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "sapienza-p115",
@@ -7953,7 +7953,7 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Psicologia%20e%20processi%20sociali",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33569",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniroma1.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "federico2-p126",
@@ -7981,21 +7981,21 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 65,
+  "salary": 22300,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 71,
+   "dropout": 15,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8003,7 +8003,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20e%20tecniche%20psicologiche",
   "url": "https://www.studiumanistici.unina.it/corsi/scienze-e-tecniche-psicologiche/",
   "curriculumUrl": null,
-  "dataSource": "https://www.unina.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unibo-p137",
@@ -8031,21 +8031,21 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 75,
+  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 76,
+   "dropout": 10,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8053,7 +8053,7 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://corsi.unibo.it/laurea/ScienzeTecnichePsicologiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibo.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unifi-p149",
@@ -8103,7 +8103,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://www.scienzetecnichepsicologiche.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.unifi.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "unipa-p159",
@@ -8131,21 +8131,21 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 65,
+  "salary": 22300,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 71,
+   "dropout": 15,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8153,7 +8153,7 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://portale.unipa.it/dipartimenti/dipsicologia/cds/scienzeetecnichepsicologiche2121",
   "curriculumUrl": null,
-  "dataSource": "https://www.unipa.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  },
  {
   "id": "uniba-p169",
@@ -8181,21 +8181,21 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 72,
-  "salary": 24000,
+  "employment1y": 65,
+  "salary": 22300,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "teachSat": 87,
    "workloadOk": 78,
    "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
+   "wouldChooseAgain": 71,
+   "dropout": 15,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
+  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8203,6 +8203,6 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20e%20tecniche%20psicologiche",
   "url": "https://manageweb.ict.uniba.it/ricerca/dipartimenti/forpsicom/didattica/corsi/triennali/scienze-tecniche-psicologiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.uniba.it"
+  "dataSource": "https://www.universitaly.it/cerca-corsi"
  }
 ]

@@ -673,6 +673,28 @@ export default function CareerCompass() {
         {stage === "compare" && pair.length === 2 && <Compare />}
       </main>
 
+      {/* ————— Compare bar: appears anywhere two paths are picked, including
+              across different worlds and careers (tester feedback). ————— */}
+      {finalists.length === 2 && stage !== "compare" && (
+        <div className="cc-fade-up fixed bottom-0 left-0 right-0 z-40 px-4 pb-4 pt-3"
+          style={{ background: `linear-gradient(to top, ${T.bg} 65%, transparent)` }}>
+          <div className="max-w-[1500px] mx-auto flex items-center gap-3 rounded-2xl px-4 py-3"
+            style={{ background: T.card, border: `1.5px solid ${T.violet}`, boxShadow: "0 8px 30px rgba(0,0,0,.18)" }}>
+            <div className="min-w-0 flex-1 text-xs" style={{ color: T.grey }}>
+              {pair.map((c) => c?.name).filter(Boolean).join("  vs  ")}
+            </div>
+            <button onClick={() => setFinalists([])} className="text-xs underline shrink-0" style={{ color: T.grey }}>
+              {t("cmp_bar_clear")}
+            </button>
+            <button onClick={() => go("compare")}
+              className="px-5 py-2.5 rounded-full font-bold text-sm text-white shrink-0 transition-transform hover:scale-105"
+              style={{ background: T.grad }}>
+              {t("compare_cta")}
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ————— Sign-in pop-up (save nudge / post-survey) ————— */}
       <AuthModal />
 

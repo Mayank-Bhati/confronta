@@ -102,6 +102,7 @@ export default function Compare() {
                     </div>
                   ))}
                 </div>
+                <p className="text-xs mt-2" style={{ color: T.grey }}>{t("stats_note")}</p>
               </div>
 
               <div className="mt-5">

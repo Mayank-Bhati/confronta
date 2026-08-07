@@ -112,11 +112,6 @@ export default function Paths() {
               );
             })()}
 
-            {finalists.length === 2 && (
-              <button onClick={() => go("compare")} className="cc-glow w-full px-6 py-3.5 rounded-full font-bold text-white transition-transform hover:scale-[1.01]" style={{ background: T.grad, ...display }}>
-                {t("compare_cta")}
-              </button>
-            )}
             {institutions.length > 0 && finalists.length < 2 && (
               <p className="text-xs text-center" style={{ color: T.grey }}>{t("pick_hint")}</p>
             )}

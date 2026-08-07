@@ -25,7 +25,7 @@ export default function Careers() {
                   </div>
                   <div className="flex flex-col items-end gap-2 shrink-0">
                     <span className="text-xs font-semibold" style={{ ...mono, color: scoreColor(c.fit) }}>{t("fit_you", { n: c.fit })}</span>
-                    <button onClick={() => { setCareerId(c.id); setFinalists([]); go("filter"); }}
+                    <button onClick={() => { setCareerId(c.id); go("filter"); }}
                       className="px-4 py-2 rounded-full text-sm font-semibold text-white transition-transform hover:scale-105" style={{ background: T.violet }}>
                       {t("career_explore")}
                     </button>

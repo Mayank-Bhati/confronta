@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useApp } from "../context";
 import { mono, display } from "../constants";
@@ -9,9 +9,14 @@ import { BackLink } from "../ui";
 export default function Worlds() {
   const { T, t, td, rankedWorlds, world, setWorldId, rankedCareers, setCareerId, setFinalists, go, identTitle, scoreColor } = useApp();
 
+  // Until the student picks a tab themselves, the open tab follows the top of
+  // the ranking — otherwise editing interests re-orders the tabs while the
+  // panel below still shows the world that used to be first.
+  const [picked, setPicked] = useState(false);
   useEffect(() => {
-    if (!world && rankedWorlds.length) setWorldId(rankedWorlds[0].id);
-  }, [world, rankedWorlds, setWorldId]);
+    if (picked || !rankedWorlds.length) return;
+    if (world?.id !== rankedWorlds[0].id) setWorldId(rankedWorlds[0].id);
+  }, [picked, world, rankedWorlds, setWorldId]);
 
   const selected = world || rankedWorlds[0];
   return (
@@ -26,7 +31,7 @@ export default function Worlds() {
             {rankedWorlds.map((w) => {
               const on = selected && w.id === selected.id;
               return (
-                <button key={w.id} onClick={() => { setWorldId(w.id); setCareerId(null); }}
+                <button key={w.id} onClick={() => { setPicked(true); setWorldId(w.id); setCareerId(null); }}
                   className="px-3.5 py-2 rounded-full text-sm font-semibold transition-all"
                   style={{
                     border: `1.5px solid ${on ? T.violet : T.line}`,
@@ -42,11 +47,17 @@ export default function Worlds() {
           {selected && (
             <div className="cc-fade-up" key={selected.id}>
               <p className="text-sm" style={{ color: T.grey }}>{td(selected.tagline)}</p>
-              {selected.reasonDim && (
+              {/* Name the interests that actually drive the match; the old
+                  "strong {dim} side" line read the same under every world. */}
+              {selected.reasonTags?.length ? (
+                <p className="text-xs mt-1 font-semibold" style={{ color: T.accent }}>
+                  {t("world_because_tags", { tags: selected.reasonTags.map((tg) => td(tg)).join(", ") })}
+                </p>
+              ) : selected.reasonDim ? (
                 <p className="text-xs mt-1 font-semibold" style={{ color: T.accent }}>
                   {t("world_because", { dim: t(`dim_${selected.reasonDim}`) })}
                 </p>
-              )}
+              ) : null}
               <div className="mt-2" style={{ borderTop: `1px solid ${T.line}` }}>
                 {rankedCareers.map((c) => (
                   <div key={c.id} className="py-6 flex items-start justify-between gap-4 flex-wrap" style={{ borderBottom: `1px solid ${T.line}` }}>
@@ -59,7 +70,7 @@ export default function Worlds() {
                     </div>
                     <div className="flex flex-col items-end gap-2 shrink-0">
                       <span className="text-xs font-semibold" style={{ ...mono, color: scoreColor(c.fit) }}>{t("fit_you", { n: c.fit })}</span>
-                      <button onClick={() => { setCareerId(c.id); setFinalists([]); go("filter"); }}
+                      <button onClick={() => { setCareerId(c.id); go("filter"); }}
                         className="px-4 py-2 rounded-full text-sm font-semibold text-white transition-transform hover:scale-105" style={{ background: T.violet }}>
                         {t("career_explore")}
                       </button>
