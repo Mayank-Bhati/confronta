@@ -220,6 +220,12 @@ WANTED_OCC = {
     "employment_rate": ("Tasso di occupazione", "totale", None),
     "unemployment_rate": ("Tasso di disoccupazione", "first", None),
     "net_pay": ("Retribuzione mensile netta", "totale", (300, 4000)),
+    # Why a low employment rate is not the same as "no jobs": on a three-year
+    # degree most graduates enrol straight into a master's. These three shares
+    # (section 3, "Condizione occupazionale e formativa") make that visible.
+    "working_only": ("Lavorano e non sono iscritti ad una laurea di secondo livello", "first", None),
+    "working_studying": ("Lavorano e sono iscritti ad una laurea di secondo livello", "first", None),
+    "studying_only": ("Non lavorano e sono iscritti ad una laurea di secondo livello", "first", None),
 }
 WANTED_PROF = {
     "would_choose_again": ("Si iscriverebbero di nuovo all'università", "sub", "Sì, allo stesso corso dell'Ateneo"),
