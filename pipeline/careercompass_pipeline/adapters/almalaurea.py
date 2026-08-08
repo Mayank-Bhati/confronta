@@ -347,15 +347,23 @@ if __name__ == "__main__":
         with sync_playwright() as p:
             browser, ctx = _browser(p)
             page = ctx.new_page()
+            # both landings — statistiche.almalaurea.it only answers once the
+            # occupazione page has been visited in this session
             page.goto(f"{PROFILO}?LANG=it", wait_until="domcontentloaded", timeout=60000)
             page.wait_for_timeout(2500)
             _accept_cookies(page)
+            page.goto(f"{OCC}?LANG=it", wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(1500)
             for config, anno in (("occupazione", OCC_YEAR), ("profilo", PROF_YEAR)):
                 url = _query_url(config, ATENEO["unibo"], GRUPPO["economico"], "L", anno)
-                page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                page.wait_for_timeout(1500)
-                lines = _lines(page.content())
-                _dump(f"labels_{config}.txt", "\n".join(f"{i:4} {l}" for i, l in enumerate(lines)))
+                try:
+                    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(1500)
+                    lines = _lines(page.content())
+                    _dump(f"labels_{config}.txt", "\n".join(f"{i:4} {l}" for i, l in enumerate(lines)))
+                    print(f"  {config}: {len(lines)} lines")
+                except Exception as e:
+                    print(f"  {config} FAILED: {str(e)[:140]}")
             browser.close()
     elif cmd == "sample":
         # small run to validate parsing before the full matrix
