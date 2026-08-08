@@ -3,7 +3,7 @@ import React from "react";
 import { useApp } from "../context";
 import { NATURE_KEY, mono, display } from "../constants";
 import { Bar, Section, BackLink, GoogleLink, OfficialLink } from "../ui";
-import { estimateMonthlyCost, prepList, generateNarrative, haversineKm } from "../../../lib/fitEngine-v2";
+import { estimateMonthlyCost, prepList, generateNarrative, haversineKm, realOutcomes } from "../../../lib/fitEngine-v2";
 import COURSES from "../../../data/courses-v2.json";
 
 export default function Compare() {
@@ -93,14 +93,31 @@ export default function Compare() {
               <div className="mt-5">
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("cmp_reality")}</div>
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
-                  {pair.map((c) => (
-                    <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ border: `1px solid ${T.line}` }}>
-                      <div><b>{c.env.wouldChooseAgain}%</b> {t("cmp_again")}</div>
-                      <div><b>{c.env.teachSat}%</b> {t("cmp_teach")}</div>
-                      <div><b>{c.env.dropout}%</b> {t("cmp_drop")}</div>
-                      <div style={{ color: T.grey }}>{td(c.env.cityVibe)}</div>
-                    </div>
-                  ))}
+                  {pair.map((c) => {
+                    const r = realOutcomes(c);
+                    return (
+                      <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ border: `1px solid ${T.line}` }}>
+                        {r ? (
+                          <>
+                            <div><b>{r.employment1y}%</b> {t("cmp_emp_real")}</div>
+                            <div><b>{r.wouldChooseAgain}%</b> {t("cmp_again")}</div>
+                            <div><b>{r.teachSat}%</b> {t("cmp_teach")}</div>
+                            <div><b>{r.onTime}%</b> {t("cmp_ontime")}</div>
+                            <a href={r.sourceOcc} target="_blank" rel="noreferrer" className="inline-block text-xs underline" style={{ color: T.accent }}>
+                              {t("cmp_source_al", { y: r.occYear })}
+                            </a>
+                          </>
+                        ) : (
+                          <div style={{ color: T.grey }}>
+                            {c.outcomes?.status === "its" ? t("cmp_nodata_its")
+                              : c.outcomes?.status === "not_member" ? t("cmp_nodata_member")
+                              : t("cmp_nodata")}
+                          </div>
+                        )}
+                        <div style={{ color: T.grey }}>{td(c.env.cityVibe)}</div>
+                      </div>
+                    );
+                  })}
                 </div>
                 <p className="text-xs mt-2" style={{ color: T.grey }}>{t("stats_note")}</p>
               </div>
@@ -118,7 +135,7 @@ export default function Compare() {
                           {t("cmp_total", { n: est.total.toLocaleString(), b: prefs.budget.toLocaleString() })}
                         </div>
                       ); })()}
-                      <div>{t("cmp_after", { n: c.netMonthly.toLocaleString() })}</div>
+                      <div>{c.careerPay ? t("cmp_after_job", { n: c.careerPay.toLocaleString() }) : ""}</div>
                     </div>
                   ))}
                 </div>

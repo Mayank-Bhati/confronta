@@ -81,12 +81,13 @@ def apply_outcomes():
     al = json.load(open(os.path.join(DATA, "almalaurea.json"), encoding="utf-8"))
     rows = al["rows"]
 
-    # course id → career id
-    career_of = {}
+    # course id → career id, and the career's approximate market pay
+    career_of, career_pay = {}, {}
     for w in worlds["worlds"]:
         for c in w["careers"]:
             for cid in c.get("courses", []):
                 career_of[cid] = c["id"]
+                career_pay[cid] = c.get("netMonthly")
 
     stats = {"matched": 0, "no_row": 0, "not_member": 0, "its": 0, "unmapped": []}
     for course in courses:
@@ -126,11 +127,20 @@ def apply_outcomes():
                 }
                 stats["matched"] += 1
 
+        # Approximate entry pay for the JOB this course leads to. A career-level
+        # market average, identical for every course leading to that job — never
+        # presented as a figure measured at this university.
+        course["careerPay"] = career_pay.get(course["id"])
+
         # The old estimated fields are left in place for now so the running app
         # keeps working; STRIP_ESTIMATES removes them in the same commit that
         # switches the UI over to `outcomes`. Nothing reads both.
         if STRIP_ESTIMATES:
-            for dead in ("employment1y", "salary", "selectivity", "mastersAccess", "handsOn"):
+            # Only MEASURED claims about this university are removed.
+            # handsOn / mastersAccess / mathLoad / selectivity describe the
+            # qualification type (an ITS is vocational, a triennale leads to a
+            # master's) and stay — they are classification, not measurement.
+            for dead in ("employment1y", "salary"):
                 course.pop(dead, None)
             env = course.get("env") or {}
             for dead in ("teachSat", "workloadOk", "infraOk", "wouldChooseAgain", "dropout"):

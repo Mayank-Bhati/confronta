@@ -24,21 +24,13 @@
    "high": 0
   },
   "cityRent": 550,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Milan's industrial north — metro to the centre"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -49,7 +41,8 @@
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "its-lomb-mecc-p73",
@@ -76,21 +69,13 @@
    "high": 0
   },
   "cityRent": 550,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Milan's industrial north — metro to the centre"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -101,7 +86,8 @@
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "polimi-p3",
@@ -129,21 +115,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Analisi Matematica 1",
    "Economia E Organizzazione Aziendale",
@@ -284,7 +262,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1770
  },
  {
   "id": "its-rizzoli-p89",
@@ -312,21 +291,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -337,7 +308,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1770
  },
  {
   "id": "polito-p32",
@@ -364,21 +336,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "both",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -509,7 +473,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "its-lomb-mecc-p79",
@@ -536,21 +501,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -561,7 +518,8 @@
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "polito-p50",
@@ -589,21 +547,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "both",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -734,7 +684,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1610
  },
  {
   "id": "polito-p47",
@@ -762,21 +713,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Elementi di Materiali e Tecnologie per l'industria manifatturiera",
    "Elementi di economia e organizzazione aziendale",
@@ -903,7 +846,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1610
  },
  {
   "id": "polimi-p13",
@@ -931,21 +875,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Analisi Matematica 1",
    "Elettrotecnica",
@@ -1046,7 +982,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "polito-p39",
@@ -1074,21 +1011,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "both",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -1207,7 +1136,8 @@
    "status": "no_survey",
    "group": "ict",
    "level": "L"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unimib-p58",
@@ -1235,21 +1165,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1274,7 +1196,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "its-rizzoli-p80",
@@ -1302,21 +1225,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1327,7 +1242,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "sapienza-p111",
@@ -1355,21 +1271,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 93,
-  "salary": 30000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1394,7 +1302,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "federico2-p122",
@@ -1422,21 +1331,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 86,
-  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 73,
-   "dropout": 26,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "scientific",
-  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1461,7 +1362,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unibo-p133",
@@ -1489,21 +1391,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1528,7 +1422,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unifi-p145",
@@ -1556,21 +1451,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 93,
-  "salary": 30000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1595,7 +1482,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unipa-p155",
@@ -1623,21 +1511,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 86,
-  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 73,
-   "dropout": 26,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "scientific",
-  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1662,7 +1542,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "uniba-p166",
@@ -1690,21 +1571,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 86,
-  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 73,
-   "dropout": 26,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "scientific",
-  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -1729,7 +1602,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "polimi-p23",
@@ -1757,21 +1631,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra Lineare E Geometria",
    "Analisi Matematica I",
@@ -1944,7 +1810,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "polito-p53",
@@ -1972,21 +1839,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -2101,7 +1960,8 @@
    "status": "no_survey",
    "group": "ict",
    "level": "L"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unimib-p60",
@@ -2129,21 +1989,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2168,7 +2020,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "its-rizzoli-p87",
@@ -2196,21 +2049,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2221,7 +2066,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "sapienza-p112",
@@ -2249,21 +2095,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 88,
-  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2288,7 +2126,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "federico2-p123",
@@ -2316,21 +2155,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2355,7 +2186,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unibo-p134",
@@ -2383,21 +2215,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2422,7 +2246,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unifi-p146",
@@ -2450,21 +2275,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 88,
-  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2489,7 +2306,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unipa-p156",
@@ -2517,21 +2335,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2556,7 +2366,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "uniba-p174",
@@ -2584,21 +2395,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2623,7 +2426,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "its-rizzoli-p86",
@@ -2650,21 +2454,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2675,7 +2471,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1660
  },
  {
   "id": "its-rizzoli-p85",
@@ -2702,21 +2499,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2727,7 +2516,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "its-rizzoli-p83",
@@ -2754,21 +2544,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2779,7 +2561,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "unito-p71",
@@ -2806,21 +2589,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 98,
-  "salary": 27000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 82,
-   "dropout": 8,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "mixed",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2845,7 +2620,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "sapienza-p113",
@@ -2872,21 +2648,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 95,
-  "salary": 26000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2911,7 +2679,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "federico2-p124",
@@ -2938,21 +2707,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 88,
-  "salary": 24200,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 77,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -2977,7 +2738,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "unibo-p135",
@@ -3004,21 +2766,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 98,
-  "salary": 27000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 82,
-   "dropout": 8,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3043,7 +2797,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "unifi-p147",
@@ -3070,21 +2825,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 95,
-  "salary": 26000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 80,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "mixed",
-  "netMonthly": 1450,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3109,7 +2856,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "unipa-p157",
@@ -3136,21 +2884,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 88,
-  "salary": 24200,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 77,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3175,7 +2915,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "uniba-p167",
@@ -3202,21 +2943,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 88,
-  "salary": 24200,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 83,
-   "workloadOk": 74,
-   "infraOk": 80,
-   "wouldChooseAgain": 77,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3241,7 +2974,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "polimi-p4",
@@ -3269,21 +3003,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Analisi Matematica 1",
    "Analisi Matematica 2",
@@ -3420,7 +3146,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "polito-p33",
@@ -3448,21 +3175,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -3597,7 +3316,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "its-lomb-mecc-p77",
@@ -3625,21 +3345,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -3650,7 +3362,8 @@
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "polimi-p19",
@@ -3678,21 +3391,13 @@
    "high": 3943
   },
   "cityRent": 430,
-  "employment1y": 90,
-  "salary": 26000,
   "mastersAccess": 4,
   "handsOn": 4,
   "env": {
-   "teachSat": 86,
-   "workloadOk": 75,
-   "infraOk": 84,
-   "wouldChooseAgain": 81,
-   "dropout": 14,
    "language": "eng",
    "cityVibe": "Lakeside campus town, quiet and outdoorsy"
   },
   "nature": "mixed",
-  "netMonthly": 1510,
   "curriculum": [
    "Architecture Of Embedded And Connected Systems",
    "Basics Of Programming",
@@ -3797,7 +3502,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "polimi-p9",
@@ -3824,21 +3530,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 90,
-  "salary": 26000,
   "mastersAccess": 4,
   "handsOn": 4,
   "env": {
-   "teachSat": 86,
-   "workloadOk": 75,
-   "infraOk": 84,
-   "wouldChooseAgain": 81,
-   "dropout": 14,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1510,
   "curriculum": [
    "Culture Visive E Sistemi Iconografici",
    "Curve E Superfici Per Il Design",
@@ -3927,7 +3625,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "polimi-p28",
@@ -3954,21 +3653,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 90,
-  "salary": 26000,
   "mastersAccess": 4,
   "handsOn": 4,
   "env": {
-   "teachSat": 86,
-   "workloadOk": 75,
-   "infraOk": 84,
-   "wouldChooseAgain": 81,
-   "dropout": 14,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1510,
   "curriculum": [
    "Curve E Superfici Per Il Design",
    "Laboratorio Del Disegno",
@@ -4049,7 +3740,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "polito-p36",
@@ -4077,21 +3769,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -4210,7 +3894,8 @@
    "status": "no_survey",
    "group": "arte_design",
    "level": "L"
-  }
+  },
+  "careerPay": 1220
  },
  {
   "id": "its-rizzoli-p92",
@@ -4238,21 +3923,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4263,7 +3940,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1220
  },
  {
   "id": "unimib-p62",
@@ -4291,21 +3969,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4330,7 +4000,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "bocconi-p64",
@@ -4358,21 +4029,13 @@
    "high": 17000
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "eng",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4383,7 +4046,8 @@
   "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "its-rizzoli-p91",
@@ -4411,21 +4075,13 @@
    "high": 0
   },
   "cityRent": 664,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4436,7 +4092,8 @@
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "federico2-p129",
@@ -4464,21 +4121,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4503,7 +4152,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "unibo-p140",
@@ -4531,21 +4181,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4570,7 +4212,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "unipa-p163",
@@ -4598,21 +4241,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4637,7 +4272,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "uniba-p172",
@@ -4665,21 +4301,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4704,7 +4332,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "bocconi-p65",
@@ -4731,21 +4360,13 @@
    "high": 17000
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "eng",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4756,7 +4377,8 @@
   "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1660
  },
  {
   "id": "unimib-p61",
@@ -4784,21 +4406,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4823,7 +4437,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "sapienza-p121",
@@ -4851,21 +4466,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 88,
-  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4890,7 +4497,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "federico2-p130",
@@ -4918,21 +4526,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 81,
-  "salary": 25100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 75,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1440,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -4957,7 +4557,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unibo-p141",
@@ -4985,21 +4586,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5024,7 +4617,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unifi-p152",
@@ -5052,21 +4646,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 88,
-  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 78,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "mixed",
-  "netMonthly": 1550,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5091,7 +4677,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "bocconi-p68",
@@ -5119,21 +4706,13 @@
    "high": 17000
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "eng",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5144,7 +4723,8 @@
   "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 0
  },
  {
   "id": "polito-p44",
@@ -5172,21 +4752,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -5317,7 +4889,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "polimi-p12",
@@ -5345,21 +4918,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Analisi E Geometria 1",
    "Analisi E Geometria 2",
@@ -5442,7 +5007,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "its-energia-pi-p94",
@@ -5470,21 +5036,13 @@
    "high": 0
   },
   "cityRent": 525,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5495,7 +5053,8 @@
   "dataSource": "https://its-energiapiemonte.it/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "unibo-p144",
@@ -5523,21 +5082,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5562,7 +5113,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1440
  },
  {
   "id": "polito-p46",
@@ -5590,21 +5142,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -5735,7 +5279,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "polimi-p15",
@@ -5763,21 +5308,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "--",
    "Geotecnica",
@@ -5810,7 +5347,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "its-energia-pi-p95",
@@ -5838,21 +5376,13 @@
    "high": 0
   },
   "cityRent": 525,
-  "employment1y": 87,
-  "salary": 27000,
   "mastersAccess": 1,
   "handsOn": 5,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 82,
-   "infraOk": 83,
-   "wouldChooseAgain": 87,
-   "dropout": 25,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "technical-practical",
-  "netMonthly": 1510,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5863,7 +5393,8 @@
   "dataSource": "https://its-energiapiemonte.it/",
   "outcomes": {
    "status": "its"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "sapienza-p119",
@@ -5891,21 +5422,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 93,
-  "salary": 30000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5930,7 +5453,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "federico2-p131",
@@ -5958,21 +5482,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 86,
-  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 73,
-   "dropout": 26,
    "language": "eng",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "scientific",
-  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -5997,7 +5513,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unibo-p142",
@@ -6025,21 +5542,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6064,7 +5573,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unifi-p153",
@@ -6092,21 +5602,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 93,
-  "salary": 30000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 23,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "scientific",
-  "netMonthly": 1700,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6131,7 +5633,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "unipa-p164",
@@ -6159,21 +5662,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 86,
-  "salary": 27900,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 73,
-   "dropout": 26,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "scientific",
-  "netMonthly": 1580,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6198,7 +5693,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1550
  },
  {
   "id": "polito-p35",
@@ -6226,21 +5722,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -6371,7 +5859,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "polimi-p26",
@@ -6398,21 +5887,13 @@
    "high": 3943
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra Lineare",
    "Analisi Matematica I",
@@ -6499,7 +5980,8 @@
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
    "status": "not_member"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "polito-p51",
@@ -6526,21 +6008,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 31200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 70,
-   "infraOk": 85,
-   "wouldChooseAgain": 78,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "scientific",
-  "netMonthly": 1770,
   "curriculum": [
    "Algebra lineare e geometria",
    "Analisi matematica I",
@@ -6671,7 +6145,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unimib-p59",
@@ -6698,21 +6173,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 85,
-  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 81,
-   "dropout": 24,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "scientific",
-  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6737,7 +6204,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "sapienza-p120",
@@ -6764,21 +6232,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 82,
-  "salary": 26000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6803,7 +6263,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "federico2-p132",
@@ -6830,21 +6291,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 75,
-  "salary": 24200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 29,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "scientific",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6869,7 +6322,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unibo-p143",
@@ -6896,21 +6350,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 85,
-  "salary": 27000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 81,
-   "dropout": 24,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "scientific",
-  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -6935,7 +6381,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unifi-p154",
@@ -6962,21 +6409,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 82,
-  "salary": 26000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 79,
-   "dropout": 26,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "scientific",
-  "netMonthly": 1500,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7001,7 +6440,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unipa-p165",
@@ -7028,21 +6468,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 75,
-  "salary": 24200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 29,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "scientific",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7067,7 +6499,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "uniba-p173",
@@ -7094,21 +6527,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 75,
-  "salary": 24200,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 74,
-   "infraOk": 85,
-   "wouldChooseAgain": 76,
-   "dropout": 29,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "scientific",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7133,7 +6558,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unimib-p63",
@@ -7161,21 +6587,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 91,
-  "salary": 28100,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 76,
-   "infraOk": 86,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1610,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7200,7 +6618,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1380
  },
  {
   "id": "unito-p104",
@@ -7228,21 +6647,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 85,
-   "dropout": 8,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7267,7 +6678,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unimib-p105",
@@ -7295,21 +6707,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 96,
-  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 85,
-   "dropout": 8,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "classical",
-  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7334,7 +6738,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70132&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70132&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unito-p106",
@@ -7362,21 +6767,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 96,
-  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 85,
-   "dropout": 8,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7401,7 +6798,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "sapienza-p116",
@@ -7429,21 +6827,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 93,
-  "salary": 25000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "classical",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7468,7 +6858,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70026&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70026&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unibo-p138",
@@ -7496,21 +6887,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 96,
-  "salary": 26000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 85,
-   "dropout": 8,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "classical",
-  "netMonthly": 1460,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7535,7 +6918,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70003&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70003&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unifi-p150",
@@ -7563,21 +6947,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 93,
-  "salary": 25000,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 83,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "classical",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7602,7 +6978,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70010&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70010&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unipa-p160",
@@ -7630,21 +7007,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 86,
-  "salary": 23200,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "classical",
-  "netMonthly": 1300,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7669,7 +7038,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70020&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70020&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "uniba-p170",
@@ -7697,21 +7067,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 86,
-  "salary": 23200,
   "mastersAccess": 1,
   "handsOn": 4,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 81,
-   "wouldChooseAgain": 80,
-   "dropout": 13,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "classical",
-  "netMonthly": 1300,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7736,7 +7098,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70002&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70002&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unito-p107",
@@ -7764,21 +7127,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 79,
-  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 78,
-   "infraOk": 80,
-   "wouldChooseAgain": 73,
-   "dropout": 16,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7803,7 +7158,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=4&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=4&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unimib-p108",
@@ -7831,21 +7187,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 79,
-  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 78,
-   "infraOk": 80,
-   "wouldChooseAgain": 73,
-   "dropout": 16,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "classical",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7870,7 +7218,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "sapienza-p117",
@@ -7898,21 +7247,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 76,
-  "salary": 23000,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 78,
-   "infraOk": 80,
-   "wouldChooseAgain": 71,
-   "dropout": 18,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "classical",
-  "netMonthly": 1300,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -7937,7 +7278,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "federico2-p127",
@@ -7965,21 +7307,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 69,
-  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 78,
-   "infraOk": 80,
-   "wouldChooseAgain": 68,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "classical",
-  "netMonthly": 1210,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8004,7 +7338,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unipa-p161",
@@ -8032,21 +7367,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 69,
-  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 78,
-   "infraOk": 80,
-   "wouldChooseAgain": 68,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "classical",
-  "netMonthly": 1210,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8071,7 +7398,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "uniba-p175",
@@ -8099,21 +7427,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 69,
-  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 3,
   "env": {
-   "teachSat": 84,
-   "workloadOk": 78,
-   "infraOk": 80,
-   "wouldChooseAgain": 68,
-   "dropout": 21,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "classical",
-  "netMonthly": 1210,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8138,7 +7458,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unito-p109",
@@ -8166,21 +7487,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 85,
-  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 77,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "classical",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8205,7 +7518,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "unimib-p110",
@@ -8233,21 +7547,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 85,
-  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 77,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "classical",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8272,7 +7578,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "sapienza-p118",
@@ -8300,21 +7607,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 82,
-  "salary": 23000,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "classical",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8339,7 +7638,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "federico2-p128",
@@ -8367,21 +7667,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 75,
-  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 72,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "classical",
-  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8406,7 +7698,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "unibo-p139",
@@ -8434,21 +7727,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 85,
-  "salary": 23900,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 77,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "classical",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8473,7 +7758,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "unifi-p151",
@@ -8501,21 +7787,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 82,
-  "salary": 23000,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 75,
-   "dropout": 12,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "classical",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8540,7 +7818,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "unipa-p162",
@@ -8568,21 +7847,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 75,
-  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 72,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "classical",
-  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8607,7 +7878,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "uniba-p171",
@@ -8635,21 +7907,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 75,
-  "salary": 21400,
   "mastersAccess": 3,
   "handsOn": 4,
   "env": {
-   "teachSat": 85,
-   "workloadOk": 77,
-   "infraOk": 79,
-   "wouldChooseAgain": 72,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "classical",
-  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8674,7 +7938,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1270
  },
  {
   "id": "unito-p98",
@@ -8702,21 +7967,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 95,
-  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 88,
-   "dropout": 4,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "mixed",
-  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8741,7 +7998,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unimib-p99",
@@ -8769,21 +8027,13 @@
    "high": 4100
   },
   "cityRent": 500,
-  "employment1y": 95,
-  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 88,
-   "dropout": 4,
    "language": "ita",
    "cityVibe": "Green, orderly, a train away from Milan"
   },
   "nature": "mixed",
-  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8808,7 +8058,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unimi-p100",
@@ -8836,21 +8087,13 @@
    "high": 3500
   },
   "cityRent": 664,
-  "employment1y": 95,
-  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 88,
-   "dropout": 4,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8875,7 +8118,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70015&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70015&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "sapienza-p114",
@@ -8903,21 +8147,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 92,
-  "salary": 27000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -8942,7 +8178,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "federico2-p125",
@@ -8970,21 +8207,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 85,
-  "salary": 25100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 83,
-   "dropout": 9,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9009,7 +8238,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unibo-p136",
@@ -9037,21 +8267,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 95,
-  "salary": 28100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 88,
-   "dropout": 4,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1560,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9076,7 +8298,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unifi-p148",
@@ -9104,21 +8327,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 92,
-  "salary": 27000,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 86,
-   "dropout": 6,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "mixed",
-  "netMonthly": 1500,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9143,7 +8358,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unipa-p158",
@@ -9171,21 +8387,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 85,
-  "salary": 25100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 83,
-   "dropout": 9,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9210,7 +8418,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "uniba-p168",
@@ -9238,21 +8447,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 85,
-  "salary": 25100,
   "mastersAccess": 2,
   "handsOn": 5,
   "env": {
-   "teachSat": 88,
-   "workloadOk": 80,
-   "infraOk": 82,
-   "wouldChooseAgain": 83,
-   "dropout": 9,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9277,7 +8478,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1500
  },
  {
   "id": "unito-p101",
@@ -9305,21 +8507,13 @@
    "high": 2800
   },
   "cityRent": 525,
-  "employment1y": 75,
-  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 76,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9344,7 +8538,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unimib-p102",
@@ -9372,21 +8567,13 @@
    "high": 4100
   },
   "cityRent": 664,
-  "employment1y": 75,
-  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 76,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9411,7 +8598,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unimi-p103",
@@ -9439,21 +8627,13 @@
    "high": 3500
   },
   "cityRent": 664,
-  "employment1y": 75,
-  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 76,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9466,7 +8646,8 @@
    "status": "no_survey",
    "group": "psicologico",
    "level": "L"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "sapienza-p115",
@@ -9494,21 +8675,13 @@
    "high": 2900
   },
   "cityRent": 600,
-  "employment1y": 72,
-  "salary": 24000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9533,7 +8706,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "federico2-p126",
@@ -9561,21 +8735,13 @@
    "high": 3000
   },
   "cityRent": 450,
-  "employment1y": 65,
-  "salary": 22300,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 71,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
   "nature": "mixed",
-  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9600,7 +8766,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unibo-p137",
@@ -9628,21 +8795,13 @@
    "high": 3500
   },
   "cityRent": 655,
-  "employment1y": 75,
-  "salary": 25000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 76,
-   "dropout": 10,
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
   "nature": "mixed",
-  "netMonthly": 1400,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9667,7 +8826,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unifi-p149",
@@ -9695,21 +8855,13 @@
    "high": 3000
   },
   "cityRent": 620,
-  "employment1y": 72,
-  "salary": 24000,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 74,
-   "dropout": 12,
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
   "nature": "mixed",
-  "netMonthly": 1350,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9734,7 +8886,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "unipa-p159",
@@ -9762,21 +8915,13 @@
    "high": 2600
   },
   "cityRent": 350,
-  "employment1y": 65,
-  "salary": 22300,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 71,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
   "nature": "mixed",
-  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9801,7 +8946,8 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  },
  {
   "id": "uniba-p169",
@@ -9829,21 +8975,13 @@
    "high": 2700
   },
   "cityRent": 400,
-  "employment1y": 65,
-  "salary": 22300,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
-   "teachSat": 87,
-   "workloadOk": 78,
-   "infraOk": 83,
-   "wouldChooseAgain": 71,
-   "dropout": 15,
    "language": "ita",
    "cityVibe": "Seaside, growing, affordable"
   },
   "nature": "mixed",
-  "netMonthly": 1260,
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -9868,6 +9006,7 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
-  }
+  },
+  "careerPay": 1330
  }
 ]

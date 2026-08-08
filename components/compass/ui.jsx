@@ -2,7 +2,7 @@ import React from "react";
 
 import { AppCtx } from "./context";
 import { NATURE_KEY, mono, display, natureStyleFor } from "./constants";
-import { estimateMonthlyCost } from "../../lib/fitEngine-v2";
+import { estimateMonthlyCost, realOutcomes } from "../../lib/fitEngine-v2";
 
 
 export function PeopleIcon({ size = 18, color = "currentColor" }) {
@@ -88,6 +88,7 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
   const fees = c.costByIsee?.[profile?.isee || "mid"];
   // cost stat is a 3-way toggle (tester feedback: "distinguish taxes from
   // living costs with a click"): fees/yr → living/mo → all-in/mo
+  const real = realOutcomes(c);
   const costView = prefs?.costView || "fees";
   const est = estimateMonthlyCost(c, envPrefs || { isee: profile?.isee, awayFromHome: true }, homeCity);
   const cycleCost = (e) => {
@@ -158,16 +159,22 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
       {/* Statistics strip — big, scannable, per tester feedback */}
       <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
         <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.green, letterSpacing: "-.02em" }}>{c.employment1y}%</div>
-          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_emp")}</div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: real ? T.green : T.grey, letterSpacing: "-.02em" }}>
+            {real ? `${real.employment1y}%` : "—"}
+          </div>
+          <div style={{ fontSize: 11, color: T.grey }}>{real ? t("stat_emp") : t("stat_nodata")}</div>
         </div>
         <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.ink, letterSpacing: "-.02em" }}>~€{Math.round(c.netMonthly / 100) / 10}k</div>
-          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_net")}</div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.ink, letterSpacing: "-.02em" }}>
+            {c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"}
+          </div>
+          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_net_job")}</div>
         </div>
         <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: c.env.dropout >= 22 ? T.amber : T.ink, letterSpacing: "-.02em" }}>{c.env.dropout}%</div>
-          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_drop")}</div>
+          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: real && real.onTime < 65 ? T.amber : T.ink, letterSpacing: "-.02em" }}>
+            {real && real.onTime != null ? `${real.onTime}%` : "—"}
+          </div>
+          <div style={{ fontSize: 11, color: T.grey }}>{real && real.onTime != null ? t("stat_ontime") : t("stat_nodata")}</div>
         </div>
         <button onClick={cycleCost} className="text-left" title={t("stat_cost_hint")}>
           <div className="font-semibold" style={{ ...mono, fontSize: 21, color: costView === "fees" && fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{costStat.n}</div>
