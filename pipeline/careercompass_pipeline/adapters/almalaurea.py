@@ -255,20 +255,28 @@ def _lines(html):
     return [l.strip() for l in txt.split("\n") if l.strip()]
 
 
-def _find(lines, label, start=0):
+def _find_all(lines, label):
+    """Every line index matching `label`.
+
+    The results page renders each section twice — an empty template block and
+    then the populated one — so a parser that stops at the first match reads
+    dashes and reports "no data" for figures that are actually published.
+    """
     lab = label.lower()
-    for i in range(start, len(lines)):
-        if lab in lines[i].lower():
-            return i
-    return -1
+    return [i for i, l in enumerate(lines) if lab in l.lower()]
 
 
 def _pick(lines, spec, window=14):
-    """Read one figure using the layout its section actually uses."""
+    """Read one figure, trying every block the label appears in."""
     label, mode, extra = spec
-    i = _find(lines, label)
-    if i < 0:
-        return None
+    for i in _find_all(lines, label):
+        v = _pick_at(lines, i, mode, extra, window)
+        if v is not None:
+            return v
+    return None
+
+
+def _pick_at(lines, i, mode, extra, window):
     chunk = lines[i + 1:i + 1 + window]
 
     if mode == "totale":
