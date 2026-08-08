@@ -210,18 +210,24 @@ GRUPPO = {
 OCC_YEAR = 2024      # latest "Condizione occupazionale" survey
 PROF_YEAR = 2025     # latest "Profilo dei laureati" survey
 
-# Numbers we want, and the label that precedes them on the results page.
-# Values sit in the lines that follow the label (Uomini / Donne / Totale).
+# Field → (label on the page, how to read the value). Labels verified against a
+# real result page (Bologna, economics, triennale) on 2026-08-07.
+#   totale  — label then Uomini/Donne/Totale, take Totale
+#   likert  — label then a "Decisamente sì / Più sì che no / ..." breakdown;
+#             the published "% satisfied" is the sum of the two positive bars
+#   sub     — label then a named sub-row, take the value after that sub-row
 WANTED_OCC = {
-    "employment_rate": "Tasso di occupazione",
-    "unemployment_rate": "Tasso di disoccupazione",
-    "net_pay": "Retribuzione mensile netta",
+    "employment_rate": ("Tasso di occupazione", "totale", None),
+    "unemployment_rate": ("Tasso di disoccupazione", "first", None),
+    "net_pay": ("Retribuzione mensile netta", "totale", (300, 4000)),
 }
 WANTED_PROF = {
-    "would_choose_again": "Si iscriverebbe di nuovo",
-    "teaching_satisfaction": "rapporti con i docenti",
-    "on_time": "Laureati in corso",
+    "would_choose_again": ("Si iscriverebbero di nuovo all'università", "sub", "Sì, allo stesso corso dell'Ateneo"),
+    "course_satisfaction": ("Sono complessivamente soddisfatti del corso di laurea", "likert", None),
+    "teaching_satisfaction": ("Sono soddisfatti dei rapporti con i docenti in generale", "likert", None),
+    "on_time": ("Regolarità negli studi", "sub", "In corso"),
 }
+POSITIVE_BARS = ("decisamente sì", "più sì che no")
 
 
 def _num(s):
@@ -243,20 +249,61 @@ def _lines(html):
     return [l.strip() for l in txt.split("\n") if l.strip()]
 
 
-def _pick(lines, label, window=8):
-    """Find `label`, then return the value after 'Totale' (or the first number)."""
-    for i, l in enumerate(lines):
-        if label.lower() in l.lower():
-            chunk = lines[i + 1:i + 1 + window]
-            for j, c in enumerate(chunk):
-                if c.strip().lower() == "totale" and j + 1 < len(chunk):
-                    v = _num(chunk[j + 1])
-                    if v is not None:
-                        return v
-            for c in chunk:
-                v = _num(c)
+def _find(lines, label, start=0):
+    lab = label.lower()
+    for i in range(start, len(lines)):
+        if lab in lines[i].lower():
+            return i
+    return -1
+
+
+def _pick(lines, spec, window=14):
+    """Read one figure using the layout its section actually uses."""
+    label, mode, extra = spec
+    i = _find(lines, label)
+    if i < 0:
+        return None
+    chunk = lines[i + 1:i + 1 + window]
+
+    if mode == "totale":
+        for j, c in enumerate(chunk):
+            if c.strip().lower() == "totale" and j + 1 < len(chunk):
+                v = _num(chunk[j + 1])
+                if v is None:
+                    return None
+                if extra and not (extra[0] <= v <= extra[1]):
+                    return None       # out of plausible range → treat as absent
+                return v
+        return None
+
+    if mode == "likert":
+        # sum the two positive bars — AlmaLaurea's published "% satisfied".
+        # Each bar is taken once: the window would otherwise spill into the
+        # next question and produce totals above 100.
+        seen, total = set(), None
+        for j, c in enumerate(chunk):
+            key = c.strip().lower()
+            if key in POSITIVE_BARS and key not in seen and j + 1 < len(chunk):
+                v = _num(chunk[j + 1])
                 if v is not None:
-                    return v
+                    seen.add(key)
+                    total = v if total is None else total + v
+            if len(seen) == len(POSITIVE_BARS):
+                break
+        return round(total, 1) if total is not None else None
+
+    if mode == "first":
+        for c in chunk:
+            v = _num(c)
+            if v is not None:
+                return v
+        return None
+
+    if mode == "sub":
+        for j, c in enumerate(chunk):
+            if extra.lower() in c.lower() and j + 1 < len(chunk):
+                return _num(chunk[j + 1])
+        return None
     return None
 
 
@@ -308,7 +355,7 @@ def ingest(combos=None, delay=1.2):
                     page.goto(url, wait_until="domcontentloaded", timeout=60000)
                     page.wait_for_timeout(1200)
                     lines = _lines(page.content())
-                    got = {k: _pick(lines, lab) for k, lab in wanted.items()}
+                    got = {k: _pick(lines, spec) for k, spec in wanted.items()}
                     entry.update({k: v for k, v in got.items()})
                     entry[f"{config}_year"] = anno
                     entry[f"{config}_source"] = url
