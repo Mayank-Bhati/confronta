@@ -166,9 +166,10 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
         </div>
         <div>
           <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.ink, letterSpacing: "-.02em" }}>
-            {c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"}
+            {real?.netPay ? `~€${Math.round(real.netPay / 100) / 10}k`
+              : c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"}
           </div>
-          <div style={{ fontSize: 11, color: T.grey }}>{t("stat_net_job")}</div>
+          <div style={{ fontSize: 11, color: T.grey }}>{real?.netPay ? t("stat_net_real") : t("stat_net_job")}</div>
         </div>
         <div>
           <div className="font-semibold" style={{ ...mono, fontSize: 21, color: real && real.onTime < 65 ? T.amber : T.ink, letterSpacing: "-.02em" }}>
@@ -181,6 +182,11 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           <div style={{ fontSize: 11, color: T.accent, textDecoration: "underline", textDecorationStyle: "dotted" }}>{costStat.label} ↺</div>
         </button>
       </div>
+      {real?.continuingMasters != null && (
+        <div className="mt-2 text-xs" style={{ color: T.accent }}>
+          {t("stat_masters_note", { p: real.continuingMasters })}
+        </div>
+      )}
       {showFit && c.envFit && (
         <div className="mt-2.5 text-xs space-y-0.5" style={{ color: T.grey }}>
           {c.envFit.reasons.slice(0, 2).map((r, i) => <div key={i}>· {r}</div>)}

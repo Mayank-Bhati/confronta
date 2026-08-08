@@ -117,6 +117,12 @@ def apply_outcomes():
                     "courseSat": row.get("course_satisfaction"),
                     "onTime": row.get("on_time"),
                     "netPay": row.get("net_pay"),
+                    # Why a low "working" share is not bad news on a 3-year
+                    # degree: most graduates enrol straight into a master's.
+                    "continuingMasters": (
+                        None if row.get("studying_only") is None and row.get("working_studying") is None
+                        else round((row.get("studying_only") or 0) + (row.get("working_studying") or 0), 1)),
+                    "workingOnly": row.get("working_only"),
                     "group": group, "level": level,
                     "occYear": row.get("occupazione_year"),
                     "profYear": row.get("profilo_year"),
