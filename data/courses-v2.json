@@ -46,7 +46,10 @@
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Factory%20Automation",
   "url": "https://www.itslombardiameccatronica.it/corsi/#factory-automation",
   "curriculumUrl": null,
-  "dataSource": "https://www.itslombardiameccatronica.it/corsi/"
+  "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "its-lomb-mecc-p73",
@@ -95,7 +98,10 @@
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Process%20Automation",
   "url": "https://www.itslombardiameccatronica.it/corsi/#process-automation",
   "curriculumUrl": null,
-  "dataSource": "https://www.itslombardiameccatronica.it/corsi/"
+  "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "polimi-p3",
@@ -275,7 +281,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Automation%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/automation-engineering",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=519&ac_ins=0&k_indir=A1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "its-rizzoli-p89",
@@ -325,7 +334,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20AI%20%26%20Robotics%20for%20Automation%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#ai-robotics-for-automation-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "polito-p32",
@@ -480,7 +492,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Automotive%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/automotive-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/automotive-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.7,
+   "unemployment": 15.0,
+   "wouldChooseAgain": 73.7,
+   "teachSat": 81.9,
+   "courseSat": 88.4,
+   "onTime": 55.7,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "its-lomb-mecc-p79",
@@ -529,7 +558,10 @@
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Automotive%20Tech%20Service%20Engineering",
   "url": "https://www.itslombardiameccatronica.it/corsi/#automotive-tech-service-engineering",
   "curriculumUrl": null,
-  "dataSource": "https://www.itslombardiameccatronica.it/corsi/"
+  "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "polito-p50",
@@ -685,7 +717,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Mechanical%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mechanical-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mechanical-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.7,
+   "unemployment": 15.0,
+   "wouldChooseAgain": 73.7,
+   "teachSat": 81.9,
+   "courseSat": 88.4,
+   "onTime": 55.7,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polito-p47",
@@ -837,7 +886,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Industrial%20Manufacturing%20Technologies",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/industrial-manufacturing-technologies",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/industrial-manufacturing-technologies/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.7,
+   "unemployment": 15.0,
+   "wouldChooseAgain": 73.7,
+   "teachSat": 81.9,
+   "courseSat": 88.4,
+   "onTime": 55.7,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polimi-p13",
@@ -977,7 +1043,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Engineering%20of%20Computing%20Systems",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/engineering-of-computing-systems",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=531&ac_ins=0&k_indir=IT1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polito-p39",
@@ -1133,7 +1202,12 @@
   "googleQuery": "Politecnico%20di%20Torino%20Computer%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/computer-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/computer-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "no_survey",
+   "group": "ict",
+   "level": "L"
+  }
  },
  {
   "id": "unimib-p58",
@@ -1183,7 +1257,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Informatica",
   "url": "https://www.unimib.it#informatica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 68.7,
+   "unemployment": 3.7,
+   "wouldChooseAgain": 69.5,
+   "teachSat": 80.9,
+   "courseSat": 82.8,
+   "onTime": 60.7,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "its-rizzoli-p80",
@@ -1233,7 +1324,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Software%20Architect%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#software-architect-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "sapienza-p111",
@@ -1283,7 +1377,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Informatica",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33503",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 58.7,
+   "unemployment": 6.9,
+   "wouldChooseAgain": 71.9,
+   "teachSat": 80.1,
+   "courseSat": 86.6,
+   "onTime": 41.4,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p122",
@@ -1333,7 +1444,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Informatica",
   "url": "http://informatica.dieti.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 60.9,
+   "unemployment": 6.7,
+   "wouldChooseAgain": 69.6,
+   "teachSat": 69.6,
+   "courseSat": 83.5,
+   "onTime": 23.9,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p133",
@@ -1383,7 +1511,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Informatica",
   "url": "http://corsi.unibo.it/informatica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 65.4,
+   "unemployment": 1.2,
+   "wouldChooseAgain": 76.6,
+   "teachSat": 81.1,
+   "courseSat": 90.6,
+   "onTime": 60.5,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p145",
@@ -1433,7 +1578,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Informatica",
   "url": "http://informatica.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 69.7,
+   "unemployment": 0.0,
+   "wouldChooseAgain": 59.2,
+   "teachSat": 65.3,
+   "courseSat": 79.6,
+   "onTime": 29.4,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p155",
@@ -1483,7 +1645,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Informatica",
   "url": "https://www.unipa.it/dipartimenti/matematicaeinformatica/cds/informatica2086",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 68.4,
+   "unemployment": 7.1,
+   "wouldChooseAgain": 88.0,
+   "teachSat": 92.0,
+   "courseSat": 100.0,
+   "onTime": 33.3,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p166",
@@ -1533,7 +1712,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Informatica",
   "url": "https://www.uniba.it/it/corsi/informatica/corso-di-laurea-in-informatica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 62.1,
+   "unemployment": 5.8,
+   "wouldChooseAgain": 71.6,
+   "teachSat": 80.1,
+   "courseSat": 84.8,
+   "onTime": 47.6,
+   "netPay": null,
+   "group": "ict",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=10&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polimi-p23",
@@ -1745,7 +1941,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Mathematical%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/mathematical-engineering",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=532&ac_ins=0&k_indir=MTM&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polito-p53",
@@ -1897,7 +2096,12 @@
   "googleQuery": "Politecnico%20di%20Torino%20Mathematics%20for%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mathematics-for-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/mathematics-for-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "no_survey",
+   "group": "ict",
+   "level": "L"
+  }
  },
  {
   "id": "unimib-p60",
@@ -1947,7 +2151,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20Statistiche%20ed%20Economiche",
   "url": "https://www.unimib.it#scienze-statistiche-ed-economiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 49.6,
+   "unemployment": 8.5,
+   "wouldChooseAgain": 63.5,
+   "teachSat": 82.1,
+   "courseSat": 86.1,
+   "onTime": 71.0,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "its-rizzoli-p87",
@@ -1997,7 +2218,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Big%20Data%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#big-data-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "sapienza-p112",
@@ -2047,7 +2271,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Statistica%20gestionale",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33507",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 32.6,
+   "unemployment": 20.5,
+   "wouldChooseAgain": 70.2,
+   "teachSat": 77.9,
+   "courseSat": 86.2,
+   "onTime": 63.1,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p123",
@@ -2097,7 +2338,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Statistica%20e%20Tecnologie%20per%20l%27Analisi%20dei%20Dati",
   "url": "http://www.scienzepolitiche.unina.it/?p=7472",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 30.1,
+   "unemployment": 26.1,
+   "wouldChooseAgain": 75.0,
+   "teachSat": 79.3,
+   "courseSat": 89.4,
+   "onTime": 57.7,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p134",
@@ -2147,7 +2405,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20statistiche",
   "url": "http://corsi.unibo.it/Laurea/ScienzeStatistiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 39.6,
+   "unemployment": 15.5,
+   "wouldChooseAgain": 64.8,
+   "teachSat": 84.2,
+   "courseSat": 88.2,
+   "onTime": 80.9,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p146",
@@ -2197,7 +2472,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Statistica",
   "url": "http://www.statistica.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 42.7,
+   "unemployment": 9.6,
+   "wouldChooseAgain": 71.4,
+   "teachSat": 82.7,
+   "courseSat": 88.1,
+   "onTime": 51.9,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p156",
@@ -2247,7 +2539,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Statistica%20e%20Data%20Science",
   "url": "http://statistica.unipa.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 34.9,
+   "unemployment": 25.6,
+   "wouldChooseAgain": 59.7,
+   "teachSat": 74.7,
+   "courseSat": 84.4,
+   "onTime": 32.1,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p174",
@@ -2297,7 +2606,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20statistiche",
   "url": "https://www.uniba.it/it/corsi/scienze-statistiche/l-41",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 35.7,
+   "unemployment": 19.6,
+   "wouldChooseAgain": 59.8,
+   "teachSat": 77.9,
+   "courseSat": 86.0,
+   "onTime": 42.5,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "its-rizzoli-p86",
@@ -2346,7 +2672,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Cyber%20Defence%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#cyber-defence-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "its-rizzoli-p85",
@@ -2395,7 +2724,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Network%20and%20Cloud%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#network-and-cloud-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "its-rizzoli-p83",
@@ -2444,7 +2776,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Cloud%20Development%20Operations%20%28DevOps%29%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#cloud-development-operations-devops-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "unito-p71",
@@ -2493,7 +2828,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Infermieristica",
   "url": "https://www.unito.it#infermieristica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 84.7,
+   "unemployment": 2.6,
+   "wouldChooseAgain": 72.8,
+   "teachSat": 85.0,
+   "courseSat": 87.2,
+   "onTime": 63.6,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p113",
@@ -2542,7 +2894,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Infermieristica",
   "url": "https://corsidilaurea.uniroma1.it/it/course/30010",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 80.2,
+   "unemployment": 6.8,
+   "wouldChooseAgain": 69.3,
+   "teachSat": 87.3,
+   "courseSat": 87.7,
+   "onTime": 66.1,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p124",
@@ -2591,7 +2960,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Infermieristica",
   "url": "http://m75.corsidistudio.unina.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 73.0,
+   "unemployment": 12.4,
+   "wouldChooseAgain": 72.0,
+   "teachSat": 85.3,
+   "courseSat": 90.1,
+   "onTime": 54.7,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p135",
@@ -2640,7 +3026,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Infermieristica",
   "url": "http://corsi.unibo.it/InfermieristicaBologna",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 81.0,
+   "unemployment": 3.1,
+   "wouldChooseAgain": 70.9,
+   "teachSat": 86.9,
+   "courseSat": 86.3,
+   "onTime": 74.4,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p147",
@@ -2689,7 +3092,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Infermieristica",
   "url": "http://www.infermieristica.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 86.4,
+   "unemployment": 3.3,
+   "wouldChooseAgain": 63.2,
+   "teachSat": 84.0,
+   "courseSat": 84.8,
+   "onTime": 54.6,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p157",
@@ -2738,7 +3158,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Infermieristica",
   "url": "http://www.unipa.it/dipartimenti/promise/cds/infermieristica2172",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 75.9,
+   "unemployment": 9.2,
+   "wouldChooseAgain": 79.1,
+   "teachSat": 91.3,
+   "courseSat": 88.0,
+   "onTime": 80.7,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p167",
@@ -2787,7 +3224,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Infermieristica",
   "url": "https://www.uniba.it/corsi/infermieristica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 78.4,
+   "unemployment": 8.2,
+   "wouldChooseAgain": 59.6,
+   "teachSat": 86.4,
+   "courseSat": 85.1,
+   "onTime": 55.0,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polimi-p4",
@@ -2963,7 +3417,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Biomedical%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/biomedical-engineering",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=222&k_corso_la=1030&ac_ins=0&k_indir=IE1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polito-p33",
@@ -3123,7 +3580,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Biomedical%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/biomedical-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/biomedical-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.7,
+   "unemployment": 15.0,
+   "wouldChooseAgain": 73.7,
+   "teachSat": 81.9,
+   "courseSat": 88.4,
+   "onTime": 55.7,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "its-lomb-mecc-p77",
@@ -3173,7 +3647,10 @@
   "googleQuery": "ITS%20Lombardia%20Meccatronica%20Meccatronica%20Biomedicale",
   "url": "https://www.itslombardiameccatronica.it/corsi/#meccatronica-biomedicale",
   "curriculumUrl": null,
-  "dataSource": "https://www.itslombardiameccatronica.it/corsi/"
+  "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "polimi-p19",
@@ -3317,7 +3794,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Interaction%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/interaction-design",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1014&ac_ins=0&k_indir=IDE&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polimi-p9",
@@ -3444,7 +3924,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Communication%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/communication-design",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1021&ac_ins=0&k_indir=C1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polimi-p28",
@@ -3563,7 +4046,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Product%20Design",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/product-design",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1020&ac_ins=0&k_indir=P1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polito-p36",
@@ -3719,7 +4205,12 @@
   "googleQuery": "Politecnico%20di%20Torino%20Cinema%20and%20Digital%20Media%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/cinema-and-digital-media-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/cinema-and-digital-media-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "no_survey",
+   "group": "arte_design",
+   "level": "L"
+  }
  },
  {
   "id": "its-rizzoli-p92",
@@ -3769,7 +4260,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Omnichannel%20Communication%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#omnichannel-communication-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "unimib-p62",
@@ -3819,7 +4313,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Marketing%2C%20Comunicazione%20Aziendale%20e%20Mercati%20Globali",
   "url": "https://www.unimib.it#marketing-comunicazione-aziendale-e-mercati-globali",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 49.6,
+   "unemployment": 8.5,
+   "wouldChooseAgain": 63.5,
+   "teachSat": 82.1,
+   "courseSat": 86.1,
+   "onTime": 71.0,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "bocconi-p64",
@@ -3869,7 +4380,10 @@
   "googleQuery": "Universit%C3%A0%20Bocconi%20International%20Economics%20and%20Management%20%28BIEM%29",
   "url": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school#international-economics-and-management-biem",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school"
+  "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "its-rizzoli-p91",
@@ -3919,7 +4433,10 @@
   "googleQuery": "ITS%20Angelo%20Rizzoli%20Digital%20Marketing%20Data%20Specialist",
   "url": "https://www.itsrizzoli.it/corsi/#digital-marketing-data-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://www.itsrizzoli.it/corsi/"
+  "dataSource": "https://www.itsrizzoli.it/corsi/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "federico2-p129",
@@ -3969,7 +4486,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Economia%20aziendale",
   "url": "https://www.demi.unina.it/didattica/corsi-di-laurea/lauree-triennali/1484097-economia-aziendale/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 30.1,
+   "unemployment": 26.1,
+   "wouldChooseAgain": 75.0,
+   "teachSat": 79.3,
+   "courseSat": 89.4,
+   "onTime": 57.7,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p140",
@@ -4019,7 +4553,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Economia%20aziendale",
   "url": "http://corsi.unibo.it/Laurea/EconomiaAziendale",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 39.6,
+   "unemployment": 15.5,
+   "wouldChooseAgain": 64.8,
+   "teachSat": 84.2,
+   "courseSat": 88.2,
+   "onTime": 80.9,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p163",
@@ -4069,7 +4620,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Economia%20e%20amministrazione%20aziendale",
   "url": "https://www.unipa.it/dipartimenti/seas/cds/economiaeamministrazioneaziendale2077",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 34.9,
+   "unemployment": 25.6,
+   "wouldChooseAgain": 59.7,
+   "teachSat": 74.7,
+   "courseSat": 84.4,
+   "onTime": 32.1,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p172",
@@ -4119,7 +4687,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Economia%20aziendale",
   "url": "https://www.uniba.it/it/corsi/economia-aziendale/corso-di-laurea-in-economia-aziendale",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 35.7,
+   "unemployment": 19.6,
+   "wouldChooseAgain": 59.8,
+   "teachSat": 77.9,
+   "courseSat": 86.0,
+   "onTime": 42.5,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "bocconi-p65",
@@ -4168,7 +4753,10 @@
   "googleQuery": "Universit%C3%A0%20Bocconi%20International%20Economics%20and%20Finance%20%28BIEF%29",
   "url": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school#international-economics-and-finance-bief",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school"
+  "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "unimib-p61",
@@ -4218,7 +4806,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Economia%20e%20Commercio",
   "url": "https://www.unimib.it#economia-e-commercio",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 49.6,
+   "unemployment": 8.5,
+   "wouldChooseAgain": 63.5,
+   "teachSat": 82.1,
+   "courseSat": 86.1,
+   "onTime": 71.0,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p121",
@@ -4268,7 +4873,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Economia%20e%20finanza",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33438",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 32.6,
+   "unemployment": 20.5,
+   "wouldChooseAgain": 70.2,
+   "teachSat": 77.9,
+   "courseSat": 86.2,
+   "onTime": 63.1,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p130",
@@ -4318,7 +4940,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Economia%20e%20commercio",
   "url": "http://www.dises.unina.it/didattica/corsi-di-laurea/lauree-magistrali/1484696-economia-e-commercio/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 30.1,
+   "unemployment": 26.1,
+   "wouldChooseAgain": 75.0,
+   "teachSat": 79.3,
+   "courseSat": 89.4,
+   "onTime": 57.7,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p141",
@@ -4368,7 +5007,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Economia%2C%20mercati%20e%20istituzioni",
   "url": "http://corsi.unibo.it/Laurea/EconomiaMercatiIstituzioni",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 39.6,
+   "unemployment": 15.5,
+   "wouldChooseAgain": 64.8,
+   "teachSat": 84.2,
+   "courseSat": 88.2,
+   "onTime": 80.9,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p152",
@@ -4418,7 +5074,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Economia%20e%20commercio",
   "url": "http://www.ec.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 42.7,
+   "unemployment": 9.6,
+   "wouldChooseAgain": 71.4,
+   "teachSat": 82.7,
+   "courseSat": 88.1,
+   "onTime": 51.9,
+   "netPay": null,
+   "group": "economico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=7&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "bocconi-p68",
@@ -4468,7 +5141,10 @@
   "googleQuery": "Universit%C3%A0%20Bocconi%20Economics%2C%20Management%20and%20Computer%20Science%20%28BEMACS%29",
   "url": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school#economics-management-and-computer-science-bemacs",
   "curriculumUrl": null,
-  "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school"
+  "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polito-p44",
@@ -4624,7 +5300,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Energy%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/energy-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/energy-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.7,
+   "unemployment": 15.0,
+   "wouldChooseAgain": 73.7,
+   "teachSat": 81.9,
+   "courseSat": 88.4,
+   "onTime": 55.7,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polimi-p12",
@@ -4746,7 +5439,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Energy%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/energy-engineering",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=524&ac_ins=0&k_indir=ENN&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "its-energia-pi-p94",
@@ -4796,7 +5492,10 @@
   "googleQuery": "ITS%20Energia%20Piemonte%20Energy%20Manager",
   "url": "https://its-energiapiemonte.it/#energy-manager",
   "curriculumUrl": null,
-  "dataSource": "https://its-energiapiemonte.it/"
+  "dataSource": "https://its-energiapiemonte.it/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "unibo-p144",
@@ -4846,7 +5545,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Ingegneria%20dell%27energia%20elettrica",
   "url": "http://corsi.unibo.it/elettrica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 31.8,
+   "unemployment": 5.3,
+   "wouldChooseAgain": 75.7,
+   "teachSat": 79.7,
+   "courseSat": 90.3,
+   "onTime": 65.2,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polito-p46",
@@ -5002,7 +5718,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Environmental%20and%20Land%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/environmental-and-land-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/environmental-and-land-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 24.6,
+   "unemployment": 14.1,
+   "wouldChooseAgain": 73.1,
+   "teachSat": 85.0,
+   "courseSat": 87.2,
+   "onTime": 59.8,
+   "netPay": null,
+   "group": "ing_civ",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polimi-p15",
@@ -5074,7 +5807,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Environmental%20and%20Land%20Planning%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/environmental-and-land-planning-engineering",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=1&k_corso_la=346&ac_ins=0&k_indir=M1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "its-energia-pi-p95",
@@ -5124,7 +5860,10 @@
   "googleQuery": "ITS%20Energia%20Piemonte%20Energy%20%26%20Circular%20Economy%20Specialist",
   "url": "https://its-energiapiemonte.it/#energy-circular-economy-specialist",
   "curriculumUrl": null,
-  "dataSource": "https://its-energiapiemonte.it/"
+  "dataSource": "https://its-energiapiemonte.it/",
+  "outcomes": {
+   "status": "its"
+  }
  },
  {
   "id": "sapienza-p119",
@@ -5174,7 +5913,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Ingegneria%20per%20l%27Ambiente%20e%20il%20Territorio",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33473",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 37.5,
+   "unemployment": 6.6,
+   "wouldChooseAgain": 70.8,
+   "teachSat": 83.8,
+   "courseSat": 88.4,
+   "onTime": 43.8,
+   "netPay": null,
+   "group": "ing_civ",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p131",
@@ -5224,7 +5980,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Civil%20and%20Environmental%20Engineering",
   "url": "https://www.civil-environmental.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 30.4,
+   "unemployment": 12.8,
+   "wouldChooseAgain": 77.8,
+   "teachSat": 87.3,
+   "courseSat": 91.8,
+   "onTime": 43.6,
+   "netPay": null,
+   "group": "ing_civ",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p142",
@@ -5274,7 +6047,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Ingegneria%20per%20l%27ambiente%20e%20il%20territorio",
   "url": "http://corsi.unibo.it/ingegneriambienterritorioL",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 28.4,
+   "unemployment": 0.0,
+   "wouldChooseAgain": 68.3,
+   "teachSat": 82.4,
+   "courseSat": 91.2,
+   "onTime": 56.7,
+   "netPay": null,
+   "group": "ing_civ",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p153",
@@ -5324,7 +6114,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Ingegneria%20ambientale",
   "url": "https://www.ing-ial.unifi.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 38.8,
+   "unemployment": 5.0,
+   "wouldChooseAgain": 63.4,
+   "teachSat": 77.8,
+   "courseSat": 79.1,
+   "onTime": 35.4,
+   "netPay": null,
+   "group": "ing_civ",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p164",
@@ -5374,7 +6181,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Ingegneria%20Ambientale%20per%20lo%20Sviluppo%20Sostenibile",
   "url": "https://www.unipa.it/dipartimenti/ingegneria/cds/ingegneriaambientaleperlosvilupposostenibile2303",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 27.3,
+   "unemployment": 25.0,
+   "wouldChooseAgain": 71.8,
+   "teachSat": 87.3,
+   "courseSat": 90.2,
+   "onTime": 34.1,
+   "netPay": null,
+   "group": "ing_civ",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polito-p35",
@@ -5530,7 +6354,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Chemical%20and%20Food%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/chemical-and-food-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/chemical-and-food-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.7,
+   "unemployment": 15.0,
+   "wouldChooseAgain": 73.7,
+   "teachSat": 81.9,
+   "courseSat": 88.4,
+   "onTime": 55.7,
+   "netPay": null,
+   "group": "ing_ind",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=12&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "polimi-p26",
@@ -5655,7 +6496,10 @@
   "googleQuery": "Politecnico%20di%20Milano%20Physics%20Engineering",
   "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/physics-engineering",
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=526&ac_ins=0&k_indir=F1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
-  "dataSource": "https://www.polimi.it/en/education/laurea-programmes"
+  "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
+  "outcomes": {
+   "status": "not_member"
+  }
  },
  {
   "id": "polito-p51",
@@ -5810,7 +6654,24 @@
   "googleQuery": "Politecnico%20di%20Torino%20Physical%20Engineering",
   "url": "https://www.polito.it/en/education/bachelor-s-degree-programmes/physical-engineering",
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/physical-engineering/programme-curriculum",
-  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes"
+  "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 11.4,
+   "unemployment": 16.7,
+   "wouldChooseAgain": 69.8,
+   "teachSat": 72.1,
+   "courseSat": 80.3,
+   "onTime": 69.5,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p59",
@@ -5859,7 +6720,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Fisica",
   "url": "https://www.unimib.it#fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 35.9,
+   "unemployment": 8.7,
+   "wouldChooseAgain": 76.6,
+   "teachSat": 87.4,
+   "courseSat": 91.3,
+   "onTime": 63.1,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p120",
@@ -5908,7 +6786,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Fisica",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33588",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 25.2,
+   "unemployment": 11.5,
+   "wouldChooseAgain": 75.8,
+   "teachSat": 87.9,
+   "courseSat": 89.9,
+   "onTime": 50.8,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p132",
@@ -5957,7 +6852,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Fisica",
   "url": "http://www.fisica.unina.it/corso-di-laurea-magistrale-in-fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 19.8,
+   "unemployment": 27.2,
+   "wouldChooseAgain": 70.6,
+   "teachSat": 85.1,
+   "courseSat": 89.9,
+   "onTime": 43.0,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p143",
@@ -6006,7 +6918,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Fisica",
   "url": "https://corsi.unibo.it/laurea/fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 26.6,
+   "unemployment": 10.5,
+   "wouldChooseAgain": 73.5,
+   "teachSat": 84.4,
+   "courseSat": 91.6,
+   "onTime": 67.8,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p154",
@@ -6055,7 +6984,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Fisica%20e%20Astrofisica",
   "url": "http://www.fis-astro.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 30.0,
+   "unemployment": 13.3,
+   "wouldChooseAgain": 74.8,
+   "teachSat": 86.9,
+   "courseSat": 91.6,
+   "onTime": 39.1,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p165",
@@ -6104,7 +7050,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20Fisiche",
   "url": "http://portale.unipa.it/dipartimenti/dipartimentofisicaechimica/cds/scienzefisiche2124",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 17.2,
+   "unemployment": 25.0,
+   "wouldChooseAgain": 74.8,
+   "teachSat": 89.9,
+   "courseSat": 91.2,
+   "onTime": 45.3,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p173",
@@ -6153,7 +7116,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Fisica",
   "url": "https://www.uniba.it/it/ricerca/dipartimenti/fisica/didattica/corsi-di-laurea/fisica/fisica",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 32.0,
+   "unemployment": 9.8,
+   "wouldChooseAgain": 64.5,
+   "teachSat": 82.5,
+   "courseSat": 85.1,
+   "onTime": 51.8,
+   "netPay": null,
+   "group": "scientifico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=9&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p63",
@@ -6203,7 +7183,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20dell%27Organizzazione",
   "url": "https://www.unimib.it#scienze-dell-organizzazione",
   "curriculumUrl": null,
-  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf"
+  "dataSource": "https://www.unimib.it/sites/default/files/2025-07/Guida%20CONTRIBUZIONE%2025_26_0.pdf",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 56.3,
+   "unemployment": 9.2,
+   "wouldChooseAgain": 63.8,
+   "teachSat": 90.5,
+   "courseSat": 87.8,
+   "onTime": 65.0,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unito-p104",
@@ -6253,7 +7250,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20della%20formazione%20primaria",
   "url": "http://formazioneprimaria.campusnet.unito.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 91.1,
+   "unemployment": 5.9,
+   "wouldChooseAgain": 88.8,
+   "teachSat": 88.4,
+   "courseSat": 89.5,
+   "onTime": 63.7,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p105",
@@ -6303,7 +7317,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20della%20formazione%20primaria",
   "url": "https://www.formazione.unimib.it/didattica/corsi-di-laurea",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 91.7,
+   "unemployment": 3.2,
+   "wouldChooseAgain": 87.0,
+   "teachSat": 91.0,
+   "courseSat": 93.7,
+   "onTime": 62.9,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70132&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70132&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unito-p106",
@@ -6353,7 +7384,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20dell%27educazione",
   "url": "http://educazione.campusnet.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 69.5,
+   "unemployment": 7.9,
+   "wouldChooseAgain": 73.9,
+   "teachSat": 88.2,
+   "courseSat": 92.8,
+   "onTime": 51.5,
+   "netPay": null,
+   "group": "educazione",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p116",
@@ -6403,7 +7451,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Scienze%20della%20formazione%20primaria",
   "url": "https://corsidilaurea.uniroma1.it/it/course/30040",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 88.9,
+   "unemployment": 7.7,
+   "wouldChooseAgain": 79.6,
+   "teachSat": 92.6,
+   "courseSat": 90.7,
+   "onTime": 66.7,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70026&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70026&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p138",
@@ -6453,7 +7518,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20della%20formazione%20primaria",
   "url": "http://corsi.unibo.it/Laurea/ScienzeFormazionePrimaria",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 90.3,
+   "unemployment": 4.7,
+   "wouldChooseAgain": 83.6,
+   "teachSat": 94.8,
+   "courseSat": 96.8,
+   "onTime": 66.2,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70003&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70003&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p150",
@@ -6503,7 +7585,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Scienze%20della%20formazione%20primaria",
   "url": "http://www.formazioneprimaria.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 82.4,
+   "unemployment": 6.3,
+   "wouldChooseAgain": 84.8,
+   "teachSat": 87.8,
+   "courseSat": 93.2,
+   "onTime": 58.6,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70010&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70010&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p160",
@@ -6553,7 +7652,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20della%20formazione%20primaria",
   "url": "https://www.unipa.it/dipartimenti/sc.psicol.pedag.edellaformazione/cds/scienzedellaformazioneprimaria2183/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 64.3,
+   "unemployment": 17.6,
+   "wouldChooseAgain": 84.8,
+   "teachSat": 96.3,
+   "courseSat": 96.8,
+   "onTime": 80.5,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70020&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70020&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p170",
@@ -6603,7 +7719,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20della%20formazione%20primaria",
   "url": "https://manageweb.ict.uniba.it/ricerca/dipartimenti/forpsicom/didattica/corsi/magistrale-a-ciclo-unico/scienze-formazione-primaria",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 70.1,
+   "unemployment": 21.8,
+   "wouldChooseAgain": 70.8,
+   "teachSat": 86.8,
+   "courseSat": 92.4,
+   "onTime": 72.5,
+   "netPay": null,
+   "group": "educazione",
+   "level": "LSE",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=LSE&ateneo=70002&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70002&facolta=tutti&gruppo=1&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unito-p107",
@@ -6653,7 +7786,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Lingue%20e%20culture%20per%20il%20turismo",
   "url": "http://www.lingue.unito.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 42.4,
+   "unemployment": 16.3,
+   "wouldChooseAgain": 50.8,
+   "teachSat": 83.7,
+   "courseSat": 74.8,
+   "onTime": 46.8,
+   "netPay": null,
+   "group": "linguistico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=4&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=4&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p108",
@@ -6703,7 +7853,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20del%20turismo%20e%20comunit%C3%A0%20locale",
   "url": "https://www.unimib.it/ateneo/dipartimenti/sociologia-e-ricerca-sociale",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 56.3,
+   "unemployment": 9.2,
+   "wouldChooseAgain": 63.8,
+   "teachSat": 90.5,
+   "courseSat": 87.8,
+   "onTime": 65.0,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p117",
@@ -6753,7 +7920,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Scienze%20del%20turismo%20sostenibile",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33536",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 34.4,
+   "unemployment": 24.4,
+   "wouldChooseAgain": 67.1,
+   "teachSat": 85.6,
+   "courseSat": 87.9,
+   "onTime": 61.5,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p127",
@@ -6803,7 +7987,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20del%20turismo%20ad%20indirizzo%20manageriale",
   "url": "http://www.dises.unina.it/didattica/corsi-di-laurea/lauree-triennali/1484142-scienze-del-turismo-ad-indirizzo-manageriale/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 36.6,
+   "unemployment": 28.3,
+   "wouldChooseAgain": 68.8,
+   "teachSat": 87.2,
+   "courseSat": 89.8,
+   "onTime": 60.3,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p161",
@@ -6853,7 +8054,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Turismo%2C%20Territori%20e%20Imprese",
   "url": "https://www.unipa.it/dipartimenti/seas/cds/turismoterritorieimpresesedepa2269",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 32.6,
+   "unemployment": 33.3,
+   "wouldChooseAgain": 65.4,
+   "teachSat": 85.2,
+   "courseSat": 85.2,
+   "onTime": 51.4,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p175",
@@ -6903,7 +8121,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Nuovi%20turismi",
   "url": "https://www.uniba.it/it/corsi/nuovi-turismi/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 38.7,
+   "unemployment": 27.8,
+   "wouldChooseAgain": 63.7,
+   "teachSat": 88.0,
+   "courseSat": 88.2,
+   "onTime": 64.4,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unito-p109",
@@ -6953,7 +8188,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Servizio%20sociale",
   "url": "http://www.didattica-cps.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 52.1,
+   "unemployment": 13.3,
+   "wouldChooseAgain": 64.2,
+   "teachSat": 86.6,
+   "courseSat": 86.0,
+   "onTime": 63.9,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p110",
@@ -7003,7 +8255,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Servizio%20sociale",
   "url": "https://www.unimib.it/servizio-sociale",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 56.3,
+   "unemployment": 9.2,
+   "wouldChooseAgain": 63.8,
+   "teachSat": 90.5,
+   "courseSat": 87.8,
+   "onTime": 65.0,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p118",
@@ -7053,7 +8322,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Servizio%20sociale",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33572",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 34.4,
+   "unemployment": 24.4,
+   "wouldChooseAgain": 67.1,
+   "teachSat": 85.6,
+   "courseSat": 87.9,
+   "onTime": 61.5,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p128",
@@ -7103,7 +8389,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20del%20servizio%20sociale",
   "url": "http://www.scienzepolitiche.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 36.6,
+   "unemployment": 28.3,
+   "wouldChooseAgain": 68.8,
+   "teachSat": 87.2,
+   "courseSat": 89.8,
+   "onTime": 60.3,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p139",
@@ -7153,7 +8456,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Servizio%20sociale",
   "url": "http://corsi.unibo.it/Laurea/ServizioSociale",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 35.8,
+   "unemployment": 17.8,
+   "wouldChooseAgain": 66.7,
+   "teachSat": 87.1,
+   "courseSat": 87.0,
+   "onTime": 79.9,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p151",
@@ -7203,7 +8523,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Servizio%20sociale",
   "url": "http://www.serviziosociale.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 44.2,
+   "unemployment": 17.3,
+   "wouldChooseAgain": 62.4,
+   "teachSat": 84.8,
+   "courseSat": 84.5,
+   "onTime": 60.7,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p162",
@@ -7253,7 +8590,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Servizio%20sociale",
   "url": "https://www.unipa.it/dipartimenti/cultureesocieta/cds/serviziosocialesedeag2136   https://www.unipa.it/dipartimenti/cultureesocieta/cds/serviziosocialesedepa2137",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 32.6,
+   "unemployment": 33.3,
+   "wouldChooseAgain": 65.4,
+   "teachSat": 85.2,
+   "courseSat": 85.2,
+   "onTime": 51.4,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p171",
@@ -7303,7 +8657,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20del%20servizio%20sociale%20e%20sociologia",
   "url": "https://www.uniba.it/it/corsi/cdl-scienze-servizio-sociale-sociologia",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 38.7,
+   "unemployment": 27.8,
+   "wouldChooseAgain": 63.7,
+   "teachSat": 88.0,
+   "courseSat": 88.2,
+   "onTime": 64.4,
+   "netPay": null,
+   "group": "politico_sociale",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=5&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unito-p98",
@@ -7353,7 +8724,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Fisioterapia",
   "url": "http://medcto.campusnet.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 84.7,
+   "unemployment": 2.6,
+   "wouldChooseAgain": 72.8,
+   "teachSat": 85.0,
+   "courseSat": 87.2,
+   "onTime": 63.6,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p99",
@@ -7403,7 +8791,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Fisioterapia",
   "url": "https://www.medicina.unimib.it/it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 78.4,
+   "unemployment": 2.8,
+   "wouldChooseAgain": 76.8,
+   "teachSat": 90.4,
+   "courseSat": 90.4,
+   "onTime": 71.0,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimi-p100",
@@ -7453,7 +8858,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Fisioterapia",
   "url": "https://fisioterapia.cdl.unimi.it/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 87.3,
+   "unemployment": 2.8,
+   "wouldChooseAgain": 65.9,
+   "teachSat": 87.4,
+   "courseSat": 86.4,
+   "onTime": 72.8,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70015&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70015&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "sapienza-p114",
@@ -7503,7 +8925,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Fisioterapia",
   "url": "https://corsidilaurea.uniroma1.it/it/course/30017",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 80.2,
+   "unemployment": 6.8,
+   "wouldChooseAgain": 69.3,
+   "teachSat": 87.3,
+   "courseSat": 87.7,
+   "onTime": 66.1,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p125",
@@ -7553,7 +8992,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Fisioterapia",
   "url": "http://M78.corsidistudio.unina.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 73.0,
+   "unemployment": 12.4,
+   "wouldChooseAgain": 72.0,
+   "teachSat": 85.3,
+   "courseSat": 90.1,
+   "onTime": 54.7,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p136",
@@ -7603,7 +9059,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Fisioterapia",
   "url": "http://corsi.unibo.it/fisioterapia",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 81.0,
+   "unemployment": 3.1,
+   "wouldChooseAgain": 70.9,
+   "teachSat": 86.9,
+   "courseSat": 86.3,
+   "onTime": 74.4,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p148",
@@ -7653,7 +9126,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Fisioterapia",
   "url": "http://www.fisioterapia.unifi.it/index.php",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 86.4,
+   "unemployment": 3.3,
+   "wouldChooseAgain": 63.2,
+   "teachSat": 84.0,
+   "courseSat": 84.8,
+   "onTime": 54.6,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p158",
@@ -7703,7 +9193,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Fisioterapia",
   "url": "http://www.unipa.it/dipartimenti/bi.n.d./cds/fisioterapia2170",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 75.9,
+   "unemployment": 9.2,
+   "wouldChooseAgain": 79.1,
+   "teachSat": 91.3,
+   "courseSat": 88.0,
+   "onTime": 80.7,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p168",
@@ -7753,7 +9260,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Fisioterapia",
   "url": "https://www.uniba.it/it/corsi/fisioterapia",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 78.4,
+   "unemployment": 8.2,
+   "wouldChooseAgain": 59.6,
+   "teachSat": 86.4,
+   "courseSat": 85.1,
+   "onTime": 55.0,
+   "netPay": null,
+   "group": "medico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unito-p101",
@@ -7803,7 +9327,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Torino%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://www.triennalepsicologia.unito.it/do/home.pl",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 36.9,
+   "unemployment": 11.9,
+   "wouldChooseAgain": 84.2,
+   "teachSat": 88.7,
+   "courseSat": 89.0,
+   "onTime": 67.4,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70031&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimib-p102",
@@ -7853,7 +9394,24 @@
   "googleQuery": "Universit%C3%A0%20Milano-Bicocca%20Scienze%20e%20tecniche%20psicologiche",
   "url": "https://didattica.unimib.it/E2403P",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 37.8,
+   "unemployment": 4.5,
+   "wouldChooseAgain": 76.4,
+   "teachSat": 82.3,
+   "courseSat": 89.3,
+   "onTime": 71.9,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70132&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unimi-p103",
@@ -7903,7 +9461,12 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Milano%20Scienze%20psicologiche%20per%20la%20prevenzione%20e%20la%20cura",
   "url": "https://scienze-psicologiche.cdl.unimi.it/it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "no_survey",
+   "group": "psicologico",
+   "level": "L"
+  }
  },
  {
   "id": "sapienza-p115",
@@ -7953,7 +9516,24 @@
   "googleQuery": "Sapienza%20Universit%C3%A0%20di%20Roma%20Psicologia%20e%20processi%20sociali",
   "url": "https://corsidilaurea.uniroma1.it/it/course/33569",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 33.0,
+   "unemployment": 7.4,
+   "wouldChooseAgain": 82.0,
+   "teachSat": 84.7,
+   "courseSat": 88.4,
+   "onTime": 69.5,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70026&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "federico2-p126",
@@ -8003,7 +9583,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Napoli%20Federico%20II%20Scienze%20e%20tecniche%20psicologiche",
   "url": "https://www.studiumanistici.unina.it/corsi/scienze-e-tecniche-psicologiche/",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 15.8,
+   "unemployment": 32.4,
+   "wouldChooseAgain": 74.9,
+   "teachSat": 81.2,
+   "courseSat": 86.5,
+   "onTime": 70.6,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70018&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unibo-p137",
@@ -8053,7 +9650,24 @@
   "googleQuery": "Universit%C3%A0%20di%20Bologna%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://corsi.unibo.it/laurea/ScienzeTecnichePsicologiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 31.0,
+   "unemployment": 7.9,
+   "wouldChooseAgain": 85.6,
+   "teachSat": 91.0,
+   "courseSat": 91.0,
+   "onTime": 78.4,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70003&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unifi-p149",
@@ -8103,7 +9717,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Firenze%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://www.scienzetecnichepsicologiche.unifi.it",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 28.4,
+   "unemployment": 7.4,
+   "wouldChooseAgain": 72.3,
+   "teachSat": 74.9,
+   "courseSat": 84.7,
+   "onTime": 67.6,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70010&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "unipa-p159",
@@ -8153,7 +9784,24 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Palermo%20Scienze%20e%20tecniche%20psicologiche",
   "url": "http://portale.unipa.it/dipartimenti/dipsicologia/cds/scienzeetecnichepsicologiche2121",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 17.4,
+   "unemployment": 18.9,
+   "wouldChooseAgain": 80.1,
+   "teachSat": 89.5,
+   "courseSat": 92.6,
+   "onTime": 75.2,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70020&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  },
  {
   "id": "uniba-p169",
@@ -8203,6 +9851,23 @@
   "googleQuery": "Universit%C3%A0%20degli%20Studi%20di%20Bari%20Aldo%20Moro%20Scienze%20e%20tecniche%20psicologiche",
   "url": "https://manageweb.ict.uniba.it/ricerca/dipartimenti/forpsicom/didattica/corsi/triennali/scienze-tecniche-psicologiche",
   "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi"
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "ok",
+   "employment1y": 16.9,
+   "unemployment": 29.4,
+   "wouldChooseAgain": 72.9,
+   "teachSat": 85.1,
+   "courseSat": 86.9,
+   "onTime": 66.1,
+   "netPay": null,
+   "group": "psicologico",
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70002&facolta=tutti&gruppo=6&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  }
  }
 ]
