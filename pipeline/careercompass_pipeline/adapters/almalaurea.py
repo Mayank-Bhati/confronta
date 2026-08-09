@@ -407,6 +407,30 @@ def ingest(combos=None, delay=1.2):
 LSE_GROUPS = ("educazione", "medico")
 
 
+def _open_session(page, attempts=3):
+    """Establish the session that unlocks statistiche.almalaurea.it.
+
+    profilo.php 302-redirects to tendine.php, so navigating again too soon
+    aborts the in-flight redirect ("interrupted by another navigation") and
+    kills the run. Wait for the redirect to settle, and retry the handshake
+    rather than losing a whole shard to a transient race.
+    """
+    from playwright.sync_api import Error as PWError
+    for attempt in range(1, attempts + 1):
+        try:
+            page.goto(f"{PROFILO}?LANG=it", wait_until="load", timeout=60000)
+            page.wait_for_timeout(2500)
+            _accept_cookies(page)
+            page.wait_for_timeout(1200)
+            page.goto(f"{OCC}?LANG=it", wait_until="load", timeout=60000)
+            page.wait_for_timeout(1500)
+            return True
+        except PWError as e:
+            print(f"  session attempt {attempt}/{attempts} failed: {str(e)[:90]}")
+            page.wait_for_timeout(3000)
+    raise RuntimeError("could not open an AlmaLaurea session")
+
+
 def fetch_universities(page):
     """The live ateneo list from the query builder — never a hardcoded copy,
     so a university joining or leaving the consortium is picked up by itself."""
@@ -428,11 +452,7 @@ def ingest_all(shard=0, shards=1, delay=0.8):
     with sync_playwright() as p:
         browser, ctx = _browser(p)
         page = ctx.new_page()
-        page.goto(f"{PROFILO}?LANG=it", wait_until="domcontentloaded", timeout=60000)
-        page.wait_for_timeout(2500)
-        _accept_cookies(page)
-        page.goto(f"{OCC}?LANG=it", wait_until="domcontentloaded", timeout=60000)
-        page.wait_for_timeout(1500)
+        _open_session(page)
 
         unis = fetch_universities(page)
         print(f"{len(unis)} AlmaLaurea universities listed")
