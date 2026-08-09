@@ -473,16 +473,24 @@ def ingest_all(shard=0, shards=1, delay=0.8):
             for config, wanted, anno in (("occupazione", WANTED_OCC, OCC_YEAR),
                                          ("profilo", WANTED_PROF, PROF_YEAR)):
                 url = _query_url(config, u["code"], GRUPPO[gkey], corstipo, anno)
-                try:
-                    page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                    page.wait_for_timeout(1000)
-                    lines = _lines(page.content())
-                    got = {k: _pick(lines, spec) for k, spec in wanted.items()}
-                    entry.update(got)
-                    entry[f"{config}_year"] = anno
-                    entry[f"{config}_source"] = url
-                except Exception as e:
-                    misses.append(f"{key}/{config}: {str(e)[:60]}")
+                # An all-empty read is usually a flaky render, not a missing
+                # combination — retry once before believing it, otherwise real
+                # rows (PoliTo engineering, UniBo medicine) silently vanish.
+                got = {}
+                for attempt in (1, 2):
+                    try:
+                        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                        page.wait_for_timeout(1000 if attempt == 1 else 2500)
+                        lines = _lines(page.content())
+                        got = {k: _pick(lines, spec) for k, spec in wanted.items()}
+                        if any(v is not None for v in got.values()):
+                            break
+                    except Exception as e:
+                        if attempt == 2:
+                            misses.append(f"{key}/{config}: {str(e)[:60]}")
+                entry.update(got)
+                entry[f"{config}_year"] = anno
+                entry[f"{config}_source"] = url
                 page.wait_for_timeout(int(delay * 1000))
             # keep only combinations that actually exist somewhere
             if any(entry.get(k) is not None for k in ("employment_rate", "would_choose_again", "on_time")):

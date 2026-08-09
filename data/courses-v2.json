@@ -3941,9 +3941,23 @@
   "curriculumUrl": "https://www.polito.it/en/education/bachelor-s-degree-programmes/cinema-and-digital-media-engineering/programme-curriculum",
   "dataSource": "https://www.polito.it/en/education/bachelor-s-degree-programmes",
   "outcomes": {
-   "status": "no_survey",
+   "status": "ok",
+   "employment1y": 41.0,
+   "unemployment": 21.2,
+   "wouldChooseAgain": 66.3,
+   "teachSat": 82.9,
+   "courseSat": 87.1,
+   "onTime": 62.3,
+   "netPay": 1138.0,
+   "continuingMasters": 50.0,
+   "workingOnly": 34.0,
    "group": "arte_design",
-   "level": "L"
+   "level": "L",
+   "occYear": 2024,
+   "profYear": 2025,
+   "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=2&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
+   "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70032&facolta=tutti&gruppo=2&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
+   "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
   "careerPay": 1220
  },
