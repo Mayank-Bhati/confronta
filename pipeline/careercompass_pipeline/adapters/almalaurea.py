@@ -395,12 +395,102 @@ def ingest(combos=None, delay=1.2):
     return out
 
 
+
+# ————————————————————————————————————————————————————————————————
+# National ingest: every AlmaLaurea member university, not just ours.
+# Sharded so GitHub Actions can run it in parallel — one pass is ~1,900 page
+# loads, which is hours in a single job and ~12 minutes across eight.
+# ————————————————————————————————————————————————————————————————
+
+# Single-cycle degrees only exist in a few areas; querying LSE for every group
+# would double the run for combinations that cannot exist.
+LSE_GROUPS = ("educazione", "medico")
+
+
+def fetch_universities(page):
+    """The live ateneo list from the query builder — never a hardcoded copy,
+    so a university joining or leaving the consortium is picked up by itself."""
+    page.goto(f"{BASE}/solotendine.php?anno={OCC_YEAR}&LANG=it&CONFIG=occupazione",
+              wait_until="domcontentloaded", timeout=60000)
+    page.wait_for_timeout(1500)
+    opts = page.eval_on_selector_all(
+        "select[name=ateneo] option",
+        "els => els.map(o => ({ code: o.value, name: (o.textContent||'').trim() }))")
+    return [o for o in opts if o["code"].isdigit()]
+
+
+def ingest_all(shard=0, shards=1, delay=0.8):
+    """Every university × subject group × level, keyed by AlmaLaurea's own
+    ateneo code so the dataset outlives our institution slugs."""
+    from playwright.sync_api import sync_playwright
+
+    rows, misses = {}, []
+    with sync_playwright() as p:
+        browser, ctx = _browser(p)
+        page = ctx.new_page()
+        page.goto(f"{PROFILO}?LANG=it", wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(2500)
+        _accept_cookies(page)
+        page.goto(f"{OCC}?LANG=it", wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(1500)
+
+        unis = fetch_universities(page)
+        print(f"{len(unis)} AlmaLaurea universities listed")
+
+        combos = []
+        for u in unis:
+            for gkey in GRUPPO:
+                combos.append((u, gkey, "L"))
+                if gkey in LSE_GROUPS:
+                    combos.append((u, gkey, "LSE"))
+        mine = [c for i, c in enumerate(combos) if i % shards == shard]
+        print(f"shard {shard + 1}/{shards}: {len(mine)} of {len(combos)} combos")
+
+        for idx, (u, gkey, corstipo) in enumerate(mine, 1):
+            key = f"{u['code']}|{gkey}|{corstipo}"
+            entry = {"ateneo_code": u["code"], "university": u["name"],
+                     "group": gkey, "level": corstipo, "gruppo_code": GRUPPO[gkey]}
+            for config, wanted, anno in (("occupazione", WANTED_OCC, OCC_YEAR),
+                                         ("profilo", WANTED_PROF, PROF_YEAR)):
+                url = _query_url(config, u["code"], GRUPPO[gkey], corstipo, anno)
+                try:
+                    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(1000)
+                    lines = _lines(page.content())
+                    got = {k: _pick(lines, spec) for k, spec in wanted.items()}
+                    entry.update(got)
+                    entry[f"{config}_year"] = anno
+                    entry[f"{config}_source"] = url
+                except Exception as e:
+                    misses.append(f"{key}/{config}: {str(e)[:60]}")
+                page.wait_for_timeout(int(delay * 1000))
+            # keep only combinations that actually exist somewhere
+            if any(entry.get(k) is not None for k in ("employment_rate", "would_choose_again", "on_time")):
+                rows[key] = entry
+            if idx % 25 == 0 or idx == len(mine):
+                print(f"  {idx}/{len(mine)} · {len(rows)} rows with data")
+        browser.close()
+
+    out = {"surveys": {"occupazione": OCC_YEAR, "profilo": PROF_YEAR},
+           "shard": shard, "shards": shards, "rows": rows, "errors": misses}
+    os.makedirs("out", exist_ok=True)
+    name = f"out/almalaurea-shard-{shard}.json"
+    with open(name, "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=1, ensure_ascii=False)
+    print(f"\nwrote {name} — {len(rows)} rows with data, {len(misses)} errors")
+    return out
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "discover"
     if cmd == "discover":
         discover()
     elif cmd == "ingest":
         ingest()
+    elif cmd == "all":
+        shard = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+        shards = int(sys.argv[3]) if len(sys.argv) > 3 else 1
+        ingest_all(shard=shard, shards=shards)
     elif cmd == "labels":
         # dump the exact label/value lines of one result page per config, so the
         # parsers can be written against reality instead of guessed strings

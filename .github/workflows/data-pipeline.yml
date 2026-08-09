@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all"
         required: false
         default: "probe"
       pages:
@@ -200,3 +200,27 @@ jobs:
           path: |
             /tmp/unidump
             /tmp/aldump
+
+  # The national pass: every AlmaLaurea university, split across shards so it
+  # finishes in minutes instead of hours. Runs only for task=almalaurea-all.
+  almalaurea-national:
+    if: inputs.task == 'almalaurea-all'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r pipeline/requirements.txt playwright && python -m playwright install chromium --with-deps
+      - name: Ingest shard ${{ matrix.shard }}
+        working-directory: pipeline
+        run: python -m careercompass_pipeline.adapters.almalaurea all ${{ matrix.shard }} 8
+      - uses: actions/upload-artifact@v4
+        with:
+          name: almalaurea-national-${{ matrix.shard }}
+          path: pipeline/out/almalaurea-shard-*.json
