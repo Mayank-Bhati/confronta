@@ -56,6 +56,14 @@ NAME_GROUP = (
     ("economia", "economico"),
 )
 
+# our institution slug → AlmaLaurea ateneo code (national dataset is keyed by
+# code, so it stays valid however we name institutions internally)
+ATENEO_CODE = {
+    "polito": "70032", "unito": "70031", "unimib": "70132", "unimi": "70015",
+    "sapienza": "70026", "federico2": "70018", "unibo": "70003", "unifi": "70010",
+    "unipa": "70020", "uniba": "70002",
+}
+
 NO_DATA_REASON = {
     "polimi": "not_member", "bocconi": "not_member",
     "its-lomb-mecc": "its", "its-rizzoli": "its", "its-energia-pi": "its",
@@ -101,7 +109,8 @@ def apply_outcomes():
             course["outcomes"] = {"status": NO_DATA_REASON[slug]}
             stats[NO_DATA_REASON[slug]] += 1
         else:
-            row = rows.get(f"{slug}|{group}|{level}") if group else None
+            code = ATENEO_CODE.get(slug)
+            row = rows.get(f"{code}|{group}|{level}") if (code and group) else None
             if not row or row.get("employment_rate") is None:
                 course["outcomes"] = {"status": "no_survey", "group": group, "level": level}
                 stats["no_row"] += 1
