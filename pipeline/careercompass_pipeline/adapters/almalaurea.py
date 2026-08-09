@@ -510,7 +510,7 @@ def ingest_all(shard=0, shards=1, delay=0.8):
 
 
 
-def fill_gaps(path="out/gaps.json", delay=0.8):
+def fill_gaps(path=None, delay=0.8):
     """Re-query specific (ateneo, group, level) combinations.
 
     The national pass occasionally reads an empty render and drops a real
@@ -519,6 +519,7 @@ def fill_gaps(path="out/gaps.json", delay=0.8):
     """
     from playwright.sync_api import sync_playwright
 
+    path = path or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "gaps.json")
     combos = json.load(open(path, encoding="utf-8"))
     print(f"filling {len(combos)} gap combos")
     rows = {}
