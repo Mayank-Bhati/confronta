@@ -83,6 +83,25 @@ export function OfficialLink({ c }) {
   );
 }
 
+// A statistic that carries its own source: click the number, land on the exact
+// AlmaLaurea page it came from. Tester ask — "let me check the figure myself".
+function StatCell({ T, value, label, color, href }) {
+  const inner = (
+    <>
+      <div className="font-semibold" style={{ ...mono, fontSize: 21, color, letterSpacing: "-.02em" }}>{value}</div>
+      <div style={{ fontSize: 11, color: T.grey, textDecoration: href ? "underline dotted" : "none" }}>
+        {label}{href ? " \u2197" : ""}
+      </div>
+    </>
+  );
+  if (!href) return <div>{inner}</div>;
+  return (
+    <a href={href} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="block text-left">
+      {inner}
+    </a>
+  );
+}
+
 export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badge }) {
   const { T, t, scoreColor, isSavedOn, toggleSave, profile, prefs, setPrefs, envPrefs, homeCity } = React.useContext(AppCtx);
   const fees = c.costByIsee?.[profile?.isee || "mid"];
@@ -158,25 +177,16 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
       </div>
       {/* Statistics strip — big, scannable, per tester feedback */}
       <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
-        <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: real ? T.green : T.grey, letterSpacing: "-.02em" }}>
-            {real ? `${real.employment1y}%` : "—"}
-          </div>
-          <div style={{ fontSize: 11, color: T.grey }}>{real ? t("stat_emp") : t("stat_nodata")}</div>
-        </div>
-        <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: T.ink, letterSpacing: "-.02em" }}>
-            {real?.netPay ? `~€${Math.round(real.netPay / 100) / 10}k`
-              : c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"}
-          </div>
-          <div style={{ fontSize: 11, color: T.grey }}>{real?.netPay ? t("stat_net_real") : t("stat_net_job")}</div>
-        </div>
-        <div>
-          <div className="font-semibold" style={{ ...mono, fontSize: 21, color: real && real.onTime < 65 ? T.amber : T.ink, letterSpacing: "-.02em" }}>
-            {real && real.onTime != null ? `${real.onTime}%` : "—"}
-          </div>
-          <div style={{ fontSize: 11, color: T.grey }}>{real && real.onTime != null ? t("stat_ontime") : t("stat_nodata")}</div>
-        </div>
+        <StatCell T={T} href={real?.sourceOcc} label={real ? t("stat_emp") : t("stat_nodata")}
+          value={real ? `${real.employment1y}%` : "—"} color={real ? T.green : T.grey} />
+        <StatCell T={T} href={real?.netPay ? real.sourceOcc : null}
+          label={real?.netPay ? t("stat_net_real") : t("stat_net_job")} color={T.ink}
+          value={real?.netPay ? `~€${Math.round(real.netPay / 100) / 10}k`
+            : c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"} />
+        <StatCell T={T} href={real?.onTime != null ? real.sourceProf : null}
+          label={real && real.onTime != null ? t("stat_ontime") : t("stat_nodata")}
+          value={real && real.onTime != null ? `${real.onTime}%` : "—"}
+          color={real && real.onTime < 65 ? T.amber : T.ink} />
         <button onClick={cycleCost} className="text-left" title={t("stat_cost_hint")}>
           <div className="font-semibold" style={{ ...mono, fontSize: 21, color: costView === "fees" && fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{costStat.n}</div>
           <div style={{ fontSize: 11, color: T.accent, textDecoration: "underline", textDecorationStyle: "dotted" }}>{costStat.label} ↺</div>

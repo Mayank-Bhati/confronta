@@ -33,7 +33,13 @@ export default function Paths() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("isee_label")}</div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>
+                    {t("isee_label")}{" "}
+                    <a href="https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.49936.tipologie-di-isee.html"
+                      target="_blank" rel="noreferrer" className="underline normal-case" style={{ color: T.accent }}>
+                      {t("isee_what")}
+                    </a>
+                  </div>
                   <div className="flex gap-2">
                     {[["low", "≤ €22k (no-tax area)"], ["mid", "€22–30k"], ["high", "> €30k"]].map(([v, l]) => (
                       <ChipBtn key={v} active={profile.isee === v} onClick={() => setProfile((p) => ({ ...p, isee: v }))}>{l}</ChipBtn>
