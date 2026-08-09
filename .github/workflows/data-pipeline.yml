@@ -8,10 +8,11 @@ name: Data pipeline
 on:
   schedule:
     - cron: "0 3 1 * *"   # monthly refresh of the Universitaly catalog
+    - cron: "0 6 */3 * *" # keep the Supabase project awake (it pauses when idle)
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all | almalaurea-fill"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all | almalaurea-fill | db-ping"
         required: false
         default: "probe"
       pages:
@@ -31,6 +32,22 @@ jobs:
 
       - name: Install pipeline deps
         run: pip install -r pipeline/requirements.txt psycopg2-binary
+
+      - name: Keep the database awake
+        # Supabase free-tier projects pause after about a week of inactivity and
+        # their endpoints are withdrawn entirely, which breaks every pipeline
+        # command. One trivial query every three days prevents that.
+        if: github.event_name == 'schedule' || inputs.task == 'db-ping'
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        working-directory: pipeline
+        run: |
+          python -c "
+          from careercompass_pipeline.db import Session
+          from sqlalchemy import text
+          with Session() as s:
+              print('db awake:', s.execute(text('select count(*) from programs')).scalar(), 'programs')
+          "
 
       - name: Probe registries
         run: |
@@ -99,7 +116,7 @@ jobs:
           python -m careercompass_pipeline.verify_access
 
       - name: Universitaly full-catalog ingest
-        if: inputs.task == 'universitaly-ingest' || github.event_name == 'schedule'
+        if: inputs.task == 'universitaly-ingest' || (github.event_name == 'schedule' && github.event.schedule == '0 3 1 * *')
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         working-directory: pipeline
