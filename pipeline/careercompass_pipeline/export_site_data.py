@@ -93,6 +93,15 @@ SOUTH = {
 for cid, entries in SOUTH.items():
     CAREER_MAP[cid] = CAREER_MAP[cid] + entries
 
+# 2026-08 expansion — written by seed_expand from the registry, so course names
+# here always match what is actually in the database.
+_EXPANDED = os.path.join(os.path.dirname(os.path.abspath(__file__)), "expanded_map.json")
+if os.path.exists(_EXPANDED):
+    with open(_EXPANDED, encoding="utf-8") as _f:
+        for cid, entries in json.load(_f).items():
+            CAREER_MAP.setdefault(cid, [])
+            CAREER_MAP[cid] = CAREER_MAP[cid] + [tuple(e) for e in entries]
+
 CAREER_TAGS = {
     "mechatronics": ["Machines & hardware", "Building things"],
     "robotics-eng": ["Machines & hardware", "Programming", "Mathematics"],
@@ -140,6 +149,17 @@ CITY_FALLBACK = {
     "Bari": {"lat": 41.1171, "lon": 16.8719, "rent": 400, "size": "medium", "vibe": "Seaside, growing, affordable"},
     "Palermo": {"lat": 38.1157, "lon": 13.3615, "rent": 350, "size": "large", "vibe": "Beautiful, affordable, far from the north"},
     "Firenze": {"lat": 43.7696, "lon": 11.2558, "rent": 620, "size": "medium", "vibe": "Art everywhere, tourist prices"},
+    # 2026-08 expansion — approximate single-room rents, city-level living costs
+    "Padova": {"lat": 45.4064, "lon": 11.8768, "rent": 400, "size": "medium", "vibe": "Classic student city, everything walkable"},
+    "Pisa": {"lat": 43.7228, "lon": 10.4017, "rent": 380, "size": "small", "vibe": "Small, academic, cheap by Tuscan standards"},
+    "Genova": {"lat": 44.4056, "lon": 8.9463, "rent": 350, "size": "large", "vibe": "Sea and hills, affordable for a big city"},
+    "Verona": {"lat": 45.4384, "lon": 10.9916, "rent": 380, "size": "medium", "vibe": "Elegant, well connected, quietly wealthy"},
+    "Trento": {"lat": 46.0748, "lon": 11.1217, "rent": 400, "size": "small", "vibe": "Mountains, high quality of life, strong services"},
+    "Pavia": {"lat": 45.1847, "lon": 9.1582, "rent": 380, "size": "small", "vibe": "College-town feel, 30 minutes from Milan"},
+    "Parma": {"lat": 44.8015, "lon": 10.3279, "rent": 350, "size": "small", "vibe": "Food capital, compact and liveable"},
+    "Catania": {"lat": 37.5079, "lon": 15.0830, "rent": 300, "size": "large", "vibe": "Volcano and sea, lively and inexpensive"},
+    "Cagliari": {"lat": 39.2238, "lon": 9.1217, "rent": 330, "size": "medium", "vibe": "Island capital, beaches on the doorstep"},
+    "Salerno": {"lat": 40.6824, "lon": 14.7681, "rent": 300, "size": "medium", "vibe": "Seafront, affordable, near the Amalfi coast"},
 }
 
 # Verified fee anchors (research workbook, Universities + ISEE_Bands sheets).
@@ -156,6 +176,11 @@ INST_FEES = {
     "unifi": {"low": 156, "mid": 1400, "high": 3000},
     "unipa": {"low": 156, "mid": 1100, "high": 2600},
     "uniba": {"low": 156, "mid": 1200, "high": 2700},
+    "unipd": {"low": 190, "mid": 1500, "high": 2900}, "unipi": {"low": 160, "mid": 1300, "high": 2600},
+    "unige": {"low": 160, "mid": 1300, "high": 2800}, "univr": {"low": 180, "mid": 1500, "high": 3000},
+    "unitn": {"low": 160, "mid": 1600, "high": 3600}, "unipv": {"low": 160, "mid": 1500, "high": 3000},
+    "unipr": {"low": 160, "mid": 1400, "high": 2900}, "unict": {"low": 150, "mid": 1100, "high": 2400},
+    "unica": {"low": 150, "mid": 1100, "high": 2400}, "unisa": {"low": 150, "mid": 1200, "high": 2500},
     "its-lomb-mecc": {"low": 0, "mid": 0, "high": 0},   # ITS Academy: MIM/ESF funded
     "its-rizzoli": {"low": 0, "mid": 0, "high": 0},
     "its-energia-pi": {"low": 0, "mid": 0, "high": 0},
@@ -176,6 +201,10 @@ INST_TEST = {
     "unifi": "TOLC (CISIA)",
     "unipa": "TOLC (CISIA)",
     "uniba": "TOLC (CISIA)",
+    "unipd": "TOLC (CISIA)", "unipi": "TOLC (CISIA)", "unige": "TOLC (CISIA)",
+    "univr": "TOLC (CISIA)", "unitn": "TOLC (CISIA)", "unipv": "TOLC (CISIA)",
+    "unipr": "TOLC (CISIA)", "unict": "TOLC (CISIA)", "unica": "TOLC (CISIA)",
+    "unisa": "TOLC (CISIA)",
     "its-lomb-mecc": "Internal selection test + interview",
     "its-rizzoli": "Internal selection test + interview",
     "its-energia-pi": "Internal selection test + interview",

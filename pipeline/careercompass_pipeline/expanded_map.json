@@ -1,0 +1,450 @@
+{
+ "software-dev": [
+  [
+   "unipd",
+   "Informatica"
+  ],
+  [
+   "unipi",
+   "INFORMATICA"
+  ],
+  [
+   "unige",
+   "Informatica"
+  ],
+  [
+   "univr",
+   "Informatica"
+  ],
+  [
+   "unitn",
+   "INFORMATICA"
+  ],
+  [
+   "unipv",
+   "Artificial intelligence"
+  ],
+  [
+   "unipr",
+   "Informatica"
+  ],
+  [
+   "unict",
+   "Informatica"
+  ],
+  [
+   "unica",
+   "Informatica"
+  ],
+  [
+   "unisa",
+   "Informatica"
+  ]
+ ],
+ "data-analyst": [
+  [
+   "unipd",
+   "Matematica"
+  ],
+  [
+   "unipi",
+   "MATEMATICA"
+  ],
+  [
+   "unige",
+   "Matematica"
+  ],
+  [
+   "univr",
+   "Matematica applicata"
+  ],
+  [
+   "unitn",
+   "MATEMATICA"
+  ],
+  [
+   "unipv",
+   "Matematica"
+  ],
+  [
+   "unipr",
+   "Matematica"
+  ],
+  [
+   "unict",
+   "Matematica"
+  ],
+  [
+   "unica",
+   "Matematica"
+  ],
+  [
+   "unisa",
+   "Matematica"
+  ]
+ ],
+ "nurse": [
+  [
+   "unipd",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unipi",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unige",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "univr",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unipv",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unipr",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unict",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unica",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ],
+  [
+   "unisa",
+   "Infermieristica (abilitante alla professione sanitaria di Infermiere)"
+  ]
+ ],
+ "physio": [
+  [
+   "unipd",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unipi",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unige",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "univr",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unipv",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unipr",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unict",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unica",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ],
+  [
+   "unisa",
+   "Fisioterapia (abilitante alla professione sanitaria di Fisioterapista)"
+  ]
+ ],
+ "psychologist": [
+  [
+   "unipd",
+   "Scienze e Tecniche psicologiche"
+  ],
+  [
+   "unipi",
+   "SCIENZE E TECNICHE DI PSICOLOGIA CLINICA E SPERIMENTALE"
+  ],
+  [
+   "unige",
+   "Scienze e tecniche psicologiche"
+  ],
+  [
+   "univr",
+   "Scienze psicologiche per la formazione"
+  ],
+  [
+   "unitn",
+   "Scienze e Tecniche di Psicologia Cognitiva"
+  ],
+  [
+   "unipv",
+   "Scienze e tecniche psicologiche"
+  ],
+  [
+   "unipr",
+   "Scienze e Tecniche Psicologiche per le Sfide Contemporanee"
+  ],
+  [
+   "unict",
+   "Scienze e tecniche psicologiche"
+  ],
+  [
+   "unica",
+   "Scienze e Tecniche psicologiche"
+  ]
+ ],
+ "teacher": [
+  [
+   "unipd",
+   "Scienze della formazione primaria"
+  ],
+  [
+   "unipi",
+   "Scienze della formazione primaria"
+  ],
+  [
+   "unige",
+   "Scienze della formazione primaria"
+  ],
+  [
+   "univr",
+   "Scienze della formazione primaria"
+  ],
+  [
+   "unict",
+   "Scienze della formazione primaria"
+  ],
+  [
+   "unica",
+   "Scienze della formazione primaria"
+  ],
+  [
+   "unisa",
+   "Scienze della formazione primaria"
+  ]
+ ],
+ "social-worker": [
+  [
+   "unipd",
+   "Servizio sociale"
+  ],
+  [
+   "unipi",
+   "SCIENZE DEL SERVIZIO SOCIALE"
+  ],
+  [
+   "unige",
+   "Servizio Sociale"
+  ],
+  [
+   "univr",
+   "Scienze del servizio sociale"
+  ],
+  [
+   "unitn",
+   "SERVIZIO SOCIALE"
+  ],
+  [
+   "unipr",
+   "Servizio Sociale"
+  ],
+  [
+   "unict",
+   "Sociologia e servizio sociale"
+  ],
+  [
+   "unica",
+   "Servizio Sociale e Innovazione"
+  ],
+  [
+   "unisa",
+   "Scienze del Servizio Sociale"
+  ]
+ ],
+ "marketing": [
+  [
+   "unipd",
+   "Economia"
+  ],
+  [
+   "unipi",
+   "ECONOMIA AZIENDALE"
+  ],
+  [
+   "unige",
+   "Economia aziendale"
+  ],
+  [
+   "univr",
+   "Economia aziendale e management"
+  ],
+  [
+   "unitn",
+   "Amministrazione Aziendale e Diritto"
+  ],
+  [
+   "unipv",
+   "Management"
+  ],
+  [
+   "unipr",
+   "Economia e Management"
+  ],
+  [
+   "unict",
+   "Economia Aziendale"
+  ],
+  [
+   "unica",
+   "Economia e Gestione Aziendale"
+  ],
+  [
+   "unisa",
+   "Economia aziendale"
+  ]
+ ],
+ "env-eng": [
+  [
+   "unipd",
+   "Ingegneria civile"
+  ],
+  [
+   "unipi",
+   "INGEGNERIA CIVILE AMBIENTALE E EDILE"
+  ],
+  [
+   "unige",
+   "Ingegneria Civile, Edile e Ambientale"
+  ],
+  [
+   "unitn",
+   "INGEGNERIA CIVILE"
+  ],
+  [
+   "unipv",
+   "Ingegneria civile e ambientale"
+  ],
+  [
+   "unipr",
+   "Ingegneria Civile e Ambientale"
+  ],
+  [
+   "unict",
+   "Ingegneria Civile, Ambientale e Gestionale"
+  ],
+  [
+   "unica",
+   "Ingegneria Civile"
+  ],
+  [
+   "unisa",
+   "Ingegneria civile"
+  ]
+ ],
+ "researcher": [
+  [
+   "unipd",
+   "Fisica"
+  ],
+  [
+   "unipi",
+   "FISICA"
+  ],
+  [
+   "unige",
+   "FISICA"
+  ],
+  [
+   "unitn",
+   "FISICA"
+  ],
+  [
+   "unipv",
+   "Fisica"
+  ],
+  [
+   "unipr",
+   "Fisica"
+  ],
+  [
+   "unict",
+   "Fisica"
+  ],
+  [
+   "unica",
+   "FISICA"
+  ],
+  [
+   "unisa",
+   "FISICA"
+  ]
+ ],
+ "tourism": [
+  [
+   "unipd",
+   "Progettazione e Gestione del turismo culturale"
+  ],
+  [
+   "unipi",
+   "SCIENZE DEL TURISMO"
+  ],
+  [
+   "unige",
+   "Scienze del turismo: impresa, cultura e territorio"
+  ],
+  [
+   "unict",
+   "Scienze del turismo"
+  ],
+  [
+   "unica",
+   "Management delle destinazioni e del turismo culturale"
+  ],
+  [
+   "unisa",
+   "Scienze del Turismo"
+  ]
+ ],
+ "export": [
+  [
+   "unipi",
+   "ECONOMIA E COMMERCIO"
+  ],
+  [
+   "unige",
+   "Scienze Economiche e Finanziarie"
+  ],
+  [
+   "univr",
+   "Economia e commercio"
+  ],
+  [
+   "unitn",
+   "Economia e Management"
+  ],
+  [
+   "unipv",
+   "Economia"
+  ],
+  [
+   "unipr",
+   "Economia e Management delle Filiere Alimentari Sostenibili"
+  ],
+  [
+   "unict",
+   "Economia"
+  ],
+  [
+   "unica",
+   "Economia e Finanza"
+  ],
+  [
+   "unisa",
+   "Economia e commercio"
+  ]
+ ]
+}

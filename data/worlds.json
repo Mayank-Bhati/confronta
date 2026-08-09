@@ -133,7 +133,17 @@
       "unibo-p133",
       "unifi-p145",
       "unipa-p155",
-      "uniba-p166"
+      "uniba-p166",
+      "unipd-p176",
+      "unipi-p186",
+      "unige-p197",
+      "univr-p208",
+      "unitn-p216",
+      "unipv-p276",
+      "unipr-p230",
+      "unict-p238",
+      "unica-p249",
+      "unisa-p259"
      ],
      "netMonthly": 1550
     },
@@ -160,7 +170,17 @@
       "unibo-p134",
       "unifi-p146",
       "unipa-p156",
-      "uniba-p174"
+      "uniba-p174",
+      "unipd-p270",
+      "unipi-p272",
+      "unige-p273",
+      "univr-p274",
+      "unitn-p275",
+      "unipv-p277",
+      "unipr-p278",
+      "unict-p280",
+      "unica-p281",
+      "unisa-p283"
      ],
      "netMonthly": 1500
     },
@@ -240,7 +260,16 @@
       "unibo-p135",
       "unifi-p147",
       "unipa-p157",
-      "uniba-p167"
+      "uniba-p167",
+      "unipd-p178",
+      "unipi-p187",
+      "unige-p198",
+      "univr-p209",
+      "unipv-p223",
+      "unipr-p231",
+      "unict-p239",
+      "unica-p250",
+      "unisa-p261"
      ],
      "netMonthly": 1440
     },
@@ -266,7 +295,16 @@
       "unibo-p136",
       "unifi-p148",
       "unipa-p158",
-      "uniba-p168"
+      "uniba-p168",
+      "unipd-p179",
+      "unipi-p188",
+      "unige-p199",
+      "univr-p210",
+      "unipv-p224",
+      "unipr-p232",
+      "unict-p240",
+      "unica-p251",
+      "unisa-p262"
      ],
      "netMonthly": 1500
     },
@@ -314,7 +352,16 @@
       "unibo-p137",
       "unifi-p149",
       "unipa-p159",
-      "uniba-p169"
+      "uniba-p169",
+      "unipd-p180",
+      "unipi-p189",
+      "unige-p200",
+      "univr-p211",
+      "unitn-p217",
+      "unipv-p225",
+      "unipr-p233",
+      "unict-p241",
+      "unica-p252"
      ],
      "netMonthly": 1330
     }
@@ -444,7 +491,17 @@
       "federico2-p129",
       "unibo-p140",
       "unipa-p163",
-      "uniba-p172"
+      "uniba-p172",
+      "unipd-p271",
+      "unipi-p192",
+      "unige-p203",
+      "univr-p214",
+      "unitn-p219",
+      "unipv-p226",
+      "unipr-p235",
+      "unict-p244",
+      "unica-p282",
+      "unisa-p265"
      ],
      "netMonthly": 1380
     },
@@ -486,7 +543,16 @@
       "sapienza-p121",
       "federico2-p130",
       "unibo-p141",
-      "unifi-p152"
+      "unifi-p152",
+      "unipi-p193",
+      "unige-p204",
+      "univr-p215",
+      "unitn-p220",
+      "unipv-p227",
+      "unipr-p279",
+      "unict-p245",
+      "unica-p255",
+      "unisa-p266"
      ],
      "netMonthly": 1500
     },
@@ -567,7 +633,16 @@
       "federico2-p131",
       "unibo-p142",
       "unifi-p153",
-      "unipa-p164"
+      "unipa-p164",
+      "unipd-p183",
+      "unipi-p194",
+      "unige-p205",
+      "unitn-p221",
+      "unipv-p228",
+      "unipr-p236",
+      "unict-p246",
+      "unica-p256",
+      "unisa-p267"
      ],
      "netMonthly": 1550
     },
@@ -612,7 +687,16 @@
       "unibo-p143",
       "unifi-p154",
       "unipa-p165",
-      "uniba-p173"
+      "uniba-p173",
+      "unipd-p184",
+      "unipi-p195",
+      "unige-p206",
+      "unitn-p222",
+      "unipv-p229",
+      "unipr-p237",
+      "unict-p247",
+      "unica-p257",
+      "unisa-p268"
      ],
      "netMonthly": 1330
     }
@@ -652,7 +736,14 @@
       "unibo-p138",
       "unifi-p150",
       "unipa-p160",
-      "uniba-p170"
+      "uniba-p170",
+      "unipd-p181",
+      "unipi-p190",
+      "unige-p201",
+      "univr-p212",
+      "unict-p242",
+      "unica-p253",
+      "unisa-p263"
      ],
      "netMonthly": 1330
     },
@@ -695,7 +786,13 @@
       "sapienza-p117",
       "federico2-p127",
       "unipa-p161",
-      "uniba-p175"
+      "uniba-p175",
+      "unipd-p185",
+      "unipi-p196",
+      "unige-p207",
+      "unict-p248",
+      "unica-p258",
+      "unisa-p269"
      ],
      "netMonthly": 1330
     },
@@ -720,7 +817,16 @@
       "unibo-p139",
       "unifi-p151",
       "unipa-p162",
-      "uniba-p171"
+      "uniba-p171",
+      "unipd-p182",
+      "unipi-p191",
+      "unige-p202",
+      "univr-p213",
+      "unitn-p218",
+      "unipr-p234",
+      "unict-p243",
+      "unica-p254",
+      "unisa-p264"
      ],
      "netMonthly": 1270
     }

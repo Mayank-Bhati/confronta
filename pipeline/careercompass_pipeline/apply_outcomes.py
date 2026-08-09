@@ -62,6 +62,9 @@ ATENEO_CODE = {
     "polito": "70032", "unito": "70031", "unimib": "70132", "unimi": "70015",
     "sapienza": "70026", "federico2": "70018", "unibo": "70003", "unifi": "70010",
     "unipa": "70020", "uniba": "70002",
+    "unipd": "70019", "unipi": "70024", "unige": "70011", "univr": "70040",
+    "unitn": "70062", "unipv": "70022", "unipr": "70021", "unict": "70008",
+    "unica": "70004", "unisa": "70028",
 }
 
 NO_DATA_REASON = {

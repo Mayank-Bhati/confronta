@@ -509,12 +509,64 @@ def ingest_all(shard=0, shards=1, delay=0.8):
     return out
 
 
+
+def fill_gaps(path="out/gaps.json", delay=0.8):
+    """Re-query specific (ateneo, group, level) combinations.
+
+    The national pass occasionally reads an empty render and drops a real
+    combination. Rather than re-run the whole matrix, re-ask for exactly the
+    ones the site is missing.
+    """
+    from playwright.sync_api import sync_playwright
+
+    combos = json.load(open(path, encoding="utf-8"))
+    print(f"filling {len(combos)} gap combos")
+    rows = {}
+    with sync_playwright() as p:
+        browser, ctx = _browser(p)
+        page = ctx.new_page()
+        _open_session(page)
+        for idx, (code, gkey, level) in enumerate(combos, 1):
+            key = f"{code}|{gkey}|{level}"
+            entry = {"ateneo_code": code, "group": gkey, "level": level,
+                     "gruppo_code": GRUPPO[gkey]}
+            for config, wanted, anno in (("occupazione", WANTED_OCC, OCC_YEAR),
+                                         ("profilo", WANTED_PROF, PROF_YEAR)):
+                url = _query_url(config, code, GRUPPO[gkey], level, anno)
+                got = {}
+                for attempt in (1, 2, 3):
+                    try:
+                        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                        page.wait_for_timeout(1200 * attempt)
+                        got = {k: _pick(_lines(page.content()), spec) for k, spec in wanted.items()}
+                        if any(v is not None for v in got.values()):
+                            break
+                    except Exception:
+                        pass
+                entry.update(got)
+                entry[f"{config}_year"] = anno
+                entry[f"{config}_source"] = url
+                page.wait_for_timeout(int(delay * 1000))
+            if any(entry.get(k) is not None for k in ("employment_rate", "would_choose_again", "on_time")):
+                rows[key] = entry
+            print(f"  {idx}/{len(combos)} {key}: {'filled' if key in rows else 'genuinely empty'}")
+        browser.close()
+    os.makedirs("out", exist_ok=True)
+    with open("out/almalaurea-shard-gaps.json", "w", encoding="utf-8") as f:
+        json.dump({"surveys": {"occupazione": OCC_YEAR, "profilo": PROF_YEAR}, "rows": rows}, f,
+                  indent=1, ensure_ascii=False)
+    print(f"\nfilled {len(rows)} of {len(combos)} gaps")
+    return rows
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "discover"
     if cmd == "discover":
         discover()
     elif cmd == "ingest":
         ingest()
+    elif cmd == "fill":
+        fill_gaps()
     elif cmd == "all":
         shard = int(sys.argv[2]) if len(sys.argv) > 2 else 0
         shards = int(sys.argv[3]) if len(sys.argv) > 3 else 1
