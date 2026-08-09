@@ -93,6 +93,16 @@ export default function CareerCompass() {
   const norm = useMemo(() => normalize(vector), [vector]);
   const ident = useMemo(() => identity(vector), [vector]);
   const identTitle = t(`pair_${ident.letters}`) === `pair_${ident.letters}` ? t("pair_XX") : t(`pair_${ident.letters}`);
+  // Every career on the site, tagged with its world — powers the search box
+  // for students who already know the job they want.
+  const allCareers = useMemo(() => {
+    const out = [];
+    for (const w of WORLDS_DATA.worlds) {
+      for (const c of w.careers) out.push({ ...c, worldId: w.id, worldName: w.name });
+    }
+    return out;
+  }, []);
+
   const rankedWorlds = useMemo(() => rankWorlds(vector, WORLDS_DATA.worlds, profile.interests), [vector, profile.interests]);
   const world = rankedWorlds.find((w) => w.id === worldId);
   const rankedCareers = useMemo(() => (world ? rankCareers(vector, world, profile.interests) : []), [vector, world, profile.interests]);
@@ -630,7 +640,7 @@ export default function CareerCompass() {
     prefs, setPrefs, homeCity, awayFromHome, institutions, envPrefs, cityCostBadge,
     saved, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter,
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
-    savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist,
+    savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, allCareers,
     pair, compareDims, narrative, setNarrative,
     lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal,
     tourQueue, roundChoice, startTournament, nextRound, crownChampion, clearChampion, champion: store.champion || null,

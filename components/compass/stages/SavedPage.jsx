@@ -5,7 +5,7 @@ import { mono, display } from "../constants";
 import { ChipBtn, Section, InstitutionCard, BackLink } from "../ui";
 
 export default function SavedPage() {
-  const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel, td, startTournament, champion, clearChampion } = useApp();
+  const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel, td, startTournament, champion, clearChampion, toggleSave } = useApp();
   const championCourse = champion?.courseId ? savedEntries.find((s) => s.course.id === champion.courseId)?.course : null;
   return (
     <>
@@ -50,10 +50,19 @@ export default function SavedPage() {
             )}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {filteredSavedEntries.map((s) => (
-                <InstitutionCard key={`${s.courseId}::${s.careerId}`} c={s.course} chosen={finalists.includes(s.courseId)}
-                  onCardClick={() => toggleFinalist(s.courseId)}
-                  saveCtx={{ careerId: s.careerId, careerName: s.careerName, worldName: s.worldName }}
-                  badge={s.careerName ? `${t("saved_from")}: ${s.worldName} → ${td(s.careerName)}` : null} />
+                <div key={`${s.courseId}::${s.careerId}`} className="relative">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); toggleSave(s.course, { careerId: s.careerId, careerName: s.careerName, worldName: s.worldName }); }}
+                    aria-label={t("saved_remove")} title={t("saved_remove")}
+                    className="absolute top-2 right-2 z-10 w-7 h-7 rounded-full text-sm flex items-center justify-center transition-opacity opacity-60 hover:opacity-100"
+                    style={{ color: T.grey, background: T.card, border: `1px solid ${T.line}` }}>
+                    ✕
+                  </button>
+                  <InstitutionCard c={s.course} chosen={finalists.includes(s.courseId)}
+                    onCardClick={() => toggleFinalist(s.courseId)}
+                    saveCtx={{ careerId: s.careerId, careerName: s.careerName, worldName: s.worldName }}
+                    badge={s.careerName ? `${t("saved_from")}: ${s.worldName} → ${td(s.careerName)}` : null} />
+                </div>
               ))}
             </div>
 
