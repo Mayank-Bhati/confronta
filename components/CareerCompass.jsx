@@ -69,7 +69,10 @@ export default function CareerCompass() {
   const [profile, setProfile] = useState({ interests: [], goals: ["work"], isee: "mid", locationMode: "anywhere", homeCityId: "", relocationCities: [], mathStrength: 3 });
   const [worldId, setWorldId] = useState(null);
   const [careerId, setCareerId] = useState(null);
-  const [prefs, setPrefs] = useState({ pathType: "any", ownership: "any", maxDistance: 100, cityRadius: 60, budget: 900 });
+  // 0 = no limit. Nothing is filtered or flagged until the student asks for it:
+  // a pre-set distance and budget silently hid options and marked courses "over
+  // budget" before they had said anything.
+  const [prefs, setPrefs] = useState({ pathType: "any", ownership: "any", maxDistance: 0, cityRadius: 0, budget: 0, place: "", sortBy: "fit" });
   const saved = store.saved; // [{ courseId, careerId, careerName, worldName, resultId }] — persisted, contextual per path
   const [savedFilter, setSavedFilter] = useState("all");
   const [savedProfileFilter, setSavedProfileFilter] = useState("all");
@@ -242,21 +245,23 @@ export default function CareerCompass() {
       if (goals.has(g)) goals.delete(g);
       else {
         goals.add(g);
+        // "work soon" and "a master's" pull in opposite directions
         if (g === "work") goals.delete("study");
         if (g === "study") goals.delete("work");
       }
+      goals.delete("salary");   // retired goal — ignore anything stored earlier
       if (!goals.size) goals.add("unsure");
       return { ...p, goals: [...goals] };
     });
   }
 
   // Slider at max (500) means "all of Italy": no distance cap at all.
-  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, maxDistance: profile.locationMode === "home" && homeCity && prefs.maxDistance < 500 ? prefs.maxDistance : null };
+  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, maxDistance: profile.locationMode === "home" && homeCity && prefs.maxDistance > 0 && prefs.maxDistance < 500 ? prefs.maxDistance : null };
 
   const institutions = useMemo(() => {
     if (!career) return [];
     let list = career.courses.map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
-    list = list.filter((c) => passesHardFilters(c, prefs));
+    list = list.filter((c) => passesHardFilters(c, { ...prefs, goals: profile.goals }));
     // Location is a soft filter made visible: courses beyond the chosen range
     // stay listed (collapsed) up to 2× the slider, then disappear entirely —
     // a hidden best answer is the failure mode we exist to prevent.
@@ -264,18 +269,27 @@ export default function CareerCompass() {
     let rangeLimit = null;
     let distOf = null;
     if (profile.locationMode === "home" && homeCity) {
-      if (prefs.maxDistance < 500) rangeLimit = prefs.maxDistance;
+      if (prefs.maxDistance > 0 && prefs.maxDistance < 500) rangeLimit = prefs.maxDistance;
       distOf = (course) => haversineKm(homeCity.lat, homeCity.lon, course.lat, course.lon);
     } else if (profile.locationMode === "cities" && profile.relocationCities.length) {
       const chosen = CITIES.filter((c) => profile.relocationCities.includes(c.id));
-      if (prefs.cityRadius < 500) rangeLimit = prefs.cityRadius;
+      if (prefs.cityRadius > 0 && prefs.cityRadius < 500) rangeLimit = prefs.cityRadius;
       distOf = (course) => Math.min(...chosen.map((city) => haversineKm(city.lat, city.lon, course.lat, course.lon)));
+    }
+    // free-text place filter: city or region, typed on the profession page
+    const place = (prefs.place || "").trim().toLowerCase();
+    if (place) {
+      list = list.filter((c) => (c.city || "").toLowerCase().includes(place) ||
+                                (c.region || "").toLowerCase().includes(place) ||
+                                (c.inst || "").toLowerCase().includes(place));
     }
     return list
       .map((c) => ({ ...c, distKm: distOf ? Math.round(distOf(c)) : null }))
       .filter((c) => rangeLimit == null || c.distKm <= rangeLimit * 2)
       .map((c) => ({ ...c, beyondRange: rangeLimit != null && c.distKm > rangeLimit, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
-      .sort((a, b) => b.envFit.score - a.envFit.score);
+      .sort((a, b) => (prefs.sortBy === "distance" && a.distKm != null && b.distKm != null)
+        ? a.distKm - b.distKm
+        : b.envFit.score - a.envFit.score);
   }, [career, prefs, profile, homeCity, t]);
 
   const savedEntries = saved

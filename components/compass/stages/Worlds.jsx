@@ -10,7 +10,6 @@ export default function Worlds() {
   const { T, t, td, rankedWorlds, world, setWorldId, rankedCareers, setCareerId, setFinalists, go, identTitle, scoreColor, allCareers } = useApp();
   const [query, setQuery] = useState("");
   const [sortBy, setSortBy] = useState("fit");   // fit | pay | demand
-  const [pathType, setPathType] = useState("any");
 
   // Until the student picks a tab themselves, the open tab follows the top of
   // the ranking — otherwise editing interests re-orders the tabs while the
@@ -22,7 +21,6 @@ export default function Worlds() {
   }, [picked, world, rankedWorlds, setWorldId]);
 
   const DEMAND_RANK = { high: 3, growing: 2, stable: 1, competitive: 0, "n/a": 0 };
-  const matchesPath = (c) => pathType === "any" || (c.pathTypes || []).some((p) => p.toLowerCase().includes(pathType.toLowerCase()));
   const sortCareers = (list) => [...list].sort((a, b) => {
     if (sortBy === "pay") return (b.netMonthly || 0) - (a.netMonthly || 0);
     if (sortBy === "demand") return (DEMAND_RANK[b.demand] ?? 0) - (DEMAND_RANK[a.demand] ?? 0);
@@ -36,11 +34,11 @@ export default function Worlds() {
     ? sortCareers(allCareers.filter((c) =>
         (td(c.name) || "").toLowerCase().includes(q) ||
         (c.name || "").toLowerCase().includes(q) ||
-        (td(c.day) || "").toLowerCase().includes(q)).filter(matchesPath))
+        (td(c.day) || "").toLowerCase().includes(q)))
     : [];
 
   const selected = world || rankedWorlds[0];
-  const shown = sortCareers(rankedCareers.filter(matchesPath));
+  const shown = sortCareers(rankedCareers);
   return (
     <>
           <BackLink />
@@ -78,10 +76,6 @@ export default function Worlds() {
               <span className="text-xs uppercase tracking-widest" style={{ color: T.grey }}>{t("sort_label")}</span>
               {[["fit", t("sort_fit")], ["pay", t("sort_pay")], ["demand", t("sort_demand")]].map(([v, l]) => (
                 <ChipBtn key={v} active={sortBy === v} onClick={() => setSortBy(v)}>{l}</ChipBtn>
-              ))}
-              <span className="text-xs uppercase tracking-widest ml-2" style={{ color: T.grey }}>{t("pathtype")}</span>
-              {[["any", t("pt_any")], ["University", t("pt_uni")], ["ITS", t("pt_its")]].map(([v, l]) => (
-                <ChipBtn key={v} active={pathType === v} onClick={() => setPathType(v)}>{l}</ChipBtn>
               ))}
             </div>
           </div>

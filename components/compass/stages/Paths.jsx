@@ -47,32 +47,47 @@ export default function Paths() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("budget_label", { n: prefs.budget.toLocaleString() })}</div>
-                  <input type="range" min={awayFromHome ? 400 : 100} max="2000" step="50" value={prefs.budget} onChange={(e) => setPrefs((p) => ({ ...p, budget: +e.target.value }))} className="w-full" />
-                  <p className="text-xs mt-1" style={{ color: T.grey }}>{t(awayFromHome ? "budget_hint_away" : "budget_hint_home")}</p>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>
+                    {prefs.budget > 0 ? t("budget_label", { n: prefs.budget.toLocaleString() }) : t("budget_label_off")}
+                  </div>
+                  <input type="range" min="0" max="2000" step="50" value={prefs.budget} onChange={(e) => setPrefs((p) => ({ ...p, budget: +e.target.value }))} className="w-full" />
+                  <p className="text-xs mt-1" style={{ color: T.grey }}>{prefs.budget > 0 ? t(awayFromHome ? "budget_hint_away" : "budget_hint_home") : t("budget_hint_off")}</p>
                 </div>
                 {profile.locationMode === "home" && homeCity && (
                   <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{prefs.maxDistance >= 500 ? t("dist_label_all", { city: homeCity.name }) : t("dist_label", { city: homeCity.name, n: prefs.maxDistance })}</div>
-                    <input type="range" min="10" max="500" step="10" value={prefs.maxDistance} onChange={(e) => setPrefs((p) => ({ ...p, maxDistance: +e.target.value }))} className="w-full" />
-                    <div className="flex gap-2 mt-1.5 flex-wrap">
-                      {[[30, t("preset_prov")], [120, t("preset_reg")], [500, t("preset_all")]].map(([v, l]) => (
-                        <ChipBtn key={v} active={prefs.maxDistance === v} onClick={() => setPrefs((p) => ({ ...p, maxDistance: v }))}>{l}</ChipBtn>
-                      ))}
+                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>
+                      {prefs.maxDistance > 0 ? t("dist_label", { city: homeCity.name, n: prefs.maxDistance }) : t("dist_label_off", { city: homeCity.name })}
                     </div>
+                    <input type="range" min="0" max="500" step="10" value={prefs.maxDistance} onChange={(e) => setPrefs((p) => ({ ...p, maxDistance: +e.target.value }))} className="w-full" />
                   </div>
                 )}
                 {profile.locationMode === "cities" && profile.relocationCities.length > 0 && (
                   <div>
-                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{prefs.cityRadius >= 500 ? t("radius_label_all") : t("radius_label", { n: prefs.cityRadius })}</div>
-                    <input type="range" min="10" max="500" step="10" value={prefs.cityRadius} onChange={(e) => setPrefs((p) => ({ ...p, cityRadius: +e.target.value }))} className="w-full" />
-                    <div className="flex gap-2 mt-1.5 flex-wrap">
-                      {[[30, t("preset_prov")], [120, t("preset_reg")], [500, t("preset_all")]].map(([v, l]) => (
-                        <ChipBtn key={v} active={prefs.cityRadius === v} onClick={() => setPrefs((p) => ({ ...p, cityRadius: v }))}>{l}</ChipBtn>
-                      ))}
+                    <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>
+                      {prefs.cityRadius > 0 ? t("radius_label", { n: prefs.cityRadius }) : t("radius_label_off")}
                     </div>
+                    <input type="range" min="0" max="500" step="10" value={prefs.cityRadius} onChange={(e) => setPrefs((p) => ({ ...p, cityRadius: +e.target.value }))} className="w-full" />
                   </div>
                 )}
+              </div>
+              {/* Type a city or region to see only universities there, and sort
+                  by distance — the two things testers reached for first. */}
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 items-end">
+                <div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("place_label")}</div>
+                  <input type="search" value={prefs.place || ""} placeholder={t("place_ph")}
+                    onChange={(e) => setPrefs((p) => ({ ...p, place: e.target.value }))}
+                    className="w-full rounded-xl px-3 py-2.5 text-sm"
+                    style={{ border: `1.5px solid ${T.line}`, background: T.card2, color: T.ink }} />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("sort_label")}</div>
+                  <div className="flex gap-2 flex-wrap">
+                    {[["fit", t("sort_bestfit")], ["distance", t("sort_nearest")]].map(([v, l]) => (
+                      <ChipBtn key={v} active={(prefs.sortBy || "fit") === v} onClick={() => setPrefs((p) => ({ ...p, sortBy: v }))}>{l}</ChipBtn>
+                    ))}
+                  </div>
+                </div>
               </div>
               {profile.locationMode === "cities" && profile.relocationCities.length > 0 && (
                 <p className="text-xs mt-3" style={{ color: T.grey }}>

@@ -138,7 +138,7 @@ export default function Reveal() {
               <div className="mt-6">
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("goal_title")}</div>
                 <div className="flex flex-wrap gap-2">
-                  {[["work", t("goal_work")], ["salary", t("goal_salary")], ["study", t("goal_study")], ["unsure", t("goal_unsure")]].map(([v, l]) => (
+                  {[["work", t("goal_work")], ["study", t("goal_study")], ["unsure", t("goal_unsure")]].map(([v, l]) => (
                     <ChipBtn key={v} active={profile.goals.includes(v)} onClick={() => toggleGoal(v)}>{l}</ChipBtn>
                   ))}
                 </div>

@@ -407,6 +407,7 @@ def build_course(prog, inst, career_id, cities_by_name):
         "type": "ITS" if inst.kind == "its" else "University",
         "ownership": INST_OWNERSHIP.get(inst.slug, "public"),
         "city": city,
+        "region": inst.region or "",
         "lat": c["lat"], "lon": c["lon"],
         "citySize": c["size"],
         "years": prog.years or 3,
