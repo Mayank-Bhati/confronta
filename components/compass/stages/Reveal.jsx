@@ -43,7 +43,7 @@ function CityPicker({ T, t, value, onPick }) {
 }
 
 export default function Reveal() {
-  const { T, t, td, lang, norm, ident, identTitle, profile, setProfile, toggleGoal, savedToName, lastResult, setShowProfiles, activeProfile, openResult, deleteResult, go, historyList } = useApp();
+  const { T, t, td, lang, norm, ident, identTitle, profile, setProfile, toggleGoal, savedToName, lastResult, setShowProfiles, activeProfile, openResult, deleteResult, go, historyList, store, moveResult } = useApp();
   return (
     <>
           <div className="max-w-4xl mx-auto space-y-5">
@@ -109,6 +109,21 @@ export default function Reveal() {
                         <div className="text-xs mt-1" style={{ ...mono, color: T.grey }}>
                           {new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric" })}
                         </div>
+                        {/* Reassign this result to another profile. Shown only
+                            when there is somewhere else to put it. */}
+                        {(store?.profiles?.length > (activeProfile ? 1 : 0)) && (
+                          <select
+                            value={activeProfile?.id || ""}
+                            onClick={(e) => e.stopPropagation()}
+                            onChange={(e) => { e.stopPropagation(); moveResult(r.id, e.target.value || null); }}
+                            className="mt-1.5 w-full rounded-lg px-2 py-1 text-xs"
+                            style={{ border: `1px solid ${T.line}`, background: T.card, color: T.grey }}>
+                            <option value="">{t("res_no_profile")}</option>
+                            {store.profiles.map((p) => (
+                              <option key={p.id} value={p.id}>{t("res_move_to", { name: p.name })}</option>
+                            ))}
+                          </select>
+                        )}
                         {/* the choice made in Compare, shown with its result */}
                         {r.finalChoice && COURSES.find((c) => c.id === r.finalChoice) && (
                           <div className="text-xs mt-1.5 font-semibold" style={{ color: T.green }}>

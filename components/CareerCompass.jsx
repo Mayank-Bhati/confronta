@@ -91,7 +91,10 @@ export default function CareerCompass() {
   const homeCity = HOME_CITIES.find((c) => c.id === profile.homeCityId) || CITIES.find((c) => c.id === profile.homeCityId) || null;
   const awayFromHome = profile.locationMode !== "home"; // cost model: anywhere/cities = living away
   const hasResult = lastResult !== null || DIMS.some((d) => vector[d] > 0);
-  const historyList = activeProfile?.history?.length ? activeProfile.history : (store.guestHistory || []);
+  // A profile shows ITS OWN results, even when it has none. The old fallback
+  // to guestHistory made a freshly created (or newly switched-to) profile
+  // display someone else's guest results as if they belonged to it.
+  const historyList = activeProfile ? (activeProfile.history || []) : (store.guestHistory || []);
 
   // ————— Derived rankings —————
   const norm = useMemo(() => normalize(vector), [vector]);
@@ -536,6 +539,30 @@ export default function CareerCompass() {
     setNewName("");
   }
   function switchProfile(id) { updateStore((s) => ({ ...s, activeId: id })); }
+
+  // Put a particular result under a particular profile. Two people sharing one
+  // browser (a parent and their child is the common case) need this: whoever
+  // takes a test first has their results adopted by the first profile created.
+  // targetId === null moves it back out to the unassigned pile.
+  function moveResult(rid, targetId) {
+    updateStore((s) => {
+      let found = (s.guestHistory || []).find((h) => h.id === rid);
+      for (const p of s.profiles) {
+        const hit = (p.history || []).find((h) => h.id === rid);
+        if (hit) found = hit;
+      }
+      if (!found) return s;
+      const strippedProfiles = s.profiles.map((p) => ({ ...p, history: (p.history || []).filter((h) => h.id !== rid) }));
+      const strippedGuest = (s.guestHistory || []).filter((h) => h.id !== rid);
+      return {
+        ...s,
+        profiles: targetId
+          ? strippedProfiles.map((p) => (p.id === targetId ? { ...p, history: [found, ...p.history] } : p))
+          : strippedProfiles,
+        guestHistory: targetId ? strippedGuest : [found, ...strippedGuest],
+      };
+    });
+  }
   function deleteResult(rid) {
     updateStore((s) => ({
       ...s,
@@ -657,7 +684,7 @@ export default function CareerCompass() {
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
     savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, allCareers,
     pair, compareDims, narrative, setNarrative,
-    lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal,
+    lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal, moveResult,
     tourQueue, roundChoice, startTournament, nextRound, crownChampion, clearChampion, champion: store.champion || null,
     showProfiles, setShowProfiles, newName, setNewName,
     createProfile, switchProfile, deleteProfile,
