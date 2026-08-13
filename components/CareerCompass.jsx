@@ -19,6 +19,7 @@ import { PeopleIcon, Logo, Bar, ChipBtn, Section, NatureBadge, GoogleLink, Offic
 import Header from "./compass/Header";
 import AuthModal from "./compass/AuthModal";
 import ProfileModal from "./compass/ProfileModal";
+import FeedbackButton from "./compass/FeedbackButton";
 import Welcome from "./compass/stages/Welcome";
 import Survey from "./compass/stages/Survey";
 import Reveal from "./compass/stages/Reveal";
@@ -30,13 +31,13 @@ import Compare from "./compass/stages/Compare";
 
 export default function CareerCompass() {
   // ————— Language + theme + profiles (device-local) —————
-  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "en", theme: "light", saved: [] });
+  const [store, setStore] = useState({ profiles: [], activeId: null, lang: "it", theme: "light", saved: [] });
   const [storeLoaded, setStoreLoaded] = useState(false);
   useEffect(() => { setStore((s) => ({ ...s, ...loadStore() })); setStoreLoaded(true); }, []);
   useEffect(() => { if (storeLoaded) saveStore(store); }, [store, storeLoaded]);
   function updateStore(fn) { setStore(fn); }
 
-  const lang = store.lang || "en";
+  const lang = store.lang || "it";
   const theme = store.theme || "dark";
   const T = PALETTES[theme];
   const t = useMemo(() => makeT(lang), [lang]);
@@ -699,6 +700,8 @@ export default function CareerCompass() {
 
       {/* ————— Compare bar: appears anywhere two paths are picked, including
               across different worlds and careers (tester feedback). ————— */}
+      <FeedbackButton />
+
       {finalists.length === 2 && stage !== "compare" && (
         <div className="cc-fade-up fixed bottom-0 left-0 right-0 z-40 px-4 pb-4 pt-3"
           style={{ background: `linear-gradient(to top, ${T.bg} 65%, transparent)` }}>
