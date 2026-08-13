@@ -4,10 +4,18 @@ import { useApp } from "../context";
 import { mono, display } from "../constants";
 import { ChipBtn, Section, InstitutionCard, BackLink } from "../ui";
 import CITIES from "../../../data/cities-v2.json";
+import COURSES from "../../../data/courses-v2.json";
 
 export default function Paths() {
-  const { T, t, td, career, world, prefs, setPrefs, profile, setProfile, homeCity, institutions, finalists, toggleFinalist, go, awayFromHome } = useApp();
+  const { T, t, td, career, world, prefs, setPrefs, profile, setProfile, homeCity, institutions, finalists, toggleFinalist, go, awayFromHome, toggleGoal } = useApp();
   const [beyondOpen, setBeyondOpen] = useState(false);
+
+  // Why the list is empty matters. "Relax a filter" is wrong advice when no
+  // filter is set and the real reason is that this job is only reached through
+  // an ITS, which cannot answer a "master's & beyond" goal.
+  const allForCareer = (career.courses || []).map((id) => COURSES.find((c) => c.id === id)).filter(Boolean);
+  const onlyITS = allForCareer.length > 0 && allForCareer.every((c) => c.type === "ITS");
+  const blockedByStudyGoal = onlyITS && (profile.goals || []).includes("study");
   return (
     <>
           <>
@@ -97,7 +105,28 @@ export default function Paths() {
             </Section>
 
             {institutions.length === 0 && (
-              <Section><p className="text-sm" style={{ color: T.grey }}>{t("no_match")}</p></Section>
+              <Section>
+                {blockedByStudyGoal ? (
+                  <>
+                    <p className="text-sm" style={{ color: T.ink }}>{t("no_match_its_study", { c: td(career.name) })}</p>
+                    <button onClick={() => toggleGoal("work")}
+                      className="mt-3 px-4 py-2 rounded-full text-sm font-bold text-white transition-transform hover:scale-105"
+                      style={{ background: T.grad }}>
+                      {t("no_match_switch_goal")}
+                    </button>
+                  </>
+                ) : prefs.place ? (
+                  <>
+                    <p className="text-sm" style={{ color: T.ink }}>{t("no_match_place", { p: prefs.place })}</p>
+                    <button onClick={() => setPrefs((x) => ({ ...x, place: "" }))}
+                      className="mt-3 px-4 py-2 rounded-full text-sm font-bold" style={{ border: `1.5px solid ${T.lineStrong}`, color: T.ink }}>
+                      {t("no_match_clear_place")}
+                    </button>
+                  </>
+                ) : (
+                  <p className="text-sm" style={{ color: T.grey }}>{t("no_match")}</p>
+                )}
+              </Section>
             )}
 
             {(() => {
