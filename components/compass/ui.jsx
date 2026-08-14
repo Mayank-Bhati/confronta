@@ -3,6 +3,7 @@ import React from "react";
 import { AppCtx } from "./context";
 import { NATURE_KEY, mono, display, natureStyleFor } from "./constants";
 import { estimateMonthlyCost, realOutcomes } from "../../lib/fitEngine-v2";
+import { outcomeNote } from "../../lib/outcomeNote";
 
 
 export function PeopleIcon({ size = 18, color = "currentColor" }) {
@@ -210,8 +211,10 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
       </div>
       {/* Statistics strip — big, scannable, per tester feedback */}
       <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
-        <StatCell T={T} href={real?.sourceOcc} label={real ? t("stat_emp") : t("stat_nodata")}
-          value={real ? `${real.employment1y}%` : "—"} color={real ? T.green : T.grey} />
+        <StatCell T={T} href={real?.employment1y != null ? real.sourceOcc : null}
+          label={real?.employment1y != null ? t("stat_emp") : t("stat_nodata")}
+          value={real?.employment1y != null ? `${real.employment1y}%` : "—"}
+          color={real?.employment1y != null ? T.green : T.grey} />
         <StatCell T={T} href={real?.netPay ? real.sourceOcc : null}
           label={real?.netPay ? t("stat_net_real") : t("stat_net_job")} color={T.ink}
           value={real?.netPay ? `~€${Math.round(real.netPay / 100) / 10}k`
@@ -230,6 +233,26 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           {t("stat_masters_note", { p: real.continuingMasters })}
         </div>
       )}
+      {/* Name the reason a figure is missing, rather than leaving a dash that
+          reads like a bug. */}
+      {(() => {
+        const why = outcomeNote(c, t);
+        if (!why) return null;
+        return (
+          <div className="mt-2 text-xs" style={{ color: T.grey }}>
+            {why.text}
+            {why.href && (
+              <>
+                {" "}
+                <a href={why.href} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}
+                  className="underline" style={{ color: T.accent }}>
+                  {why.link} ↗
+                </a>
+              </>
+            )}
+          </div>
+        );
+      })()}
       {showFit && c.envFit && (
         <div className="mt-2.5 text-xs space-y-0.5" style={{ color: T.grey }}>
           {c.envFit.reasons.slice(0, 2).map((r, i) => <div key={i}>· {r}</div>)}

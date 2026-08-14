@@ -100,7 +100,7 @@ def apply_outcomes():
                 career_of[cid] = c["id"]
                 career_pay[cid] = c.get("netMonthly")
 
-    stats = {"matched": 0, "no_row": 0, "not_member": 0, "its": 0, "unmapped": []}
+    stats = {"matched": 0, "partial": 0, "no_row": 0, "not_member": 0, "its": 0, "unmapped": []}
     for course in courses:
         slug = slug_of(course["id"])
         career_id = career_of.get(course["id"])
@@ -114,14 +114,21 @@ def apply_outcomes():
         else:
             code = ATENEO_CODE.get(slug)
             row = rows.get(f"{code}|{group}|{level}") if (code and group) else None
-            if not row or row.get("employment_rate") is None:
+            # AlmaLaurea suppresses employment figures for groups with too few
+            # respondents while still publishing the graduate profile. Treating
+            # that as "no data" threw away real satisfaction numbers, so a course
+            # with a partial row now keeps what exists and says what is missing.
+            has_profile = row is not None and any(
+                row.get(k) is not None
+                for k in ("would_choose_again", "course_satisfaction", "teaching_satisfaction", "on_time"))
+            if not row or (row.get("employment_rate") is None and not has_profile):
                 course["outcomes"] = {"status": "no_survey", "group": group, "level": level}
                 stats["no_row"] += 1
                 if not group:
                     stats["unmapped"].append(f"{course['id']} ({career_id})")
             else:
                 course["outcomes"] = {
-                    "status": "ok",
+                    "status": "ok" if row.get("employment_rate") is not None else "partial",
                     "employment1y": row.get("employment_rate"),
                     "unemployment": row.get("unemployment_rate"),
                     "wouldChooseAgain": row.get("would_choose_again"),
@@ -143,7 +150,7 @@ def apply_outcomes():
                     "basis": "AlmaLaurea — this university, this subject area, "
                              "graduates of this level surveyed 1 year after graduating",
                 }
-                stats["matched"] += 1
+                stats["matched" if row.get("employment_rate") is not None else "partial"] += 1
 
         # Approximate entry pay for the JOB this course leads to. A career-level
         # market average, identical for every course leading to that job — never

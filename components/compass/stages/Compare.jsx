@@ -99,16 +99,18 @@ export default function Compare() {
                       <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ border: `1px solid ${T.line}` }}>
                         {r ? (
                           <>
-                            <div><b>{r.employment1y}%</b> {t("cmp_emp_real")}</div>
-                            <div><b>{r.wouldChooseAgain}%</b> {t("cmp_again")}</div>
-                            <div><b>{r.teachSat}%</b> {t("cmp_teach")}</div>
-                            <div><b>{r.onTime}%</b> {t("cmp_ontime")}</div>
+                            {r.employment1y != null
+                              ? <div><b>{r.employment1y}%</b> {t("cmp_emp_real")}</div>
+                              : <div style={{ color: T.grey }}>{t("cmp_emp_suppressed")}</div>}
+                            {r.wouldChooseAgain != null && <div><b>{r.wouldChooseAgain}%</b> {t("cmp_again")}</div>}
+                            {r.teachSat != null && <div><b>{r.teachSat}%</b> {t("cmp_teach")}</div>}
+                            {r.onTime != null && <div><b>{r.onTime}%</b> {t("cmp_ontime")}</div>}
                             {r.continuingMasters != null && (
                               <div><b>{r.continuingMasters}%</b> {t("cmp_masters")}</div>
                             )}
                             {r.netPay && <div><b>~€{r.netPay.toLocaleString()}</b> {t("cmp_pay_real")}</div>}
-                            <a href={r.sourceOcc} target="_blank" rel="noreferrer" className="inline-block text-xs underline" style={{ color: T.accent }}>
-                              {t("cmp_source_al", { y: r.occYear })}
+                            <a href={r.sourceOcc || r.sourceProf} target="_blank" rel="noreferrer" className="inline-block text-xs underline" style={{ color: T.accent }}>
+                              {t("cmp_source_al", { y: r.occYear || r.profYear })}
                             </a>
                           </>
                         ) : (
