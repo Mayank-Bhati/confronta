@@ -45,10 +45,19 @@ CAREER_GROUP = {
 }
 
 # course-name overrides — AlmaLaurea files these by subject, not by our career
+# First match wins, so the engineering rules must precede "informatic":
+# AlmaLaurea files Ingegneria Informatica (L-8) under group 12, engineering,
+# and reserves group 10 for Scienze informatiche (L-31). Sending a
+# politecnico's computer engineering to group 10 asked for a cell that does
+# not exist and produced a spurious "no survey data".
 NAME_GROUP = (
+    ("computer engineering", "ing_ind"),
+    ("ingegneria informatica", "ing_ind"),
     ("statistic", "economico"),      # Statistica / Scienze statistiche
     ("matematic", "scientifico"),
+    ("mathematic", "scientifico"),   # catalogue carries English course names too
     ("fisica", "scientifico"),
+    ("physics", "scientifico"),
     ("astrofisic", "scientifico"),
     ("scienze fisiche", "scientifico"),
     ("lingue", "linguistico"),       # Lingue e culture per il turismo
