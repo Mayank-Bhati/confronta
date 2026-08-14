@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useApp } from "./context";
 import { display } from "./constants";
 import { getSupabase } from "../../lib/supabaseClient";
+import { track } from "../../lib/track";
 
 // A way for students to tell us a number is wrong or a course is missing.
 // Testers found things no amount of our own clicking would — this gives every
@@ -31,6 +32,7 @@ export default function FeedbackButton() {
         user_agent: (navigator.userAgent || "").slice(0, 200),
       });
       if (error) throw error;
+      track("feedback_sent");
       setState("sent");
       setMsg(""); setContact("");
       setTimeout(() => { setOpen(false); setState("idle"); }, 1800);

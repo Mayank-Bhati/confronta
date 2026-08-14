@@ -13,6 +13,7 @@ import { LANGS, makeT, makeTD } from "../lib/i18n";
 import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
 import { getSupabase } from "../lib/supabaseClient";
 import { SIGN_IN_ENABLED } from "../lib/flags";
+import { track } from "../lib/track";
 
 import { AppCtx } from "./compass/context";
 import { PALETTES, WORLD_HUES, INTEREST_TAGS, DIM_TO_TAGS, NATURE_KEY, mono, display, DATE_LOCALE, natureStyleFor } from "./compass/constants";
@@ -34,7 +35,7 @@ export default function CareerCompass() {
   // ————— Language + theme + profiles (device-local) —————
   const [store, setStore] = useState({ profiles: [], activeId: null, lang: "it", theme: "light", saved: [] });
   const [storeLoaded, setStoreLoaded] = useState(false);
-  useEffect(() => { setStore((s) => ({ ...s, ...loadStore() })); setStoreLoaded(true); }, []);
+  useEffect(() => { setStore((s) => ({ ...s, ...loadStore() })); setStoreLoaded(true); track("landed", null, { once: true }); }, []);
   useEffect(() => { if (storeLoaded) saveStore(store); }, [store, storeLoaded]);
   function updateStore(fn) { setStore(fn); }
 
@@ -129,6 +130,8 @@ export default function CareerCompass() {
 
   function go(next) {
     if (next === stage) return;
+    // one row per stage per session: the funnel, not a click stream
+    track(`stage_${next}`, null, { once: true });
     // The survey isn't a place to "go back" into once left — skip it in history.
     setNavStack((s) => (stage === "express" ? s : [...s, stage]));
     setStage(next);
@@ -149,6 +152,7 @@ export default function CareerCompass() {
 
   // ————— Survey flow (with undo history) —————
   function startSurvey() {
+    track("survey_started");
     setSurvey(buildSurvey(POOLS, 10, 5));
     setVector(emptyVector());
     setPhase("binary");
@@ -201,6 +205,7 @@ export default function CareerCompass() {
       updateStore((s) => ({ ...s, guestHistory: [result, ...(s.guestHistory || [])].slice(0, 10) }));
       setSavedToName("");
     }
+    track("survey_completed", identity(v).letters);
     cloudUpsertResults([result]);
     if (SIGN_IN_ENABLED && !session && !store.authPromptSeen) {
       setShowAuth(true);
@@ -365,6 +370,7 @@ export default function CareerCompass() {
       updateStore((s) => ({ ...s, saved: s.saved.filter((x) => !(x.courseId === course.id && x.careerId === cId)) }));
       existing.forEach(cloudDeleteSave);
     } else {
+      track("course_saved", course.id);
       const entry = {
         courseId: course.id, careerId: cId, careerName: ctx?.careerName || "", worldName: ctx?.worldName || "",
         resultId: rid, profileId: activeProfile?.id || null,
@@ -551,6 +557,7 @@ export default function CareerCompass() {
 
   // ————— Profile actions —————
   function createProfile() {
+    track("profile_created");
     const name = newName.trim();
     if (!name) return;
     const p = newProfile(name);
@@ -568,6 +575,7 @@ export default function CareerCompass() {
   // "Take me to the course": from a saved winner or a past choice, land on the
   // page where that course actually lives instead of just reading its name.
   function goToCourse(courseId) {
+    track("course_reopened", courseId);
     for (const w of WORLDS_DATA.worlds) {
       for (const c of w.careers) {
         if ((c.courses || []).includes(courseId)) {
@@ -620,6 +628,7 @@ export default function CareerCompass() {
   // The final question: record the chosen course on the current result,
   // persisted with the result (profile history or guest history).
   function chooseFinal(courseId) {
+    track("final_choice", courseId);
     setRoundChoice(courseId);
     setLastResult((r) => (r ? { ...r, finalChoice: courseId } : r));
     const rid = lastResult?.id;
@@ -635,6 +644,7 @@ export default function CareerCompass() {
   // saved course, round after round, until one champion remains (pinned on
   // the Saved page). Requested by testers: "winner out of all".
   function startTournament() {
+    track("tournament_started");
     const ids = [...new Set(savedEntries.map((e) => e.course.id))];
     if (ids.length < 2) return;
     setFinalists([ids[0], ids[1]]);
@@ -651,6 +661,7 @@ export default function CareerCompass() {
     setRoundChoice(null);
   }
   function crownChampion(courseId) {
+    track("champion_crowned", courseId);
     updateStore((s) => ({ ...s, champion: { courseId, date: Date.now() } }));
     setTourQueue(null);
   }
