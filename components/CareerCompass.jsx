@@ -636,7 +636,9 @@ export default function CareerCompass() {
     const orphans = store.saved.filter((e) => e.resultId === rid);
     updateStore((s) => ({
       ...s,
-      profiles: s.profiles.map((p) => (p.id === s.activeId ? { ...p, history: p.history.filter((h) => h.id !== rid) } : p)),
+      // a result id belongs to exactly one profile, so sweeping all of them
+      // keeps the result and its saves from ever going out of sync
+      profiles: s.profiles.map((p) => ({ ...p, history: (p.history || []).filter((h) => h.id !== rid) })),
       guestHistory: (s.guestHistory || []).filter((h) => h.id !== rid),
       saved: s.saved.filter((e) => e.resultId !== rid),
       // the champion is only meaningful while the path it won is still saved
