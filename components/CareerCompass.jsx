@@ -338,11 +338,25 @@ export default function CareerCompass() {
   const filteredSavedEntries = savedEntries
     .filter((s) => savedProfileFilter === "all" || (s.profileId || "none") === savedProfileFilter)
     .filter((s) => savedFilter === "all" || (s.resultId || "none") === savedFilter);
+  // A result may live under any profile or in the unassigned pile — looking
+  // only in the active profile made every other one render as a bare "—",
+  // which told the student nothing about what they were filtering by.
+  const findResult = (rid) => {
+    if (!rid) return null;
+    for (const p of store.profiles) {
+      const hit = (p.history || []).find((h) => h.id === rid);
+      if (hit) return hit;
+    }
+    return (store.guestHistory || []).find((h) => h.id === rid) || null;
+  };
   const resultLabel = (rid) => {
-    const r = (activeProfile?.history || []).find((h) => h.id === rid);
-    if (!r) return "—";
+    if (!rid) return t("saved_filter_notest");
+    const r = findResult(rid);
+    if (!r) return t("saved_filter_gone");
     const title = t(`pair_${r.letters}`) === `pair_${r.letters}` ? t("pair_XX") : t(`pair_${r.letters}`);
-    return `${title} · ${new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short" })}`;
+    const owner = store.profiles.find((p) => (p.history || []).some((h) => h.id === rid));
+    const date = new Date(r.date).toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { day: "numeric", month: "short" });
+    return owner ? `${title} · ${owner.name} · ${date}` : `${title} · ${date}`;
   };
 
   const compareDims = useMemo(() => {
@@ -614,12 +628,24 @@ export default function CareerCompass() {
       };
     });
   }
+  // Deleting a result deletes what was saved under it. Leaving the saves
+  // behind stranded them: they showed up on the Saved page tagged to a test
+  // that no longer exists, and nothing on screen could explain where they
+  // came from.
   function deleteResult(rid) {
+    const orphans = store.saved.filter((e) => e.resultId === rid);
     updateStore((s) => ({
       ...s,
       profiles: s.profiles.map((p) => (p.id === s.activeId ? { ...p, history: p.history.filter((h) => h.id !== rid) } : p)),
       guestHistory: (s.guestHistory || []).filter((h) => h.id !== rid),
+      saved: s.saved.filter((e) => e.resultId !== rid),
+      // the champion is only meaningful while the path it won is still saved
+      champion: orphans.some((e) => e.courseId === s.champion?.courseId) ? null : s.champion,
     }));
+    if (orphans.length) {
+      setFinalists((f) => f.filter((id) => !orphans.some((e) => e.courseId === id)));
+      orphans.forEach(cloudDeleteSave);
+    }
     cloudDeleteResult(rid);
   }
   function deleteProfile(id) {
@@ -660,10 +686,16 @@ export default function CareerCompass() {
     });
     setRoundChoice(null);
   }
+  // Crowning ends the tournament: drop the finalists so the "compare these
+  // two" bar stops following the student around after they already decided,
+  // and land them on Saved, where the winner is pinned at the top.
   function crownChampion(courseId) {
     track("champion_crowned", courseId);
     updateStore((s) => ({ ...s, champion: { courseId, date: Date.now() } }));
     setTourQueue(null);
+    setRoundChoice(null);
+    setFinalists([]);
+    go("saved");
   }
   function clearChampion() {
     updateStore((s) => ({ ...s, champion: null }));
