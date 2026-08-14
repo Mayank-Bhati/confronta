@@ -4,7 +4,7 @@ import { useApp } from "./context";
 import { mono, display } from "./constants";
 
 export default function ProfileModal() {
-  const { T, t, showProfiles, setShowProfiles, store, newName, setNewName, createProfile, switchProfile, deleteProfile, accountPanel } = useApp();
+  const { T, t, showProfiles, setShowProfiles, store, newName, setNewName, createProfile, switchProfile, deleteProfile, accountPanel, signInEnabled } = useApp();
   if (!showProfiles) return null;
   return (
         <div className="cc-fade-in fixed inset-0 z-50 flex items-start md:items-center justify-center p-4 overflow-y-auto"
@@ -18,7 +18,7 @@ export default function ProfileModal() {
             </div>
             <p className="text-xs mt-1.5" style={{ color: T.grey }}>{t("pf_note")}</p>
 
-            {accountPanel}
+            {signInEnabled && accountPanel}
 
             <div className="mt-4 flex gap-2">
               <input value={newName} onChange={(e) => setNewName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && createProfile()}

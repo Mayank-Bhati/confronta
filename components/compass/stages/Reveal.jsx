@@ -43,7 +43,7 @@ function CityPicker({ T, t, value, onPick }) {
 }
 
 export default function Reveal() {
-  const { T, t, td, lang, norm, ident, identTitle, profile, setProfile, toggleGoal, savedToName, lastResult, setShowProfiles, activeProfile, openResult, deleteResult, go, historyList, store, moveResult } = useApp();
+  const { T, t, td, lang, norm, ident, identTitle, profile, setProfile, toggleGoal, savedToName, lastResult, setShowProfiles, activeProfile, openResult, deleteResult, go, historyList, store, moveResult, goToCourse } = useApp();
   return (
     <>
           <div className="max-w-4xl mx-auto space-y-5">
@@ -129,6 +129,10 @@ export default function Reveal() {
                           <div className="text-xs mt-1.5 font-semibold" style={{ color: T.green }}>
                             ✓ {t("res_choice")}: {COURSES.find((c) => c.id === r.finalChoice).name}
                             <span style={{ color: T.grey, fontWeight: 400 }}> — {COURSES.find((c) => c.id === r.finalChoice).inst}</span>
+                            <button onClick={(e) => { e.stopPropagation(); goToCourse(r.finalChoice); }}
+                              className="block mt-1 underline" style={{ color: T.accent }}>
+                              {t("res_take_me")}
+                            </button>
                           </div>
                         )}
                       </div>

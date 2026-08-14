@@ -139,7 +139,7 @@ export default function Paths() {
               return (
                 <>
                   {beyond.length > 0 && within.length > 0 && (
-                    <div className="text-xs uppercase tracking-widest" style={{ color: T.grey }}>{t("within_range")}</div>
+                    <div className="text-xs uppercase tracking-widest" style={{ color: T.grey }}>{prefs.place ? `${t("place_label")}: ${prefs.place}` : t("within_range")}</div>
                   )}
                   {within.length === 0 && institutions.length > 0 && (
                     <Section><p className="text-sm" style={{ color: T.grey }}>{t("none_within_range")}</p></Section>
@@ -148,7 +148,7 @@ export default function Paths() {
                   {beyond.length > 0 && (
                     <div className="mt-2">
                       <button onClick={() => setBeyondOpen((o) => !o)} className="text-sm font-bold py-2" style={{ color: T.grey }}>
-                        {beyondOpen ? "▾ " : "▸ "}{t("beyond_range", { n: beyond.length })}
+                        {beyondOpen ? "▾ " : "▸ "}{prefs.place ? t("beyond_place", { n: beyond.length }) : t("beyond_range", { n: beyond.length })}
                       </button>
                       {beyondOpen && (
                         <>

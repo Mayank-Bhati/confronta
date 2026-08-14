@@ -12,10 +12,11 @@ import { fitInterests, fitOutcome, fitEnvironment, estimateMonthlyCost, passesHa
 import { LANGS, makeT, makeTD } from "../lib/i18n";
 import { loadStore, saveStore, newProfile, uid } from "../lib/storage";
 import { getSupabase } from "../lib/supabaseClient";
+import { SIGN_IN_ENABLED } from "../lib/flags";
 
 import { AppCtx } from "./compass/context";
 import { PALETTES, WORLD_HUES, INTEREST_TAGS, DIM_TO_TAGS, NATURE_KEY, mono, display, DATE_LOCALE, natureStyleFor } from "./compass/constants";
-import { PeopleIcon, Logo, Bar, ChipBtn, Section, NatureBadge, GoogleLink, OfficialLink, InstitutionCard, BackLink } from "./compass/ui";
+import { PeopleIcon, Logo, Bar, ChipBtn, Section, NatureBadge, GoogleLink, OfficialLink, InstitutionCard, BackLink, ScrollTop, scrollToTop } from "./compass/ui";
 import Header from "./compass/Header";
 import AuthModal from "./compass/AuthModal";
 import ProfileModal from "./compass/ProfileModal";
@@ -201,7 +202,7 @@ export default function CareerCompass() {
       setSavedToName("");
     }
     cloudUpsertResults([result]);
-    if (!session && !store.authPromptSeen) {
+    if (SIGN_IN_ENABLED && !session && !store.authPromptSeen) {
       setShowAuth(true);
       updateStore((st) => ({ ...st, authPromptSeen: true }));
     }
@@ -280,17 +281,41 @@ export default function CareerCompass() {
       if (prefs.cityRadius > 0 && prefs.cityRadius < 500) rangeLimit = prefs.cityRadius;
       distOf = (course) => Math.min(...chosen.map((city) => haversineKm(city.lat, city.lon, course.lat, course.lon)));
     }
-    // free-text place filter: city or region, typed on the profession page
+    // Free-text place, typed on the profession page. It does two jobs: it
+    // marks which courses are "in" that city/region, and — when the text names
+    // a city we know — it becomes the origin for "nearest first", so the
+    // student sees that city's universities and then the ones closest to it.
     const place = (prefs.place || "").trim().toLowerCase();
+    let placeOrigin = null;
     if (place) {
-      list = list.filter((c) => (c.city || "").toLowerCase().includes(place) ||
-                                (c.region || "").toLowerCase().includes(place) ||
-                                (c.inst || "").toLowerCase().includes(place));
+      const fold = (x) => (x || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const hit = HOME_CITIES.find((c) => fold(c.name) === fold(place))
+        || HOME_CITIES.find((c) => fold(c.name).startsWith(fold(place)))
+        || CITIES.find((c) => fold(c.name).startsWith(fold(place)));
+      if (hit) placeOrigin = hit;
+      const matches = (c) => (c.city || "").toLowerCase().includes(place) ||
+                             (c.region || "").toLowerCase().includes(place) ||
+                             (c.inst || "").toLowerCase().includes(place);
+      // Anything outside the place stays reachable under "beyond", ordered by
+      // how far it is — hiding a good option a train ride away is the failure
+      // mode this product exists to prevent.
+      if (!placeOrigin) list = list.filter(matches);
+      else {
+        distOf = (course) => haversineKm(placeOrigin.lat, placeOrigin.lon, course.lat, course.lon);
+        rangeLimit = 0;   // "in this place" vs "further away", by name not km
+        list = list.map((c) => ({ ...c, _inPlace: matches(c) }));
+      }
     }
     return list
       .map((c) => ({ ...c, distKm: distOf ? Math.round(distOf(c)) : null }))
-      .filter((c) => rangeLimit == null || c.distKm <= rangeLimit * 2)
-      .map((c) => ({ ...c, beyondRange: rangeLimit != null && c.distKm > rangeLimit, envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t) }))
+      .filter((c) => placeOrigin != null || rangeLimit == null || c.distKm <= rangeLimit * 2)
+      .map((c) => ({
+        ...c,
+        beyondRange: placeOrigin != null
+          ? !c._inPlace
+          : (rangeLimit != null && c.distKm > rangeLimit),
+        envFit: fitEnvironment(c, envPrefs, profile.locationMode === "home" ? homeCity : null, t),
+      }))
       .sort((a, b) => (prefs.sortBy === "distance" && a.distKm != null && b.distKm != null)
         ? a.distKm - b.distKm
         : b.envFit.score - a.envFit.score);
@@ -346,7 +371,7 @@ export default function CareerCompass() {
       };
       updateStore((s) => ({ ...s, saved: [...s.saved, entry] }));
       cloudUpsertSaves([entry]);
-      if (!session && !saveNudged) { setShowAuth(true); setSaveNudged(true); }
+      if (SIGN_IN_ENABLED && !session && !saveNudged) { setShowAuth(true); setSaveNudged(true); }
     }
   }
 
@@ -540,6 +565,24 @@ export default function CareerCompass() {
   }
   function switchProfile(id) { updateStore((s) => ({ ...s, activeId: id })); }
 
+  // "Take me to the course": from a saved winner or a past choice, land on the
+  // page where that course actually lives instead of just reading its name.
+  function goToCourse(courseId) {
+    for (const w of WORLDS_DATA.worlds) {
+      for (const c of w.careers) {
+        if ((c.courses || []).includes(courseId)) {
+          setWorldId(w.id);
+          setCareerId(c.id);
+          setPrefs((p) => ({ ...p, place: "", pathType: "any", ownership: "any" }));
+          go("filter");
+          setTimeout(scrollToTop, 60);
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   // Put a particular result under a particular profile. Two people sharing one
   // browser (a parent and their child is the common case) need this: whoever
   // takes a test first has their results adopted by the first profile created.
@@ -684,11 +727,11 @@ export default function CareerCompass() {
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
     savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, allCareers,
     pair, compareDims, narrative, setNarrative,
-    lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal, moveResult,
+    lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal, moveResult, goToCourse,
     tourQueue, roundChoice, startTournament, nextRound, crownChampion, clearChampion, champion: store.champion || null,
     showProfiles, setShowProfiles, newName, setNewName,
     createProfile, switchProfile, deleteProfile,
-    session, showAuth, setShowAuth, accountPanel,
+    session, showAuth, setShowAuth, accountPanel, signInEnabled: SIGN_IN_ENABLED,
   };
 
   return (
@@ -728,6 +771,7 @@ export default function CareerCompass() {
       {/* ————— Compare bar: appears anywhere two paths are picked, including
               across different worlds and careers (tester feedback). ————— */}
       <FeedbackButton />
+      <ScrollTop />
 
       {finalists.length === 2 && stage !== "compare" && (
         <div className="cc-fade-up fixed bottom-0 left-0 right-0 z-40 px-4 pb-4 pt-3"
@@ -750,7 +794,7 @@ export default function CareerCompass() {
       )}
 
       {/* ————— Sign-in pop-up (save nudge / post-survey) ————— */}
-      <AuthModal />
+      {SIGN_IN_ENABLED && <AuthModal />}
 
       {/* ————— Profile manager ————— */}
       <ProfileModal />

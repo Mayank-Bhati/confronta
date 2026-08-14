@@ -102,6 +102,39 @@ function StatCell({ T, value, label, color, href }) {
   );
 }
 
+// Scroll to the top, whatever the browser supports. Some environments (and
+// "reduce motion" settings) ignore the object form of scrollTo entirely, which
+// silently made the button do nothing — so fall back to a plain jump if the
+// smooth call has not moved the page.
+export function scrollToTop() {
+  const start = window.scrollY;
+  if (start === 0) return;
+  try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* older browsers */ }
+  setTimeout(() => { if (window.scrollY === start) window.scrollTo(0, 0); }, 400);
+}
+
+// Comparison and results pages get long; a student who has read to the bottom
+// should not have to swipe all the way back. Appears only once scrolled.
+export function ScrollTop() {
+  const { T, t } = React.useContext(AppCtx);
+  const [show, setShow] = React.useState(false);
+  React.useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 350);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  if (!show) return null;
+  return (
+    <button onClick={() => scrollToTop()}
+      aria-label={t("scroll_top")} title={t("scroll_top")}
+      className="fixed right-4 bottom-20 z-30 w-11 h-11 rounded-full font-bold shadow-lg transition-transform hover:scale-110"
+      style={{ background: T.card, color: T.ink, border: `1.5px solid ${T.lineStrong}` }}>
+      ↑
+    </button>
+  );
+}
+
 export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badge }) {
   const { T, t, scoreColor, isSavedOn, toggleSave, profile, prefs, setPrefs, envPrefs, homeCity } = React.useContext(AppCtx);
   const fees = c.costByIsee?.[profile?.isee || "mid"];

@@ -5,7 +5,7 @@ import { mono, display } from "../constants";
 import { ChipBtn, Section, InstitutionCard, BackLink } from "../ui";
 
 export default function SavedPage() {
-  const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel, td, startTournament, champion, clearChampion, toggleSave } = useApp();
+  const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel, td, startTournament, champion, clearChampion, toggleSave, goToCourse } = useApp();
   const championCourse = champion?.courseId ? savedEntries.find((s) => s.course.id === champion.courseId)?.course : null;
   return (
     <>
@@ -15,12 +15,14 @@ export default function SavedPage() {
             <p className="text-sm -mt-2" style={{ color: T.grey }}>{t("saved_sub")}</p>
             {savedEntries.length === 0 && <Section><p className="text-sm" style={{ color: T.grey }}>{t("saved_empty")}</p></Section>}
             {championCourse && (
-              <div className="rounded-2xl p-4 flex items-baseline justify-between gap-3 flex-wrap" style={{ background: T.greenSoft, border: `1.5px solid ${T.green}` }}>
-                <div>
+              <div className="rounded-2xl p-3" style={{ background: T.greenSoft, border: `1.5px solid ${T.green}` }}>
+                <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
                   <span className="text-xs uppercase tracking-widest font-bold" style={{ color: T.green }}>{t("saved_champion")}</span>
-                  <div className="font-bold mt-0.5" style={display}>{championCourse.name} — {championCourse.inst}</div>
+                  <button onClick={clearChampion} className="text-xs underline" style={{ color: T.grey }}>{t("saved_champion_clear")}</button>
                 </div>
-                <button onClick={clearChampion} className="text-xs underline" style={{ color: T.grey }}>{t("saved_champion_clear")}</button>
+                {/* the winner as the real card, so it can be opened and read —
+                    a name alone made the student hunt for it again */}
+                <InstitutionCard c={championCourse} onCardClick={() => goToCourse(championCourse.id)} />
               </div>
             )}
             {savedEntries.length >= 3 && (
