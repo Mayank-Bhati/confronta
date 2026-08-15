@@ -205,6 +205,13 @@ GRUPPO = {
     "scientifico": "9",
     "linguistico": "4",
     "arte_design": "2",
+    # Codes read off AlmaLaurea's own dropdown (`almalaurea groups`), never
+    # guessed — the catalogue needs these for law, medicine-adjacent, farming,
+    # sport and humanities careers.
+    "giuridico": "8",              # Giurisprudenza (LMG/01)
+    "agrario_veterinario": "13",   # Agrario-Forestale e Veterinario
+    "scienze_motorie": "15",       # Scienze motorie e sportive
+    "letterario_umanistico": "3",  # Lettere, storia, filosofia, beni culturali
 }
 
 OCC_YEAR = 2024      # latest "Condizione occupazionale" survey
@@ -404,7 +411,11 @@ def ingest(combos=None, delay=1.2):
 
 # Single-cycle degrees only exist in a few areas; querying LSE for every group
 # would double the run for combinations that cannot exist.
-LSE_GROUPS = ("educazione", "medico")
+# Groups that also have a single-cycle (ciclo unico) level worth querying:
+# Scienze della formazione primaria (LM-85bis), Medicina and Odontoiatria,
+# Giurisprudenza (LMG/01), Veterinaria (LM-42) and Architettura (LM-4 c.u.)
+# are all five- or six-year degrees with no separate triennale.
+LSE_GROUPS = ("educazione", "medico", "giuridico", "agrario_veterinario", "ing_civ")
 
 
 def _open_session(page, attempts=3):
