@@ -364,6 +364,91 @@
       "unica-p252"
      ],
      "netMonthly": 1330
+    },
+    {
+     "id": "doctor",
+     "name": "Doctor",
+     "riasec": {
+      "I": 3,
+      "S": 3,
+      "R": 1
+     },
+     "day": "Diagnose and treat patients. Six years, then years of specialisation — the longest training of any path here, and the deepest responsibility.",
+     "salary": null,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "dentist",
+     "name": "Dentist",
+     "riasec": {
+      "I": 2,
+      "R": 3,
+      "S": 2
+     },
+     "day": "Precise hands-on work in a very small field of view, usually in your own practice.",
+     "salary": null,
+     "demand": "high",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "pharmacist",
+     "name": "Pharmacist",
+     "riasec": {
+      "I": 3,
+      "C": 2,
+      "S": 2
+     },
+     "day": "Dispense and advise on medicines — chemistry, with a counter and a queue of real people.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "vet",
+     "name": "Veterinarian",
+     "riasec": {
+      "I": 3,
+      "R": 2,
+      "S": 2
+     },
+     "day": "Treat animals, from pets to farm herds. Physical, unpredictable, often outdoors and at night.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "sport-scientist",
+     "name": "Sport & exercise scientist",
+     "riasec": {
+      "R": 3,
+      "S": 3,
+      "I": 1
+     },
+     "day": "Train people and design rehabilitation or performance programmes.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
     }
    ]
   },
@@ -455,6 +540,23 @@
       "polimi-p28"
      ],
      "netMonthly": 1440
+    },
+    {
+     "id": "architect",
+     "name": "Architect",
+     "riasec": {
+      "A": 3,
+      "I": 2,
+      "R": 2
+     },
+     "day": "Design buildings and spaces, then see the design survive contact with budgets, rules and clients.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
     }
    ]
   },
@@ -699,6 +801,23 @@
       "unisa-p268"
      ],
      "netMonthly": 1330
+    },
+    {
+     "id": "agronomist",
+     "name": "Agronomist / food producer",
+     "riasec": {
+      "R": 3,
+      "I": 2,
+      "E": 1
+     },
+     "day": "Make land, crops and livestock productive — science applied outdoors, season by season.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
     }
    ]
   },
@@ -829,6 +948,40 @@
       "unisa-p264"
      ],
      "netMonthly": 1270
+    },
+    {
+     "id": "lawyer",
+     "name": "Lawyer",
+     "riasec": {
+      "E": 3,
+      "C": 2,
+      "S": 1
+     },
+     "day": "Read, argue and draft. Five years, then a traineeship and the bar exam before you can practise alone.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "translator",
+     "name": "Translator / interpreter",
+     "riasec": {
+      "A": 2,
+      "C": 2,
+      "S": 1
+     },
+     "day": "Carry meaning between languages — in documents, or live in the room as people speak.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "University"
+     ],
+     "courses": [],
+     "netMonthly": null
     }
    ]
   }

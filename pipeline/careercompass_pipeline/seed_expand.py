@@ -41,6 +41,15 @@ TOLC_E = ("programmed", "TOLC-E (CISIA)")
 TOLC_S = ("programmed", "TOLC-S (CISIA)")
 TOLC_PSI = ("programmed", "TOLC-PSI (CISIA)")
 TOLC_SU = ("programmed", "TOLC-SU (CISIA)")
+# Medicine, Dentistry and Veterinary no longer use an entrance test. Since the
+# 2025 reform you enrol directly into an open first semester ("semestre
+# aperto") teaching Chemistry, Physics and Biology at 6 CFU each, sit two exam
+# sittings per subject, and MUR builds a national merit ranking from those
+# scores to decide who continues into the second semester. Describing this as a
+# test would send a student to entirely the wrong preparation, which is exactly
+# the kind of error this catalogue exists to avoid.
+SEMESTRE_APERTO = ("national", "Semestre aperto — open enrolment, then a national ranking from the first-semester exams")
+LMG_FREE = ("open", "Open access (some universities set a non-selective placement test)")
 
 # career → (degree-class prefixes, name must contain one of these, admission)
 # Order matters: the first matching course in the registry wins.
@@ -63,6 +72,18 @@ CAREER_RULES = [
     ("env-eng", ("L-7",), ("ambiente", "ambientale", "civile"), TOLC_I),
     ("researcher", ("L-30",), ("fisica",), TOLC_S),
     ("tourism", ("L-15",), ("turism",), TOLC_SU),
+    # Careers whose institutions were already sitting in uni_catalog unused.
+    # Single-cycle degrees (LM-41/46/42/13, LMG/01, LM-4 c.u.) carry no separate
+    # triennale, so they are matched on the magistrale class directly.
+    ("doctor", ("LM-41",), ("medicina e chirurgia",), SEMESTRE_APERTO),
+    ("dentist", ("LM-46",), ("odontoiatria",), SEMESTRE_APERTO),
+    ("vet", ("LM-42",), ("veterinaria",), SEMESTRE_APERTO),
+    ("pharmacist", ("LM-13",), ("farmacia", "chimica e tecnologia farmaceutiche"), TOLC_S),
+    ("lawyer", ("LMG/01",), ("giurisprudenza",), LMG_FREE),
+    ("architect", ("LM-4", "L-17"), ("architettura", "scienze dell'architettura"), TOLC_I),
+    ("agronomist", ("L-25",), ("agrar", "agricol", "scienze e tecnologie agrarie"), TOLC_S),
+    ("sport-scientist", ("L-22",), ("scienze motorie", "sport"), NATIONAL_HEALTH),
+    ("translator", ("L-12",), ("mediazione linguistica", "traduzione"), TOLC_SU),
 ]
 
 SOURCE = "Universitaly catalog (Cineca API) + institution admission pages"

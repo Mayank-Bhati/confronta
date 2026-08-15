@@ -131,6 +131,18 @@ CAREER_TAGS = {
     "teacher": ["Teaching & mentoring", "People & communication", "Languages & writing"],
     "tourism": ["Food & hospitality", "Languages & writing", "People & communication"],
     "social-worker": ["People & communication", "Law & society", "Health & body"],
+    # All nine new careers land inside the existing 16-tag vocabulary, so the
+    # survey needs no new question and no re-scoring of saved results. Only
+    # music and performing arts would force a 17th tag — deferred with AFAM.
+    "doctor": ["Health & body", "Science & research", "People & communication"],
+    "dentist": ["Health & body", "Building things", "Science & research"],
+    "pharmacist": ["Health & body", "Science & research", "Mathematics"],
+    "vet": ["Health & body", "Nature & environment", "Science & research"],
+    "sport-scientist": ["Sport & movement", "Health & body", "Teaching & mentoring"],
+    "lawyer": ["Law & society", "Languages & writing", "People & communication"],
+    "translator": ["Languages & writing", "People & communication"],
+    "agronomist": ["Nature & environment", "Science & research", "Food & hospitality"],
+    "architect": ["Design & creativity", "Building things", "Mathematics"],
 }
 
 CITY_FALLBACK = {

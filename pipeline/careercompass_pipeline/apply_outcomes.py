@@ -42,7 +42,20 @@ CAREER_GROUP = {
     "researcher": "scientifico",
     "ux": "arte_design", "graphic": "arte_design", "industrial-design": "arte_design",
     "videomaker": "arte_design",
+    # New careers. Their AlmaLaurea groups were only added once the codes had
+    # been read off the site's own dropdown, so none of these is a guess.
+    "doctor": "medico", "dentist": "medico", "pharmacist": "medico",
+    "vet": "agrario_veterinario", "agronomist": "agrario_veterinario",
+    "lawyer": "giuridico",
+    "architect": "ing_civ",
+    "sport-scientist": "scienze_motorie",
+    "translator": "linguistico",
 }
+
+# Careers whose degree is a single-cycle (ciclo unico) qualification: the
+# outcomes lookup must ask for level LSE, not L, regardless of course length
+# recorded in the catalogue.
+LSE_CAREERS = {"doctor", "dentist", "vet", "lawyer", "teacher"}
 
 # course-name overrides — AlmaLaurea files these by subject, not by our career
 # First match wins, so the engineering rules must precede "informatic":
@@ -114,7 +127,7 @@ def apply_outcomes():
         slug = slug_of(course["id"])
         career_id = career_of.get(course["id"])
         group = group_of(course, career_id)
-        level = "LSE" if (course.get("years") or 3) >= 5 else "L"
+        level = "LSE" if (career_id in LSE_CAREERS or (course.get("years") or 3) >= 5) else "L"
 
         # institutions outside the consortium: no data, and we say why
         if slug in NO_DATA_REASON:
