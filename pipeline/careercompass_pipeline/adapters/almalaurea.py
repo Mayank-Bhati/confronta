@@ -588,7 +588,14 @@ if __name__ == "__main__":
                 page.goto(f"{BASE}/solotendine.php?anno={anno}&LANG=it&CONFIG={config}",
                           wait_until="domcontentloaded", timeout=60000)
                 page.wait_for_timeout(2000)
-                for sel in page.eval_on_selector_all("select", SELECT_JS):
+                # NOT SELECT_JS: that helper slices to the first 14 options,
+                # which silently dropped real group codes on the first run.
+                all_opts = """els => els.map(s => ({
+                    name: s.name,
+                    options: Array.from(s.options).map(o => ({
+                        value: o.value, label: (o.textContent || '').trim() })),
+                }))"""
+                for sel in page.eval_on_selector_all("select", all_opts):
                     if "gruppo" not in (sel.get("name") or "").lower():
                         continue
                     for o in sel["options"]:
