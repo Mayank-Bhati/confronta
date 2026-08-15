@@ -572,6 +572,36 @@ if __name__ == "__main__":
         shard = int(sys.argv[2]) if len(sys.argv) > 2 else 0
         shards = int(sys.argv[3]) if len(sys.argv) > 3 else 1
         ingest_all(shard=shard, shards=shards)
+    elif cmd == "groups":
+        # Print every disciplinary-group code AlmaLaurea offers, read off the
+        # dropdown fragment rather than guessed. GRUPPO covers only the eleven
+        # groups the catalogue needed so far; adding careers in law, medicine,
+        # agriculture, sport or the humanities needs the codes for the rest, and
+        # guessing one is how Ingegneria Informatica ended up asking group 10.
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            browser, ctx = _browser(p)
+            page = ctx.new_page()
+            _open_session(page)
+            found = {}
+            for config, anno in (("occupazione", OCC_YEAR), ("profilo", PROF_YEAR)):
+                page.goto(f"{BASE}/solotendine.php?anno={anno}&LANG=it&CONFIG={config}",
+                          wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(2000)
+                for sel in page.eval_on_selector_all("select", SELECT_JS):
+                    if "gruppo" not in (sel.get("name") or "").lower():
+                        continue
+                    for o in sel["options"]:
+                        v = str(o["value"]).strip()
+                        if v.isdigit():
+                            found[v] = o["label"].strip()
+            known = {v: k for k, v in GRUPPO.items()}
+            print(f"\n{len(found)} disciplinary groups on AlmaLaurea:")
+            for code in sorted(found, key=int):
+                mark = f"-> GRUPPO[{known[code]!r}]" if code in known else "   MISSING from GRUPPO"
+                print(f"  {code:>3}  {found[code][:52]:54} {mark}")
+            _dump("almalaurea-groups.json", json.dumps(found, ensure_ascii=False, indent=2))
+            browser.close()
     elif cmd == "labels":
         # dump the exact label/value lines of one result page per config, so the
         # parsers can be written against reality instead of guessed strings
