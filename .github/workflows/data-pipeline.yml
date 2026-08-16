@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all | almalaurea-fill | almalaurea-groups | db-ping"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all | almalaurea-fill | almalaurea-groups | seed-expand | export-site | db-ping"
         required: false
         default: "probe"
       pages:
@@ -70,6 +70,24 @@ jobs:
           pip install playwright
           python -m playwright install chromium --with-deps
           python -m careercompass_pipeline.adapters.almalaurea ${{ inputs.task == 'almalaurea-sample' && 'sample' || inputs.task == 'almalaurea-labels' && 'labels' || inputs.task == 'almalaurea-fill' && 'fill' || inputs.task == 'almalaurea-groups' && 'groups' || 'ingest' }}
+
+      - name: Seed careers from the catalogue
+        if: inputs.task == 'seed-expand' || inputs.task == 'export-site'
+        working-directory: pipeline
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if [ "${{ inputs.task }}" = "seed-expand" ]; then python main.py seed-expand; fi
+          if [ "${{ inputs.task }}" = "export-site" ]; then python main.py export-site; fi
+
+      - name: Upload regenerated site data
+        if: inputs.task == 'seed-expand' || inputs.task == 'export-site'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-data
+          path: |
+            data/*.json
+            pipeline/careercompass_pipeline/expanded_map.json
 
       - name: Upload AlmaLaurea data
         if: startsWith(inputs.task, 'almalaurea-') && inputs.task != 'almalaurea-probe' && inputs.task != 'almalaurea-discover'

@@ -76,6 +76,9 @@ def main():
         from careercompass_pipeline.export_app_json import export
         path, n = export()
         print(f"wrote {n} programs → {path}")
+    elif cmd == "seed-expand":
+        from careercompass_pipeline.seed_expand import seed_expand
+        print(seed_expand())
     elif cmd == "export-site":
         from careercompass_pipeline.export_site_data import export_site
         print(export_site())
