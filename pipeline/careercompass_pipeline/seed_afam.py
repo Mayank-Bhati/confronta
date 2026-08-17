@@ -93,6 +93,13 @@ def _slug(institution, city_key):
 # would mislead precisely the students least able to absorb the surprise.
 def _is_public(institution):
     i = institution.upper()
+    # "Legalmente riconosciuta" means state-recognised, not state-run: NABA,
+    # RUFA and the like award valid diplomi accademici but charge private-school
+    # fees. The first filter let them through on the words "Accademia di Belle
+    # Arti" alone, which is exactly the pairing a student cannot afford to
+    # misread when no fee is shown.
+    if "LEGALMENTE RICONOSCIUT" in i or "LEG. RICON" in i:
+        return False
     return (("CONSERVATORIO" in i and "MUSICA" in i)
             or "ACCADEMIA DI BELLE ARTI" in i
             or "ISIA" in i
