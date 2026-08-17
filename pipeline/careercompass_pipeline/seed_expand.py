@@ -48,7 +48,7 @@ TOLC_SU = ("programmed", "TOLC-SU (CISIA)")
 # scores to decide who continues into the second semester. Describing this as a
 # test would send a student to entirely the wrong preparation, which is exactly
 # the kind of error this catalogue exists to avoid.
-SEMESTRE_APERTO = ("national", "Semestre aperto — open enrolment, then a national ranking from the first-semester exams")
+SEMESTRE_APERTO = ("semestre", "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues")
 LMG_FREE = ("open", "Open access (some universities set a non-selective placement test)")
 
 # career → (degree-class prefixes, name must contain one of these, admission)

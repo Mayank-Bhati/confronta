@@ -170,7 +170,13 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
             </span>
             <NatureBadge c={c} />
             {c.admission && (
-              <span className="text-xs px-2 py-0.5 rounded-full"
+              // The generic type label is not always true of the course. Since
+              // the 2025 reform Medicina, Odontoiatria and Veterinaria have no
+              // entrance test at all — you enrol, sit the first-semester exams
+              // and are ranked on those — so a badge reading "national
+              // admission test" would send a student to the wrong preparation.
+              // Where the course states its own route, that wins.
+              <span className="text-xs px-2 py-0.5 rounded-full" title={c.test || undefined}
                 style={{
                   background: c.admission === "open" ? T.greenSoft : c.admission === "selection" ? T.violetSoft : T.amberSoft,
                   color: c.admission === "open" ? T.green : c.admission === "selection" ? T.accent : T.amber,
