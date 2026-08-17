@@ -65,8 +65,9 @@ def main():
             cap = int(_sys.argv[3]) if len(_sys.argv) > 3 else None
             print(universitaly.ingest(max_pages=cap))
         elif target == "afam":
+            # init_db is already imported at module scope; re-importing it here
+            # made it local to this whole function and broke the earlier call.
             from careercompass_pipeline.adapters import universitaly
-            from careercompass_pipeline.db import init_db
             init_db()
             print(universitaly.ingest_afam())
         elif target == "mur":
