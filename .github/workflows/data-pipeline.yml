@@ -96,6 +96,7 @@ jobs:
           path: |
             data/*.json
             pipeline/careercompass_pipeline/expanded_map.json
+            pipeline/careercompass_pipeline/afam_map.json
 
       - name: Upload AlmaLaurea data
         if: startsWith(inputs.task, 'almalaurea-') && inputs.task != 'almalaurea-probe' && inputs.task != 'almalaurea-discover'
