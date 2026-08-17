@@ -41,6 +41,10 @@ export const INTEREST_TAGS = [
   "Machines & hardware", "People & communication", "Science & research", "Building things",
   "Health & body", "Nature & environment", "Media & video", "Teaching & mentoring",
   "Languages & writing", "Law & society", "Sport & movement", "Food & hospitality",
+  // Seventeenth tag, added with the AFAM catalogue. Until conservatori and
+  // accademie existed there was nothing to route it to, so a student whose
+  // whole life is playing an instrument had no box to tick.
+  "Music & performance",
 ];
 
 

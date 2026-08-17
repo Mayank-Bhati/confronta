@@ -619,6 +619,74 @@
      ],
      "netMonthly": 1345,
      "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 9 courses shown for this career"
+    },
+    {
+     "id": "musician",
+     "name": "Musician / performer",
+     "riasec": {
+      "A": 3,
+      "R": 1,
+      "S": 1
+     },
+     "day": "Play or sing to a professional standard. A conservatorio is years of daily practice, and the audition comes before the enrolment.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "AFAM"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "music-producer",
+     "name": "Composer / music producer",
+     "riasec": {
+      "A": 3,
+      "I": 2,
+      "R": 1
+     },
+     "day": "Write, arrange and produce — from scoring to studio work and sound for screen.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "AFAM"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "fine-artist",
+     "name": "Fine artist",
+     "riasec": {
+      "A": 3,
+      "R": 2,
+      "I": 1
+     },
+     "day": "Painting, sculpture, decoration. Studio practice, exhibitions, commissions.",
+     "salary": null,
+     "demand": "low",
+     "pathTypes": [
+      "AFAM"
+     ],
+     "courses": [],
+     "netMonthly": null
+    },
+    {
+     "id": "art-designer",
+     "name": "Art-school designer",
+     "riasec": {
+      "A": 3,
+      "I": 1,
+      "E": 1
+     },
+     "day": "Design, fashion, graphics and set design taught through an art academy rather than an engineering faculty.",
+     "salary": null,
+     "demand": "medium",
+     "pathTypes": [
+      "AFAM"
+     ],
+     "courses": [],
+     "netMonthly": null
     }
    ]
   },

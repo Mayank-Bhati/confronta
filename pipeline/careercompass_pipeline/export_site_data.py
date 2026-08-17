@@ -95,12 +95,13 @@ for cid, entries in SOUTH.items():
 
 # 2026-08 expansion — written by seed_expand from the registry, so course names
 # here always match what is actually in the database.
-_EXPANDED = os.path.join(os.path.dirname(os.path.abspath(__file__)), "expanded_map.json")
-if os.path.exists(_EXPANDED):
-    with open(_EXPANDED, encoding="utf-8") as _f:
-        for cid, entries in json.load(_f).items():
-            CAREER_MAP.setdefault(cid, [])
-            CAREER_MAP[cid] = CAREER_MAP[cid] + [tuple(e) for e in entries]
+for _name in ("expanded_map.json", "afam_map.json"):
+    _p = os.path.join(os.path.dirname(os.path.abspath(__file__)), _name)
+    if os.path.exists(_p):
+        with open(_p, encoding="utf-8") as _f:
+            for cid, entries in json.load(_f).items():
+                CAREER_MAP.setdefault(cid, [])
+                CAREER_MAP[cid] = CAREER_MAP[cid] + [tuple(e) for e in entries]
 
 CAREER_TAGS = {
     "mechatronics": ["Machines & hardware", "Building things"],
@@ -143,6 +144,13 @@ CAREER_TAGS = {
     "translator": ["Languages & writing", "People & communication"],
     "agronomist": ["Nature & environment", "Science & research", "Food & hospitality"],
     "architect": ["Design & creativity", "Building things", "Mathematics"],
+    # AFAM. "Music & performance" is the seventeenth interest tag and the only
+    # one these careers needed that did not already exist — a student whose
+    # whole life is playing an instrument previously had no box to tick.
+    "musician": ["Music & performance", "Design & creativity"],
+    "music-producer": ["Music & performance", "Media & video", "Design & creativity"],
+    "fine-artist": ["Design & creativity", "Building things"],
+    "art-designer": ["Design & creativity", "Media & video"],
 }
 
 CITY_FALLBACK = {
@@ -428,7 +436,10 @@ def build_course(prog, inst, career_id, cities_by_name):
         "selectivity": a["selectivity"],
         "mathLoad": a["mathLoad"],
         "subjects": CAREER_TAGS[career_id],
-        "costByIsee": INST_FEES[inst.slug],
+        # AFAM institutions set their own fees and the registry does not carry
+        # them; None means the card says "check the official page" instead of
+        # showing a university figure that would simply be wrong here.
+        "costByIsee": INST_FEES.get(inst.slug),
         "cityRent": c["rent"],
         "employment1y": adj["employment1y"],
         "salary": adj["salary"],

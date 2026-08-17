@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all | almalaurea-fill | almalaurea-groups | afam-ingest | seed-expand | export-site | db-ping"
+        description: "probe | mur | universitaly-sample | universitaly-api | universitaly-har | universitaly-ingest | verify-access | almalaurea-probe | almalaurea-discover | almalaurea-sample | almalaurea-ingest | almalaurea-labels | almalaurea-all | almalaurea-fill | almalaurea-groups | afam-ingest | seed-afam | seed-expand | export-site | db-ping"
         required: false
         default: "probe"
       pages:
@@ -79,16 +79,17 @@ jobs:
         run: python main.py ingest afam
 
       - name: Seed careers from the catalogue
-        if: inputs.task == 'seed-expand' || inputs.task == 'export-site'
+        if: inputs.task == 'seed-expand' || inputs.task == 'seed-afam' || inputs.task == 'export-site'
         working-directory: pipeline
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           if [ "${{ inputs.task }}" = "seed-expand" ]; then python main.py seed-expand; fi
+          if [ "${{ inputs.task }}" = "seed-afam" ]; then python main.py seed-afam; fi
           if [ "${{ inputs.task }}" = "export-site" ]; then python main.py export-site; fi
 
       - name: Upload regenerated site data
-        if: inputs.task == 'seed-expand' || inputs.task == 'export-site'
+        if: inputs.task == 'seed-expand' || inputs.task == 'seed-afam' || inputs.task == 'export-site'
         uses: actions/upload-artifact@v4
         with:
           name: site-data

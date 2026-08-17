@@ -95,6 +95,18 @@ NO_DATA_REASON = {
 }
 
 
+def _afam(slug):
+    """Conservatori, accademie and ISIA — the AFAM sector.
+
+    AlmaLaurea surveys university graduates only. Its 2012 agreement with 21
+    AFAM institutions is published on its own site as "in fase di rinnovo e
+    rilancio" with no members listed, and INDIRE covers ITS rather than AFAM,
+    so for these courses no outcome source exists at all. Saying so is the only
+    honest option; there is nothing to substitute.
+    """
+    return slug.startswith(("cons-", "aba-", "isia-", "afam-"))
+
+
 def slug_of(course_id):
     """'unibo-p123' → 'unibo' (ITS slugs contain dashes, so split on '-p')."""
     return course_id.rsplit("-p", 1)[0]
@@ -130,7 +142,10 @@ def apply_outcomes():
         level = "LSE" if (career_id in LSE_CAREERS or (course.get("years") or 3) >= 5) else "L"
 
         # institutions outside the consortium: no data, and we say why
-        if slug in NO_DATA_REASON:
+        if _afam(slug):
+            course["outcomes"] = {"status": "afam"}
+            stats["afam"] = stats.get("afam", 0) + 1
+        elif slug in NO_DATA_REASON:
             course["outcomes"] = {"status": NO_DATA_REASON[slug]}
             stats[NO_DATA_REASON[slug]] += 1
         else:
