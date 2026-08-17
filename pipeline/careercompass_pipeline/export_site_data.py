@@ -424,7 +424,13 @@ def build_course(prog, inst, career_id, cities_by_name):
         "id": f"{inst.slug}-p{prog.id}",
         "name": prog.name,
         "inst": inst.name,
-        "type": "ITS" if inst.kind == "its" else "University",
+        # A conservatorio is neither a university nor an ITS. Labelling it
+        # "University" made a piano diploma look like a degree course and broke
+        # the path-type filter for anyone looking specifically for one.
+        "type": {"its": "ITS", "afam": "AFAM"}.get(inst.kind, "University"),
+        # An area profile picked for degree courses called a piano diploma
+        # "scientific" with a heavy maths load. Practice is the honest label.
+        **({"nature": "technical-practical", "mathLoad": 1} if inst.kind == "afam" else {}),
         "ownership": INST_OWNERSHIP.get(inst.slug, "public"),
         "city": city,
         "region": inst.region or "",

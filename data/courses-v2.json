@@ -20060,7 +20060,7 @@
   "id": "aba-bologna-p501",
   "name": "Pittura",
   "inst": "Accademia di Belle Arti di Bologna",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Bologna",
   "region": "Emilia-Romagna",
@@ -20071,7 +20071,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20084,7 +20084,7 @@
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20102,7 +20102,7 @@
   "id": "aba-firenze-p503",
   "name": "Scultura",
   "inst": "Accademia di Belle Arti di Firenze",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Firenze",
   "region": "Toscana",
@@ -20113,7 +20113,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20126,7 +20126,7 @@
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20144,7 +20144,7 @@
   "id": "aba-roma-p507",
   "name": "Decorazione - Arti Visive Per Gli Spazi Architettonici E Il Paesaggio",
   "inst": "Accademia di Belle Arti di Roma",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20155,7 +20155,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20168,7 +20168,7 @@
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20186,7 +20186,7 @@
   "id": "aba-torino-p509",
   "name": "Pittura",
   "inst": "Accademia di Belle Arti di Torino",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Torino",
   "region": "Piemonte",
@@ -20197,7 +20197,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20210,7 +20210,7 @@
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20228,7 +20228,7 @@
   "id": "aba-bologna-p502",
   "name": "Design Grafico",
   "inst": "Accademia di Belle Arti di Bologna",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Bologna",
   "region": "Emilia-Romagna",
@@ -20239,7 +20239,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 84,
-  "mathLoad": 2,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20252,7 +20252,7 @@
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
-  "nature": "mixed",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20270,7 +20270,7 @@
   "id": "aba-firenze-p504",
   "name": "Design",
   "inst": "Accademia di Belle Arti di Firenze",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Firenze",
   "region": "Toscana",
@@ -20281,7 +20281,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 84,
-  "mathLoad": 2,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20294,7 +20294,7 @@
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
-  "nature": "mixed",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20312,7 +20312,7 @@
   "id": "aba-milano-p505",
   "name": "Nuove Tecnologie Dell'Arte",
   "inst": "Accademia di Belle Arti di Milano",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Milano",
   "region": "Lombardia",
@@ -20323,7 +20323,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20336,7 +20336,7 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20354,7 +20354,7 @@
   "id": "aba-palermo-p506",
   "name": "Design Grafico",
   "inst": "Accademia di Belle Arti di Palermo",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Palermo",
   "region": "Sicilia",
@@ -20365,7 +20365,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 84,
-  "mathLoad": 2,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20378,7 +20378,7 @@
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
-  "nature": "mixed",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20396,7 +20396,7 @@
   "id": "aba-roma-p508",
   "name": "Grafica D'Arte",
   "inst": "Accademia di Belle Arti di Roma",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20407,7 +20407,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20420,7 +20420,7 @@
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20438,7 +20438,7 @@
   "id": "aba-venezia-p510",
   "name": "Nuove Tecnologie Dell'Arte",
   "inst": "Accademia di Belle Arti di Venezia",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Venezia",
   "region": "Veneto",
@@ -20449,7 +20449,7 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20462,7 +20462,7 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20480,7 +20480,7 @@
   "id": "cons-bologna-p511",
   "name": "Pianoforte",
   "inst": "Conservatorio di Musica di Bologna",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Bologna",
   "region": "Emilia-Romagna",
@@ -20491,7 +20491,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20504,7 +20504,7 @@
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20522,7 +20522,7 @@
   "id": "cons-firenze-p512",
   "name": "Canto",
   "inst": "Conservatorio di Musica di Firenze",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Firenze",
   "region": "Toscana",
@@ -20533,7 +20533,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20546,7 +20546,7 @@
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20564,7 +20564,7 @@
   "id": "cons-milano-p513",
   "name": "Violino Barocco",
   "inst": "Conservatorio di Musica di Milano",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Milano",
   "region": "Lombardia",
@@ -20575,7 +20575,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20588,7 +20588,7 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20606,7 +20606,7 @@
   "id": "cons-napoli-p514",
   "name": "Pianoforte Jazz",
   "inst": "Conservatorio di Musica di Napoli",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Napoli",
   "region": "Campania",
@@ -20617,7 +20617,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20630,7 +20630,7 @@
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20648,7 +20648,7 @@
   "id": "cons-roma-p515",
   "name": "Pianoforte",
   "inst": "Conservatorio di Musica di Roma",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20659,7 +20659,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20672,7 +20672,7 @@
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20690,7 +20690,7 @@
   "id": "cons-venezia-p517",
   "name": "Pianoforte Jazz",
   "inst": "Conservatorio di Musica di Venezia",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Venezia",
   "region": "Veneto",
@@ -20701,7 +20701,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20714,7 +20714,7 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20732,7 +20732,7 @@
   "id": "cons-roma-p516",
   "name": "Composizione",
   "inst": "Conservatorio di Musica di Roma",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20743,7 +20743,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Media & video",
@@ -20757,7 +20757,7 @@
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
@@ -20775,7 +20775,7 @@
   "id": "cons-venezia-p518",
   "name": "Canto Jazz",
   "inst": "Conservatorio di Musica di Venezia",
-  "type": "University",
+  "type": "AFAM",
   "ownership": "public",
   "city": "Venezia",
   "region": "Veneto",
@@ -20786,7 +20786,7 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 5,
+  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Media & video",
@@ -20800,7 +20800,7 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "scientific",
+  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],

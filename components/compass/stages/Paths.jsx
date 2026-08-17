@@ -27,7 +27,7 @@ export default function Paths() {
                 <div>
                   <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("pathtype")}</div>
                   <div className="flex gap-2 flex-wrap">
-                    {[["any", t("pt_any")], ["University", t("pt_uni")], ["ITS", t("pt_its")]].map(([v, l]) => (
+                    {[["any", t("pt_any")], ["University", t("pt_uni")], ["ITS", t("pt_its")], ["AFAM", t("pt_afam")]].map(([v, l]) => (
                       <ChipBtn key={v} active={prefs.pathType === v} onClick={() => setPrefs((p) => ({ ...p, pathType: v }))}>{l}</ChipBtn>
                     ))}
                   </div>

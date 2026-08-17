@@ -204,8 +204,10 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
         <div className="text-right shrink-0">
           {showFit && c.envFit && (
             <>
-              <div className="text-sm font-bold" style={{ ...mono, color: scoreColor(c.envFit.score) }}>{c.envFit.score}/100</div>
-              <div className="text-xs" style={{ color: T.grey }}>{t("card_env")}</div>
+              <div className="text-sm font-bold" style={{ ...mono, color: c.envFit.scored === false ? T.grey : scoreColor(c.envFit.score) }}>
+                {c.envFit.scored === false ? "—" : `${c.envFit.score}/100`}
+              </div>
+              <div className="text-xs" style={{ color: T.grey }}>{c.envFit.scored === false ? t("card_env_unscored") : t("card_env")}</div>
             </>
           )}
           <button onClick={(e) => { e.stopPropagation(); toggleSave(c, saveCtx); }}
