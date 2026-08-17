@@ -379,7 +379,18 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p347",
+      "unipi-p355",
+      "unige-p363",
+      "univr-p369",
+      "unitn-p374",
+      "unipv-p378",
+      "unipr-p384",
+      "unict-p391",
+      "unica-p399",
+      "unisa-p405"
+     ],
      "netMonthly": null
     },
     {
@@ -396,7 +407,17 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p348",
+      "unipi-p356",
+      "unige-p364",
+      "univr-p370",
+      "unipv-p379",
+      "unipr-p385",
+      "unict-p392",
+      "unica-p400",
+      "unisa-p406"
+     ],
      "netMonthly": null
     },
     {
@@ -413,7 +434,17 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p350",
+      "unipi-p358",
+      "unige-p365",
+      "univr-p371",
+      "unipv-p380",
+      "unipr-p387",
+      "unict-p393",
+      "unica-p401",
+      "unisa-p407"
+     ],
      "netMonthly": null
     },
     {
@@ -430,7 +461,11 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p349",
+      "unipi-p357",
+      "unipr-p386"
+     ],
      "netMonthly": null
     },
     {
@@ -447,7 +482,18 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p354",
+      "unipi-p362",
+      "unige-p368",
+      "univr-p373",
+      "unitn-p377",
+      "unipv-p383",
+      "unipr-p390",
+      "unict-p397",
+      "unica-p404",
+      "unisa-p411"
+     ],
      "netMonthly": null
     }
    ]
@@ -555,7 +601,17 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p352",
+      "unipi-p360",
+      "unige-p367",
+      "unitn-p376",
+      "unipv-p382",
+      "unipr-p389",
+      "unict-p395",
+      "unica-p403",
+      "unisa-p409"
+     ],
      "netMonthly": null
     }
    ]
@@ -816,7 +872,12 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p353",
+      "unipi-p361",
+      "unict-p396",
+      "unisa-p410"
+     ],
      "netMonthly": null
     }
    ]
@@ -963,7 +1024,18 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unipd-p351",
+      "unipi-p359",
+      "unige-p366",
+      "univr-p372",
+      "unitn-p375",
+      "unipv-p381",
+      "unipr-p388",
+      "unict-p394",
+      "unica-p402",
+      "unisa-p408"
+     ],
      "netMonthly": null
     },
     {
@@ -980,7 +1052,9 @@
      "pathTypes": [
       "University"
      ],
-     "courses": [],
+     "courses": [
+      "unict-p398"
+     ],
      "netMonthly": null
     }
    ]
