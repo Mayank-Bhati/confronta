@@ -409,6 +409,278 @@
    "Scienze del Turismo"
   ]
  ],
+ "doctor": [
+  [
+   "unipd",
+   "Medicina e chirurgia"
+  ],
+  [
+   "unipi",
+   "MEDICINA E CHIRURGIA"
+  ],
+  [
+   "unige",
+   "Medicina e chirurgia"
+  ],
+  [
+   "univr",
+   "Medicina e chirurgia"
+  ],
+  [
+   "unitn",
+   "Medicina e Chirurgia"
+  ],
+  [
+   "unipv",
+   "Medicina e chirurgia"
+  ],
+  [
+   "unipr",
+   "Medicina e Chirurgia"
+  ],
+  [
+   "unict",
+   "Medicina e chirurgia"
+  ],
+  [
+   "unica",
+   "Medicina e chirurgia"
+  ],
+  [
+   "unisa",
+   "Medicina e chirurgia"
+  ]
+ ],
+ "dentist": [
+  [
+   "unipd",
+   "Odontoiatria e protesi dentaria"
+  ],
+  [
+   "unipi",
+   "ODONTOIATRIA E PROTESI DENTARIA"
+  ],
+  [
+   "unige",
+   "Odontoiatria e protesi dentaria"
+  ],
+  [
+   "univr",
+   "Odontoiatria e protesi dentaria"
+  ],
+  [
+   "unipv",
+   "Odontoiatria e protesi dentaria"
+  ],
+  [
+   "unipr",
+   "Odontoiatria e Protesi Dentaria"
+  ],
+  [
+   "unict",
+   "Odontoiatria e protesi dentaria"
+  ],
+  [
+   "unica",
+   "Odontoiatria e protesi dentaria"
+  ],
+  [
+   "unisa",
+   "Odontoiatria e protesi dentaria"
+  ]
+ ],
+ "vet": [
+  [
+   "unipd",
+   "Medicina veterinaria"
+  ],
+  [
+   "unipi",
+   "MEDICINA VETERINARIA"
+  ],
+  [
+   "unipr",
+   "Medicina Veterinaria"
+  ]
+ ],
+ "pharmacist": [
+  [
+   "unipd",
+   "Farmacia"
+  ],
+  [
+   "unipi",
+   "FARMACIA"
+  ],
+  [
+   "unige",
+   "Farmacia"
+  ],
+  [
+   "univr",
+   "Farmacia"
+  ],
+  [
+   "unipv",
+   "Farmacia"
+  ],
+  [
+   "unipr",
+   "Farmacia"
+  ],
+  [
+   "unict",
+   "Farmacia"
+  ],
+  [
+   "unica",
+   "Farmacia"
+  ],
+  [
+   "unisa",
+   "Farmacia"
+  ]
+ ],
+ "lawyer": [
+  [
+   "unipd",
+   "GIURISPRUDENZA"
+  ],
+  [
+   "unipi",
+   "GIURISPRUDENZA"
+  ],
+  [
+   "unige",
+   "GIURISPRUDENZA"
+  ],
+  [
+   "univr",
+   "GIURISPRUDENZA"
+  ],
+  [
+   "unitn",
+   "GIURISPRUDENZA"
+  ],
+  [
+   "unipv",
+   "GIURISPRUDENZA"
+  ],
+  [
+   "unipr",
+   "Giurisprudenza"
+  ],
+  [
+   "unict",
+   "Giurisprudenza"
+  ],
+  [
+   "unica",
+   "Giurisprudenza"
+  ],
+  [
+   "unisa",
+   "GIURISPRUDENZA"
+  ]
+ ],
+ "architect": [
+  [
+   "unipd",
+   "Ingegneria edile-architettura"
+  ],
+  [
+   "unipi",
+   "INGEGNERIA EDILE-ARCHITETTURA"
+  ],
+  [
+   "unige",
+   "ARCHITETTURA"
+  ],
+  [
+   "unitn",
+   "Ingegneria Edile | Architettura"
+  ],
+  [
+   "unipv",
+   "Ingegneria edile-architettura"
+  ],
+  [
+   "unipr",
+   "Architettura e Città Sostenibili"
+  ],
+  [
+   "unict",
+   "Architettura"
+  ],
+  [
+   "unica",
+   "Architettura"
+  ],
+  [
+   "unisa",
+   "Ingegneria edile-architettura"
+  ]
+ ],
+ "agronomist": [
+  [
+   "unipd",
+   "Scienze e Tecnologie agrarie"
+  ],
+  [
+   "unipi",
+   "SCIENZE AGRARIE"
+  ],
+  [
+   "unict",
+   "Scienze e tecnologie agrarie"
+  ],
+  [
+   "unisa",
+   "Gestione e Valorizzazione delle risorse agrarie e delle aree protette"
+  ]
+ ],
+ "sport-scientist": [
+  [
+   "unipd",
+   "Scienze motorie"
+  ],
+  [
+   "unipi",
+   "SCIENZE MOTORIE"
+  ],
+  [
+   "unige",
+   "Scienze Motorie, Sport e Salute"
+  ],
+  [
+   "univr",
+   "Scienze delle attività motorie e sportive"
+  ],
+  [
+   "unitn",
+   "Scienze motorie, Sport e Benessere"
+  ],
+  [
+   "unipv",
+   "Scienze Motorie"
+  ],
+  [
+   "unipr",
+   "Scienze Motorie, Sport e Salute"
+  ],
+  [
+   "unict",
+   "Scienze motorie"
+  ],
+  [
+   "unica",
+   "Scienze delle attivita' motorie e sportive"
+  ],
+  [
+   "unisa",
+   "Scienze delle attività motorie, sportive e dell'educazione psicomotoria"
+  ]
+ ],
  "export": [
   [
    "unipi",
@@ -445,6 +717,12 @@
   [
    "unisa",
    "Economia e commercio"
+  ]
+ ],
+ "translator": [
+  [
+   "unict",
+   "Mediazione linguistica e interculturale"
   ]
  ]
 }
