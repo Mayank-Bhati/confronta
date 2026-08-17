@@ -29,6 +29,10 @@ from .adapters.universitaly import AfamCatalogCourse
 
 # Only cities the site already models, so distance, rent and commuting figures
 # stay real. Registry city values are upper case.
+# Every city the exporter has verified cost and coordinate data for. Limiting
+# this to ten was my own constraint, not a limit in the data: the registry has
+# public AFAM institutions in fourteen of them, and Cremona and Piacenza — both
+# conservatorio towns — were sitting in the table unused.
 CITY_REGION = {
     "MILANO": ("Milano", "Lombardia"),
     "ROMA": ("Roma", "Lazio"),
@@ -40,6 +44,22 @@ CITY_REGION = {
     "PALERMO": ("Palermo", "Sicilia"),
     "BARI": ("Bari", "Puglia"),
     "BERGAMO": ("Bergamo", "Lombardia"),
+    "BRESCIA": ("Brescia", "Lombardia"),
+    "CREMONA": ("Cremona", "Lombardia"),
+    "PIACENZA": ("Piacenza", "Emilia-Romagna"),
+    "PARMA": ("Parma", "Emilia-Romagna"),
+    "VERONA": ("Verona", "Veneto"),
+    "PADOVA": ("Padova", "Veneto"),
+    "CAGLIARI": ("Cagliari", "Sardegna"),
+    "CATANIA": ("Catania", "Sicilia"),
+    "GENOVA": ("Genova", "Liguria"),
+    "PISA": ("Pisa", "Toscana"),
+    "TRENTO": ("Trento", "Trentino-Alto Adige"),
+    "PAVIA": ("Pavia", "Lombardia"),
+    "SALERNO": ("Salerno", "Campania"),
+    "MONZA": ("Monza", "Lombardia"),
+    "LECCO": ("Lecco", "Lombardia"),
+    "MANTOVA": ("Mantova", "Lombardia"),
 }
 
 # Admission to a conservatorio or accademia is by audition or portfolio — the
@@ -50,12 +70,17 @@ PORTFOLIO = ("selection", "Portfolio review and entrance exam")
 # career → (name patterns, admission). First match wins, one course per
 # (career, institution), shortest name preferred — same rule as seed_expand.
 CAREER_RULES = [
-    # Needle order is preference order: "Arpa" is the shortest name in the
-    # registry and would otherwise represent every conservatorio on the site.
+    # Producer runs before performer. Nearly every jazz course is named for an
+    # instrument ("Canto jazz", "Chitarra jazz"), so with performer first the
+    # performer rule swallowed them and composition was left with two courses
+    # nationwide. Composition and studio work are matched first; whatever is
+    # left over is a performance course, which is the honest reading anyway.
+    ("music-producer", ("composizione", "musica elettronica", "tecnico del suono",
+                        "musica applicata", "jazz"), AUDITION),
     ("musician", ("pianoforte", "canto", "violino", "chitarra", "violoncello",
-                  "flauto", "clarinetto", "tromba", "percussioni", "arpa"), AUDITION),
-    ("music-producer", ("composizione", "musica elettronica", "jazz",
-                        "musica applicata", "tecnico del suono"), AUDITION),
+                  "flauto", "clarinetto", "tromba", "percussioni", "arpa",
+                  "oboe", "fagotto", "viola", "contrabbasso", "organo",
+                  "fisarmonica", "saxofono", "sassofono"), AUDITION),
     ("fine-artist", ("pittura", "scultura", "decorazione", "arti visive"), PORTFOLIO),
     ("art-designer", ("design", "fashion", "grafica", "scenografia",
                       "nuove tecnologie dell'arte", "fotografia"), PORTFOLIO),
@@ -146,7 +171,7 @@ def seed_afam():
             # not in this registry and must not be modelled from university ones
             s.flush()
 
-            taken = set()
+            taken = set()   # cineca ids, not URLs: see below
             for career, needles, (atype, atest) in CAREER_RULES:
                 def rank(c):
                     nm = (c.name or "").lower()
@@ -154,15 +179,22 @@ def seed_afam():
                     return (pos, len(nm), c.cineca_id)
                 best = [c for c in courses
                         if any(n in (c.name or "").lower() for n in needles)
-                        and c.url not in taken]
+                        and c.cineca_id not in taken]
                 if not best:
                     continue
                 best.sort(key=rank)
                 cat = best[0]
-                taken.add(cat.url)
-                prog = s.query(Program).filter_by(institution_id=inst.id, url=cat.url).one_or_none()
+                taken.add(cat.cineca_id)
+                # Every AFAM row carries the institution's homepage as its URL —
+                # all 53 Bologna courses share http://www.consbo.it — and
+                # Program is unique on (institution_id, url). So a conservatorio
+                # could hold exactly one course, and the second career onwards
+                # found nothing. The fragment keeps the link landing on the real
+                # official page while giving each course its own identity.
+                url = f"{cat.url}#corso-{cat.cineca_id}"
+                prog = s.query(Program).filter_by(institution_id=inst.id, url=url).one_or_none()
                 if not prog:
-                    prog = Program(institution_id=inst.id, url=cat.url, name=(cat.name or "").strip().title())
+                    prog = Program(institution_id=inst.id, url=url, name=(cat.name or "").strip().title())
                     s.add(prog)
                     stats["created"] += 1
                 else:

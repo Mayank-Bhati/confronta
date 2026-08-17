@@ -154,6 +154,8 @@ CAREER_TAGS = {
 }
 
 CITY_FALLBACK = {
+    "Venezia": {"lat": 45.4408, "lon": 12.3155, "rent": 456, "size": "medium", "vibe": "Unique, compact, tourist-heavy — student life on the mainland too"},
+    "Brescia": {"lat": 45.5416, "lon": 10.2118, "rent": 478, "size": "medium", "vibe": "Industrial Lombardy, cheaper than Milan and an hour away"},
     "Milano": {"lat": 45.4642, "lon": 9.19, "rent": 664, "size": "large", "vibe": "Big, fast, most opportunities, most expensive"},
     "Torino": {"lat": 45.0703, "lon": 7.6869, "rent": 525, "size": "large", "vibe": "Elegant, livable, strong student scene"},
     "Bologna": {"lat": 44.4949, "lon": 11.3426, "rent": 655, "size": "medium", "vibe": "Italy's classic student city"},
@@ -181,6 +183,25 @@ CITY_FALLBACK = {
     "Cagliari": {"lat": 39.2238, "lon": 9.1217, "rent": 330, "size": "medium", "vibe": "Island capital, beaches on the doorstep"},
     "Salerno": {"lat": 40.6824, "lon": 14.7681, "rent": 300, "size": "medium", "vibe": "Seafront, affordable, near the Amalfi coast"},
 }
+
+def _city_data(city):
+    """Never let an unmodelled city masquerade as Milano.
+
+    The old fallback was `CITY_FALLBACK.get(city) or CITY_FALLBACK["Milano"]`,
+    which silently gave every unknown city Milano's rent *and Milano's
+    latitude and longitude*. Venezia shipped that way: its courses sat at
+    45.46, 9.19, so "nearest first" placed them 250 km from where they are.
+    A missing city is now a loud failure at build time, not a quiet lie on the
+    card — adding one means finding a real rent and real coordinates.
+    """
+    data = CITY_FALLBACK.get(city)
+    if data is None:
+        raise KeyError(
+            f"No verified cost/coordinate data for {city!r}. Add it to "
+            f"CITY_FALLBACK with a sourced rent before seeding courses there."
+        )
+    return data
+
 
 # Verified fee anchors (research workbook, Universities + ISEE_Bands sheets).
 INST_FEES = {
@@ -418,7 +439,7 @@ def build_course(prog, inst, career_id, cities_by_name):
     a = AREA[area_of(prog, inst.kind)]
     city = first_city(prog.campus, default=inst.city or "Milano")
     adj = regional(a, city)
-    c = cities_by_name.get(city) or CITY_FALLBACK.get(city) or CITY_FALLBACK["Milano"]
+    c = cities_by_name.get(city) or _city_data(city)
     lang = (prog.language or "ITA").upper()
     return {
         "id": f"{inst.slug}-p{prog.id}",
