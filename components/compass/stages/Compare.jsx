@@ -133,7 +133,9 @@ export default function Compare() {
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {pair.map((c) => (
                     <div key={c.id} className="rounded-xl p-3 text-sm space-y-1" style={{ border: `1px solid ${T.line}`, ...mono }}>
-                      <div>{t("cmp_fees", { n: c.costByIsee[profile.isee].toLocaleString() })}</div>
+                      <div>{c.costByIsee
+                        ? t("cmp_fees", { n: c.costByIsee[profile.isee].toLocaleString() })
+                        : t("stat_fees_unknown")}</div>
                       {awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
                       {profile.locationMode === "home" && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
                       {(() => { const est = estimateMonthlyCost(c, envPrefs, profile.locationMode === "home" ? homeCity : null); const over = est.total - prefs.budget; return (
