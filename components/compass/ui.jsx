@@ -153,7 +153,12 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
     ? { n: `~€${est.living.toLocaleString()}`, label: t("stat_living") }
     : costView === "total"
       ? { n: `~€${est.total.toLocaleString()}`, label: t("stat_total") }
-      : { n: fees === 0 ? "€0" : `~€${fees?.toLocaleString?.() ?? "—"}`, label: t("stat_fees") };
+      // AFAM institutions set fees themselves and the registry carries none, so
+      // there is nothing to show. "~€—" reads like a bug; a dash with a label
+      // saying where to look reads like the truth.
+      : fees == null
+        ? { n: "—", label: t("stat_fees_unknown") }
+        : { n: fees === 0 ? "€0" : `~€${fees.toLocaleString()}`, label: t("stat_fees") };
   return (
     <div onClick={onCardClick} className={`cc-card cc-shine w-full text-left rounded-2xl p-4 md:p-5 ${onCardClick ? "cursor-pointer" : ""}`}
       style={{ background: chosen ? T.violetSoft : T.card, border: `1.5px solid ${chosen ? T.violet : T.line}` }}>

@@ -634,8 +634,16 @@
      "pathTypes": [
       "AFAM"
      ],
-     "courses": [],
-     "netMonthly": null
+     "courses": [
+      "cons-bologna-p511",
+      "cons-firenze-p512",
+      "cons-milano-p513",
+      "cons-napoli-p514",
+      "cons-roma-p515",
+      "cons-venezia-p517"
+     ],
+     "netMonthly": null,
+     "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
     },
     {
      "id": "music-producer",
@@ -651,8 +659,12 @@
      "pathTypes": [
       "AFAM"
      ],
-     "courses": [],
-     "netMonthly": null
+     "courses": [
+      "cons-roma-p516",
+      "cons-venezia-p518"
+     ],
+     "netMonthly": null,
+     "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
     },
     {
      "id": "fine-artist",
@@ -668,8 +680,14 @@
      "pathTypes": [
       "AFAM"
      ],
-     "courses": [],
-     "netMonthly": null
+     "courses": [
+      "aba-bologna-p501",
+      "aba-firenze-p503",
+      "aba-roma-p507",
+      "aba-torino-p509"
+     ],
+     "netMonthly": null,
+     "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
     },
     {
      "id": "art-designer",
@@ -685,8 +703,16 @@
      "pathTypes": [
       "AFAM"
      ],
-     "courses": [],
-     "netMonthly": null
+     "courses": [
+      "aba-bologna-p502",
+      "aba-firenze-p504",
+      "aba-milano-p505",
+      "aba-palermo-p506",
+      "aba-roma-p508",
+      "aba-venezia-p510"
+     ],
+     "netMonthly": null,
+     "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
     }
    ]
   },

@@ -16002,8 +16002,8 @@
   "lon": 11.8768,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16051,7 +16051,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70019&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipi-p355",
@@ -16065,8 +16065,8 @@
   "lon": 10.4017,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16114,7 +16114,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70024&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unige-p363",
@@ -16128,8 +16128,8 @@
   "lon": 8.9463,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16177,7 +16177,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70011&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "univr-p369",
@@ -16191,8 +16191,8 @@
   "lon": 10.9916,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16240,7 +16240,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70040&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unitn-p374",
@@ -16254,8 +16254,8 @@
   "lon": 11.1217,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16289,7 +16289,7 @@
    "group": "medico",
    "level": "LSE"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipv-p378",
@@ -16303,8 +16303,8 @@
   "lon": 9.1582,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16352,7 +16352,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70022&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipr-p384",
@@ -16366,8 +16366,8 @@
   "lon": 10.3279,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16415,7 +16415,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70021&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unict-p391",
@@ -16429,8 +16429,8 @@
   "lon": 15.083,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16478,7 +16478,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70008&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unica-p399",
@@ -16492,8 +16492,8 @@
   "lon": 9.1217,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16541,7 +16541,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70004&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unisa-p405",
@@ -16555,8 +16555,8 @@
   "lon": 14.7681,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16604,7 +16604,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70028&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipd-p348",
@@ -16618,8 +16618,8 @@
   "lon": 11.8768,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16667,7 +16667,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70019&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipi-p356",
@@ -16681,8 +16681,8 @@
   "lon": 10.4017,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16730,7 +16730,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70024&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unige-p364",
@@ -16744,8 +16744,8 @@
   "lon": 8.9463,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16793,7 +16793,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70011&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "univr-p370",
@@ -16807,8 +16807,8 @@
   "lon": 10.9916,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16856,7 +16856,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70040&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipv-p379",
@@ -16870,8 +16870,8 @@
   "lon": 9.1582,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16919,7 +16919,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70022&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipr-p385",
@@ -16933,8 +16933,8 @@
   "lon": 10.3279,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16982,7 +16982,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70021&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unict-p392",
@@ -16996,8 +16996,8 @@
   "lon": 15.083,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17045,7 +17045,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70008&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unica-p400",
@@ -17059,8 +17059,8 @@
   "lon": 9.1217,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17108,7 +17108,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70004&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unisa-p406",
@@ -17122,8 +17122,8 @@
   "lon": 14.7681,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17171,7 +17171,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70028&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipd-p349",
@@ -17185,8 +17185,8 @@
   "lon": 11.8768,
   "citySize": "medium",
   "years": 5,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17234,7 +17234,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70019&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1395
  },
  {
   "id": "unipi-p357",
@@ -17248,8 +17248,8 @@
   "lon": 10.4017,
   "citySize": "small",
   "years": 5,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17297,7 +17297,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70024&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1395
  },
  {
   "id": "unipr-p386",
@@ -17311,8 +17311,8 @@
   "lon": 10.3279,
   "citySize": "small",
   "years": 5,
-  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
-  "admission": "semestre",
+  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
+  "admission": "national",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17360,7 +17360,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70021&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1395
  },
  {
   "id": "unipd-p350",
@@ -17423,7 +17423,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70019&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipi-p358",
@@ -17486,7 +17486,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70024&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unige-p365",
@@ -17549,7 +17549,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70011&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "univr-p371",
@@ -17612,7 +17612,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70040&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipv-p380",
@@ -17675,7 +17675,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70022&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipr-p387",
@@ -17738,7 +17738,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70021&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unict-p393",
@@ -17801,7 +17801,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70008&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unica-p401",
@@ -17864,7 +17864,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70004&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unisa-p407",
@@ -17927,7 +17927,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70028&facolta=tutti&gruppo=14&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1789
  },
  {
   "id": "unipd-p351",
@@ -17990,7 +17990,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70019&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unipi-p359",
@@ -18053,7 +18053,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70024&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unige-p366",
@@ -18116,7 +18116,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70011&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "univr-p372",
@@ -18179,7 +18179,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70040&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unitn-p375",
@@ -18242,7 +18242,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70062&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unipv-p381",
@@ -18305,7 +18305,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70022&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unipr-p388",
@@ -18368,7 +18368,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70021&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unict-p394",
@@ -18431,7 +18431,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70008&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unica-p402",
@@ -18494,7 +18494,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70004&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unisa-p408",
@@ -18557,7 +18557,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70028&facolta=tutti&gruppo=8&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1036
  },
  {
   "id": "unipd-p352",
@@ -18620,7 +18620,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70019&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unipi-p360",
@@ -18683,7 +18683,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70024&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unige-p367",
@@ -18746,7 +18746,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70011&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unitn-p376",
@@ -18809,7 +18809,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70062&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unipv-p382",
@@ -18872,7 +18872,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70022&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unipr-p389",
@@ -18935,7 +18935,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70021&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unict-p395",
@@ -18998,7 +18998,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70008&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unica-p403",
@@ -19061,7 +19061,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70004&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unisa-p409",
@@ -19124,7 +19124,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=LSE&ateneo=70028&facolta=tutti&gruppo=11&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1345
  },
  {
   "id": "unipd-p353",
@@ -19187,7 +19187,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70019&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1078
  },
  {
   "id": "unipi-p361",
@@ -19250,7 +19250,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70024&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1078
  },
  {
   "id": "unict-p396",
@@ -19313,7 +19313,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70008&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1078
  },
  {
   "id": "unisa-p410",
@@ -19376,7 +19376,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70028&facolta=tutti&gruppo=13&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 1078
  },
  {
   "id": "unipd-p354",
@@ -19439,7 +19439,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70019&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unipi-p362",
@@ -19502,7 +19502,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70024&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unige-p368",
@@ -19565,7 +19565,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70011&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "univr-p373",
@@ -19628,7 +19628,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70040&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unitn-p377",
@@ -19677,7 +19677,7 @@
    "group": "scienze_motorie",
    "level": "L"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unipv-p383",
@@ -19740,7 +19740,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70022&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unipr-p390",
@@ -19803,7 +19803,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70021&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unict-p397",
@@ -19866,7 +19866,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70008&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unica-p404",
@@ -19929,7 +19929,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70004&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unisa-p411",
@@ -19992,7 +19992,7 @@
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70028&facolta=tutti&gruppo=15&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
   },
-  "careerPay": null
+  "careerPay": 897
  },
  {
   "id": "unict-p398",
@@ -20053,6 +20053,764 @@
    "sourceOcc": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2024&annolau=1&corstipo=L&ateneo=70008&facolta=tutti&gruppo=4&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=occupazione",
    "sourceProf": "https://statistiche.almalaurea.it/cgi-php/universita/statistiche/visualizza.php?anno=2025&annolau=1&corstipo=L&ateneo=70008&facolta=tutti&gruppo=4&classe=tutti&isstella=0&areageografica=tutti&regione=tutti&dimensione=tutti&aggregacodicione=1&condocc=tutti&LANG=it&CONFIG=profilo",
    "basis": "AlmaLaurea — this university, this subject area, graduates of this level surveyed 1 year after graduating"
+  },
+  "careerPay": 986
+ },
+ {
+  "id": "aba-bologna-p501",
+  "name": "Pittura",
+  "inst": "Accademia di Belle Arti di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "region": "Emilia-Romagna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Building things"
+  ],
+  "costByIsee": null,
+  "cityRent": 655,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Bologna%20Pittura",
+  "url": "https://www.ababo.it/courses-and-subjects/courses-index/pittura",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-firenze-p503",
+  "name": "Scultura",
+  "inst": "Accademia di Belle Arti di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "region": "Toscana",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Building things"
+  ],
+  "costByIsee": null,
+  "cityRent": 620,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Firenze%20Scultura",
+  "url": "https://www.accademia.firenze.it/it/component/k2/321-mappa-offerta-formativa/scultura",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-roma-p507",
+  "name": "Decorazione - Arti Visive Per Gli Spazi Architettonici E Il Paesaggio",
+  "inst": "Accademia di Belle Arti di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Building things"
+  ],
+  "costByIsee": null,
+  "cityRent": 600,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Roma%20Decorazione%20-%20Arti%20Visive%20Per%20Gli%20Spazi%20Architettonici%20E%20Il%20Paesaggio",
+  "url": "https://abaroma.it/",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-torino-p509",
+  "name": "Pittura",
+  "inst": "Accademia di Belle Arti di Torino",
+  "type": "University",
+  "ownership": "public",
+  "city": "Torino",
+  "region": "Piemonte",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Building things"
+  ],
+  "costByIsee": null,
+  "cityRent": 525,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Elegant, livable, strong student scene"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Torino%20Pittura",
+  "url": "http://www.albertina.academy",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-bologna-p502",
+  "name": "Design Grafico",
+  "inst": "Accademia di Belle Arti di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "region": "Emilia-Romagna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 84,
+  "mathLoad": 2,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 655,
+  "mastersAccess": 4,
+  "handsOn": 4,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "mixed",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Bologna%20Design%20Grafico",
+  "url": "https://www.ababo.it/courses-and-subjects/courses-index/design_grafico",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-firenze-p504",
+  "name": "Design",
+  "inst": "Accademia di Belle Arti di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "region": "Toscana",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 84,
+  "mathLoad": 2,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 620,
+  "mastersAccess": 4,
+  "handsOn": 4,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "mixed",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Firenze%20Design",
+  "url": "https://www.accademia.firenze.it/it/component/k2/321-mappa-offerta-formativa/graphic-design",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-milano-p505",
+  "name": "Nuove Tecnologie Dell'Arte",
+  "inst": "Accademia di Belle Arti di Milano",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "region": "Lombardia",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 664,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Milano%20Nuove%20Tecnologie%20Dell%27Arte",
+  "url": "www.accademiadibrera.milano.it",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-palermo-p506",
+  "name": "Design Grafico",
+  "inst": "Accademia di Belle Arti di Palermo",
+  "type": "University",
+  "ownership": "public",
+  "city": "Palermo",
+  "region": "Sicilia",
+  "lat": 38.1157,
+  "lon": 13.3615,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 84,
+  "mathLoad": 2,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 350,
+  "mastersAccess": 4,
+  "handsOn": 4,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Beautiful, affordable, far from the north"
+  },
+  "nature": "mixed",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Palermo%20Design%20Grafico",
+  "url": "www.accademiadipalermo.it",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-roma-p508",
+  "name": "Grafica D'Arte",
+  "inst": "Accademia di Belle Arti di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 600,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Roma%20Grafica%20D%27Arte",
+  "url": "https://abaroma.it/corsi/grafica-darte/",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-venezia-p510",
+  "name": "Nuove Tecnologie Dell'Arte",
+  "inst": "Accademia di Belle Arti di Venezia",
+  "type": "University",
+  "ownership": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 664,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Venezia%20Nuove%20Tecnologie%20Dell%27Arte",
+  "url": "http://www.accademiavenezia.it/",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-bologna-p511",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Bologna",
+  "type": "University",
+  "ownership": "public",
+  "city": "Bologna",
+  "region": "Emilia-Romagna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 655,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Bologna%20Pianoforte",
+  "url": "http://www.consbo.it",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-firenze-p512",
+  "name": "Canto",
+  "inst": "Conservatorio di Musica di Firenze",
+  "type": "University",
+  "ownership": "public",
+  "city": "Firenze",
+  "region": "Toscana",
+  "lat": 43.7696,
+  "lon": 11.2558,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 620,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Art everywhere, tourist prices"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Firenze%20Canto",
+  "url": "www.conservatorio.firenze.it",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-milano-p513",
+  "name": "Violino Barocco",
+  "inst": "Conservatorio di Musica di Milano",
+  "type": "University",
+  "ownership": "public",
+  "city": "Milano",
+  "region": "Lombardia",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 664,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Milano%20Violino%20Barocco",
+  "url": "https://www.consmi.it/it/home",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-napoli-p514",
+  "name": "Pianoforte Jazz",
+  "inst": "Conservatorio di Musica di Napoli",
+  "type": "University",
+  "ownership": "public",
+  "city": "Napoli",
+  "region": "Campania",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 450,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Napoli%20Pianoforte%20Jazz",
+  "url": "www.sanpietroamajella.it",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-roma-p515",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 600,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Roma%20Pianoforte",
+  "url": "http://www.conservatoriosantacecilia.it/wp-content/uploads/2015/06/PIanoforte_triennio_.pdf",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-venezia-p517",
+  "name": "Pianoforte Jazz",
+  "inst": "Conservatorio di Musica di Venezia",
+  "type": "University",
+  "ownership": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 664,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Venezia%20Pianoforte%20Jazz",
+  "url": "http://www.conservatoriovenezia.net/portale/__dati/offerta_formativa/triennio/piano_didattico_pianoforte_jazz_triennio.pdf",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-roma-p516",
+  "name": "Composizione",
+  "inst": "Conservatorio di Musica di Roma",
+  "type": "University",
+  "ownership": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 600,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Roma%20Composizione",
+  "url": "http://www.conservatoriosantacecilia.it/wp-content/uploads/2015/06/Composizione_triennio_.pdf",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-venezia-p518",
+  "name": "Canto Jazz",
+  "inst": "Conservatorio di Musica di Venezia",
+  "type": "University",
+  "ownership": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "lat": 45.4642,
+  "lon": 9.19,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "mathLoad": 5,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 664,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Big, fast, most opportunities, most expensive"
+  },
+  "nature": "scientific",
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Venezia%20Canto%20Jazz",
+  "url": "http://www.conservatoriovenezia.net/portale/__dati/offerta_formativa/triennio/piano_didattico_canto_jazz_triennio.pdf",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
   },
   "careerPay": null
  }
