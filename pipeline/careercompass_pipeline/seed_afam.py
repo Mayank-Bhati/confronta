@@ -22,6 +22,8 @@ Two honest limits, both surfaced in the UI rather than papered over:
 
     python3 main.py seed-afam
 """
+import re
+
 from .db import Institution, Program, Session
 from .adapters.universitaly import AfamCatalogCourse
 
@@ -48,8 +50,10 @@ PORTFOLIO = ("selection", "Portfolio review and entrance exam")
 # career → (name patterns, admission). First match wins, one course per
 # (career, institution), shortest name preferred — same rule as seed_expand.
 CAREER_RULES = [
-    ("musician", ("pianoforte", "violino", "canto", "chitarra", "violoncello",
-                  "flauto", "clarinetto", "tromba", "arpa", "percussioni"), AUDITION),
+    # Needle order is preference order: "Arpa" is the shortest name in the
+    # registry and would otherwise represent every conservatorio on the site.
+    ("musician", ("pianoforte", "canto", "violino", "chitarra", "violoncello",
+                  "flauto", "clarinetto", "tromba", "percussioni", "arpa"), AUDITION),
     ("music-producer", ("composizione", "musica elettronica", "jazz",
                         "musica applicata", "tecnico del suono"), AUDITION),
     ("fine-artist", ("pittura", "scultura", "decorazione", "arti visive"), PORTFOLIO),
@@ -60,24 +64,53 @@ CAREER_RULES = [
 SOURCE = "AFAM registry (Universitaly / Cineca API)"
 
 
-def _slug(institution):
-    """A stable short slug for an AFAM institution."""
+def _slug(institution, city_key):
+    """A slug unique to the institution, not merely to its city.
+
+    Deriving it from a city name found inside the title collapsed every
+    accademia in Milan onto one slug and gave every institution with no city in
+    its name the shared slug "afam-", merging separate schools into one. The
+    city comes from the registry field we already filter on; the discriminator
+    comes from the institution's own name.
+    """
     i = institution.upper()
-    city = next((c for c in CITY_REGION if c in i), "")
-    if "CONSERVATORIO" in i or "MUSIC" in i:
-        kind = "cons"
-    elif "BELLE ARTI" in i:
-        kind = "aba"
-    elif "ISIA" in i:
-        kind = "isia"
-    else:
-        kind = "afam"
-    return f"{kind}-{city.lower().replace(' ', '')}"[:64]
+    kind = ("cons" if ("CONSERVATORIO" in i or "STUDI MUSICALI" in i)
+            else "aba" if "BELLE ARTI" in i
+            else "isia" if "ISIA" in i
+            else "afam")
+    stop = {"CONSERVATORIO", "DI", "MUSICA", "ACCADEMIA", "BELLE", "ARTI",
+            "STATALE", "ISTITUTO", "SUPERIORE", "STUDI", "MUSICALI", "DELLE",
+            "DELL", "DEL", "DELLA", "E", "SEDE", "DECENTRATA", "LEGALMENTE",
+            "RICONOSCIUTO", city_key}
+    words = [w for w in re.split(r"[^A-Z0-9]+", i) if w and w not in stop]
+    tail = ("-" + words[0].lower()[:12]) if words else ""
+    return f"{kind}-{city_key.lower().replace(' ', '')}{tail}"[:64]
+
+
+# Only the public sector. Private academies (Accademia del Lusso, and similar)
+# charge several thousand a year against a conservatorio's few hundred, and the
+# registry carries no fees at all, so listing them beside statali with no price
+# would mislead precisely the students least able to absorb the surprise.
+def _is_public(institution):
+    i = institution.upper()
+    return (("CONSERVATORIO" in i and "MUSICA" in i)
+            or "ACCADEMIA DI BELLE ARTI" in i
+            or "ISIA" in i
+            or "ISTITUTO SUPERIORE DI STUDI MUSICALI" in i)
 
 
 def seed_afam():
-    stats = {"institutions": 0, "created": 0, "updated": 0, "careers": {}}
+    stats = {"institutions": 0, "created": 0, "updated": 0, "removed": 0, "careers": {}}
     with Session() as s:
+        # The first run merged distinct schools onto shared slugs, so start from
+        # a clean sector rather than upserting on top of wrong identities.
+        stale = s.query(Institution).filter(Institution.kind == "afam").all()
+        for inst in stale:
+            for prog in list(inst.programs):
+                s.delete(prog)
+            s.delete(inst)
+            stats["removed"] += 1
+        s.flush()
         rows = s.query(AfamCatalogCourse).all()
         # group registry rows by the institution slug we will create
         by_inst = {}
@@ -89,7 +122,9 @@ def seed_afam():
                 continue
             if not (r.url or "").strip():
                 continue
-            by_inst.setdefault((_slug(r.institution), r.institution, city), []).append(r)
+            if not _is_public(r.institution):
+                continue
+            by_inst.setdefault((_slug(r.institution, city), r.institution, city), []).append(r)
 
         for (slug, full_name, city_key), courses in sorted(by_inst.items()):
             city, region = CITY_REGION[city_key]
@@ -106,12 +141,16 @@ def seed_afam():
 
             taken = set()
             for career, needles, (atype, atest) in CAREER_RULES:
+                def rank(c):
+                    nm = (c.name or "").lower()
+                    pos = next((i for i, n in enumerate(needles) if n in nm), len(needles))
+                    return (pos, len(nm), c.cineca_id)
                 best = [c for c in courses
                         if any(n in (c.name or "").lower() for n in needles)
                         and c.url not in taken]
                 if not best:
                     continue
-                best.sort(key=lambda c: (len(c.name or ""), c.cineca_id))
+                best.sort(key=rank)
                 cat = best[0]
                 taken.add(cat.url)
                 prog = s.query(Program).filter_by(institution_id=inst.id, url=cat.url).one_or_none()
