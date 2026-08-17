@@ -374,7 +374,7 @@
       "R": 1
      },
      "day": "Diagnose and treat patients. Six years, then years of specialisation — the longest training of any path here, and the deepest responsibility.",
-     "salary": null,
+     "salary": 30000,
      "demand": "high",
      "pathTypes": [
       "University"
@@ -391,7 +391,8 @@
       "unica-p399",
       "unisa-p405"
      ],
-     "netMonthly": null
+     "netMonthly": 1789,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 9 courses shown for this career"
     },
     {
      "id": "dentist",
@@ -402,7 +403,7 @@
       "S": 2
      },
      "day": "Precise hands-on work in a very small field of view, usually in your own practice.",
-     "salary": null,
+     "salary": 30000,
      "demand": "high",
      "pathTypes": [
       "University"
@@ -418,7 +419,8 @@
       "unica-p400",
       "unisa-p406"
      ],
-     "netMonthly": null
+     "netMonthly": 1789,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 9 courses shown for this career"
     },
     {
      "id": "pharmacist",
@@ -429,7 +431,7 @@
       "S": 2
      },
      "day": "Dispense and advise on medicines — chemistry, with a counter and a queue of real people.",
-     "salary": null,
+     "salary": 30000,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -445,7 +447,8 @@
       "unica-p401",
       "unisa-p407"
      ],
-     "netMonthly": null
+     "netMonthly": 1789,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 9 courses shown for this career"
     },
     {
      "id": "vet",
@@ -456,7 +459,7 @@
       "S": 2
      },
      "day": "Treat animals, from pets to farm herds. Physical, unpredictable, often outdoors and at night.",
-     "salary": null,
+     "salary": 23000,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -466,7 +469,8 @@
       "unipi-p357",
       "unipr-p386"
      ],
-     "netMonthly": null
+     "netMonthly": 1395,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 3 courses shown for this career"
     },
     {
      "id": "sport-scientist",
@@ -477,7 +481,7 @@
       "I": 1
      },
      "day": "Train people and design rehabilitation or performance programmes.",
-     "salary": null,
+     "salary": 15000,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -494,7 +498,8 @@
       "unica-p404",
       "unisa-p411"
      ],
-     "netMonthly": null
+     "netMonthly": 897,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 9 courses shown for this career"
     }
    ]
   },
@@ -596,7 +601,7 @@
       "R": 2
      },
      "day": "Design buildings and spaces, then see the design survive contact with budgets, rules and clients.",
-     "salary": null,
+     "salary": 22500,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -612,7 +617,8 @@
       "unica-p403",
       "unisa-p409"
      ],
-     "netMonthly": null
+     "netMonthly": 1345,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 9 courses shown for this career"
     }
    ]
   },
@@ -867,7 +873,7 @@
       "E": 1
      },
      "day": "Make land, crops and livestock productive — science applied outdoors, season by season.",
-     "salary": null,
+     "salary": 18000,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -878,7 +884,8 @@
       "unict-p396",
       "unisa-p410"
      ],
-     "netMonthly": null
+     "netMonthly": 1078,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 4 courses shown for this career"
     }
    ]
   },
@@ -1019,7 +1026,7 @@
       "S": 1
      },
      "day": "Read, argue and draft. Five years, then a traineeship and the bar exam before you can practise alone.",
-     "salary": null,
+     "salary": 17500,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -1036,7 +1043,8 @@
       "unica-p402",
       "unisa-p408"
      ],
-     "netMonthly": null
+     "netMonthly": 1036,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 10 courses shown for this career"
     },
     {
      "id": "translator",
@@ -1047,7 +1055,7 @@
       "S": 1
      },
      "day": "Carry meaning between languages — in documents, or live in the room as people speak.",
-     "salary": null,
+     "salary": 16500,
      "demand": "medium",
      "pathTypes": [
       "University"
@@ -1055,7 +1063,8 @@
      "courses": [
       "unict-p398"
      ],
-     "netMonthly": null
+     "netMonthly": 986,
+     "payBasis": "median AlmaLaurea net pay 1 year after graduating across the 1 courses shown for this career"
     }
    ]
   }
