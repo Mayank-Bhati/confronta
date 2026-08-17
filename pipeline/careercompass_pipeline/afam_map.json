@@ -1,0 +1,82 @@
+{
+ "fine-artist": [
+  [
+   "aba-bologna",
+   "Pittura"
+  ],
+  [
+   "aba-firenze",
+   "Scultura"
+  ],
+  [
+   "aba-roma",
+   "Decorazione - Arti Visive Per Gli Spazi Architettonici E Il Paesaggio"
+  ],
+  [
+   "aba-torino",
+   "Pittura"
+  ]
+ ],
+ "art-designer": [
+  [
+   "aba-bologna",
+   "Design Grafico"
+  ],
+  [
+   "aba-firenze",
+   "Design"
+  ],
+  [
+   "aba-milano",
+   "Nuove Tecnologie Dell'Arte"
+  ],
+  [
+   "aba-palermo",
+   "Design Grafico"
+  ],
+  [
+   "aba-roma",
+   "Grafica D'Arte"
+  ],
+  [
+   "aba-venezia",
+   "Nuove Tecnologie Dell'Arte"
+  ]
+ ],
+ "musician": [
+  [
+   "cons-bologna",
+   "Pianoforte"
+  ],
+  [
+   "cons-firenze",
+   "Canto"
+  ],
+  [
+   "cons-milano",
+   "Violino Barocco"
+  ],
+  [
+   "cons-napoli",
+   "Pianoforte Jazz"
+  ],
+  [
+   "cons-roma",
+   "Pianoforte"
+  ],
+  [
+   "cons-venezia",
+   "Pianoforte Jazz"
+  ]
+ ],
+ "music-producer": [
+  [
+   "cons-roma",
+   "Composizione"
+  ],
+  [
+   "cons-venezia",
+   "Canto Jazz"
+  ]
+ ]
+}
