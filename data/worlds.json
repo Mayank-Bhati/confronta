@@ -635,12 +635,17 @@
       "AFAM"
      ],
      "courses": [
-      "cons-bologna-p511",
-      "cons-firenze-p512",
-      "cons-milano-p513",
-      "cons-napoli-p514",
-      "cons-roma-p515",
-      "cons-venezia-p517"
+      "cons-bologna-p535",
+      "cons-brescia-p537",
+      "cons-cagliari-p539",
+      "cons-cremona-p540",
+      "cons-firenze-p541",
+      "cons-milano-p542",
+      "cons-napoli-p544",
+      "cons-parma-p545",
+      "cons-piacenza-p547",
+      "cons-roma-p549",
+      "cons-venezia-p551"
      ],
      "netMonthly": null,
      "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
@@ -660,8 +665,13 @@
       "AFAM"
      ],
      "courses": [
-      "cons-roma-p516",
-      "cons-venezia-p518"
+      "cons-bologna-p534",
+      "cons-brescia-p536",
+      "cons-cagliari-p538",
+      "cons-napoli-p543",
+      "cons-piacenza-p546",
+      "cons-roma-p548",
+      "cons-venezia-p550"
      ],
      "netMonthly": null,
      "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
@@ -681,10 +691,12 @@
       "AFAM"
      ],
      "courses": [
-      "aba-bologna-p501",
-      "aba-firenze-p503",
-      "aba-roma-p507",
-      "aba-torino-p509"
+      "aba-bologna-p519",
+      "aba-catania-p521",
+      "aba-firenze-p523",
+      "aba-roma-p527",
+      "aba-torino-p529",
+      "aba-verona-p532"
      ],
      "netMonthly": null,
      "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"
@@ -704,12 +716,15 @@
       "AFAM"
      ],
      "courses": [
-      "aba-bologna-p502",
-      "aba-firenze-p504",
-      "aba-milano-p505",
-      "aba-palermo-p506",
-      "aba-roma-p508",
-      "aba-venezia-p510"
+      "aba-bologna-p520",
+      "aba-catania-p522",
+      "aba-firenze-p524",
+      "aba-milano-p525",
+      "aba-palermo-p526",
+      "aba-roma-p528",
+      "aba-torino-p530",
+      "aba-venezia-p531",
+      "aba-verona-p533"
      ],
      "netMonthly": null,
      "payBasis": "no outcome survey covers AFAM, so no pay figure is shown for these paths rather than one borrowed from elsewhere"

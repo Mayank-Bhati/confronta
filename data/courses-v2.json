@@ -20057,10 +20057,12 @@
   "careerPay": 986
  },
  {
-  "id": "aba-bologna-p501",
+  "id": "aba-bologna-p519",
   "name": "Pittura",
   "inst": "Accademia di Belle Arti di Bologna",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Bologna",
   "region": "Emilia-Romagna",
@@ -20071,7 +20073,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20084,13 +20085,12 @@
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Bologna%20Pittura",
-  "url": "https://www.ababo.it/courses-and-subjects/courses-index/pittura",
+  "url": "https://www.ababo.it/courses-and-subjects/courses-index/pittura#corso-61524",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20099,10 +20099,54 @@
   "careerPay": null
  },
  {
-  "id": "aba-firenze-p503",
+  "id": "aba-catania-p521",
+  "name": "Pittura",
+  "inst": "Accademia di Belle Arti di Catania",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Catania",
+  "region": "Sicilia",
+  "lat": 37.5079,
+  "lon": 15.083,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Design & creativity",
+   "Building things"
+  ],
+  "costByIsee": null,
+  "cityRent": 300,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Volcano and sea, lively and inexpensive"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Catania%20Pittura",
+  "url": "https://www.abacatania.it/offerta-formativa/dapl01-pittura/#corso-65194",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-firenze-p523",
   "name": "Scultura",
   "inst": "Accademia di Belle Arti di Firenze",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Firenze",
   "region": "Toscana",
@@ -20113,7 +20157,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20126,13 +20169,12 @@
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Firenze%20Scultura",
-  "url": "https://www.accademia.firenze.it/it/component/k2/321-mappa-offerta-formativa/scultura",
+  "url": "https://www.accademia.firenze.it/it/component/k2/321-mappa-offerta-formativa/scultura#corso-58485",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20141,10 +20183,12 @@
   "careerPay": null
  },
  {
-  "id": "aba-roma-p507",
+  "id": "aba-roma-p527",
   "name": "Decorazione - Arti Visive Per Gli Spazi Architettonici E Il Paesaggio",
   "inst": "Accademia di Belle Arti di Roma",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20155,7 +20199,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20168,13 +20211,12 @@
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Roma%20Decorazione%20-%20Arti%20Visive%20Per%20Gli%20Spazi%20Architettonici%20E%20Il%20Paesaggio",
-  "url": "https://abaroma.it/",
+  "url": "https://abaroma.it/#corso-61797",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20183,10 +20225,12 @@
   "careerPay": null
  },
  {
-  "id": "aba-torino-p509",
+  "id": "aba-torino-p529",
   "name": "Pittura",
   "inst": "Accademia di Belle Arti di Torino",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Torino",
   "region": "Piemonte",
@@ -20197,7 +20241,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Building things"
@@ -20210,13 +20253,12 @@
    "language": "ita",
    "cityVibe": "Elegant, livable, strong student scene"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Torino%20Pittura",
-  "url": "http://www.albertina.academy",
+  "url": "http://www.albertina.academy#corso-58407",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20225,10 +20267,54 @@
   "careerPay": null
  },
  {
-  "id": "aba-bologna-p502",
+  "id": "aba-verona-p532",
+  "name": "Pittura",
+  "inst": "Accademia di Belle Arti di Verona",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Verona",
+  "region": "Veneto",
+  "lat": 45.4384,
+  "lon": 10.9916,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Design & creativity",
+   "Building things"
+  ],
+  "costByIsee": null,
+  "cityRent": 380,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Elegant, well connected, quietly wealthy"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Verona%20Pittura",
+  "url": "https://accademiabelleartiverona.it/it/artivisive/pittura/#corso-64531",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-bologna-p520",
   "name": "Design Grafico",
   "inst": "Accademia di Belle Arti di Bologna",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Bologna",
   "region": "Emilia-Romagna",
@@ -20239,7 +20325,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 84,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20252,13 +20337,12 @@
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Bologna%20Design%20Grafico",
-  "url": "https://www.ababo.it/courses-and-subjects/courses-index/design_grafico",
+  "url": "https://www.ababo.it/courses-and-subjects/courses-index/design_grafico#corso-61544",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20267,10 +20351,54 @@
   "careerPay": null
  },
  {
-  "id": "aba-firenze-p504",
+  "id": "aba-catania-p522",
+  "name": "Fashion Design",
+  "inst": "Accademia di Belle Arti di Catania",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Catania",
+  "region": "Sicilia",
+  "lat": 37.5079,
+  "lon": 15.083,
+  "citySize": "large",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 84,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 300,
+  "mastersAccess": 4,
+  "handsOn": 4,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Volcano and sea, lively and inexpensive"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Catania%20Fashion%20Design",
+  "url": "https://www.abacatania.it/offerta-formativa/dapl06-fashion-design/#corso-65920",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-firenze-p524",
   "name": "Design",
   "inst": "Accademia di Belle Arti di Firenze",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Firenze",
   "region": "Toscana",
@@ -20281,7 +20409,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 84,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20294,13 +20421,12 @@
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Firenze%20Design",
-  "url": "https://www.accademia.firenze.it/it/component/k2/321-mappa-offerta-formativa/graphic-design",
+  "url": "https://www.accademia.firenze.it/it/component/k2/321-mappa-offerta-formativa/graphic-design#corso-58062",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20309,10 +20435,12 @@
   "careerPay": null
  },
  {
-  "id": "aba-milano-p505",
+  "id": "aba-milano-p525",
   "name": "Nuove Tecnologie Dell'Arte",
   "inst": "Accademia di Belle Arti di Milano",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Milano",
   "region": "Lombardia",
@@ -20323,7 +20451,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20336,13 +20463,12 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Milano%20Nuove%20Tecnologie%20Dell%27Arte",
-  "url": "www.accademiadibrera.milano.it",
+  "url": "www.accademiadibrera.milano.it#corso-58300",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20351,10 +20477,12 @@
   "careerPay": null
  },
  {
-  "id": "aba-palermo-p506",
+  "id": "aba-palermo-p526",
   "name": "Design Grafico",
   "inst": "Accademia di Belle Arti di Palermo",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Palermo",
   "region": "Sicilia",
@@ -20365,7 +20493,6 @@
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 84,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
@@ -20378,13 +20505,12 @@
    "language": "ita",
    "cityVibe": "Beautiful, affordable, far from the north"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Palermo%20Design%20Grafico",
-  "url": "www.accademiadipalermo.it",
+  "url": "www.accademiadipalermo.it#corso-58449",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20393,10 +20519,12 @@
   "careerPay": null
  },
  {
-  "id": "aba-roma-p508",
-  "name": "Grafica D'Arte",
+  "id": "aba-roma-p528",
+  "name": "Design",
   "inst": "Accademia di Belle Arti di Roma",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20406,27 +20534,25 @@
   "years": 3,
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
-  "selectivity": 82,
-  "mathLoad": 1,
+  "selectivity": 84,
   "subjects": [
    "Design & creativity",
    "Media & video"
   ],
   "costByIsee": null,
   "cityRent": 600,
-  "mastersAccess": 5,
-  "handsOn": 2,
+  "mastersAccess": 4,
+  "handsOn": 4,
   "env": {
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
-  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Roma%20Grafica%20D%27Arte",
-  "url": "https://abaroma.it/corsi/grafica-darte/",
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Roma%20Design",
+  "url": "https://abaroma.it/#corso-61883",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20435,40 +20561,40 @@
   "careerPay": null
  },
  {
-  "id": "aba-venezia-p510",
-  "name": "Nuove Tecnologie Dell'Arte",
-  "inst": "Accademia di Belle Arti di Venezia",
+  "id": "aba-torino-p530",
+  "name": "Scenografia Per Il Teatro",
+  "inst": "Accademia di Belle Arti di Torino",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
-  "city": "Venezia",
-  "region": "Veneto",
-  "lat": 45.4642,
-  "lon": 9.19,
+  "city": "Torino",
+  "region": "Piemonte",
+  "lat": 45.0703,
+  "lon": 7.6869,
   "citySize": "large",
   "years": 3,
   "test": "Portfolio review and entrance exam",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Design & creativity",
    "Media & video"
   ],
   "costByIsee": null,
-  "cityRent": 664,
+  "cityRent": 525,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "language": "ita",
-   "cityVibe": "Big, fast, most opportunities, most expensive"
+   "cityVibe": "Elegant, livable, strong student scene"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
-  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Venezia%20Nuove%20Tecnologie%20Dell%27Arte",
-  "url": "http://www.accademiavenezia.it/",
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Torino%20Scenografia%20Per%20Il%20Teatro",
+  "url": "http://www.albertina.academy#corso-58303",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20477,10 +20603,96 @@
   "careerPay": null
  },
  {
-  "id": "cons-bologna-p511",
-  "name": "Pianoforte",
+  "id": "aba-venezia-p531",
+  "name": "Nuove Tecnologie Dell'Arte",
+  "inst": "Accademia di Belle Arti di Venezia",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "lat": 45.4408,
+  "lon": 12.3155,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 456,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Unique, compact, tourist-heavy — student life on the mainland too"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Venezia%20Nuove%20Tecnologie%20Dell%27Arte",
+  "url": "http://www.accademiavenezia.it/#corso-57314",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "aba-verona-p533",
+  "name": "Scenografia",
+  "inst": "Accademia di Belle Arti di Verona",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Verona",
+  "region": "Veneto",
+  "lat": 45.4384,
+  "lon": 10.9916,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Portfolio review and entrance exam",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Design & creativity",
+   "Media & video"
+  ],
+  "costByIsee": null,
+  "cityRent": 380,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Elegant, well connected, quietly wealthy"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Accademia%20di%20Belle%20Arti%20di%20Verona%20Scenografia",
+  "url": "https://accademiabelleartiverona.it/it/scenografia/#corso-64534",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-bologna-p534",
+  "name": "Composizione",
   "inst": "Conservatorio di Musica di Bologna",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Bologna",
   "region": "Emilia-Romagna",
@@ -20491,7 +20703,307 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 655,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Italy's classic student city"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Bologna%20Composizione",
+  "url": "http://www.consbo.it#corso-61055",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-brescia-p536",
+  "name": "Composizione",
+  "inst": "Conservatorio di Musica di Brescia",
+  "type": "AFAM",
+  "nature": "technical-practical",
   "mathLoad": 1,
+  "ownership": "public",
+  "city": "Brescia",
+  "region": "Lombardia",
+  "lat": 45.5416,
+  "lon": 10.2118,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 478,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Industrial Lombardy, cheaper than Milan and an hour away"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Brescia%20Composizione",
+  "url": "www.consbs.it#corso-59561",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-cagliari-p538",
+  "name": "Canto Jazz",
+  "inst": "Conservatorio di Musica di Cagliari",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Cagliari",
+  "region": "Sardegna",
+  "lat": 39.2238,
+  "lon": 9.1217,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 330,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Island capital, beaches on the doorstep"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Cagliari%20Canto%20Jazz",
+  "url": "www.conservatoriocagliari.it#corso-57710",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-napoli-p543",
+  "name": "Composizione Jazz",
+  "inst": "Conservatorio di Musica di Napoli",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Napoli",
+  "region": "Campania",
+  "lat": 40.8518,
+  "lon": 14.2681,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 450,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Intense, warm, cheapest big city"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Napoli%20Composizione%20Jazz",
+  "url": "www.sanpietroamajella.it#corso-58661",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-piacenza-p546",
+  "name": "Composizione",
+  "inst": "Conservatorio di Musica di Piacenza",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Piacenza",
+  "region": "Emilia-Romagna",
+  "lat": 45.0526,
+  "lon": 9.693,
+  "citySize": "small",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 400,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Compact student city between Milano and Bologna"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Piacenza%20Composizione",
+  "url": "www.conservatorionicolini.com#corso-57765",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-roma-p548",
+  "name": "Composizione",
+  "inst": "Conservatorio di Musica di Roma",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Roma",
+  "region": "Lazio",
+  "lat": 41.9028,
+  "lon": 12.4964,
+  "citySize": "large",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 600,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Huge, historic, chaotic, endless options"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Roma%20Composizione",
+  "url": "http://www.conservatoriosantacecilia.it/wp-content/uploads/2015/06/Composizione_triennio_.pdf#corso-57726",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-venezia-p550",
+  "name": "Canto Jazz",
+  "inst": "Conservatorio di Musica di Venezia",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Venezia",
+  "region": "Veneto",
+  "lat": 45.4408,
+  "lon": 12.3155,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Media & video",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 456,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Unique, compact, tourist-heavy — student life on the mainland too"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Venezia%20Canto%20Jazz",
+  "url": "http://www.conservatoriovenezia.net/portale/__dati/offerta_formativa/triennio/piano_didattico_canto_jazz_triennio.pdf#corso-58588",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-bologna-p535",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Bologna",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Bologna",
+  "region": "Emilia-Romagna",
+  "lat": 44.4949,
+  "lon": 11.3426,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20504,13 +21016,12 @@
    "language": "ita",
    "cityVibe": "Italy's classic student city"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Conservatorio%20di%20Musica%20di%20Bologna%20Pianoforte",
-  "url": "http://www.consbo.it",
+  "url": "http://www.consbo.it#corso-61172",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20519,10 +21030,138 @@
   "careerPay": null
  },
  {
-  "id": "cons-firenze-p512",
+  "id": "cons-brescia-p537",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Brescia",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Brescia",
+  "region": "Lombardia",
+  "lat": 45.5416,
+  "lon": 10.2118,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 478,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Industrial Lombardy, cheaper than Milan and an hour away"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Brescia%20Pianoforte",
+  "url": "www.consbs.it#corso-59761",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-cagliari-p539",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Cagliari",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Cagliari",
+  "region": "Sardegna",
+  "lat": 39.2238,
+  "lon": 9.1217,
+  "citySize": "medium",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 330,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Island capital, beaches on the doorstep"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Cagliari%20Pianoforte",
+  "url": "www.conservatoriocagliari.it#corso-56892",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-cremona-p540",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Cremona",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Cremona",
+  "region": "Lombardia",
+  "lat": 45.1332,
+  "lon": 10.0227,
+  "citySize": "small",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 380,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Small, calm, low cost of living"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Cremona%20Pianoforte",
+  "url": "https://www.istitutomonteverdi.it/triennio-pianoforte-it/#corso-61994",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-firenze-p541",
   "name": "Canto",
   "inst": "Conservatorio di Musica di Firenze",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Firenze",
   "region": "Toscana",
@@ -20533,7 +21172,6 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20546,13 +21184,12 @@
    "language": "ita",
    "cityVibe": "Art everywhere, tourist prices"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Conservatorio%20di%20Musica%20di%20Firenze%20Canto",
-  "url": "www.conservatorio.firenze.it",
+  "url": "www.conservatorio.firenze.it#corso-64695",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20561,10 +21198,12 @@
   "careerPay": null
  },
  {
-  "id": "cons-milano-p513",
+  "id": "cons-milano-p542",
   "name": "Violino Barocco",
   "inst": "Conservatorio di Musica di Milano",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Milano",
   "region": "Lombardia",
@@ -20575,7 +21214,6 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20588,13 +21226,12 @@
    "language": "ita",
    "cityVibe": "Big, fast, most opportunities, most expensive"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Conservatorio%20di%20Musica%20di%20Milano%20Violino%20Barocco",
-  "url": "https://www.consmi.it/it/home",
+  "url": "https://www.consmi.it/it/home#corso-58337",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20603,10 +21240,12 @@
   "careerPay": null
  },
  {
-  "id": "cons-napoli-p514",
+  "id": "cons-napoli-p544",
   "name": "Pianoforte Jazz",
   "inst": "Conservatorio di Musica di Napoli",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Napoli",
   "region": "Campania",
@@ -20617,7 +21256,6 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20630,13 +21268,12 @@
    "language": "ita",
    "cityVibe": "Intense, warm, cheapest big city"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Conservatorio%20di%20Musica%20di%20Napoli%20Pianoforte%20Jazz",
-  "url": "www.sanpietroamajella.it",
+  "url": "www.sanpietroamajella.it#corso-58786",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20645,10 +21282,96 @@
   "careerPay": null
  },
  {
-  "id": "cons-roma-p515",
+  "id": "cons-parma-p545",
+  "name": "Canto",
+  "inst": "Conservatorio di Musica di Parma",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Parma",
+  "region": "Emilia-Romagna",
+  "lat": 44.8015,
+  "lon": 10.3279,
+  "citySize": "small",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 350,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Food capital, compact and liveable"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Parma%20Canto",
+  "url": "http://aule.conservatorio.pr.it/cgi-scripts/ordinamenti.exe?azione=corso&idcorso=216#corso-58849",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-piacenza-p547",
+  "name": "Pianoforte",
+  "inst": "Conservatorio di Musica di Piacenza",
+  "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
+  "ownership": "public",
+  "city": "Piacenza",
+  "region": "Emilia-Romagna",
+  "lat": 45.0526,
+  "lon": 9.693,
+  "citySize": "small",
+  "years": 3,
+  "test": "Entrance audition (esame di ammissione)",
+  "admission": "selection",
+  "selectivity": 82,
+  "subjects": [
+   "Music & performance",
+   "Design & creativity"
+  ],
+  "costByIsee": null,
+  "cityRent": 400,
+  "mastersAccess": 5,
+  "handsOn": 2,
+  "env": {
+   "language": "ita",
+   "cityVibe": "Compact student city between Milano and Bologna"
+  },
+  "curriculum": [
+   "Study plan on the official page"
+  ],
+  "curriculumByYear": null,
+  "googleQuery": "Conservatorio%20di%20Musica%20di%20Piacenza%20Pianoforte",
+  "url": "www.conservatorionicolini.com#corso-57735",
+  "curriculumUrl": null,
+  "dataSource": "https://www.universitaly.it/cerca-corsi",
+  "outcomes": {
+   "status": "afam"
+  },
+  "careerPay": null
+ },
+ {
+  "id": "cons-roma-p549",
   "name": "Pianoforte",
   "inst": "Conservatorio di Musica di Roma",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Roma",
   "region": "Lazio",
@@ -20659,7 +21382,6 @@
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
@@ -20672,13 +21394,12 @@
    "language": "ita",
    "cityVibe": "Huge, historic, chaotic, endless options"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Conservatorio%20di%20Musica%20di%20Roma%20Pianoforte",
-  "url": "http://www.conservatoriosantacecilia.it/wp-content/uploads/2015/06/PIanoforte_triennio_.pdf",
+  "url": "http://www.conservatoriosantacecilia.it/wp-content/uploads/2015/06/PIanoforte_triennio_.pdf#corso-57323",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
@@ -20687,126 +21408,40 @@
   "careerPay": null
  },
  {
-  "id": "cons-venezia-p517",
+  "id": "cons-venezia-p551",
   "name": "Pianoforte Jazz",
   "inst": "Conservatorio di Musica di Venezia",
   "type": "AFAM",
+  "nature": "technical-practical",
+  "mathLoad": 1,
   "ownership": "public",
   "city": "Venezia",
   "region": "Veneto",
-  "lat": 45.4642,
-  "lon": 9.19,
-  "citySize": "large",
+  "lat": 45.4408,
+  "lon": 12.3155,
+  "citySize": "medium",
   "years": 3,
   "test": "Entrance audition (esame di ammissione)",
   "admission": "selection",
   "selectivity": 82,
-  "mathLoad": 1,
   "subjects": [
    "Music & performance",
    "Design & creativity"
   ],
   "costByIsee": null,
-  "cityRent": 664,
+  "cityRent": 456,
   "mastersAccess": 5,
   "handsOn": 2,
   "env": {
    "language": "ita",
-   "cityVibe": "Big, fast, most opportunities, most expensive"
+   "cityVibe": "Unique, compact, tourist-heavy — student life on the mainland too"
   },
-  "nature": "technical-practical",
   "curriculum": [
    "Study plan on the official page"
   ],
   "curriculumByYear": null,
   "googleQuery": "Conservatorio%20di%20Musica%20di%20Venezia%20Pianoforte%20Jazz",
-  "url": "http://www.conservatoriovenezia.net/portale/__dati/offerta_formativa/triennio/piano_didattico_pianoforte_jazz_triennio.pdf",
-  "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi",
-  "outcomes": {
-   "status": "afam"
-  },
-  "careerPay": null
- },
- {
-  "id": "cons-roma-p516",
-  "name": "Composizione",
-  "inst": "Conservatorio di Musica di Roma",
-  "type": "AFAM",
-  "ownership": "public",
-  "city": "Roma",
-  "region": "Lazio",
-  "lat": 41.9028,
-  "lon": 12.4964,
-  "citySize": "large",
-  "years": 3,
-  "test": "Entrance audition (esame di ammissione)",
-  "admission": "selection",
-  "selectivity": 82,
-  "mathLoad": 1,
-  "subjects": [
-   "Music & performance",
-   "Media & video",
-   "Design & creativity"
-  ],
-  "costByIsee": null,
-  "cityRent": 600,
-  "mastersAccess": 5,
-  "handsOn": 2,
-  "env": {
-   "language": "ita",
-   "cityVibe": "Huge, historic, chaotic, endless options"
-  },
-  "nature": "technical-practical",
-  "curriculum": [
-   "Study plan on the official page"
-  ],
-  "curriculumByYear": null,
-  "googleQuery": "Conservatorio%20di%20Musica%20di%20Roma%20Composizione",
-  "url": "http://www.conservatoriosantacecilia.it/wp-content/uploads/2015/06/Composizione_triennio_.pdf",
-  "curriculumUrl": null,
-  "dataSource": "https://www.universitaly.it/cerca-corsi",
-  "outcomes": {
-   "status": "afam"
-  },
-  "careerPay": null
- },
- {
-  "id": "cons-venezia-p518",
-  "name": "Canto Jazz",
-  "inst": "Conservatorio di Musica di Venezia",
-  "type": "AFAM",
-  "ownership": "public",
-  "city": "Venezia",
-  "region": "Veneto",
-  "lat": 45.4642,
-  "lon": 9.19,
-  "citySize": "large",
-  "years": 3,
-  "test": "Entrance audition (esame di ammissione)",
-  "admission": "selection",
-  "selectivity": 82,
-  "mathLoad": 1,
-  "subjects": [
-   "Music & performance",
-   "Media & video",
-   "Design & creativity"
-  ],
-  "costByIsee": null,
-  "cityRent": 664,
-  "mastersAccess": 5,
-  "handsOn": 2,
-  "env": {
-   "language": "ita",
-   "cityVibe": "Big, fast, most opportunities, most expensive"
-  },
-  "nature": "technical-practical",
-  "curriculum": [
-   "Study plan on the official page"
-  ],
-  "curriculumByYear": null,
-  "googleQuery": "Conservatorio%20di%20Musica%20di%20Venezia%20Canto%20Jazz",
-  "url": "http://www.conservatoriovenezia.net/portale/__dati/offerta_formativa/triennio/piano_didattico_canto_jazz_triennio.pdf",
+  "url": "http://www.conservatoriovenezia.net/portale/__dati/offerta_formativa/triennio/piano_didattico_pianoforte_jazz_triennio.pdf#corso-58585",
   "curriculumUrl": null,
   "dataSource": "https://www.universitaly.it/cerca-corsi",
   "outcomes": {
