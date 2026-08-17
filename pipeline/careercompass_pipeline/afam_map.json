@@ -5,6 +5,10 @@
    "Pittura"
   ],
   [
+   "aba-catania",
+   "Pittura"
+  ],
+  [
    "aba-firenze",
    "Scultura"
   ],
@@ -15,12 +19,20 @@
   [
    "aba-torino",
    "Pittura"
+  ],
+  [
+   "aba-verona",
+   "Pittura"
   ]
  ],
  "art-designer": [
   [
    "aba-bologna",
    "Design Grafico"
+  ],
+  [
+   "aba-catania",
+   "Fashion Design"
   ],
   [
    "aba-firenze",
@@ -36,16 +48,66 @@
   ],
   [
    "aba-roma",
-   "Grafica D'Arte"
+   "Design"
+  ],
+  [
+   "aba-torino",
+   "Scenografia Per Il Teatro"
   ],
   [
    "aba-venezia",
    "Nuove Tecnologie Dell'Arte"
+  ],
+  [
+   "aba-verona",
+   "Scenografia"
+  ]
+ ],
+ "music-producer": [
+  [
+   "cons-bologna",
+   "Composizione"
+  ],
+  [
+   "cons-brescia",
+   "Composizione"
+  ],
+  [
+   "cons-cagliari",
+   "Canto Jazz"
+  ],
+  [
+   "cons-napoli",
+   "Composizione Jazz"
+  ],
+  [
+   "cons-piacenza",
+   "Composizione"
+  ],
+  [
+   "cons-roma",
+   "Composizione"
+  ],
+  [
+   "cons-venezia",
+   "Canto Jazz"
   ]
  ],
  "musician": [
   [
    "cons-bologna",
+   "Pianoforte"
+  ],
+  [
+   "cons-brescia",
+   "Pianoforte"
+  ],
+  [
+   "cons-cagliari",
+   "Pianoforte"
+  ],
+  [
+   "cons-cremona",
    "Pianoforte"
   ],
   [
@@ -61,22 +123,20 @@
    "Pianoforte Jazz"
   ],
   [
+   "cons-parma",
+   "Canto"
+  ],
+  [
+   "cons-piacenza",
+   "Pianoforte"
+  ],
+  [
    "cons-roma",
    "Pianoforte"
   ],
   [
    "cons-venezia",
    "Pianoforte Jazz"
-  ]
- ],
- "music-producer": [
-  [
-   "cons-roma",
-   "Composizione"
-  ],
-  [
-   "cons-venezia",
-   "Canto Jazz"
   ]
  ]
 }
