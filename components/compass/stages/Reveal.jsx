@@ -153,6 +153,18 @@ export default function Reveal() {
                   </ChipBtn>
                 ))}
               </div>
+              {/* Affinity is an average over the ticked tags, so ticking nearly
+                  everything makes every world score alike and the ranking falls
+                  back on the survey. That is the right behaviour — if you like
+                  everything, your likes cannot choose for you — but it happens
+                  silently, so say it rather than letting the list quietly
+                  flatten. Measured: 7 tags spread the worlds 66 points apart,
+                  17 tags only 34. */}
+              {profile.interests.length >= 12 && (
+                <p className="text-xs mt-3" style={{ color: T.amber }}>
+                  {t("check_too_many", { n: profile.interests.length, total: INTEREST_TAGS.length })}
+                </p>
+              )}
 
               <div className="mt-6">
                 <div className="text-xs uppercase tracking-widest mb-2" style={{ color: T.grey }}>{t("goal_title")}</div>
