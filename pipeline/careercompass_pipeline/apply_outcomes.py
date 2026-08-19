@@ -155,9 +155,15 @@ def apply_outcomes():
             per = INDIRE["courses"].get(course["id"])
             inst = INDIRE["institutions"].get(slug)
             if per:
-                o.update({"itsRate": per["rate"], "itsRank": per["rank"], "itsOf": per["of"],
-                          "itsEfficacia": per["efficacia"], "itsScope": "course",
+                # rank and efficacia are absent when the course was monitored as
+                # two sections: two rows carry two ranks, and neither is this
+                # course's, so nothing is shown rather than one picked at whim
+                o.update({"itsRate": per["rate"], "itsOf": per["of"], "itsScope": "course",
                           "itsDiplomati": per["diplomati"]})
+                for k_src, k_dst in (("rank", "itsRank"), ("efficacia", "itsEfficacia"),
+                                     ("sections", "itsSections")):
+                    if per.get(k_src) is not None:
+                        o[k_dst] = per[k_src]
             elif inst and inst.get("rate") is not None:
                 # No rank at institution scope. The academy's best rank beside
                 # its average rate reads as this course's rank: "AI & Robotics,

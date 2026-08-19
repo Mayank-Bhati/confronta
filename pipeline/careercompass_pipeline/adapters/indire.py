@@ -44,14 +44,30 @@ INSTITUTIONS = {
 # site course id → a fragment of the official title, unique within that academy.
 # Only courses whose INDIRE row can be identified beyond doubt are listed; the
 # rest fall back to their academy's total rather than being guessed at.
+# site course id → fragment(s) of the official title, unique within that
+# academy. A list means the site lists one course that INDIRE monitored as
+# separate sections; those are summed and no rank is shown, because two rows
+# have two ranks and neither is the course's.
+#
+# Only matches that survive checking against the academy's own catalogue are
+# here. INDIRE monitors courses that ENDED in 2024, so an academy's newer
+# offerings simply have no row yet — Rizzoli's AI & Robotics and Coding & AI,
+# for instance, are in its prospectus but not in the report. Those keep their
+# academy's total rather than being attached to somebody else's course.
 COURSE_MATCH = {
     "its-rizzoli-p86": "CYBER DEFENSE SPECIALIST ' (SEZ A)",
     "its-rizzoli-p80": "SOFTWARE ARCHITECT SPECIALIST SEZ A",
     "its-rizzoli-p87": "BIG DATA SPECIALIST",
     "its-rizzoli-p91": "DIGITAL MARKETING DATA SPECIALIST",
     "its-rizzoli-p92": "OMNICHANNEL COMMUNICATION SPECIALIST",
-    "its-rizzoli-p85": "CLOUD AND DATA SECURITY SPECIALIST",
     "its-lomb-mecc-p77": "MECCATRONICI BIOMEDICALI",
+    # "Process Automation" is a direct rendering of INDIRE's "automazione e la
+    # gestione dell'industria di processo", and MIPRO is the only Milan process
+    # course in the report.
+    "its-lomb-mecc-p73": "CORSO MIPRO",
+    # "Factory Automation" is the Milan industrial mechatronics course, which
+    # INDIRE monitored as two sections (MIIND-A and MIIND-B).
+    "its-lomb-mecc-p72": ["CORSO MIIND-A", "CORSO MIIND-B"],
 }
 
 ROW = re.compile(
@@ -104,18 +120,30 @@ def ingest():
 
     for cid, fragment in COURSE_MATCH.items():
         slug = cid.rsplit("-p", 1)[0]
-        cand = [r for r in rows
-                if re.search(INSTITUTIONS[slug], r["head"], re.I)
-                and fragment.lower() in r["head"].lower()]
-        # ambiguity means we do not know which row this is, so we say nothing
-        if len(cand) != 1:
+        wanted = fragment if isinstance(fragment, list) else [fragment]
+        cand = []
+        for frag in wanted:
+            hit = [r for r in rows
+                   if re.search(INSTITUTIONS[slug], r["head"], re.I)
+                   and frag.lower() in r["head"].lower()]
+            # a fragment that is not unique tells us nothing about which row
+            # this course is, so the whole match is abandoned
+            if len(hit) != 1:
+                cand = []
+                break
+            cand.append(hit[0])
+        if not cand:
             continue
-        r = cand[0]
-        out["courses"][cid] = {
-            "rate": round(r["occupati_equivalenti"] / r["diplomati"] * 100, 1),
-            "diplomati": r["diplomati"], "occupatiEquivalenti": r["occupati_equivalenti"],
-            "efficacia": r["efficacia"], "rank": r["rank"], "of": r["of"],
-        }
+        d = sum(r["diplomati"] for r in cand)
+        o = sum(r["occupati_equivalenti"] for r in cand)
+        entry = {"rate": round(o / d * 100, 1), "diplomati": d,
+                 "occupatiEquivalenti": round(o, 1), "of": cand[0]["of"]}
+        if len(cand) == 1:
+            entry.update({"efficacia": cand[0]["efficacia"], "rank": cand[0]["rank"]})
+        else:
+            # two sections, two ranks, neither of them the course's own
+            entry["sections"] = len(cand)
+        out["courses"][cid] = entry
 
     # this file sits one level deeper than the other pipeline modules
     # (…/careercompass_pipeline/adapters/), so the repo root is four up

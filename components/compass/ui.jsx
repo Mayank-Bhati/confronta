@@ -246,7 +246,9 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
             label={its.itsScope === "course" ? t("stat_its_rate") : t("stat_its_rate_inst")} />
           <StatCell T={T} href={its.itsSource} color={T.ink}
             value={its.itsRank ? `${its.itsRank}°` : `${its.itsDiplomati}`}
-            label={its.itsRank ? t("stat_its_rank", { n: its.itsOf }) : t("stat_its_diplomati")} />
+            label={its.itsRank ? t("stat_its_rank", { n: its.itsOf })
+              : its.itsSections ? t("stat_its_sections", { k: its.itsSections })
+              : t("stat_its_diplomati")} />
           <StatCell T={T} label={t("stat_net_job")} color={T.ink}
             value={c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"} />
           <button onClick={cycleCost} className="text-left" title={t("stat_cost_hint")}>

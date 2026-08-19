@@ -34,57 +34,64 @@
    "rate": 91.4,
    "diplomati": 28,
    "occupatiEquivalenti": 25.6,
+   "of": 506,
    "efficacia": 97.88,
-   "rank": 5,
-   "of": 506
+   "rank": 5
   },
   "its-rizzoli-p80": {
    "rate": 82.0,
    "diplomati": 25,
    "occupatiEquivalenti": 20.5,
+   "of": 506,
    "efficacia": 91.38,
-   "rank": 49,
-   "of": 506
+   "rank": 49
   },
   "its-rizzoli-p87": {
    "rate": 68.0,
    "diplomati": 15,
    "occupatiEquivalenti": 10.2,
+   "of": 506,
    "efficacia": 50.48,
-   "rank": 327,
-   "of": 506
+   "rank": 327
   },
   "its-rizzoli-p91": {
    "rate": 55.4,
    "diplomati": 24,
    "occupatiEquivalenti": 13.3,
+   "of": 506,
    "efficacia": 68.78,
-   "rank": 236,
-   "of": 506
+   "rank": 236
   },
   "its-rizzoli-p92": {
    "rate": 50.4,
    "diplomati": 26,
    "occupatiEquivalenti": 13.1,
+   "of": 506,
    "efficacia": 67.27,
-   "rank": 216,
-   "of": 506
-  },
-  "its-rizzoli-p85": {
-   "rate": 88.1,
-   "diplomati": 27,
-   "occupatiEquivalenti": 23.8,
-   "efficacia": 96.07,
-   "rank": 35,
-   "of": 506
+   "rank": 216
   },
   "its-lomb-mecc-p77": {
    "rate": 83.6,
    "diplomati": 28,
    "occupatiEquivalenti": 23.4,
+   "of": 506,
    "efficacia": 94.52,
-   "rank": 78,
-   "of": 506
+   "rank": 78
+  },
+  "its-lomb-mecc-p73": {
+   "rate": 97.5,
+   "diplomati": 28,
+   "occupatiEquivalenti": 27.3,
+   "of": 506,
+   "efficacia": 99.39,
+   "rank": 150
+  },
+  "its-lomb-mecc-p72": {
+   "rate": 96.4,
+   "diplomati": 56,
+   "occupatiEquivalenti": 54.0,
+   "of": 506,
+   "sections": 2
   }
  }
 }
