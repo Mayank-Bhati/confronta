@@ -3,7 +3,7 @@ import React from "react";
 import { AppCtx } from "./context";
 import { NATURE_KEY, mono, display, natureStyleFor } from "./constants";
 import { estimateMonthlyCost, realOutcomes } from "../../lib/fitEngine-v2";
-import { outcomeNote } from "../../lib/outcomeNote";
+import { outcomeNote, NO_TAX_AREA_SOURCE } from "../../lib/outcomeNote";
 
 
 export function PeopleIcon({ size = 18, color = "currentColor" }) {
@@ -142,6 +142,11 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
   // cost stat is a 3-way toggle (tester feedback: "distinguish taxes from
   // living costs with a click"): fees/yr → living/mo → all-in/mo
   const real = realOutcomes(c);
+  // AFAM: no survey covers the sector, but the annual contribution is fixed by
+  // national law — zero below €22,000 ISEE at every state conservatorio and
+  // academy — so that much is knowable and exact.
+  const isAfam = c.outcomes?.status === "afam";
+  const lowIsee = (profile?.isee || "mid") === "low";
   const costView = prefs?.costView || "fees";
   const est = estimateMonthlyCost(c, envPrefs || { isee: profile?.isee, awayFromHome: true }, homeCity);
   const cycleCost = (e) => {
@@ -222,7 +227,27 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           {chosen && <div className="mt-1 text-xs font-bold" style={{ color: T.accent }}>{t("card_finalist")}</div>}
         </div>
       </div>
-      {/* Statistics strip — big, scannable, per tester feedback */}
+      {/* Statistics strip — big, scannable, per tester feedback.
+          AFAM gets a different strip. No survey covers conservatori or
+          accademie, so the three outcome cells could only ever be dashes there,
+          and a row of dashes reads as a broken card rather than as an absence.
+          What IS knowable for them goes in instead: the annual contribution,
+          which national law fixes at zero below €22,000 ISEE, the real living
+          costs for that city, and how you actually get in. */}
+      {isAfam ? (
+        /* three cells, not four: with the contribution at zero the "all-in"
+           figure is identical to the living figure, and printing the same
+           number twice reads as carelessness rather than as thoroughness. */
+        <div className="mt-3 pt-3 grid grid-cols-3 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
+          <StatCell T={T} href={NO_TAX_AREA_SOURCE}
+            label={lowIsee ? t("stat_afam_contrib_free") : t("stat_afam_contrib_set")}
+            value={lowIsee ? "€0" : "—"}
+            color={lowIsee ? T.green : T.grey} />
+          <StatCell T={T} label={t("stat_living")} color={T.ink} value={`~€${est.living.toLocaleString()}`} />
+          <StatCell T={T} label={t("stat_afam_entry")} color={T.ink}
+            value={/audition/i.test(c.test || "") ? t("stat_afam_audition") : t("stat_afam_portfolio")} />
+        </div>
+      ) : (
       <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
         <StatCell T={T} href={real?.employment1y != null ? real.sourceOcc : null}
           label={real?.employment1y != null ? t("stat_emp") : t("stat_nodata")}
@@ -241,6 +266,7 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           <div style={{ fontSize: 11, color: T.accent, textDecoration: "underline", textDecorationStyle: "dotted" }}>{costStat.label} ↺</div>
         </button>
       </div>
+      )}
       {real?.continuingMasters != null && (
         <div className="mt-2 text-xs" style={{ color: T.accent }}>
           {t("stat_masters_note", { p: real.continuingMasters })}
