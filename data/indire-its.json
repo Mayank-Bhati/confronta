@@ -1,0 +1,90 @@
+{
+ "source": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf",
+ "landing": "https://www.indire.it/progetto/its-istituti-tecnologici-superiori/monitoraggio-nazionale/",
+ "totalCourses": 506,
+ "note": "INDIRE national ITS monitoring 2026, courses that ended in 2024 and were followed up after 12 months. 'occupati equivalenti' is INDIRE's weighted measure of those in work, not a headcount.",
+ "institutions": {
+  "its-rizzoli": {
+   "courses": 10,
+   "diplomati": 244,
+   "occupatiEquivalenti": 184.3,
+   "rate": 75.5,
+   "bestRank": 5,
+   "of": 506
+  },
+  "its-lomb-mecc": {
+   "courses": 12,
+   "diplomati": 277,
+   "occupatiEquivalenti": 253.5,
+   "rate": 91.5,
+   "bestRank": 50,
+   "of": 506
+  },
+  "its-energia-pi": {
+   "courses": 4,
+   "diplomati": 69,
+   "occupatiEquivalenti": 50.3,
+   "rate": 72.9,
+   "bestRank": 251,
+   "of": 506
+  }
+ },
+ "courses": {
+  "its-rizzoli-p86": {
+   "rate": 91.4,
+   "diplomati": 28,
+   "occupatiEquivalenti": 25.6,
+   "efficacia": 97.88,
+   "rank": 5,
+   "of": 506
+  },
+  "its-rizzoli-p80": {
+   "rate": 82.0,
+   "diplomati": 25,
+   "occupatiEquivalenti": 20.5,
+   "efficacia": 91.38,
+   "rank": 49,
+   "of": 506
+  },
+  "its-rizzoli-p87": {
+   "rate": 68.0,
+   "diplomati": 15,
+   "occupatiEquivalenti": 10.2,
+   "efficacia": 50.48,
+   "rank": 327,
+   "of": 506
+  },
+  "its-rizzoli-p91": {
+   "rate": 55.4,
+   "diplomati": 24,
+   "occupatiEquivalenti": 13.3,
+   "efficacia": 68.78,
+   "rank": 236,
+   "of": 506
+  },
+  "its-rizzoli-p92": {
+   "rate": 50.4,
+   "diplomati": 26,
+   "occupatiEquivalenti": 13.1,
+   "efficacia": 67.27,
+   "rank": 216,
+   "of": 506
+  },
+  "its-rizzoli-p85": {
+   "rate": 88.1,
+   "diplomati": 27,
+   "occupatiEquivalenti": 23.8,
+   "efficacia": 96.07,
+   "rank": 35,
+   "of": 506
+  },
+  "its-lomb-mecc-p77": {
+   "rate": 83.6,
+   "diplomati": 28,
+   "occupatiEquivalenti": 23.4,
+   "efficacia": 94.52,
+   "rank": 78,
+   "of": 506
+  }
+ }
+}

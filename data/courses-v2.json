@@ -41,7 +41,12 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 91.5,
+   "itsScope": "institution",
+   "itsCourses": 12,
+   "itsDiplomati": 277,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1500
  },
@@ -87,7 +92,12 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 91.5,
+   "itsScope": "institution",
+   "itsCourses": 12,
+   "itsDiplomati": 277,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1500
  },
@@ -311,7 +321,12 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 75.5,
+   "itsScope": "institution",
+   "itsCourses": 10,
+   "itsDiplomati": 244,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1770
  },
@@ -525,7 +540,12 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 91.5,
+   "itsScope": "institution",
+   "itsCourses": 12,
+   "itsDiplomati": 277,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1380
  },
@@ -1275,7 +1295,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 82.0,
+   "itsRank": 49,
+   "itsOf": 506,
+   "itsEfficacia": 91.38,
+   "itsScope": "course",
+   "itsDiplomati": 25,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1550
  },
@@ -2767,7 +2794,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 68.0,
+   "itsRank": 327,
+   "itsOf": 506,
+   "itsEfficacia": 50.48,
+   "itsScope": "course",
+   "itsDiplomati": 15,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1500
  },
@@ -3821,7 +3855,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 91.4,
+   "itsRank": 5,
+   "itsOf": 506,
+   "itsEfficacia": 97.88,
+   "itsScope": "course",
+   "itsDiplomati": 28,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1660
  },
@@ -3867,7 +3908,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 88.1,
+   "itsRank": 35,
+   "itsOf": 506,
+   "itsEfficacia": 96.07,
+   "itsScope": "course",
+   "itsDiplomati": 27,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1440
  },
@@ -3913,7 +3961,12 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 75.5,
+   "itsScope": "institution",
+   "itsCourses": 10,
+   "itsDiplomati": 244,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1440
  },
@@ -5298,7 +5351,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itslombardiameccatronica.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 83.6,
+   "itsRank": 78,
+   "itsOf": 506,
+   "itsEfficacia": 94.52,
+   "itsScope": "course",
+   "itsDiplomati": 28,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1380
  },
@@ -5895,7 +5955,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 50.4,
+   "itsRank": 216,
+   "itsOf": 506,
+   "itsEfficacia": 67.27,
+   "itsScope": "course",
+   "itsDiplomati": 26,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1220
  },
@@ -6052,7 +6119,14 @@
   "curriculumUrl": null,
   "dataSource": "https://www.itsrizzoli.it/corsi/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 55.4,
+   "itsRank": 236,
+   "itsOf": 506,
+   "itsEfficacia": 68.78,
+   "itsScope": "course",
+   "itsDiplomati": 24,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1380
  },
@@ -8244,7 +8318,12 @@
   "curriculumUrl": null,
   "dataSource": "https://its-energiapiemonte.it/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 72.9,
+   "itsScope": "institution",
+   "itsCourses": 4,
+   "itsDiplomati": 69,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1440
  },
@@ -8592,7 +8671,12 @@
   "curriculumUrl": null,
   "dataSource": "https://its-energiapiemonte.it/",
   "outcomes": {
-   "status": "its"
+   "status": "its",
+   "itsRate": 72.9,
+   "itsScope": "institution",
+   "itsCourses": 4,
+   "itsDiplomati": 69,
+   "itsSource": "https://www.indire.it/wp-content/uploads/2026/06/1.Indire_Monitoraggio_2026_ITS_Ranking_generale_Aree_Tecnologiche_Regioni.pdf"
   },
   "careerPay": 1550
  },

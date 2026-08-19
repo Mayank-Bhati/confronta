@@ -22,6 +22,8 @@ import os
 
 STRIP_ESTIMATES = os.environ.get("STRIP_ESTIMATES") == "1"
 
+INDIRE = {"courses": {}, "institutions": {}, "source": ""}
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data")
 
@@ -124,6 +126,8 @@ def apply_outcomes():
     courses = json.load(open(os.path.join(DATA, "courses-v2.json"), encoding="utf-8"))
     worlds = json.load(open(os.path.join(DATA, "worlds.json"), encoding="utf-8"))
     al = json.load(open(os.path.join(DATA, "almalaurea.json"), encoding="utf-8"))
+    global INDIRE
+    INDIRE = json.load(open(os.path.join(DATA, "indire-its.json"), encoding="utf-8"))
     rows = al["rows"]
 
     # course id → career id, and the career's approximate market pay
@@ -142,7 +146,29 @@ def apply_outcomes():
         level = "LSE" if (career_id in LSE_CAREERS or (course.get("years") or 3) >= 5) else "L"
 
         # institutions outside the consortium: no data, and we say why
-        if _afam(slug):
+        if slug in NO_DATA_REASON and NO_DATA_REASON[slug] == "its":
+            # INDIRE monitors ITS on the Ministry's behalf and publishes a
+            # per-course ranking, so "its" is no longer a bare absence: it
+            # carries this course's own figures where the row is identifiable
+            # beyond doubt, and its academy's total otherwise.
+            o = {"status": "its"}
+            per = INDIRE["courses"].get(course["id"])
+            inst = INDIRE["institutions"].get(slug)
+            if per:
+                o.update({"itsRate": per["rate"], "itsRank": per["rank"], "itsOf": per["of"],
+                          "itsEfficacia": per["efficacia"], "itsScope": "course",
+                          "itsDiplomati": per["diplomati"]})
+            elif inst and inst.get("rate") is not None:
+                # No rank at institution scope. The academy's best rank beside
+                # its average rate reads as this course's rank: "AI & Robotics,
+                # 75.5%, 5th of 506" would be two true numbers making one false
+                # claim, since 5th belongs to the Cyber Defense course.
+                o.update({"itsRate": inst["rate"], "itsScope": "institution",
+                          "itsCourses": inst["courses"], "itsDiplomati": inst["diplomati"]})
+            o["itsSource"] = INDIRE["source"]
+            course["outcomes"] = o
+            stats["its"] += 1
+        elif _afam(slug):
             course["outcomes"] = {"status": "afam"}
             stats["afam"] = stats.get("afam", 0) + 1
         elif slug in NO_DATA_REASON:

@@ -146,6 +146,11 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
   // national law — zero below €22,000 ISEE at every state conservatorio and
   // academy — so that much is knowable and exact.
   const isAfam = c.outcomes?.status === "afam";
+  // ITS is no longer a blank: INDIRE publishes a per-course national ranking,
+  // so these cards carry this course's own figure where its row is
+  // identifiable, and its academy's total otherwise — never a rank beside an
+  // academy average, which would read as this course's rank.
+  const its = c.outcomes?.status === "its" && c.outcomes.itsRate != null ? c.outcomes : null;
   const lowIsee = (profile?.isee || "mid") === "low";
   const costView = prefs?.costView || "fees";
   const est = estimateMonthlyCost(c, envPrefs || { isee: profile?.isee, awayFromHome: true }, homeCity);
@@ -234,7 +239,22 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
           What IS knowable for them goes in instead: the annual contribution,
           which national law fixes at zero below €22,000 ISEE, the real living
           costs for that city, and how you actually get in. */}
-      {isAfam ? (
+      {its ? (
+        <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
+          <StatCell T={T} href={its.itsSource} color={T.green}
+            value={`${its.itsRate}%`}
+            label={its.itsScope === "course" ? t("stat_its_rate") : t("stat_its_rate_inst")} />
+          <StatCell T={T} href={its.itsSource} color={T.ink}
+            value={its.itsRank ? `${its.itsRank}°` : `${its.itsDiplomati}`}
+            label={its.itsRank ? t("stat_its_rank", { n: its.itsOf }) : t("stat_its_diplomati")} />
+          <StatCell T={T} label={t("stat_net_job")} color={T.ink}
+            value={c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"} />
+          <button onClick={cycleCost} className="text-left" title={t("stat_cost_hint")}>
+            <div className="font-semibold" style={{ ...mono, fontSize: 21, color: costView === "fees" && fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{costStat.n}</div>
+            <div style={{ fontSize: 11, color: T.accent, textDecoration: "underline", textDecorationStyle: "dotted" }}>{costStat.label} ↺</div>
+          </button>
+        </div>
+      ) : isAfam ? (
         /* three cells, not four: with the contribution at zero the "all-in"
            figure is identical to the living figure, and printing the same
            number twice reads as carelessness rather than as thoroughness. */
