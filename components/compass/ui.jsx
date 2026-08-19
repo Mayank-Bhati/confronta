@@ -151,6 +151,12 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
   // identifiable, and its academy's total otherwise — never a rank beside an
   // academy average, which would read as this course's rank.
   const its = c.outcomes?.status === "its" && c.outcomes.itsRate != null ? c.outcomes : null;
+  // Where this university publishes nothing of its own — outside the AlmaLaurea
+  // consortium, or a cell the consortium does not publish — the card carries
+  // the national median for the same subject and level, computed from the same
+  // verified rows. It describes the field, never this university, and the label
+  // has to keep saying so.
+  const nat = c.outcomes?.natRate != null ? c.outcomes : null;
   const lowIsee = (profile?.isee || "mid") === "low";
   const costView = prefs?.costView || "fees";
   const est = estimateMonthlyCost(c, envPrefs || { isee: profile?.isee, awayFromHome: true }, homeCity);
@@ -272,16 +278,20 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
       ) : (
       <div className="mt-3 pt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-2" style={{ borderTop: `1px solid ${T.line}` }}>
         <StatCell T={T} href={real?.employment1y != null ? real.sourceOcc : null}
-          label={real?.employment1y != null ? t("stat_emp") : t("stat_nodata")}
-          value={real?.employment1y != null ? `${real.employment1y}%` : "—"}
+          label={real?.employment1y != null ? t("stat_emp")
+            : nat ? t("stat_nat_emp", { n: nat.natUniversities }) : t("stat_nodata")}
+          value={real?.employment1y != null ? `${real.employment1y}%`
+            : nat ? `${nat.natRate}%` : "—"}
           color={real?.employment1y != null ? T.green : T.grey} />
         <StatCell T={T} href={real?.netPay ? real.sourceOcc : null}
           label={real?.netPay ? t("stat_net_real") : t("stat_net_job")} color={T.ink}
           value={real?.netPay ? `~€${Math.round(real.netPay / 100) / 10}k`
             : c.careerPay ? `~€${Math.round(c.careerPay / 100) / 10}k` : "—"} />
         <StatCell T={T} href={real?.onTime != null ? real.sourceProf : null}
-          label={real && real.onTime != null ? t("stat_ontime") : t("stat_nodata")}
-          value={real && real.onTime != null ? `${real.onTime}%` : "—"}
+          label={real && real.onTime != null ? t("stat_ontime")
+            : nat?.natAgain != null ? t("stat_nat_again") : t("stat_nodata")}
+          value={real && real.onTime != null ? `${real.onTime}%`
+            : nat?.natAgain != null ? `${nat.natAgain}%` : "—"}
           color={real && real.onTime < 65 ? T.amber : T.ink} />
         <button onClick={cycleCost} className="text-left" title={t("stat_cost_hint")}>
           <div className="font-semibold" style={{ ...mono, fontSize: 21, color: costView === "fees" && fees === 0 ? T.green : T.ink, letterSpacing: "-.02em" }}>{costStat.n}</div>

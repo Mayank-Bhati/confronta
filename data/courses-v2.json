@@ -277,7 +277,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=519&ac_ins=0&k_indir=A1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "ing_ind",
+   "level": "L",
+   "natRate": 27.8,
+   "natUniversities": 37,
+   "natPay": 1300,
+   "natAgain": 75.1
   },
   "careerPay": 1770
  },
@@ -1019,7 +1025,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=531&ac_ins=0&k_indir=IT1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "ict",
+   "level": "L",
+   "natRate": 61.0,
+   "natUniversities": 32,
+   "natPay": 1570,
+   "natAgain": 72.5
   },
   "careerPay": 1550
  },
@@ -2522,7 +2534,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=532&ac_ins=0&k_indir=MTM&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "scientifico",
+   "level": "L",
+   "natRate": 21.0,
+   "natUniversities": 44,
+   "natPay": 985,
+   "natAgain": 72.2
   },
   "careerPay": 1500
  },
@@ -5132,7 +5150,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=222&k_corso_la=1030&ac_ins=0&k_indir=IE1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "ing_ind",
+   "level": "L",
+   "natRate": 27.8,
+   "natUniversities": 37,
+   "natPay": 1300,
+   "natAgain": 75.1
   },
   "careerPay": 1380
  },
@@ -5500,7 +5524,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1014&ac_ins=0&k_indir=IDE&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "arte_design",
+   "level": "L",
+   "natRate": 35.0,
+   "natUniversities": 34,
+   "natPay": 1021,
+   "natAgain": 69.2
   },
   "careerPay": 1500
  },
@@ -5624,7 +5654,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1021&ac_ins=0&k_indir=C1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "arte_design",
+   "level": "L",
+   "natRate": 35.0,
+   "natUniversities": 34,
+   "natPay": 1021,
+   "natAgain": 69.2
   },
   "careerPay": 1270
  },
@@ -5740,7 +5776,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=19&k_corso_la=1020&ac_ins=0&k_indir=P1&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "arte_design",
+   "level": "L",
+   "natRate": 35.0,
+   "natUniversities": 34,
+   "natPay": 1021,
+   "natAgain": 69.2
   },
   "careerPay": 1440
  },
@@ -6073,7 +6115,13 @@
   "curriculumUrl": null,
   "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "economico",
+   "level": "L",
+   "natRate": 37.4,
+   "natUniversities": 56,
+   "natPay": 1234,
+   "natAgain": 72.7
   },
   "careerPay": 1380
  },
@@ -7055,7 +7103,13 @@
   "curriculumUrl": null,
   "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "economico",
+   "level": "L",
+   "natRate": 37.4,
+   "natUniversities": 56,
+   "natPay": 1234,
+   "natAgain": 72.7
   },
   "careerPay": 1660
  },
@@ -7984,7 +8038,13 @@
   "curriculumUrl": null,
   "dataSource": "https://www.unibocconi.it/en/about-us/organization/schools/undergraduate-school",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "economico",
+   "level": "L",
+   "natRate": 37.4,
+   "natUniversities": 56,
+   "natPay": 1234,
+   "natAgain": 72.7
   },
   "careerPay": 0
  },
@@ -8272,7 +8332,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=524&ac_ins=0&k_indir=ENN&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "ing_ind",
+   "level": "L",
+   "natRate": 27.8,
+   "natUniversities": 37,
+   "natPay": 1300,
+   "natAgain": 75.1
   },
   "careerPay": 1440
  },
@@ -8625,7 +8691,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=1&k_corso_la=346&ac_ins=0&k_indir=M1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "ing_civ",
+   "level": "L",
+   "natRate": 29.6,
+   "natUniversities": 36,
+   "natPay": 1292,
+   "natAgain": 73.1
   },
   "careerPay": 1550
  },
@@ -9850,7 +9922,13 @@
   "curriculumUrl": "https://onlineservices.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?evn_default=EVENTO&aa=2026&k_cf=225&k_corso_la=526&ac_ins=0&k_indir=F1A&lang=IT&tipoCorso=ALL_TIPO_CORSO&caricaOffertaInvisibile=false&semestre=ALL_SEMESTRI&jaf_currentWFID=main",
   "dataSource": "https://www.polimi.it/en/education/laurea-programmes",
   "outcomes": {
-   "status": "not_member"
+   "status": "not_member",
+   "group": "scientifico",
+   "level": "L",
+   "natRate": 21.0,
+   "natUniversities": 44,
+   "natPay": 985,
+   "natAgain": 72.2
   },
   "careerPay": 1330
  },
@@ -11878,7 +11956,11 @@
   "outcomes": {
    "status": "no_survey",
    "group": "educazione",
-   "level": "LSE"
+   "level": "LSE",
+   "natRate": 84.6,
+   "natUniversities": 27,
+   "natPay": 1432,
+   "natAgain": 76.1
   },
   "careerPay": 1330
  },
@@ -15140,7 +15222,11 @@
   "outcomes": {
    "status": "no_survey",
    "group": "psicologico",
-   "level": "L"
+   "level": "L",
+   "natRate": 24.6,
+   "natUniversities": 30,
+   "natPay": 872,
+   "natAgain": 76.3
   },
   "careerPay": 1330
  },
@@ -15945,7 +16031,11 @@
   "outcomes": {
    "status": "no_survey",
    "group": "psicologico",
-   "level": "L"
+   "level": "L",
+   "natRate": 24.6,
+   "natUniversities": 30,
+   "natPay": 872,
+   "natAgain": 76.3
   },
   "careerPay": 1330
  },
@@ -16087,8 +16177,8 @@
   "lon": 11.8768,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16150,8 +16240,8 @@
   "lon": 10.4017,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16213,8 +16303,8 @@
   "lon": 8.9463,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16276,8 +16366,8 @@
   "lon": 10.9916,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16339,8 +16429,8 @@
   "lon": 11.1217,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16372,7 +16462,11 @@
   "outcomes": {
    "status": "no_survey",
    "group": "medico",
-   "level": "LSE"
+   "level": "LSE",
+   "natRate": 89.2,
+   "natUniversities": 38,
+   "natPay": 1762,
+   "natAgain": 67.9
   },
   "careerPay": 1789
  },
@@ -16388,8 +16482,8 @@
   "lon": 9.1582,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16451,8 +16545,8 @@
   "lon": 10.3279,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16514,8 +16608,8 @@
   "lon": 15.083,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16577,8 +16671,8 @@
   "lon": 9.1217,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16640,8 +16734,8 @@
   "lon": 14.7681,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16703,8 +16797,8 @@
   "lon": 11.8768,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16766,8 +16860,8 @@
   "lon": 10.4017,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16829,8 +16923,8 @@
   "lon": 8.9463,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16892,8 +16986,8 @@
   "lon": 10.9916,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -16955,8 +17049,8 @@
   "lon": 9.1582,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17018,8 +17112,8 @@
   "lon": 10.3279,
   "citySize": "small",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17081,8 +17175,8 @@
   "lon": 15.083,
   "citySize": "large",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17144,8 +17238,8 @@
   "lon": 9.1217,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17207,8 +17301,8 @@
   "lon": 14.7681,
   "citySize": "medium",
   "years": 6,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17270,8 +17364,8 @@
   "lon": 11.8768,
   "citySize": "medium",
   "years": 5,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17333,8 +17427,8 @@
   "lon": 10.4017,
   "citySize": "small",
   "years": 5,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -17396,8 +17490,8 @@
   "lon": 10.3279,
   "citySize": "small",
   "years": 5,
-  "test": "Semestre aperto — open enrolment, then a national ranking from the first-semester exams",
-  "admission": "national",
+  "test": "Semestre aperto: enrol freely, sit Chemistry, Physics and Biology, then a national ranking on those exam scores decides who continues",
+  "admission": "semestre",
   "selectivity": 82,
   "mathLoad": 5,
   "subjects": [
@@ -19760,7 +19854,11 @@
   "outcomes": {
    "status": "no_survey",
    "group": "scienze_motorie",
-   "level": "L"
+   "level": "L",
+   "natRate": 53.8,
+   "natUniversities": 35,
+   "natPay": 897,
+   "natAgain": 73.7
   },
   "careerPay": 897
  },

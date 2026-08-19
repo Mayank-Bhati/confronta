@@ -23,6 +23,7 @@ import os
 STRIP_ESTIMATES = os.environ.get("STRIP_ESTIMATES") == "1"
 
 INDIRE = {"courses": {}, "institutions": {}, "source": ""}
+NATIONAL = {}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data")
@@ -122,6 +123,37 @@ def group_of(course, career_id):
     return CAREER_GROUP.get(career_id)
 
 
+def national_medians(rows):
+    """Median of every university that does publish a given group and level.
+
+    For the courses where this institution has no figure of its own, this is
+    the honest substitute: it describes the subject nationally, never this
+    university, and the card says so. It is computed from the same verified
+    AlmaLaurea rows the rest of the site uses, so it carries the same
+    provenance rather than importing a second, incomparable source.
+    """
+    import statistics
+    buckets = {}
+    for r in rows.values():
+        key = (r.get("group"), r.get("level"))
+        buckets.setdefault(key, {"emp": [], "pay": [], "again": []})
+        for field, dest in (("employment_rate", "emp"), ("net_pay", "pay"),
+                            ("would_choose_again", "again")):
+            if r.get(field) is not None:
+                buckets[key][dest].append(r[field])
+    out = {}
+    for key, vals in buckets.items():
+        if len(vals["emp"]) < 5:      # too few universities to call it national
+            continue
+        out[key] = {
+            "rate": round(statistics.median(vals["emp"]), 1),
+            "universities": len(vals["emp"]),
+            "pay": round(statistics.median(vals["pay"])) if vals["pay"] else None,
+            "again": round(statistics.median(vals["again"]), 1) if vals["again"] else None,
+        }
+    return out
+
+
 def apply_outcomes():
     courses = json.load(open(os.path.join(DATA, "courses-v2.json"), encoding="utf-8"))
     worlds = json.load(open(os.path.join(DATA, "worlds.json"), encoding="utf-8"))
@@ -129,6 +161,8 @@ def apply_outcomes():
     global INDIRE
     INDIRE = json.load(open(os.path.join(DATA, "indire-its.json"), encoding="utf-8"))
     rows = al["rows"]
+    global NATIONAL
+    NATIONAL = national_medians(rows)
 
     # course id → career id, and the career's approximate market pay
     career_of, career_pay = {}, {}
@@ -178,7 +212,12 @@ def apply_outcomes():
             course["outcomes"] = {"status": "afam"}
             stats["afam"] = stats.get("afam", 0) + 1
         elif slug in NO_DATA_REASON:
-            course["outcomes"] = {"status": NO_DATA_REASON[slug]}
+            o = {"status": NO_DATA_REASON[slug], "group": group, "level": level}
+            nat = NATIONAL.get((group, level))
+            if nat:
+                o.update({"natRate": nat["rate"], "natUniversities": nat["universities"],
+                          "natPay": nat["pay"], "natAgain": nat["again"]})
+            course["outcomes"] = o
             stats[NO_DATA_REASON[slug]] += 1
         else:
             code = ATENEO_CODE.get(slug)
@@ -191,7 +230,12 @@ def apply_outcomes():
                 row.get(k) is not None
                 for k in ("would_choose_again", "course_satisfaction", "teaching_satisfaction", "on_time"))
             if not row or (row.get("employment_rate") is None and not has_profile):
-                course["outcomes"] = {"status": "no_survey", "group": group, "level": level}
+                o = {"status": "no_survey", "group": group, "level": level}
+                nat = NATIONAL.get((group, level))
+                if nat:
+                    o.update({"natRate": nat["rate"], "natUniversities": nat["universities"],
+                              "natPay": nat["pay"], "natAgain": nat["again"]})
+                course["outcomes"] = o
                 stats["no_row"] += 1
                 if not group:
                     stats["unmapped"].append(f"{course['id']} ({career_id})")
@@ -220,6 +264,19 @@ def apply_outcomes():
                              "graduates of this level surveyed 1 year after graduating",
                 }
                 stats["matched" if row.get("employment_rate") is not None else "partial"] += 1
+
+        # Medicine, Dentistry and Veterinary carry their own admission type.
+        # The seeder sets it, but the database still holds the pre-reform value
+        # for rows written before that change, and every re-export restored
+        # "national" — which the card renders as "National admission test", the
+        # exact claim the 2025 reform made false. Correcting it here means the
+        # fix survives a re-export instead of being a manual edit that silently
+        # reverts, as it already did once.
+        if str(course.get("test", "")).startswith("Semestre aperto"):
+            course["admission"] = "semestre"
+            course["test"] = ("Semestre aperto: enrol freely, sit Chemistry, Physics and "
+                              "Biology, then a national ranking on those exam scores "
+                              "decides who continues")
 
         # Approximate entry pay for the JOB this course leads to. A career-level
         # market average, identical for every course leading to that job — never
