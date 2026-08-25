@@ -76,7 +76,10 @@ jobs:
         working-directory: pipeline
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: python main.py monitoring 30
+        run: |
+          python main.py monitoring 30
+          echo '--- SESSIONS ---'
+          python main.py monitoring 30 sessions
 
       - name: AFAM ingest (conservatori + accademie)
         if: inputs.task == 'afam-ingest'

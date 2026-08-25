@@ -125,6 +125,37 @@ def report(days=30):
     return "\n".join(out)
 
 
+def sessions(days=30):
+    """One line per session, so test traffic can be told from real traffic.
+
+    Session ids are hashed before printing: enough to tell rows apart, not
+    enough to follow a person, and the report is only ever read by us.
+    """
+    out = []
+    with Session() as s:
+        rows = _rows(s, """
+            select session_id,
+                   min(created_at)::date as day,
+                   count(*) as n,
+                   min(created_at)::time(0) as t0,
+                   max(created_at)::time(0) as t1,
+                   coalesce(max(lang),'?') as lang,
+                   coalesce(max(device),'?') as device,
+                   string_agg(distinct step, ',' order by step) as steps
+            from events where created_at > now() - (:d || ' days')::interval
+            group by 1 order by 2, 4
+        """, d=str(days))
+        out.append(f"{len(rows)} sessions")
+        for sid, day, n, t0, t1, lang, dev, steps in rows:
+            mark = " <= PROBE" if any(x in (sid or "") for x in
+                   ("audit", "stability", "probe", "finalcheck")) or "rls_probe" in (steps or "") else ""
+            out.append(f"  {day} {t0}-{t1} {n:3}ev {dev:7} {lang:2} {(steps or '')[:110]}{mark}")
+    return "\n".join(out)
+
+
 if __name__ == "__main__":
     import sys
-    print(report(int(sys.argv[1]) if len(sys.argv) > 1 else 30))
+    if len(sys.argv) > 2 and sys.argv[2] == "sessions":
+        print(sessions(int(sys.argv[1])))
+    else:
+        print(report(int(sys.argv[1]) if len(sys.argv) > 1 else 30))
