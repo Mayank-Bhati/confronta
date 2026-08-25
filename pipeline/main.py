@@ -85,6 +85,9 @@ def main():
         from careercompass_pipeline.export_app_json import export
         path, n = export()
         print(f"wrote {n} programs → {path}")
+    elif cmd == "monitoring":
+        from careercompass_pipeline.monitoring import report
+        print(report(int(sys.argv[2]) if len(sys.argv) > 2 else 30))
     elif cmd == "seed-afam":
         from careercompass_pipeline.seed_afam import seed_afam
         print(seed_afam())
