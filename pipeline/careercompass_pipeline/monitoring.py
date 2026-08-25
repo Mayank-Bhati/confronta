@@ -21,9 +21,14 @@ FUNNEL = [
     ("survey_started", "started the survey"),
     ("survey_completed", "finished the survey"),
     ("stage_reveal", "saw their result"),
+    # There is no "opened a world" step and there cannot be one: worlds and
+    # their careers share a single page, so choosing a world expands it in
+    # place and choosing a career jumps straight to the course list. The first
+    # version of this report listed stage_careers and reported it as a 100%
+    # drop-off, which was an artefact of the list, not something students did.
     ("stage_worlds", "opened the worlds list"),
-    ("stage_careers", "opened a world"),
     ("stage_filter", "reached the course list"),
+    ("stage_saved", "opened their saved paths"),
     ("course_saved", "saved a course"),
     ("stage_compare", "compared two"),
     ("tournament_started", "ran the tournament"),
@@ -109,7 +114,7 @@ def report(days=30):
                      max(case step
                            when 'landed' then 1 when 'survey_started' then 2
                            when 'survey_completed' then 3 when 'stage_reveal' then 4
-                           when 'stage_worlds' then 5 when 'stage_careers' then 6
+                           when 'stage_worlds' then 5 when 'stage_saved' then 6
                            when 'stage_filter' then 7 when 'course_saved' then 8
                            when 'stage_compare' then 9 when 'final_choice' then 10
                            else 0 end) as depth
@@ -119,7 +124,7 @@ def report(days=30):
         """, d=str(days)):
             names = {0: "(unknown step only)", 1: "landed and left", 2: "abandoned mid-survey",
                      3: "finished survey, went no further", 4: "saw result, stopped",
-                     5: "browsed worlds", 6: "opened a world", 7: "reached courses",
+                     5: "browsed worlds", 6: "opened saved paths", 7: "reached courses",
                      8: "saved something", 9: "compared", 10: "made a final choice"}
             out.append(f"  {n:4}  {names.get(reached, reached)}")
     return "\n".join(out)
