@@ -395,6 +395,21 @@ export default function CareerCompass() {
     }
   }
 
+  // One intent, one action. The course list had two ways to say "this one
+  // interests me": tapping the card marked it a comparison finalist, and a
+  // small star saved it. Students found the card — five sessions compared
+  // while three saved — and finalists live in React state, so anyone who
+  // picked two, compared them and closed the tab kept nothing at all.
+  //
+  // Picking a card now also saves it. Picking again only clears the finalist
+  // mark and leaves the save in place: removing a save is deliberate, through
+  // the star or the cross on the saved page, so a stray tap never destroys
+  // something the student meant to keep.
+  function pickCourse(course, ctx) {
+    if (!isSavedOn(course.id, ctx?.careerId ?? null)) toggleSave(course, ctx);
+    toggleFinalist(course.id);
+  }
+
   function toggleFinalist(id) {
     setFinalists((prev) => {
       if (prev.includes(id)) return prev.filter((x) => x !== id);
@@ -770,7 +785,7 @@ export default function CareerCompass() {
     prefs, setPrefs, homeCity, awayFromHome, institutions, envPrefs, cityCostBadge,
     saved, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter,
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
-    savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, allCareers,
+    savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, pickCourse, allCareers,
     pair, compareDims, narrative, setNarrative,
     lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal, moveResult, goToCourse,
     tourQueue, roundChoice, startTournament, nextRound, crownChampion, clearChampion, champion: store.champion || null,

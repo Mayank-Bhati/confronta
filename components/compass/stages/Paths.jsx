@@ -7,7 +7,7 @@ import CITIES from "../../../data/cities-v2.json";
 import COURSES from "../../../data/courses-v2.json";
 
 export default function Paths() {
-  const { T, t, td, career, world, prefs, setPrefs, profile, setProfile, homeCity, institutions, finalists, toggleFinalist, go, awayFromHome, toggleGoal } = useApp();
+  const { T, t, td, career, world, prefs, setPrefs, profile, setProfile, homeCity, institutions, finalists, pickCourse, go, awayFromHome, toggleGoal } = useApp();
   const [beyondOpen, setBeyondOpen] = useState(false);
 
   // Why the list is empty matters. "Relax a filter" is wrong advice when no
@@ -133,7 +133,8 @@ export default function Paths() {
               const within = institutions.filter((c) => !c.beyondRange);
               const beyond = institutions.filter((c) => c.beyondRange);
               const card = (c) => (
-                <InstitutionCard key={c.id} c={c} showFit chosen={finalists.includes(c.id)} onCardClick={() => toggleFinalist(c.id)}
+                <InstitutionCard key={c.id} c={c} showFit chosen={finalists.includes(c.id)}
+                  onCardClick={() => pickCourse(c, { careerId: career.id, careerName: career.name, worldName: td(world.name) })}
                   saveCtx={{ careerId: career.id, careerName: career.name, worldName: td(world.name) }} />
               );
               return (
@@ -162,8 +163,10 @@ export default function Paths() {
               );
             })()}
 
-            {institutions.length > 0 && finalists.length < 2 && (
-              <p className="text-xs text-center" style={{ color: T.grey }}>{t("pick_hint")}</p>
+            {institutions.length > 0 && (
+              <p className="text-sm text-center mt-1" style={{ color: T.grey }}>
+                {finalists.length < 2 ? t("pick_hint") : t("pick_hint_ready")}
+              </p>
             )}
           </>
     </>
