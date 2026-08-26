@@ -158,9 +158,61 @@ def sessions(days=30):
     return "\n".join(out)
 
 
+def as_json(days=30):
+    """The same figures as report(), shaped for the dashboard page.
+
+    Sessions that only ever recorded a probe step are excluded: the security
+    audit and my own live tests wrote real rows, and leaving them in overstates
+    every number at exactly the sample size where that matters most.
+    """
+    import json as _json
+    with Session() as s:
+        probe = """ and session_id not in (
+            select distinct session_id from events
+            where step in ('rls_probe','x') or session_id ~ '^(audit|stability|finalcheck|rlsprobe)')"""
+        win = "created_at > now() - (:d || ' days')::interval"
+        tot, ses, first, last = _rows(s, f"""
+            select count(*), count(distinct session_id), min(created_at), max(created_at)
+            from events where {win}{probe}""", d=str(days))[0]
+        steps = dict(_rows(s, f"""
+            select step, count(distinct session_id) from events
+            where {win}{probe} group by 1""", d=str(days)))
+        daily = [{"day": str(d), "sessions": n, "events": e} for d, n, e in _rows(s, f"""
+            select created_at::date, count(distinct session_id), count(*) from events
+            where {win}{probe} group by 1 order by 1""", d=str(days))]
+        devices = [{"label": lbl, "sessions": n} for lbl, n in _rows(s, f"""
+            select coalesce(device,'unknown'), count(distinct session_id) from events
+            where {win}{probe} group by 1 order by 2 desc""", d=str(days))]
+        langs = [{"label": lbl, "sessions": n} for lbl, n in _rows(s, f"""
+            select coalesce(lang,'not set'), count(distinct session_id) from events
+            where {win}{probe} group by 1 order by 2 desc""", d=str(days))]
+        details = [{"step": st, "detail": dt, "n": n} for st, dt, n in _rows(s, f"""
+            select step, detail, count(*) from events
+            where {win}{probe} and detail is not null group by 1,2 order by 3 desc limit 15""",
+            d=str(days))]
+        depth = [{"depth": d, "sessions": n} for d, n in _rows(s, f"""
+            with ls as (select session_id, max(case step
+                  when 'landed' then 1 when 'survey_started' then 2
+                  when 'survey_completed' then 3 when 'stage_reveal' then 4
+                  when 'stage_worlds' then 5 when 'stage_filter' then 6
+                  when 'course_saved' then 7 when 'stage_compare' then 8
+                  when 'final_choice' then 9 else 0 end) as depth
+                from events where {win}{probe} group by 1)
+            select depth, count(*) from ls group by 1 order by 1""", d=str(days))]
+    return _json.dumps({
+        "days": days, "totalEvents": tot or 0, "sessions": ses or 0,
+        "first": str(first) if first else None, "last": str(last) if last else None,
+        "funnel": [{"step": k, "label": lbl, "sessions": steps.get(k, 0)} for k, lbl in FUNNEL],
+        "daily": daily, "devices": devices, "languages": langs,
+        "details": details, "depth": depth,
+    }, indent=1)
+
+
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) > 2 and sys.argv[2] == "sessions":
+    if len(sys.argv) > 2 and sys.argv[2] == "json":
+        print(as_json(int(sys.argv[1])))
+    elif len(sys.argv) > 2 and sys.argv[2] == "sessions":
         print(sessions(int(sys.argv[1])))
     else:
         print(report(int(sys.argv[1]) if len(sys.argv) > 1 else 30))

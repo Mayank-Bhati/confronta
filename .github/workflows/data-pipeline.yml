@@ -80,6 +80,14 @@ jobs:
           python main.py monitoring 30
           echo '--- SESSIONS ---'
           python main.py monitoring 30 sessions
+          python main.py monitoring 60 json > ../monitoring.json
+
+      - name: Upload the funnel data
+        if: inputs.task == 'monitoring'
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitoring
+          path: monitoring.json
 
       - name: AFAM ingest (conservatori + accademie)
         if: inputs.task == 'afam-ingest'

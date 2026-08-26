@@ -86,9 +86,10 @@ def main():
         path, n = export()
         print(f"wrote {n} programs → {path}")
     elif cmd == "monitoring":
-        from careercompass_pipeline.monitoring import report, sessions
+        from careercompass_pipeline.monitoring import report, sessions, as_json
         days = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 30
-        print(sessions(days) if "sessions" in sys.argv else report(days))
+        print(as_json(days) if "json" in sys.argv
+              else sessions(days) if "sessions" in sys.argv else report(days))
     elif cmd == "seed-afam":
         from careercompass_pipeline.seed_afam import seed_afam
         print(seed_afam())
