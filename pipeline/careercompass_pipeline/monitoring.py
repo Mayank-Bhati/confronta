@@ -29,6 +29,7 @@ FUNNEL = [
     ("stage_worlds", "opened the worlds list"),
     ("stage_filter", "reached the course list"),
     ("stage_saved", "opened their saved paths"),
+    ("constraints_done", "answered the constraint survey"),
     ("course_saved", "saved a course"),
     ("stage_compare", "compared two"),
     ("tournament_started", "ran the tournament"),

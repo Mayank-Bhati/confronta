@@ -1,0 +1,100 @@
+{
+ "note": "The second survey. Every question here sets a field the ranking engine already reads, so an answer changes the order of the course list immediately. Nothing measures personality — that is what the first survey is for, and this one must never imply it fell short.",
+ "questions": [
+  {
+   "id": "where",
+   "prompt": "Where could you realistically study?",
+   "sub": "Money and family matter more here than ambition. Answer for the life you actually have.",
+   "field": "locationMode",
+   "options": [
+    { "value": "home", "text": "Near home — I'd stay and commute", "needsCity": true },
+    { "value": "cities", "text": "I'd move, but only to certain cities" },
+    { "value": "anywhere", "text": "Anywhere in Italy, if the course is right" }
+   ]
+  },
+  {
+   "id": "distance",
+   "prompt": "How long a journey could you do every day?",
+   "sub": "Each way, door to door.",
+   "field": "maxDistance",
+   "showIf": { "locationMode": "home" },
+   "options": [
+    { "value": 30, "text": "Half an hour at most" },
+    { "value": 60, "text": "Up to an hour" },
+    { "value": 120, "text": "Up to two hours, if it's worth it" },
+    { "value": 0, "text": "Distance isn't the problem" }
+   ]
+  },
+  {
+   "id": "city",
+   "prompt": "What kind of place would suit you?",
+   "sub": "Where you live for three years shapes the three years as much as the course does.",
+   "field": "citySize",
+   "options": [
+    { "value": "large", "text": "A big city — more going on, more expensive" },
+    { "value": "medium", "text": "Somewhere mid-sized" },
+    { "value": "small", "text": "A small place where I'd know people" },
+    { "value": "any", "text": "No preference" }
+   ]
+  },
+  {
+   "id": "budget",
+   "prompt": "What could your family manage each month?",
+   "sub": "Rent, food and transport — not fees. There's no wrong answer and nobody sees this.",
+   "field": "budget",
+   "options": [
+    { "value": 400, "text": "Under €400 — it has to be cheap" },
+    { "value": 700, "text": "Around €700" },
+    { "value": 1000, "text": "Up to €1,000" },
+    { "value": 0, "text": "Money isn't the deciding factor" }
+   ]
+  },
+  {
+   "id": "isee",
+   "prompt": "Do you know your family's ISEE band?",
+   "sub": "It decides your fees by law. Below €22,000 most public courses cost nothing.",
+   "field": "isee",
+   "options": [
+    { "value": "low", "text": "Under €22,000" },
+    { "value": "mid", "text": "€22,000 – €30,000" },
+    { "value": "high", "text": "Over €30,000" },
+    { "value": "mid", "text": "No idea — assume the middle" }
+   ]
+  },
+  {
+   "id": "maths",
+   "prompt": "How much maths can you live with?",
+   "sub": "Be honest rather than brave. This is the single most common reason people abandon a course.",
+   "field": "mathTolerance",
+   "options": [
+    { "value": 5, "text": "Bring it on — I'm good at it" },
+    { "value": 3, "text": "Some is fine" },
+    { "value": 2, "text": "As little as possible" },
+    { "value": 0, "text": "No preference" }
+   ]
+  },
+  {
+   "id": "path",
+   "prompt": "Are you open to a two-year professional course?",
+   "sub": "An ITS is shorter and more hands-on than a degree, and leads straight to work.",
+   "field": "pathType",
+   "options": [
+    { "value": "any", "text": "Show me everything" },
+    { "value": "University", "text": "University only" },
+    { "value": "ITS", "text": "ITS only — I want to work sooner" },
+    { "value": "AFAM", "text": "Conservatorio or art academy" }
+   ]
+  },
+  {
+   "id": "own",
+   "prompt": "Public or private?",
+   "sub": "Private institutions can cost several thousand a year.",
+   "field": "ownership",
+   "options": [
+    { "value": "any", "text": "Either" },
+    { "value": "public", "text": "Public only" },
+    { "value": "private", "text": "I'd consider private" }
+   ]
+  }
+ ]
+}

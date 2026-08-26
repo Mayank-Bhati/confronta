@@ -28,6 +28,7 @@ import Reveal from "./compass/stages/Reveal";
 import Worlds from "./compass/stages/Worlds";
 import Careers from "./compass/stages/Careers";
 import Paths from "./compass/stages/Paths";
+import Constraints from "./compass/stages/Constraints";
 import SavedPage from "./compass/stages/SavedPage";
 import Compare from "./compass/stages/Compare";
 
@@ -69,7 +70,7 @@ export default function CareerCompass() {
   const [multiSel, setMultiSel] = useState([]);
   const [vector, setVector] = useState(emptyVector());
   const [qHistory, setQHistory] = useState([]); // snapshots for the survey back button
-  const [profile, setProfile] = useState({ interests: [], goals: ["work"], isee: "mid", locationMode: "anywhere", homeCityId: "", relocationCities: [], mathStrength: 3 });
+  const [profile, setProfile] = useState({ interests: [], goals: ["work"], isee: "mid", locationMode: "anywhere", homeCityId: "", relocationCities: [], mathStrength: 3, mathTolerance: 0 });
   const [worldId, setWorldId] = useState(null);
   const [careerId, setCareerId] = useState(null);
   // 0 = no limit. Nothing is filtered or flagged until the student asks for it:
@@ -122,6 +123,7 @@ export default function CareerCompass() {
   const renderableStage = (s) => {
     if (s === "career") return !!world;
     if (s === "filter") return !!career;
+    if (s === "constraints") return !!career;
     if (s === "compare") return pair.length === 2;
     if (s === "express") return !!survey;
     if (s === "reveal") return hasResult;
@@ -266,7 +268,7 @@ export default function CareerCompass() {
   }
 
   // Slider at max (500) means "all of Italy": no distance cap at all.
-  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, maxDistance: profile.locationMode === "home" && homeCity && prefs.maxDistance > 0 && prefs.maxDistance < 500 ? prefs.maxDistance : null };
+  const envPrefs = { ...prefs, isee: profile.isee, awayFromHome, monthlyBudget: prefs.budget, mathTolerance: profile.mathTolerance || 0, maxDistance: profile.locationMode === "home" && homeCity && prefs.maxDistance > 0 && prefs.maxDistance < 500 ? prefs.maxDistance : null };
 
   const institutions = useMemo(() => {
     if (!career) return [];
@@ -405,6 +407,32 @@ export default function CareerCompass() {
   // mark and leaves the save in place: removing a save is deliberate, through
   // the star or the cross on the saved page, so a stray tap never destroys
   // something the student meant to keep.
+  // Fold the constraint survey's answers into the two objects the ranking
+  // already reads. Nothing new is invented: locationMode, maxDistance,
+  // citySize, budget, isee, pathType and ownership were all consumed before,
+  // they were simply left at their defaults because the only way to set them
+  // was a row of sliders and chips most students never touched. citySize in
+  // particular had never been settable at all, so its branch in fitEnvironment
+  // had never once run.
+  function applyConstraints(a, homeCityId) {
+    track("constraints_done", String(Object.keys(a).length));
+    setProfile((p) => ({
+      ...p,
+      locationMode: a.locationMode ?? p.locationMode,
+      homeCityId: a.locationMode === "home" ? (homeCityId || p.homeCityId) : p.homeCityId,
+      isee: a.isee ?? p.isee,
+      mathTolerance: a.mathTolerance ?? p.mathTolerance,
+    }));
+    setPrefs((p) => ({
+      ...p,
+      maxDistance: a.maxDistance ?? p.maxDistance,
+      citySize: a.citySize ?? p.citySize,
+      budget: a.budget ?? p.budget,
+      pathType: a.pathType ?? p.pathType,
+      ownership: a.ownership ?? p.ownership,
+    }));
+  }
+
   function pickCourse(course, ctx) {
     if (!isSavedOn(course.id, ctx?.careerId ?? null)) toggleSave(course, ctx);
     toggleFinalist(course.id);
@@ -785,7 +813,7 @@ export default function CareerCompass() {
     prefs, setPrefs, homeCity, awayFromHome, institutions, envPrefs, cityCostBadge,
     saved, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter,
     savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel,
-    savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, pickCourse, allCareers,
+    savedResultIds, resultLabel, historyList, finalists, setFinalists, toggleFinalist, pickCourse, applyConstraints, allCareers,
     pair, compareDims, narrative, setNarrative,
     lastResult, savedToName, activeProfile, openResult, deleteResult, chooseFinal, moveResult, goToCourse,
     tourQueue, roundChoice, startTournament, nextRound, crownChampion, clearChampion, champion: store.champion || null,
@@ -820,6 +848,7 @@ export default function CareerCompass() {
 
         {/* ————— Institutions / filters ————— */}
         {stage === "filter" && career && <Paths />}
+        {stage === "constraints" && <Constraints />}
 
         {/* ————— Saved (contextual per career path) ————— */}
         {stage === "saved" && <SavedPage />}

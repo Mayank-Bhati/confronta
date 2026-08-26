@@ -8,6 +8,8 @@ import COURSES from "../../../data/courses-v2.json";
 
 export default function Paths() {
   const { T, t, td, career, world, prefs, setPrefs, profile, setProfile, homeCity, institutions, finalists, pickCourse, go, awayFromHome, toggleGoal } = useApp();
+  // once any constraint is set the offer has been taken, so stop asking
+  const constraintsDone = prefs.citySize != null || prefs.budget > 0 || profile.mathTolerance > 0;
   const [beyondOpen, setBeyondOpen] = useState(false);
 
   // Why the list is empty matters. "Relax a filter" is wrong advice when no
@@ -162,6 +164,26 @@ export default function Paths() {
                 </>
               );
             })()}
+
+            {/* Offered here, not on the results page: after a student has seen
+                real courses the question "which of these could I actually say
+                yes to" is one they already have. Framed as narrowing, never as
+                a second attempt at the first survey. */}
+            {institutions.length > 2 && !constraintsDone && (
+              <Section>
+                <div className="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
+                  <div>
+                    <h3 className="font-bold text-base" style={display}>{t("cs_offer_title")}</h3>
+                    <p className="text-sm mt-1" style={{ color: T.grey }}>{t("cs_offer_sub", { n: institutions.length })}</p>
+                  </div>
+                  <button onClick={() => go("constraints")}
+                    className="px-5 py-2.5 rounded-full font-bold text-sm text-white whitespace-nowrap transition-transform hover:scale-105"
+                    style={{ background: T.grad }}>
+                    {t("cs_offer_cta")}
+                  </button>
+                </div>
+              </Section>
+            )}
 
             {institutions.length > 0 && (
               <p className="text-sm text-center mt-1" style={{ color: T.grey }}>
