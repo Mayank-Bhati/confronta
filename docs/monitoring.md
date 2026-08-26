@@ -71,3 +71,26 @@ from feedback order by id desc;
 Supabase can save any of these as a chart: run the query, then **Save as
 report** in the SQL Editor. A saved funnel query on the dashboard is the
 closest thing to Grafana without running any infrastructure.
+
+
+## The visual dashboard
+
+Ask for "the funnel" or "the dashboard" and it regenerates end to end:
+
+1. `gh workflow run data-pipeline.yml -f task=monitoring` — runs the query as the
+   table owner, since the public key can write to `events` and never read it back
+2. downloads `monitoring.json` from the run artifact
+3. rebuilds `docs/funnel-dashboard.html` from it
+4. republishes to the same Artifact URL
+
+Probe sessions are excluded automatically: anything that only ever logged
+`rls_probe`/`x`, or whose session id starts with audit/stability/finalcheck.
+
+Three views from the CLI if you want the raw numbers:
+
+    python main.py monitoring 30            # the funnel as text
+    python main.py monitoring 30 sessions   # one line per session
+    python main.py monitoring 60 json       # what the dashboard renders
+
+A caution the dashboard repeats: below roughly a hundred sessions the
+percentages are noise. Read the shape, not the decimals.

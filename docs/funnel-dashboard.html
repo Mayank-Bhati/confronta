@@ -1,0 +1,262 @@
+<title>Student Funnel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+
+<style>
+  :root {
+    --ground:#EEF1F6; --surface:#FFFFFF; --sunken:#E3E8F1;
+    --ink:#16213E; --muted:#5C6784; --line:#D3DAE8;
+    --accent:#2F5DD6; --accent-soft:#DEE6FA;
+    --keep:#127A54; --keep-soft:#D6EEE4;
+    --drop:#B23E12; --drop-soft:#F7E2D8;
+    --shadow:0 1px 2px rgba(22,33,62,.06), 0 8px 24px rgba(22,33,62,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#0E1119; --surface:#161B27; --sunken:#1E2534;
+      --ink:#E7ECF8; --muted:#94A0BC; --line:#2A3345;
+      --accent:#7C9CF5; --accent-soft:#1D2A4A;
+      --keep:#4CC39A; --keep-soft:#12301F;
+      --drop:#E38357; --drop-soft:#33190F;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#0E1119; --surface:#161B27; --sunken:#1E2534;
+    --ink:#E7ECF8; --muted:#94A0BC; --line:#2A3345;
+    --accent:#7C9CF5; --accent-soft:#1D2A4A;
+    --keep:#4CC39A; --keep-soft:#12301F;
+    --drop:#E38357; --drop-soft:#33190F;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"Public Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1080px; margin:0 auto; padding:48px 24px 80px; }
+  h1, h2, h3 { font-family:"Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif; margin:0; text-wrap:balance; }
+  h1 { font-size:clamp(30px,4.4vw,44px); font-weight:700; letter-spacing:-.022em; line-height:1.08; }
+  h2 { font-size:19px; font-weight:700; letter-spacing:-.01em; }
+  .num { font-family:"IBM Plex Mono", ui-monospace, monospace; font-variant-numeric:tabular-nums; }
+  .eyebrow {
+    font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:11px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  }
+
+  header { display:flex; flex-direction:column; gap:10px; margin-bottom:12px; }
+  .window { color:var(--muted); font-size:14.5px; max-width:62ch; }
+
+  .caveat {
+    margin:22px 0 34px; padding:14px 16px; border-radius:10px;
+    background:var(--drop-soft); border:1px solid color-mix(in srgb, var(--drop) 30%, transparent);
+    font-size:14px; line-height:1.5; color:var(--ink);
+  }
+  .caveat strong { color:var(--drop); }
+
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit, minmax(178px,1fr)); gap:14px; margin-bottom:40px; }
+  .kpi { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 18px 16px; box-shadow:var(--shadow); }
+  .kpi .v { font-size:38px; font-weight:600; line-height:1; letter-spacing:-.02em; }
+  .kpi .l { margin-top:8px; font-size:13px; color:var(--muted); }
+  .kpi .sub { margin-top:5px; font-size:12.5px; }
+  .kpi.alert .v { color:var(--drop); }
+  .kpi.good .v { color:var(--keep); }
+
+  section { margin-bottom:44px; }
+  .shead { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:6px; }
+  .note { color:var(--muted); font-size:14px; max-width:66ch; margin:0 0 18px; }
+
+  .stage { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px; box-shadow:var(--shadow); margin-bottom:12px; }
+  .stage-top { display:flex; align-items:baseline; gap:10px; margin-bottom:14px; }
+  .stage-top .idx { font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--accent); font-weight:600; }
+  .bars { display:flex; flex-direction:column; gap:10px; }
+  .bar { display:grid; grid-template-columns:minmax(150px,208px) 1fr auto; align-items:center; gap:14px; }
+  .bar .lab { font-size:14px; }
+  .track { position:relative; height:22px; background:var(--sunken); border-radius:5px; overflow:hidden; }
+  .fill { height:100%; border-radius:5px; background:var(--accent); }
+  .fill.k { background:var(--keep); }
+  .fill.d { background:var(--drop); }
+  .bar .n { font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; font-size:14px; font-weight:600; min-width:2.4ch; text-align:right; }
+
+  .depth { display:flex; flex-direction:column; gap:2px; }
+  .drow { display:grid; grid-template-columns:minmax(160px,230px) 1fr auto; gap:14px; align-items:center; padding:7px 0; border-bottom:1px solid var(--line); }
+  .drow:last-child { border-bottom:0; }
+  .dbar { height:14px; border-radius:4px; background:var(--accent-soft); position:relative; }
+  .dbar i { display:block; height:100%; border-radius:4px; background:var(--accent); }
+
+  .split { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+  .panel { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px; box-shadow:var(--shadow); }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; font-weight:600; color:var(--muted); font-size:12px; letter-spacing:.05em; text-transform:uppercase; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  td { padding:8px 0; border-bottom:1px solid var(--line); }
+  tr:last-child td { border-bottom:0; }
+  td.r { text-align:right; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; }
+  .scroll { overflow-x:auto; }
+
+  .spark { display:flex; align-items:flex-end; gap:6px; height:88px; margin-top:6px; }
+  .spark div { flex:1; background:var(--accent); border-radius:4px 4px 0 0; min-height:3px; position:relative; }
+  .spark span { position:absolute; top:-19px; left:0; right:0; text-align:center; font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted); }
+  .sparkx { display:flex; gap:6px; margin-top:7px; }
+  .sparkx div { flex:1; text-align:center; font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--muted); }
+
+  .read { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:12px; padding:22px 24px; box-shadow:var(--shadow); }
+  .read p { margin:0 0 12px; max-width:68ch; }
+  .read p:last-child { margin-bottom:0; }
+  .read b { color:var(--accent); }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+  @media (prefers-reduced-motion:no-preference) {
+    .fill, .dbar i { transition:width .5s cubic-bezier(.22,.8,.3,1); }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">CareerCompass · anonymous funnel</div>
+    <h1>Where students stop</h1>
+    <p class="window">28 sessions and 217 events between <span class="num">14</span> and <span class="num">23 August 2026</span>. No names, no answers, no IP addresses — a random per-session id, the step reached, and phone or desktop.</p>
+  </header>
+
+  <div class="caveat">
+    <strong>Read every number as approximate.</strong> Twenty-eight sessions is far too few for percentages to be stable — a two-person difference moves any rate here by seven points. Sessions that only ever logged a probe step have been excluded, but the 14 August block is still largely my own testing during the build. Treat the shape as real and the precision as illusory.
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v num">27</div><div class="l">opened the site</div></div>
+    <div class="kpi good"><div class="v num">8</div><div class="l">finished the survey</div><div class="sub num" style="color:var(--keep)">89% of those who started</div></div>
+    <div class="kpi alert"><div class="v num">3</div><div class="l">saved a course</div><div class="sub num" style="color:var(--drop)">25% of those who saw courses</div></div>
+    <div class="kpi alert"><div class="v num">0</div><div class="l">sent feedback</div><div class="sub" style="color:var(--drop)">no qualitative data at all</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><h2>The journey, by stage</h2></div>
+    <p class="note">Grouped rather than drawn as one funnel, because it isn’t one: more sessions reached the worlds list than finished the survey. That’s returning visitors, whose result is already stored — they skip straight to browsing. Bar width is sessions against the 27 who landed.</p>
+
+    <div class="stage">
+      <div class="stage-top"><span class="idx">01</span><h3 style="font-size:15px">Arrive</h3></div>
+      <div class="bars">
+        <div class="bar"><span class="lab">Opened the site</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="n">27</span></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-top"><span class="idx">02</span><h3 style="font-size:15px">Take the survey</h3></div>
+      <div class="bars">
+        <div class="bar"><span class="lab">Started it</span><div class="track"><div class="fill d" style="width:33.3%"></div></div><span class="n">9</span></div>
+        <div class="bar"><span class="lab">Finished all 20</span><div class="track"><div class="fill k" style="width:29.6%"></div></div><span class="n">8</span></div>
+        <div class="bar"><span class="lab">Saw their result</span><div class="track"><div class="fill k" style="width:29.6%"></div></div><span class="n">8</span></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-top"><span class="idx">03</span><h3 style="font-size:15px">Explore</h3></div>
+      <div class="bars">
+        <div class="bar"><span class="lab">Worlds list</span><div class="track"><div class="fill" style="width:55.6%"></div></div><span class="n">15</span></div>
+        <div class="bar"><span class="lab">Course list</span><div class="track"><div class="fill" style="width:44.4%"></div></div><span class="n">12</span></div>
+        <div class="bar"><span class="lab">Saved paths page</span><div class="track"><div class="fill" style="width:33.3%"></div></div><span class="n">9</span></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-top"><span class="idx">04</span><h3 style="font-size:15px">Commit</h3></div>
+      <div class="bars">
+        <div class="bar"><span class="lab">Saved a course</span><div class="track"><div class="fill d" style="width:11.1%"></div></div><span class="n">3</span></div>
+        <div class="bar"><span class="lab">Compared two</span><div class="track"><div class="fill" style="width:18.5%"></div></div><span class="n">5</span></div>
+        <div class="bar"><span class="lab">Ran the tournament</span><div class="track"><div class="fill" style="width:14.8%"></div></div><span class="n">4</span></div>
+        <div class="bar"><span class="lab">Crowned a winner</span><div class="track"><div class="fill" style="width:14.8%"></div></div><span class="n">4</span></div>
+        <div class="bar"><span class="lab">Recorded a final choice</span><div class="track"><div class="fill k" style="width:14.8%"></div></div><span class="n">4</span></div>
+        <div class="bar"><span class="lab">Sent feedback</span><div class="track"><div class="fill d" style="width:0.6%"></div></div><span class="n">0</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>How far each session actually got</h2></div>
+    <p class="note">Every session counted once, at its furthest point. This is the only chart here where the categories don’t overlap.</p>
+    <div class="panel">
+      <div class="depth">
+        <div class="drow"><span>Landed and left</span><div class="dbar"><i style="width:100%"></i></div><span class="num">10</span></div>
+        <div class="drow"><span>Saw their result, stopped</span><div class="dbar"><i style="width:10%"></i></div><span class="num">1</span></div>
+        <div class="drow"><span>Browsed worlds</span><div class="dbar"><i style="width:30%"></i></div><span class="num">3</span></div>
+        <div class="drow"><span>Reached the course list</span><div class="dbar"><i style="width:90%"></i></div><span class="num">9</span></div>
+        <div class="drow"><span>Compared two courses</span><div class="dbar"><i style="width:10%"></i></div><span class="num">1</span></div>
+        <div class="drow"><span>Made a final choice</span><div class="dbar"><i style="width:40%; background:var(--keep)"></i></div><span class="num">4</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Sessions per day</h2></div>
+    <p class="note">14 August is mostly my own testing during the build. The 17th onward is real traffic.</p>
+    <div class="panel">
+      <div class="spark">
+        <div style="height:66%"><span>8</span></div>
+        <div style="height:8%"><span>1</span></div>
+        <div style="height:50%"><span>6</span></div>
+        <div style="height:25%"><span>3</span></div>
+        <div style="height:100%"><span>12</span></div>
+        <div style="height:8%"><span>1</span></div>
+      </div>
+      <div class="sparkx">
+        <div>14 Aug</div><div>15</div><div>17</div><div>18</div><div>19</div><div>23</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="panel">
+      <h2 style="font-size:15px; margin-bottom:4px">Device</h2>
+      <p class="note" style="margin-bottom:12px">Counted once per value a session reported.</p>
+      <table>
+        <tr><td>Phone</td><td class="r">20</td></tr>
+        <tr><td>Desktop</td><td class="r">9</td></tr>
+      </table>
+    </div>
+    <div class="panel">
+      <h2 style="font-size:15px; margin-bottom:4px">Language</h2>
+      <p class="note" style="margin-bottom:12px">“Not set” is a first visit — the tracker reads the language from storage, which doesn’t exist yet.</p>
+      <table>
+        <tr><td>English</td><td class="r">16</td></tr>
+        <tr><td>Not set</td><td class="r">15</td></tr>
+        <tr><td>Italian</td><td class="r">11</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>What they chose</h2></div>
+    <p class="note">Course and result codes only — never free text.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Step</th><th>Item</th><th style="text-align:right">Times</th></tr></thead>
+        <tbody>
+          <tr><td>Final choice</td><td class="num">unimib-p63</td><td class="r">3</td></tr>
+          <tr><td>Final choice</td><td class="num">polimi-p3</td><td class="r">2</td></tr>
+          <tr><td>Final choice</td><td class="num">unica-p249</td><td class="r">2</td></tr>
+          <tr><td>Final choice</td><td class="num">its-energia-pi-p95</td><td class="r">2</td></tr>
+          <tr><td>Final choice</td><td class="num">unipa-p157</td><td class="r">2</td></tr>
+          <tr><td>Reopened a saved course</td><td class="num">unica-p249</td><td class="r">2</td></tr>
+          <tr><td>Reopened a saved course</td><td class="num">its-energia-pi-p95</td><td class="r">2</td></tr>
+          <tr><td>Survey result</td><td class="num">RI — the Engineer at heart</td><td class="r">2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>The read</h2></div>
+    <div class="read">
+      <p><b>The survey is not the problem.</b> Nearly nine in ten who start it finish all twenty questions. Whatever you change, don’t change that.</p>
+      <p><b>The landing page is the first leak.</b> Two thirds of arrivals never press start. Ten of twenty-eight sessions landed and left without a single further event.</p>
+      <p><b>Saving is the real leak.</b> Twelve sessions reached the course list and three saved anything. That’s the moment the product is supposed to earn its keep, and it mostly doesn’t — either the star isn’t visible enough, or a student who has just met a real course doesn’t yet see why keeping it matters.</p>
+      <p><b>People came back.</b> Seven sessions browsed courses without taking the survey at all — their result was already in storage. That is the most encouraging signal here and it isn’t visible in any single rate.</p>
+      <p><b>You have no qualitative data.</b> Zero feedback across every session, so these twenty-eight lines are everything you know, and they can’t tell you <i>why</i> anyone left. At this sample size, five screen-shares will teach you more than another month of counting.</p>
+    </div>
+  </section>
+
+  <footer>
+    Source: the <span class="num">events</span> table, read through the pipeline’s owner connection — the public key can write to it and never read it back. Regenerate by asking for the funnel again.
+  </footer>
+</div>
