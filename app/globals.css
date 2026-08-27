@@ -1,5 +1,33 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
+/* Self-hosted, not fetched from fonts.googleapis.com.
+   A webfont request to Google discloses the visitor's IP address to a third
+   party on every page load, which is a disclosure we cannot make on behalf of
+   a sixteen-year-old and cannot honestly describe as "everything runs on your
+   device". These are the same latin-subset files Google would have served,
+   142 KB in total, held here instead.
+
+   The files sit beside this stylesheet so webpack resolves and fingerprints
+   them at build time. That matters on GitHub Pages: it injects a /confronta
+   base path into the asset URLs it emits, but never rewrites url() inside
+   CSS — a hand-written /fonts/... would work locally and 404 in production,
+   which is the worst kind of bug to ship. Letting the bundler own the path
+   removes the whole class. */
+@font-face {
+  font-family: "Fraunces"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("./fonts/fraunces.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("./fonts/inter.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("./fonts/ibm-plex-mono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("./fonts/ibm-plex-mono-600.woff2") format("woff2");
+}
 
 :root {
   --bg: #faf9f6;
