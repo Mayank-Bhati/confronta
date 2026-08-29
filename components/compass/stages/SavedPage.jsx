@@ -2,7 +2,7 @@ import React from "react";
 
 import { useApp } from "../context";
 import { mono, display } from "../constants";
-import { ChipBtn, Section, InstitutionCard, BackLink } from "../ui";
+import { ChipBtn, Section, InstitutionCard, BackLink, DataFreshness } from "../ui";
 
 export default function SavedPage() {
   const { T, t, savedEntries, filteredSavedEntries, savedFilter, setSavedFilter, savedResultIds, resultLabel, finalists, toggleFinalist, go, savedProfileFilter, setSavedProfileFilter, savedProfileIds, profileLabel, td, startTournament, champion, clearChampion, toggleSave, goToCourse } = useApp();
@@ -68,6 +68,7 @@ export default function SavedPage() {
               ))}
             </div>
 
+            <DataFreshness />
           </>
     </>
   );

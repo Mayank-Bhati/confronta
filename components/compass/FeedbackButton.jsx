@@ -16,6 +16,16 @@ export default function FeedbackButton() {
   const [contact, setContact] = useState("");
   const [state, setState] = useState("idle"); // idle | sending | sent | error
 
+  // The "report incorrect data" link that sits under every data page opens this
+  // same dialog. An event rather than lifted state: the dialog's business is
+  // entirely its own, and threading a setter through the app context so a
+  // footnote can call it would spread this component across three files.
+  React.useEffect(() => {
+    const open = () => setOpen(true);
+    window.addEventListener("cc:report-data", open);
+    return () => window.removeEventListener("cc:report-data", open);
+  }, []);
+
   async function send() {
     if (msg.trim().length < 3) return;
     setState("sending");

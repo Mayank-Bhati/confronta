@@ -2,7 +2,7 @@ import React from "react";
 
 import { useApp } from "../context";
 import { NATURE_KEY, mono, display } from "../constants";
-import { Bar, Section, BackLink, GoogleLink, OfficialLink } from "../ui";
+import { Bar, Section, BackLink, GoogleLink, OfficialLink, DataFreshness } from "../ui";
 import { estimateMonthlyCost, prepList, generateNarrative, haversineKm, realOutcomes } from "../../../lib/fitEngine-v2";
 import COURSES from "../../../data/courses-v2.json";
 
@@ -219,6 +219,7 @@ export default function Compare() {
                   <p className="text-sm mt-3 font-semibold" style={{ color: T.green }}>{t("cmp_champion")}</p>
                 )}
               </div>
+              <DataFreshness />
             </Section>
           </>
     </>

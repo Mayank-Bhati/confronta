@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useApp } from "../context";
 import { mono, display } from "../constants";
-import { ChipBtn, Section, InstitutionCard, BackLink } from "../ui";
+import { ChipBtn, Section, InstitutionCard, BackLink, DataFreshness } from "../ui";
 import CITIES from "../../../data/cities-v2.json";
 import COURSES from "../../../data/courses-v2.json";
 
@@ -190,6 +190,8 @@ export default function Paths() {
                 {finalists.length < 2 ? t("pick_hint") : t("pick_hint_ready")}
               </p>
             )}
+
+            {institutions.length > 0 && <DataFreshness />}
           </>
     </>
   );
