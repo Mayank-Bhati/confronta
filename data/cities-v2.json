@@ -6,10 +6,11 @@
   "lon": 9.19,
   "size": "large",
   "costRange": [
-   910,
-   1100
+   728,
+   1054
   ],
-  "vibe": "Big, fast, most opportunities, most expensive"
+  "vibe": "Big, fast, most opportunities, most expensive",
+  "rentEstimated": false
  },
  {
   "id": "torino",
@@ -18,10 +19,11 @@
   "lon": 7.6869,
   "size": "large",
   "costRange": [
-   760,
-   940
+   570,
+   781
   ],
-  "vibe": "Elegant, livable, strong student scene"
+  "vibe": "Elegant, livable, strong student scene",
+  "rentEstimated": false
  },
  {
   "id": "bergamo",
@@ -30,10 +32,11 @@
   "lon": 9.6773,
   "size": "small",
   "costRange": [
-   660,
-   840
+   536,
+   748
   ],
-  "vibe": "Quiet, industrial heartland, close-knit"
+  "vibe": "Quiet, industrial heartland, close-knit",
+  "rentEstimated": false
  },
  {
   "id": "bologna",
@@ -42,10 +45,11 @@
   "lon": 11.3426,
   "size": "medium",
   "costRange": [
-   900,
-   1080
+   647,
+   949
   ],
-  "vibe": "Italy's classic student city"
+  "vibe": "Italy's classic student city",
+  "rentEstimated": false
  },
  {
   "id": "roma",
@@ -54,10 +58,11 @@
   "lon": 12.4964,
   "size": "large",
   "costRange": [
-   840,
-   1040
+   649,
+   900
   ],
-  "vibe": "Huge, historic, chaotic, endless options"
+  "vibe": "Huge, historic, chaotic, endless options",
+  "rentEstimated": false
  },
  {
   "id": "napoli",
@@ -66,10 +71,11 @@
   "lon": 14.2681,
   "size": "large",
   "costRange": [
-   550,
-   950
+   583,
+   730
   ],
-  "vibe": "Intense, warm, cheapest big city"
+  "vibe": "Intense, warm, cheapest big city",
+  "rentEstimated": false
  },
  {
   "id": "bari",
@@ -78,10 +84,11 @@
   "lon": 16.8719,
   "size": "medium",
   "costRange": [
-   500,
-   850
+   501,
+   657
   ],
-  "vibe": "Seaside, growing, affordable"
+  "vibe": "Seaside, growing, affordable",
+  "rentEstimated": false
  },
  {
   "id": "palermo",
@@ -90,10 +97,11 @@
   "lon": 13.3615,
   "size": "large",
   "costRange": [
-   450,
-   800
+   435,
+   545
   ],
-  "vibe": "Beautiful, affordable, far from the north"
+  "vibe": "Beautiful, affordable, far from the north",
+  "rentEstimated": false
  },
  {
   "id": "firenze",
@@ -102,10 +110,11 @@
   "lon": 11.2558,
   "size": "medium",
   "costRange": [
-   800,
-   1300
+   616,
+   921
   ],
-  "vibe": "Art everywhere, tourist prices"
+  "vibe": "Art everywhere, tourist prices",
+  "rentEstimated": false
  },
  {
   "id": "venezia",
@@ -114,9 +123,231 @@
   "lon": 12.3155,
   "size": "medium",
   "costRange": [
-   750,
-   1250
+   562,
+   768
   ],
-  "vibe": "Unique, walkable, tourist pressure"
+  "vibe": "Unique, compact, tourist-heavy — student life on the mainland too",
+  "rentEstimated": false
+ },
+ {
+  "id": "trento",
+  "name": "Trento",
+  "lat": 46.0748,
+  "lon": 11.1217,
+  "size": "small",
+  "costRange": [
+   577,
+   844
+  ],
+  "vibe": "Mountains, high quality of life, strong services",
+  "rentEstimated": false
+ },
+ {
+  "id": "brescia",
+  "name": "Brescia",
+  "lat": 45.5416,
+  "lon": 10.2118,
+  "size": "medium",
+  "costRange": [
+   625,
+   816
+  ],
+  "vibe": "Industrial Lombardy, cheaper than Milan and an hour away",
+  "rentEstimated": false
+ },
+ {
+  "id": "padova",
+  "name": "Padova",
+  "lat": 45.4064,
+  "lon": 11.8768,
+  "size": "medium",
+  "costRange": [
+   569,
+   802
+  ],
+  "vibe": "Classic student city, everything walkable",
+  "rentEstimated": false
+ },
+ {
+  "id": "verona",
+  "name": "Verona",
+  "lat": 45.4384,
+  "lon": 10.9916,
+  "size": "medium",
+  "costRange": [
+   557,
+   773
+  ],
+  "vibe": "Elegant, well connected, quietly wealthy",
+  "rentEstimated": false
+ },
+ {
+  "id": "parma",
+  "name": "Parma",
+  "lat": 44.8015,
+  "lon": 10.3279,
+  "size": "small",
+  "costRange": [
+   503,
+   702
+  ],
+  "vibe": "Food capital, compact and liveable",
+  "rentEstimated": false
+ },
+ {
+  "id": "genova",
+  "name": "Genova",
+  "lat": 44.4056,
+  "lon": 8.9463,
+  "size": "large",
+  "costRange": [
+   495,
+   659
+  ],
+  "vibe": "Sea and hills, affordable for a big city",
+  "rentEstimated": false
+ },
+ {
+  "id": "pavia",
+  "name": "Pavia",
+  "lat": 45.1847,
+  "lon": 9.1582,
+  "size": "small",
+  "costRange": [
+   528,
+   648
+  ],
+  "vibe": "College-town feel, 30 minutes from Milan",
+  "rentEstimated": false
+ },
+ {
+  "id": "pisa",
+  "name": "Pisa",
+  "lat": 43.7228,
+  "lon": 10.4017,
+  "size": "small",
+  "costRange": [
+   491,
+   613
+  ],
+  "vibe": "Small, academic, cheap by Tuscan standards",
+  "rentEstimated": false
+ },
+ {
+  "id": "catania",
+  "name": "Catania",
+  "lat": 37.5079,
+  "lon": 15.083,
+  "size": "large",
+  "costRange": [
+   452,
+   530
+  ],
+  "vibe": "Volcano and sea, lively and inexpensive",
+  "rentEstimated": false
+ },
+ {
+  "id": "cremona",
+  "name": "Cremona",
+  "lat": 45.1332,
+  "lon": 10.0227,
+  "size": "small",
+  "costRange": [
+   489,
+   650
+  ],
+  "vibe": "Small, calm, low cost of living",
+  "rentEstimated": true
+ },
+ {
+  "id": "piacenza",
+  "name": "Piacenza",
+  "lat": 45.0526,
+  "lon": 9.693,
+  "size": "small",
+  "costRange": [
+   511,
+   680
+  ],
+  "vibe": "Compact student city between Milano and Bologna",
+  "rentEstimated": true
+ },
+ {
+  "id": "mantova",
+  "name": "Mantova",
+  "lat": 45.1564,
+  "lon": 10.7914,
+  "size": "small",
+  "costRange": [
+   489,
+   650
+  ],
+  "vibe": "Renaissance town, small campus community",
+  "rentEstimated": true
+ },
+ {
+  "id": "lecco",
+  "name": "Lecco",
+  "lat": 45.8566,
+  "lon": 9.3977,
+  "size": "small",
+  "costRange": [
+   535,
+   717
+  ],
+  "vibe": "Lakeside campus town, quiet and outdoorsy",
+  "rentEstimated": true
+ },
+ {
+  "id": "monza",
+  "name": "Monza",
+  "lat": 45.5845,
+  "lon": 9.2744,
+  "size": "medium",
+  "costRange": [
+   594,
+   805
+  ],
+  "vibe": "Green, orderly, a train away from Milan",
+  "rentEstimated": true
+ },
+ {
+  "id": "sesto-san-giovanni",
+  "name": "Sesto San Giovanni",
+  "lat": 45.5347,
+  "lon": 9.2405,
+  "size": "large",
+  "costRange": [
+   634,
+   867
+  ],
+  "vibe": "Milan's industrial north — metro to the centre",
+  "rentEstimated": true
+ },
+ {
+  "id": "cagliari",
+  "name": "Cagliari",
+  "lat": 39.2238,
+  "lon": 9.1217,
+  "size": "medium",
+  "costRange": [
+   462,
+   602
+  ],
+  "vibe": "Island capital, beaches on the doorstep",
+  "rentEstimated": true
+ },
+ {
+  "id": "salerno",
+  "name": "Salerno",
+  "lat": 40.6824,
+  "lon": 14.7681,
+  "size": "medium",
+  "costRange": [
+   440,
+   567
+  ],
+  "vibe": "Seafront, affordable, near the Amalfi coast",
+  "rentEstimated": true
  }
 ]

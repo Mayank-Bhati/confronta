@@ -96,6 +96,9 @@ def main():
     elif cmd == "seed-expand":
         from careercompass_pipeline.seed_expand import seed_expand
         print(seed_expand())
+    elif cmd == "seed-rents":
+        from careercompass_pipeline.seed_rents import run
+        run(dry_run="--dry-run" in sys.argv)
     elif cmd == "export-site":
         from careercompass_pipeline.export_site_data import export_site
         print(export_site())

@@ -193,14 +193,21 @@ def _city_data(city):
     45.46, 9.19, so "nearest first" placed them 250 km from where they are.
     A missing city is now a loud failure at build time, not a quiet lie on the
     card — adding one means finding a real rent and real coordinates.
+
+    Since every catalogue city moved into the cities table, reaching this
+    function at all means the database is missing one. The dict below is kept
+    only as a record of the coordinates; it deliberately does NOT satisfy the
+    call, because a city served from it would have a single rent figure and its
+    living-cost range would silently collapse to a point -- the exact false
+    precision the range exists to remove. Falling back quietly would be worse
+    than stopping.
     """
-    data = CITY_FALLBACK.get(city)
-    if data is None:
-        raise KeyError(
-            f"No verified cost/coordinate data for {city!r}. Add it to "
-            f"CITY_FALLBACK with a sourced rent before seeding courses there."
-        )
-    return data
+    known = "known" if city in CITY_FALLBACK else "not even in the legacy table"
+    raise KeyError(
+        f"{city!r} is not in the cities table ({known}). Run "
+        f"`python3 main.py seed-rents` with a sourced single- and shared-room "
+        f"rent for it before seeding courses there."
+    )
 
 
 # Verified fee anchors (research workbook, Universities + ISEE_Bands sheets).
@@ -468,6 +475,21 @@ def build_course(prog, inst, career_id, cities_by_name):
         # showing a university figure that would simply be wrong here.
         "costByIsee": INST_FEES.get(inst.slug),
         "cityRent": c["rent"],
+        # Living cost as a span, not a point. Both ends are the same four
+        # components (rent + utilities + food + transport); only the room type
+        # differs, which is what makes the two numbers comparable and the gap
+        # between them meaningful rather than decorative. Fees are deliberately
+        # NOT folded in here — they depend on the student's ISEE band, and the
+        # card has to be able to say "excluding tuition" and mean it.
+        "livingRange": [
+            (c.get("rentShared") or c["rent"]) + (c.get("utilities") or 100)
+            + (c.get("food") or 180) + (c.get("transport") or 25),
+            c["rent"] + (c.get("utilities") or 100)
+            + (c.get("food") or 180) + (c.get("transport") or 25),
+        ],
+        # True where no published survey covers this city, so the card can mark
+        # the figure as an estimate instead of dressing it as a measurement.
+        "rentEstimated": bool(c.get("rentEstimated")),
         "employment1y": adj["employment1y"],
         "salary": adj["salary"],
         "mastersAccess": a["mastersAccess"],
@@ -506,13 +528,27 @@ def export_site():
         cities_by_name = {}
         merged_cities = {c["id"]: c for c in app_cities}
         for c in db_cities:
-            lo = int(round((c.rent_single_room + (c.utilities or 100) - 20 + (c.food or 180) - 30) / 10) * 10)
-            hi = int(round((c.rent_single_room + (c.utilities or 100) + 20 + (c.food or 180) + 30 + (c.transport or 25) + 60) / 10) * 10)
+            # The old range was the single-room rent plus and minus invented
+            # padding (-20/+20 on utilities, -30/+30 on food, +60 on nothing in
+            # particular), which produced a spread that looked researched and
+            # was not. Both ends are now real: a bed in a shared room at the low
+            # end, a private single at the high end, each surveyed per city.
+            # What moves between them is the one housing decision a student
+            # actually makes.
+            base = (c.utilities or 100) + (c.food or 180) + (c.transport or 25)
+            lo = (c.rent_shared_room or c.rent_single_room) + base
+            hi = c.rent_single_room + base
+            estimated = bool(c.source and c.source.startswith("estimate"))
             merged_cities[c.slug] = {
                 "id": c.slug, "name": c.name, "lat": c.lat, "lon": c.lon, "size": c.size,
-                "costRange": [lo, hi], "vibe": c.vibe,
+                "costRange": [lo, hi], "vibe": c.vibe, "rentEstimated": estimated,
             }
-            cities_by_name[c.name] = {"lat": c.lat, "lon": c.lon, "size": c.size, "rent": c.rent_single_room, "vibe": c.vibe}
+            cities_by_name[c.name] = {
+                "lat": c.lat, "lon": c.lon, "size": c.size, "vibe": c.vibe,
+                "rent": c.rent_single_room, "rentShared": c.rent_shared_room,
+                "utilities": c.utilities, "food": c.food, "transport": c.transport,
+                "rentEstimated": estimated,
+            }
 
         insts = {i.slug: i for i in s.query(Institution).all()}
         new_courses, career_courses = [], {}

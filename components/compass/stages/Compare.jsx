@@ -138,11 +138,24 @@ export default function Compare() {
                         : t("stat_fees_unknown")}</div>
                       {awayFromHome && <div>{t("cmp_living", { city: c.city, r: cityCostBadge(c.city) || `~€${c.cityRent}/mo` })}</div>}
                       {profile.locationMode === "home" && homeCity && <div>{t("cmp_km", { n: haversineKm(homeCity.lat, homeCity.lon, c.lat, c.lon), city: homeCity.name })}</div>}
-                      {(() => { const est = estimateMonthlyCost(c, envPrefs, profile.locationMode === "home" ? homeCity : null); const over = est.total - prefs.budget; return (
-                        <div style={{ color: over > 0 ? T.amber : T.green, fontWeight: 700 }}>
-                          {t("cmp_total", { n: est.total.toLocaleString(), b: prefs.budget.toLocaleString() })}
-                        </div>
-                      ); })()}
+                      {(() => {
+                        const est = estimateMonthlyCost(c, envPrefs, profile.locationMode === "home" ? homeCity : null);
+                        // Three states, not two. Amber is reserved for a course
+                        // the budget cannot reach at all; one that is reachable
+                        // only by sharing a room is its own answer and gets its
+                        // own colour, because "affordable if you share" and
+                        // "not affordable" are not the same news.
+                        const reach = prefs.budget >= est.total.high ? "fit"
+                          : prefs.budget >= est.total.low ? "tight" : "over";
+                        const n = est.total.low === est.total.high
+                          ? `€${est.total.low.toLocaleString()}`
+                          : `€${est.total.low.toLocaleString()}–${est.total.high.toLocaleString()}`;
+                        return (
+                          <div style={{ color: reach === "over" ? T.amber : reach === "tight" ? T.accent : T.green, fontWeight: 700 }}>
+                            {t(reach === "tight" ? "cmp_total_tight" : "cmp_total", { n, b: prefs.budget.toLocaleString() })}
+                          </div>
+                        );
+                      })()}
                       <div>{c.careerPay ? t("cmp_after_job", { n: c.careerPay.toLocaleString() }) : ""}</div>
                     </div>
                   ))}

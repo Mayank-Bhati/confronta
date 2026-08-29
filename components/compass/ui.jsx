@@ -165,10 +165,23 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
     const next = { fees: "living", living: "total", total: "fees" }[costView];
     setPrefs?.((p) => ({ ...p, costView: next }));
   };
+  // A range is written as a range. Where the two ends coincide (a catalogue
+  // entry with no surveyed spread) it degrades to the single number rather
+  // than printing "€620–620", which would look like a rendering fault.
+  const span = (r) => (r.low === r.high
+    ? `€${r.low.toLocaleString()}`
+    : `€${r.low.toLocaleString()}–${r.high.toLocaleString()}`);
   const costStat = costView === "living"
-    ? { n: `~€${est.living.toLocaleString()}`, label: t("stat_living") }
+    // The label carries the exclusion. "Living" on its own invites a student to
+    // read it as everything they will pay, and tuition is the one thing most
+    // likely to be assumed included.
+    ? { n: span(est.living), label: est.estimated ? t("stat_living_est") : t("stat_living") }
     : costView === "total"
-      ? { n: `~€${est.total.toLocaleString()}`, label: t("stat_total") }
+      // Fees and living costs are different kinds of number — one is set by law
+      // against a family's ISEE, the other is a market. This view adds them
+      // because students ask "what does a month cost", but the label has to say
+      // that it is a sum and not a single measured figure.
+      ? { n: span(est.total), label: t("stat_total") }
       // AFAM institutions set fees themselves and the registry carries none, so
       // there is nothing to show. "~€—" reads like a bug; a dash with a label
       // saying where to look reads like the truth.
@@ -271,7 +284,8 @@ export function InstitutionCard({ c, showFit, chosen, onCardClick, saveCtx, badg
             label={lowIsee ? t("stat_afam_contrib_free") : t("stat_afam_contrib_set")}
             value={lowIsee ? "€0" : "—"}
             color={lowIsee ? T.green : T.grey} />
-          <StatCell T={T} label={t("stat_living")} color={T.ink} value={`~€${est.living.toLocaleString()}`} />
+          <StatCell T={T} color={T.ink} value={span(est.living)}
+            label={est.estimated ? t("stat_living_est") : t("stat_living")} />
           <StatCell T={T} label={t("stat_afam_entry")} color={T.ink}
             value={/audition/i.test(c.test || "") ? t("stat_afam_audition") : t("stat_afam_portfolio")} />
         </div>

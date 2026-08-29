@@ -94,7 +94,11 @@ class City(Base):
     lat = Column(Float)
     lon = Column(Float)
     size = Column(String(16))                                # small | medium | large
-    rent_single_room = Column(Integer)                       # €/month
+    # Two figures, not one. Rent is the biggest slice of a student's budget and
+    # sharing a room is the biggest lever they control, so the card shows the
+    # span between these rather than a midpoint that hides the choice.
+    rent_single_room = Column(Integer)                       # €/month, private single
+    rent_shared_room = Column(Integer)                       # €/month, bed in a shared room
     utilities = Column(Integer)                              # €/month midpoint
     food = Column(Integer)                                   # €/month, cooking at home
     transport = Column(Integer)                              # €/month youth pass
