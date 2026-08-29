@@ -590,4 +590,27 @@ def export_site():
                 assert cid in by_id, f"career {career['id']} references missing {cid}"
                 assert cid not in seen, f"{cid} appears in {seen[cid]} and {career['id']}"
                 seen[cid] = career["id"]
-    return {"courses": len(new_courses), "cities": len(merged_cities), "careers_without_courses": empty}
+
+    # Outcomes come from AlmaLaurea and INDIRE, not from the catalogue database,
+    # so they are stamped on by a separate step. That separation is right; making
+    # it a separate *command* was not. This export rewrites courses-v2.json from
+    # scratch, which silently strips the outcomes block from all 327 courses —
+    # every employment rate, pay figure and source link on the site — and the
+    # result still validates, still builds and still deploys. It shipped that way
+    # once. Chaining the two here makes the window impossible rather than merely
+    # unlikely: you cannot now export the catalogue without re-applying outcomes.
+    from .apply_outcomes import apply_outcomes
+    outcomes = apply_outcomes()
+
+    with open(courses_path) as fh:
+        final = json.load(fh)
+    missing = [c["id"] for c in final if not c.get("outcomes")]
+    assert not missing, (
+        f"{len(missing)} courses left without an outcomes block after "
+        f"apply_outcomes — refusing to ship a catalogue that lost its sources: "
+        f"{missing[:5]}"
+    )
+    return {
+        "courses": len(new_courses), "cities": len(merged_cities),
+        "careers_without_courses": empty, "outcomes": outcomes,
+    }
