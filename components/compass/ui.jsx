@@ -207,9 +207,9 @@ export function DataFreshness() {
   const month = when.toLocaleDateString(DATE_LOCALE[lang] || "en-GB", { month: "long", year: "numeric" });
   return (
     <div className="mt-5 pt-3 text-center" style={{ borderTop: `1px solid ${T.line}` }}>
-      <span style={{ fontSize: 11, color: T.grey, ...mono }}>
+      <a href="data-sources/" style={{ fontSize: 11, color: T.grey, textDecoration: "underline", textDecorationStyle: "dotted", ...mono }}>
         {t("fresh_verified", { when: month })}
-      </span>
+      </a>
       {" · "}
       <button
         onClick={() => window.dispatchEvent(new CustomEvent("cc:report-data"))}

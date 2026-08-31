@@ -1,5 +1,7 @@
 // Privacy policy — static bilingual page (IT primary, EN below).
 // Server-rendered at build time; no client state needed.
+import { DocStyle } from "../docStyles";
+
 export const metadata = { title: "Privacy — CareerCompass" };
 
 const S = {
@@ -13,7 +15,8 @@ const S = {
 
 export default function Privacy() {
   return (
-    <main style={S.page}>
+    <main style={S.page} className="cc-doc">
+      <DocStyle />
       <a href="../" style={S.a}>← CareerCompass</a>
 
       <h1 style={S.h1}>Informativa sulla privacy</h1>

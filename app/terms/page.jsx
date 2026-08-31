@@ -1,4 +1,6 @@
 // Terms of use — static bilingual page (IT primary, EN below).
+import { DocStyle } from "../docStyles";
+
 export const metadata = { title: "Termini — CareerCompass" };
 
 const S = {
@@ -12,7 +14,8 @@ const S = {
 
 export default function Terms() {
   return (
-    <main style={S.page}>
+    <main style={S.page} className="cc-doc">
+      <DocStyle />
       <a href="../" style={S.a}>← CareerCompass</a>
 
       <h1 style={S.h1}>Termini di utilizzo</h1>
